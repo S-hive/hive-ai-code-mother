@@ -2,21 +2,40 @@
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import type { MenuInfo } from 'ant-design-vue/es/menu/src/interface'
-import { menuItems } from '@/config/menu'
+import { LogoutOutlined } from '@ant-design/icons-vue'
+import { menuItems as originMenuItems, type MenuItem } from '@/config/menu'
 import logoUrl from '@/assets/logo.png'
+import { useLoginUserStore } from '@/stores/loginUser.ts'
+import { userLogout } from '@/api/userController.ts'
+import { message } from 'ant-design-vue'
 
 const SITE_TITLE = 'AI 零代码应用生成平台'
 
 const route = useRoute()
 const router = useRouter()
+const loginUserStore = useLoginUserStore()
+
+const filterMenus = (menus: MenuItem[]) => {
+  return menus.filter((menu) => {
+    if (menu.key.startsWith('/admin')) {
+      const loginUser = loginUserStore.loginUser
+      if (!loginUser.id || loginUser.userRole !== 'admin') {
+        return false
+      }
+    }
+    return true
+  })
+}
+
+const visibleMenuItems = computed(() => filterMenus(originMenuItems))
 
 const selectedKeys = computed(() => {
-  const match = menuItems.find((item) => item.path === route.path)
+  const match = visibleMenuItems.value.find((item) => item.path === route.path)
   return match ? [match.key] : []
 })
 
 const handleMenuClick = (info: MenuInfo) => {
-  const item = menuItems.find((m) => m.key === info.key)
+  const item = visibleMenuItems.value.find((m) => m.key === info.key)
   if (item) {
     router.push(item.path)
   }
@@ -24,6 +43,19 @@ const handleMenuClick = (info: MenuInfo) => {
 
 const goHome = () => {
   router.push('/')
+}
+
+const doLogout = async () => {
+  const res = await userLogout()
+  if (res.data.code === 0) {
+    loginUserStore.setLoginUser({
+      userName: '未登录',
+    })
+    message.success('退出登录成功')
+    await router.push('/user/login')
+  } else {
+    message.error('退出登录失败, ' + res.data.message)
+  }
 }
 </script>
 
@@ -39,12 +71,30 @@ const goHome = () => {
       class="header-menu"
       @click="handleMenuClick"
     >
-      <a-menu-item v-for="item in menuItems" :key="item.key">
+      <a-menu-item v-for="item in visibleMenuItems" :key="item.key">
         {{ item.label }}
       </a-menu-item>
     </a-menu>
     <div class="header-right">
-      <a-button type="primary">登录</a-button>
+      <div v-if="loginUserStore.loginUser.id">
+        <a-dropdown>
+          <a-space>
+            <a-avatar :src="loginUserStore.loginUser.userAvatar" />
+            {{ loginUserStore.loginUser.userName ?? '无名' }}
+          </a-space>
+          <template #overlay>
+            <a-menu>
+              <a-menu-item @click="doLogout">
+                <LogoutOutlined />
+                退出登录
+              </a-menu-item>
+            </a-menu>
+          </template>
+        </a-dropdown>
+      </div>
+      <div v-else>
+        <a-button type="primary" href="/user/login">登录</a-button>
+      </div>
     </div>
   </a-layout-header>
 </template>
