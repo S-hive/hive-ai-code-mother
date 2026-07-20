@@ -1,6 +1,6 @@
 package com.hive.hiveaicodemother.service;
 
-import com.hive.hiveaicodemother.dto.user.UserQueryRequest;
+import com.hive.hiveaicodemother.model.dto.user.UserQueryRequest;
 import com.hive.hiveaicodemother.model.vo.LoginUserVO;
 import com.hive.hiveaicodemother.model.vo.UserVO;
 import com.mybatisflex.core.query.QueryWrapper;
