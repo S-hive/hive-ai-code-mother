@@ -1,12 +1,12 @@
 package com.hive.hiveaicodemother.service;
 
-import com.hive.hiveaicodemother.exception.BusinessException;
-import com.hive.hiveaicodemother.exception.ErrorCode;
 import com.hive.hiveaicodemother.model.dto.app.AppQueryRequest;
 import com.hive.hiveaicodemother.model.entity.App;
+import com.hive.hiveaicodemother.model.entity.User;
 import com.hive.hiveaicodemother.model.vo.AppVO;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -18,25 +18,45 @@ import java.util.List;
 public interface AppService extends IService<App> {
 
     /**
+     * 应用部署
+     * @param appId
+     * @param loginUser
+     * @return 可访问的部署地址
+     */
+    String deployApp(Long appId, User loginUser);
+
+    /**
      * 获取应用封装类
      *
      * @param app
      * @return
      */
-     AppVO getAppVO(App app);
+    AppVO getAppVO(App app);
 
     /**
      * 构造应用查询条件
+     *
      * @param appQueryRequest
      * @return
      */
-     QueryWrapper getQueryWrapper(AppQueryRequest appQueryRequest);
+    QueryWrapper getQueryWrapper(AppQueryRequest appQueryRequest);
 
 
     /**
      * 获取应用封装列表
+     *
      * @param appList
      * @return
      */
     List<AppVO> getAppVOList(List<App> appList);
+
+    /**
+     * 聊天生成代码
+     *
+     * @param appId
+     * @param message
+     * @param loginUser
+     * @return
+     */
+    Flux<String> chatToGenCode(Long appId, String message, User loginUser);
 }

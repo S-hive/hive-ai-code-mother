@@ -1,4 +1,4 @@
-package com.hive.hiveaicodemother.saver;
+package com.hive.hiveaicodemother.core.saver;
 
 import cn.hutool.core.util.StrUtil;
 import com.hive.hiveaicodemother.ai.model.HtmlCodeResult;
