@@ -3,7 +3,7 @@ package com.hive.hiveaicodemother.service.impl;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
-import com.hive.hiveaicodemother.dto.user.UserQueryRequest;
+import com.hive.hiveaicodemother.model.dto.user.UserQueryRequest;
 import com.hive.hiveaicodemother.exception.BusinessException;
 import com.hive.hiveaicodemother.exception.ErrorCode;
 import com.hive.hiveaicodemother.mapper.UserMapper;
