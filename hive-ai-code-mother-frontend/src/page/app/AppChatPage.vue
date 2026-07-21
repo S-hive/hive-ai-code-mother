@@ -17,11 +17,20 @@ type ChatMessage = {
 const route = useRoute()
 const router = useRouter()
 
-const appId = computed(() => Number(route.params.appId))
+const appId = computed(() => {
+  const rawAppId = route.params.appId
+  if (typeof rawAppId !== 'string' || !/^[1-9]\d*$/.test(rawAppId)) {
+    return null
+  }
+
+  const id = Number(rawAppId)
+  return Number.isSafeInteger(id) ? id : null
+})
 const app = ref<API.AppVO>()
 const messages = ref<ChatMessage[]>([])
 const input = ref('')
 const generating = ref(false)
+const deploying = ref(false)
 const previewUrl = ref('')
 const previewKey = ref(0)
 const messagesEl = ref<HTMLElement | null>(null)
@@ -42,7 +51,10 @@ const showPreview = () => {
 }
 
 const loadApp = async () => {
-  const res = await getAppVoById({ id: appId.value })
+  const id = appId.value
+  if (id === null) return
+
+  const res = await getAppVoById({ id })
   if (res.data.code === 0 && res.data.data) {
     app.value = res.data.data
     if (app.value.codeGenType) {
@@ -55,7 +67,8 @@ const loadApp = async () => {
 
 const sendMessage = (text: string) => {
   const content = text.trim()
-  if (!content || generating.value) return
+  const id = appId.value
+  if (!content || generating.value || id === null) return
 
   messages.value.push({ role: 'user', content })
   messages.value.push({ role: 'ai', content: '' })
@@ -65,7 +78,7 @@ const sendMessage = (text: string) => {
   const aiIndex = messages.value.length - 1
   cancelStream?.()
   cancelStream = streamChatToGenCode({
-    appId: appId.value,
+    appId: id,
     message: content,
     onMessage: (chunk) => {
       messages.value[aiIndex].content += chunk
@@ -75,7 +88,6 @@ const sendMessage = (text: string) => {
       generating.value = false
       cancelStream = null
       await loadApp()
-      showPreview()
       if (route.query.init === '1') {
         router.replace({ path: route.path, query: {} })
       }
@@ -96,23 +108,46 @@ const onSubmit = () => {
 }
 
 const onDeploy = async () => {
-  const res = await deployApp({ appId: appId.value })
-  if (res.data.code === 0 && res.data.data) {
-    const url = res.data.data
-    Modal.success({
-      title: '部署成功',
-      content: url,
-      okText: '打开',
-      onOk: () => {
-        window.open(url, '_blank')
-      },
-    })
-  } else {
-    message.error('部署失败，' + res.data.message)
+  const id = appId.value
+  if (id === null || deploying.value) return
+
+  deploying.value = true
+  try {
+    const res = await deployApp({ appId: id })
+    if (res.data.code === 0 && res.data.data) {
+      const url = res.data.data
+      Modal.confirm({
+        title: '部署成功',
+        content: url,
+        okText: '打开',
+        cancelText: '复制 URL',
+        onOk: () => {
+          window.open(url, '_blank')
+        },
+        onCancel: async () => {
+          try {
+            await navigator.clipboard.writeText(url)
+            message.success('URL 已复制')
+          } catch {
+            message.error('复制 URL 失败')
+          }
+        },
+      })
+    } else {
+      message.error('部署失败，' + res.data.message)
+    }
+  } finally {
+    deploying.value = false
   }
 }
 
 onMounted(async () => {
+  if (appId.value === null) {
+    message.error('应用 ID 无效')
+    await router.replace('/')
+    return
+  }
+
   await loadApp()
   if (route.query.init === '1' && app.value?.initPrompt) {
     sendMessage(app.value.initPrompt)
@@ -132,7 +167,7 @@ onBeforeUnmount(() => {
         <span class="app-name">{{ app?.appName || '应用对话' }}</span>
       </div>
       <div class="header-center">生成后的网页展示</div>
-      <a-button type="primary" @click="onDeploy">
+      <a-button type="primary" :loading="deploying" :disabled="deploying" @click="onDeploy">
         <template #icon><CloudUploadOutlined /></template>
         部署
       </a-button>
