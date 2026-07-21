@@ -7,4 +7,5 @@ export interface MenuItem {
 export const menuItems: MenuItem[] = [
   { key: '/home', label: '首页', path: '/' },
   { key: '/admin/userManage', label: '用户管理', path: '/admin/userManage' },
+  { key: '/admin/appManage', label: '应用管理', path: '/admin/appManage' },
 ]
