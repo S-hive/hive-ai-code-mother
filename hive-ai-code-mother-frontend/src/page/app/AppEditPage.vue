@@ -14,7 +14,15 @@ const route = useRoute()
 const router = useRouter()
 const loginUserStore = useLoginUserStore()
 
-const appId = computed(() => Number(route.params.appId))
+const appId = computed(() => {
+  const rawAppId = route.params.appId
+  if (typeof rawAppId !== 'string' || !/^[1-9]\d*$/.test(rawAppId)) {
+    return null
+  }
+
+  const id = Number(rawAppId)
+  return Number.isSafeInteger(id) ? id : null
+})
 const isAdmin = computed(() => loginUserStore.loginUser.userRole === 'admin')
 const loading = ref(false)
 const saving = ref(false)
@@ -26,11 +34,14 @@ const form = reactive({
 })
 
 const load = async () => {
+  const id = appId.value
+  if (id === null) return
+
   loading.value = true
   try {
     const res = isAdmin.value
-      ? await getAppVoByIdByAdmin({ id: appId.value })
-      : await getAppVoById({ id: appId.value })
+      ? await getAppVoByIdByAdmin({ id })
+      : await getAppVoById({ id })
     if (res.data.code === 0 && res.data.data) {
       form.appName = res.data.data.appName ?? ''
       form.cover = res.data.data.cover ?? ''
@@ -44,6 +55,9 @@ const load = async () => {
 }
 
 const onSave = async () => {
+  const id = appId.value
+  if (id === null) return
+
   if (!form.appName.trim()) {
     message.warning('请输入应用名称')
     return
@@ -52,13 +66,13 @@ const onSave = async () => {
   try {
     const res = isAdmin.value
       ? await updateAppByAdmin({
-          id: appId.value,
+          id,
           appName: form.appName,
           cover: form.cover,
           priority: form.priority,
         })
       : await updateApp({
-          id: appId.value,
+          id,
           appName: form.appName,
         })
     if (res.data.code === 0) {
@@ -72,8 +86,14 @@ const onSave = async () => {
   }
 }
 
-onMounted(() => {
-  load()
+onMounted(async () => {
+  if (appId.value === null) {
+    message.error('应用 ID 无效')
+    await router.replace('/')
+    return
+  }
+
+  await load()
 })
 </script>
 
