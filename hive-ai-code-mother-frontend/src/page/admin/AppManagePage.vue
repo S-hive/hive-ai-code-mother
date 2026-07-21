@@ -75,6 +75,8 @@ const total = ref(0)
 const searchParams = reactive<API.AppQueryRequest>({
   pageNum: 1,
   pageSize: 10,
+  sortField: 'createTime',
+  sortOrder: 'descend',
 })
 
 const fetchData = async () => {
@@ -106,12 +108,12 @@ const doSearch = () => {
   fetchData()
 }
 
-const doEdit = (id?: number) => {
+const doEdit = (id?: API.Id) => {
   if (id == null) return
   router.push(`/app/edit/${id}`)
 }
 
-const doFeature = (id?: number) => {
+const doFeature = (id?: API.Id) => {
   if (id == null) return
   Modal.confirm({
     title: '设为精选？',
@@ -128,7 +130,7 @@ const doFeature = (id?: number) => {
   })
 }
 
-const doDelete = (id?: number) => {
+const doDelete = (id?: API.Id) => {
   if (id == null) return
   Modal.confirm({
     title: '确认删除该应用？',

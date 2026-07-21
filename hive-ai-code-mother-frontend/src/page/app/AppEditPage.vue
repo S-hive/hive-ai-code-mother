@@ -19,9 +19,7 @@ const appId = computed(() => {
   if (typeof rawAppId !== 'string' || !/^[1-9]\d*$/.test(rawAppId)) {
     return null
   }
-
-  const id = Number(rawAppId)
-  return Number.isSafeInteger(id) ? id : null
+  return rawAppId
 })
 const isAdmin = computed(() => loginUserStore.loginUser.userRole === 'admin')
 const loading = ref(false)

@@ -1,5 +1,5 @@
 export type StreamChatParams = {
-  appId: number
+  appId: API.Id
   message: string
   onMessage: (chunk: string) => void
   onDone: () => void

@@ -181,14 +181,19 @@ onMounted(() => {
 
 <style scoped>
 #homePage {
-  max-width: 1100px;
-  margin: 0 auto;
+  width: calc(100% + 48px);
+  min-height: calc(100vh - 64px);
+  margin: -24px;
+  padding: 24px;
+  background: transparent;
 }
 
 .hero {
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
   padding: 48px 16px 32px;
-  background: linear-gradient(180deg, #f7fafc 0%, #e8f6f8 55%, #e3eef8 100%);
+  background: transparent;
   border-radius: 16px;
 }
 
@@ -236,7 +241,8 @@ onMounted(() => {
 }
 
 .section {
-  margin-top: 40px;
+  max-width: 1100px;
+  margin: 40px auto 0;
   padding: 0 8px 24px;
 }
 
