@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { message, Modal } from 'ant-design-vue'
-import { CloudUploadOutlined } from '@ant-design/icons-vue'
+import { message } from 'ant-design-vue'
+import axios from 'axios'
+import { CheckCircleOutlined, CloudUploadOutlined, CopyOutlined } from '@ant-design/icons-vue'
 import logoUrl from '@/assets/logo.png'
+import AppCodeViewer from '@/components/AppCodeViewer.vue'
 import AppPromptInput from '@/components/AppPromptInput.vue'
 import { deployApp, getAppVoById } from '@/api/appController'
 import { buildAppPreviewUrl } from '@/utils/appPreview'
@@ -22,17 +24,18 @@ const appId = computed(() => {
   if (typeof rawAppId !== 'string' || !/^[1-9]\d*$/.test(rawAppId)) {
     return null
   }
-
-  const id = Number(rawAppId)
-  return Number.isSafeInteger(id) ? id : null
+  return rawAppId
 })
 const app = ref<API.AppVO>()
 const messages = ref<ChatMessage[]>([])
 const input = ref('')
 const generating = ref(false)
 const deploying = ref(false)
+const deployModalOpen = ref(false)
+const deployedUrl = ref('')
 const previewUrl = ref('')
 const previewKey = ref(0)
+const rightMode = ref<'preview' | 'code'>('preview')
 const messagesEl = ref<HTMLElement | null>(null)
 let cancelStream: (() => void) | null = null
 
@@ -115,30 +118,32 @@ const onDeploy = async () => {
   try {
     const res = await deployApp({ appId: id })
     if (res.data.code === 0 && res.data.data) {
-      const url = res.data.data
-      Modal.confirm({
-        title: '部署成功',
-        content: url,
-        okText: '打开',
-        cancelText: '复制 URL',
-        onOk: () => {
-          window.open(url, '_blank')
-        },
-        onCancel: async () => {
-          try {
-            await navigator.clipboard.writeText(url)
-            message.success('URL 已复制')
-          } catch {
-            message.error('复制 URL 失败')
-          }
-        },
-      })
+      deployedUrl.value = res.data.data
+      deployModalOpen.value = true
     } else {
       message.error('部署失败，' + res.data.message)
     }
+  } catch (error) {
+    const errorMessage = axios.isAxiosError<API.BaseResponseString>(error)
+      ? error.response?.data?.message
+      : undefined
+    message.error('部署失败，' + (errorMessage || '请稍后重试'))
   } finally {
     deploying.value = false
   }
+}
+
+const copyDeployedUrl = async () => {
+  try {
+    await navigator.clipboard.writeText(deployedUrl.value)
+    message.success('部署地址已复制')
+  } catch {
+    message.error('复制部署地址失败')
+  }
+}
+
+const openDeployedSite = () => {
+  window.open(deployedUrl.value, '_blank', 'noopener,noreferrer')
 }
 
 onMounted(async () => {
@@ -166,7 +171,13 @@ onBeforeUnmount(() => {
         <img :src="logoUrl" alt="logo" class="logo" />
         <span class="app-name">{{ app?.appName || '应用对话' }}</span>
       </div>
-      <div class="header-center">生成后的网页展示</div>
+      <a-segmented
+        v-model:value="rightMode"
+        :options="[
+          { label: '代码', value: 'code' },
+          { label: '预览', value: 'preview' },
+        ]"
+      />
       <a-button type="primary" :loading="deploying" :disabled="deploying" @click="onDeploy">
         <template #icon><CloudUploadOutlined /></template>
         部署
@@ -198,15 +209,43 @@ onBeforeUnmount(() => {
 
       <section class="preview-pane">
         <iframe
-          v-if="previewUrl"
+          v-if="rightMode === 'preview' && previewUrl"
           :key="previewKey"
           class="preview-frame"
           :src="previewUrl"
           title="网站预览"
         />
-        <a-empty v-else description="生成完成后将在此展示网站效果" />
+        <AppCodeViewer
+          v-else-if="rightMode === 'code' && previewUrl"
+          :base-url="previewUrl"
+          :code-gen-type="app?.codeGenType"
+          :refresh-key="previewKey"
+        />
+        <a-empty
+          v-else
+          :description="
+            rightMode === 'code' ? '生成完成后将在此展示源码' : '生成完成后将在此展示网站效果'
+          "
+        />
       </section>
     </div>
+
+    <a-modal v-model:open="deployModalOpen" title="部署成功" :footer="null" width="600px">
+      <div class="deploy-success">
+        <CheckCircleOutlined class="success-icon" />
+        <h2>网站部署成功！</h2>
+        <p>你的网站已经成功部署，可以通过以下链接访问：</p>
+        <a-input :value="deployedUrl" readonly size="large">
+          <template #suffix>
+            <CopyOutlined class="copy-icon" @click="copyDeployedUrl" />
+          </template>
+        </a-input>
+        <a-space class="deploy-actions">
+          <a-button type="primary" size="large" @click="openDeployedSite">访问网站</a-button>
+          <a-button size="large" @click="deployModalOpen = false">关闭</a-button>
+        </a-space>
+      </div>
+    </a-modal>
   </div>
 </template>
 
@@ -244,14 +283,10 @@ onBeforeUnmount(() => {
   font-weight: 600;
 }
 
-.header-center {
-  color: #8c8c8c;
-}
-
 .chat-body {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 34% minmax(0, 66%);
   min-height: 0;
 }
 
@@ -301,10 +336,12 @@ onBeforeUnmount(() => {
 }
 
 .preview-pane {
+  min-width: 0;
   min-height: 0;
   display: flex;
   align-items: stretch;
   justify-content: center;
+  overflow: hidden;
   background: #fafafa;
 }
 
@@ -313,6 +350,33 @@ onBeforeUnmount(() => {
   height: 100%;
   border: none;
   background: #fff;
+}
+
+.deploy-success {
+  padding: 16px 24px 8px;
+  text-align: center;
+}
+
+.success-icon {
+  color: #52c41a;
+  font-size: 56px;
+}
+
+.deploy-success h2 {
+  margin: 20px 0 12px;
+}
+
+.deploy-success p {
+  margin-bottom: 20px;
+  color: #8c8c8c;
+}
+
+.copy-icon {
+  cursor: pointer;
+}
+
+.deploy-actions {
+  margin-top: 24px;
 }
 
 @media (max-width: 900px) {
