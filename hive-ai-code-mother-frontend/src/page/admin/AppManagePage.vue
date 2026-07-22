@@ -5,7 +5,13 @@
         <a-input v-model:value="searchParams.appName" placeholder="输入应用名称" />
       </a-form-item>
       <a-form-item label="生成类型">
-        <a-input v-model:value="searchParams.codeGenType" placeholder="codeGenType" />
+        <a-select
+          v-model:value="searchParams.codeGenType"
+          :options="CODE_GEN_TYPE_OPTIONS"
+          placeholder="请选择生成类型"
+          allow-clear
+          style="width: 180px"
+        />
       </a-form-item>
       <a-form-item label="用户ID">
         <a-input-number v-model:value="searchParams.userId" :controls="false" />
@@ -26,6 +32,9 @@
         <template v-if="column.dataIndex === 'cover'">
           <a-image v-if="record.cover" :src="record.cover" :width="80" />
           <span v-else>-</span>
+        </template>
+        <template v-else-if="column.dataIndex === 'codeGenType'">
+          {{ getCodeGenTypeLabel(record.codeGenType) }}
         </template>
         <template v-else-if="column.dataIndex === 'user'">
           {{ record.user?.userName || record.userId }}
@@ -55,6 +64,7 @@ import {
   listAppVoByPageByAdmin,
   updateAppByAdmin,
 } from '@/api/appController'
+import { CODE_GEN_TYPE_OPTIONS, getCodeGenTypeLabel } from '@/constants/codeGenType'
 
 const router = useRouter()
 

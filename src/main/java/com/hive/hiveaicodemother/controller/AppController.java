@@ -14,6 +14,7 @@ import com.hive.hiveaicodemother.exception.ErrorCode;
 import com.hive.hiveaicodemother.exception.ThrowUtils;
 import com.hive.hiveaicodemother.model.dto.app.AppAddRequest;
 import com.hive.hiveaicodemother.model.dto.app.AppAdminUpdateRequest;
+import com.hive.hiveaicodemother.model.dto.app.AppDeployRequest;
 import com.hive.hiveaicodemother.model.dto.app.AppQueryRequest;
 import com.hive.hiveaicodemother.model.dto.app.AppUpdateRequest;
 import com.hive.hiveaicodemother.model.entity.App;
@@ -50,6 +51,24 @@ public class AppController {
 
     @Resource
     private UserService userService;
+
+    /**
+     * 部署应用
+     *
+     * @param appDeployRequest 部署请求
+     * @param request          HTTP 请求
+     * @return 部署后的访问地址
+     */
+    @PostMapping("/deploy")
+    public BaseResponse<String> deployApp(@RequestBody AppDeployRequest appDeployRequest,
+                                          HttpServletRequest request) {
+        ThrowUtils.throwIf(appDeployRequest == null, ErrorCode.PARAMS_ERROR);
+        Long appId = appDeployRequest.getAppId();
+        ThrowUtils.throwIf(appId == null || appId <= 0, ErrorCode.PARAMS_ERROR, "应用 ID 无效");
+        User loginUser = userService.getLoginUser(request);
+        String deployUrl = appService.deployApp(appId, loginUser);
+        return ResultUtils.success(deployUrl);
+    }
 
     /**
      * 应用聊天生成代码（流式 SSE）
