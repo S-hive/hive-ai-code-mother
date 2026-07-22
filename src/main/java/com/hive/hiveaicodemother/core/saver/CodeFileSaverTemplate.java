@@ -1,7 +1,6 @@
 package com.hive.hiveaicodemother.core.saver;
 
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import com.hive.hiveaicodemother.constant.AppConstant;
 import com.hive.hiveaicodemother.exception.BusinessException;
@@ -60,7 +59,7 @@ public abstract class CodeFileSaverTemplate<T> {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "应用Id不能为空");
         }
         String codeType = getCodeType().getValue();
-        String uniqueDirName = StrUtil.format("{}_{}", codeType, IdUtil.getSnowflakeNextIdStr());
+        String uniqueDirName = codeType + "_" + appId;
         String dirPath = FILE_SAVE_ROOT_DIR + File.separator + uniqueDirName;
         FileUtil.mkdir(dirPath);
         return dirPath;

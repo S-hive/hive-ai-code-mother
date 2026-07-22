@@ -1,13 +1,21 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { message } from 'ant-design-vue'
+import { Modal, message } from 'ant-design-vue'
 import axios from 'axios'
-import { CheckCircleOutlined, CloudUploadOutlined, CopyOutlined } from '@ant-design/icons-vue'
+import {
+  CheckCircleOutlined,
+  CloudUploadOutlined,
+  CopyOutlined,
+  DeleteOutlined,
+  EditOutlined,
+  InfoCircleOutlined,
+} from '@ant-design/icons-vue'
 import logoUrl from '@/assets/logo.png'
 import AppCodeViewer from '@/components/AppCodeViewer.vue'
 import AppPromptInput from '@/components/AppPromptInput.vue'
-import { deployApp, getAppVoById } from '@/api/appController'
+import { deleteApp, deleteAppByAdmin, deployApp, getAppVoById } from '@/api/appController'
+import { useLoginUserStore } from '@/stores/loginUser'
 import { buildAppPreviewUrl } from '@/utils/appPreview'
 import { streamChatToGenCode } from '@/utils/sse'
 
@@ -18,6 +26,7 @@ type ChatMessage = {
 
 const route = useRoute()
 const router = useRouter()
+const loginUserStore = useLoginUserStore()
 
 const appId = computed(() => {
   const rawAppId = route.params.appId
@@ -32,12 +41,21 @@ const input = ref('')
 const generating = ref(false)
 const deploying = ref(false)
 const deployModalOpen = ref(false)
+const detailModalOpen = ref(false)
 const deployedUrl = ref('')
 const previewUrl = ref('')
 const previewKey = ref(0)
 const rightMode = ref<'preview' | 'code'>('preview')
 const messagesEl = ref<HTMLElement | null>(null)
 let cancelStream: (() => void) | null = null
+
+const isAdmin = computed(() => loginUserStore.loginUser.userRole === 'admin')
+const isOwner = computed(() => {
+  const loginUserId = loginUserStore.loginUser.id
+  const ownerId = app.value?.userId
+  return loginUserId != null && ownerId != null && String(loginUserId) === String(ownerId)
+})
+const canManageApp = computed(() => isAdmin.value || isOwner.value)
 
 const scrollToBottom = async () => {
   await nextTick()
@@ -110,6 +128,46 @@ const onSubmit = () => {
   sendMessage(text)
 }
 
+const openDetail = () => {
+  detailModalOpen.value = true
+}
+
+const onEdit = async () => {
+  const id = appId.value
+  if (id === null) return
+  detailModalOpen.value = false
+  await router.push(`/app/edit/${id}`)
+}
+
+const onDelete = () => {
+  const id = appId.value
+  if (id === null || !canManageApp.value) return
+
+  Modal.confirm({
+    title: '确认删除该应用？',
+    content: '删除后将无法恢复。',
+    okText: '确认删除',
+    okType: 'danger',
+    cancelText: '取消',
+    onOk: async () => {
+      try {
+        const res = isAdmin.value
+          ? await deleteAppByAdmin({ id })
+          : await deleteApp({ id })
+        if (res.data.code === 0) {
+          detailModalOpen.value = false
+          message.success('删除成功')
+          await router.replace('/')
+        } else {
+          message.error('删除失败，' + res.data.message)
+        }
+      } catch {
+        message.error('删除失败，请稍后重试')
+      }
+    },
+  })
+}
+
 const onDeploy = async () => {
   const id = appId.value
   if (id === null || deploying.value) return
@@ -178,10 +236,16 @@ onBeforeUnmount(() => {
           { label: '预览', value: 'preview' },
         ]"
       />
-      <a-button type="primary" :loading="deploying" :disabled="deploying" @click="onDeploy">
-        <template #icon><CloudUploadOutlined /></template>
-        部署
-      </a-button>
+      <a-space class="header-actions">
+        <a-button @click="openDetail">
+          <template #icon><InfoCircleOutlined /></template>
+          应用详情
+        </a-button>
+        <a-button type="primary" :loading="deploying" :disabled="deploying" @click="onDeploy">
+          <template #icon><CloudUploadOutlined /></template>
+          部署
+        </a-button>
+      </a-space>
     </header>
 
     <div class="chat-body">
@@ -229,6 +293,34 @@ onBeforeUnmount(() => {
         />
       </section>
     </div>
+
+    <a-modal v-model:open="detailModalOpen" title="应用详情" :footer="null" width="450px">
+      <div class="app-detail">
+        <div class="detail-row">
+          <span class="detail-label">创建者：</span>
+          <div class="creator">
+            <a-avatar :src="app?.user?.userAvatar">
+              {{ app?.user?.userName?.slice(0, 1) || '用' }}
+            </a-avatar>
+            <span>{{ app?.user?.userName || '无名' }}</span>
+          </div>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">创建时间：</span>
+          <span>{{ app?.createTime || '-' }}</span>
+        </div>
+        <a-space v-if="canManageApp" class="detail-actions">
+          <a-button type="primary" @click="onEdit">
+            <template #icon><EditOutlined /></template>
+            修改
+          </a-button>
+          <a-button danger @click="onDelete">
+            <template #icon><DeleteOutlined /></template>
+            删除
+          </a-button>
+        </a-space>
+      </div>
+    </a-modal>
 
     <a-modal v-model:open="deployModalOpen" title="部署成功" :footer="null" width="600px">
       <div class="deploy-success">
@@ -281,6 +373,37 @@ onBeforeUnmount(() => {
 
 .app-name {
   font-weight: 600;
+}
+
+.header-actions {
+  min-width: 180px;
+  justify-content: flex-end;
+}
+
+.app-detail {
+  padding: 4px 0;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.detail-label {
+  width: 74px;
+  flex: none;
+  color: #8c8c8c;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-actions {
+  margin-top: 18px;
 }
 
 .chat-body {
@@ -380,6 +503,17 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 900px) {
+  .header-left {
+    min-width: 0;
+  }
+
+  .app-name {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .chat-body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
