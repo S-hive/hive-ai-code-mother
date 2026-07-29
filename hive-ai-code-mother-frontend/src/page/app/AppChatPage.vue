@@ -15,14 +15,19 @@ import logoUrl from '@/assets/logo.png'
 import AppCodeViewer from '@/components/AppCodeViewer.vue'
 import AppPromptInput from '@/components/AppPromptInput.vue'
 import { deleteApp, deleteAppByAdmin, deployApp, getAppVoById } from '@/api/appController'
+import { listAppChatHistory } from '@/api/chatHistoryController'
 import { useLoginUserStore } from '@/stores/loginUser'
 import { buildAppPreviewUrl } from '@/utils/appPreview'
 import { streamChatToGenCode } from '@/utils/sse'
 
 type ChatMessage = {
+  id?: number
   role: 'user' | 'ai'
   content: string
+  createTime?: string
 }
+
+const HISTORY_PAGE_SIZE = 10
 
 const route = useRoute()
 const router = useRouter()
@@ -47,6 +52,11 @@ const previewUrl = ref('')
 const previewKey = ref(0)
 const rightMode = ref<'preview' | 'code'>('preview')
 const messagesEl = ref<HTMLElement | null>(null)
+const hasMoreHistory = ref(false)
+const loadingHistory = ref(false)
+const loadingMoreHistory = ref(false)
+const historyLoadSucceeded = ref(false)
+const totalHistoryCount = ref(0)
 let cancelStream: (() => void) | null = null
 
 const isAdmin = computed(() => loginUserStore.loginUser.userRole === 'admin')
@@ -56,6 +66,7 @@ const isOwner = computed(() => {
   return loginUserId != null && ownerId != null && String(loginUserId) === String(ownerId)
 })
 const canManageApp = computed(() => isAdmin.value || isOwner.value)
+const shouldShowPreview = computed(() => messages.value.length >= 2)
 
 const scrollToBottom = async () => {
   await nextTick()
@@ -71,6 +82,100 @@ const showPreview = () => {
   previewKey.value += 1
 }
 
+const updatePreviewIfNeeded = () => {
+  if (shouldShowPreview.value) {
+    showPreview()
+  }
+}
+
+const toChatMessage = (item: API.ChatHistory): ChatMessage => ({
+  id: item.id,
+  role: item.messageType === 'user' ? 'user' : 'ai',
+  content: item.message ?? '',
+  createTime: item.createTime,
+})
+
+const mergeHistoryMessages = (records: API.ChatHistory[], prepend = false) => {
+  const batch = [...records].reverse().map(toChatMessage)
+  if (batch.length === 0) return
+
+  if (prepend) {
+    const existingIds = new Set(messages.value.map((item) => item.id).filter((id) => id != null))
+    const uniqueBatch = batch.filter((item) => item.id == null || !existingIds.has(item.id))
+    messages.value = [...uniqueBatch, ...messages.value]
+    return
+  }
+
+  messages.value = batch
+}
+
+const loadChatHistory = async (loadMore = false) => {
+  const id = appId.value
+  if (id === null || (!loadMore && loadingHistory.value) || (loadMore && loadingMoreHistory.value)) {
+    return false
+  }
+
+  if (loadMore) {
+    loadingMoreHistory.value = true
+  } else {
+    loadingHistory.value = true
+  }
+
+  try {
+    const params: API.listAppChatHistoryParams = {
+      appId: id,
+      pageSize: HISTORY_PAGE_SIZE,
+    }
+    if (loadMore && messages.value.length > 0) {
+      const oldestMessage = messages.value[0]
+      if (oldestMessage.createTime) {
+        params.lastCreateTime = oldestMessage.createTime
+      }
+    }
+
+    const res = await listAppChatHistory(params)
+    if (res.data.code !== 0 || !res.data.data) {
+      if (!loadMore) {
+        message.error('加载对话历史失败，' + (res.data.message || '请稍后重试'))
+      }
+      return false
+    }
+
+    if (!loadMore) {
+      historyLoadSucceeded.value = true
+      totalHistoryCount.value = res.data.data.totalRow ?? 0
+    }
+
+    const records = res.data.data.records ?? []
+    hasMoreHistory.value = records.length === HISTORY_PAGE_SIZE
+
+    if (loadMore) {
+      const prevScrollHeight = messagesEl.value?.scrollHeight ?? 0
+      mergeHistoryMessages(records, true)
+      await nextTick()
+      if (messagesEl.value) {
+        messagesEl.value.scrollTop = messagesEl.value.scrollHeight - prevScrollHeight
+      }
+      return true
+    }
+
+    mergeHistoryMessages(records)
+    await scrollToBottom()
+    return true
+  } catch {
+    if (!loadMore) {
+      message.error('加载对话历史失败，请稍后重试')
+    }
+    return false
+  } finally {
+    if (loadMore) {
+      loadingMoreHistory.value = false
+    } else {
+      loadingHistory.value = false
+    }
+  }
+}
+
 const loadApp = async () => {
   const id = appId.value
   if (id === null) return
@@ -78,9 +183,6 @@ const loadApp = async () => {
   const res = await getAppVoById({ id })
   if (res.data.code === 0 && res.data.data) {
     app.value = res.data.data
-    if (app.value.codeGenType) {
-      showPreview()
-    }
   } else {
     message.error('获取应用失败，' + res.data.message)
   }
@@ -109,9 +211,7 @@ const sendMessage = (text: string) => {
       generating.value = false
       cancelStream = null
       await loadApp()
-      if (route.query.init === '1') {
-        router.replace({ path: route.path, query: {} })
-      }
+      updatePreviewIfNeeded()
     },
     onError: (err) => {
       generating.value = false
@@ -212,7 +312,16 @@ onMounted(async () => {
   }
 
   await loadApp()
-  if (route.query.init === '1' && app.value?.initPrompt) {
+  await loadChatHistory()
+  updatePreviewIfNeeded()
+
+  // 仅在自己的应用且确认无历史对话时，才自动发送 initPrompt
+  if (
+    isOwner.value &&
+    historyLoadSucceeded.value &&
+    totalHistoryCount.value === 0 &&
+    app.value?.initPrompt
+  ) {
     sendMessage(app.value.initPrompt)
   }
 })
@@ -251,14 +360,25 @@ onBeforeUnmount(() => {
     <div class="chat-body">
       <section class="chat-pane">
         <div ref="messagesEl" class="messages">
+          <div v-if="hasMoreHistory" class="load-more">
+            <a-button
+              type="link"
+              :loading="loadingMoreHistory"
+              :disabled="loadingMoreHistory"
+              @click="loadChatHistory(true)"
+            >
+              加载更多
+            </a-button>
+          </div>
           <div
             v-for="(msg, idx) in messages"
-            :key="idx"
+            :key="msg.id ?? idx"
             class="msg"
             :class="msg.role"
           >
             <div class="bubble">{{ msg.content }}</div>
           </div>
+          <a-spin v-if="loadingHistory" class="history-loading" tip="加载对话历史中..." />
         </div>
         <div class="input-wrap">
           <AppPromptInput
@@ -424,6 +544,18 @@ onBeforeUnmount(() => {
   flex: 1;
   overflow: auto;
   padding: 16px;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.history-loading {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
 }
 
 .msg {

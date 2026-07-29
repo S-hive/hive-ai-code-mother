@@ -1,6 +1,7 @@
 package com.hive.hiveaicodemother.core;
 
 import com.hive.hiveaicodemother.ai.AiCodeGeneratorService;
+import com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceFactory;
 import com.hive.hiveaicodemother.ai.model.HtmlCodeResult;
 import com.hive.hiveaicodemother.ai.model.MultiFileCodeResult;
 import com.hive.hiveaicodemother.core.parser.CodeParserExecutor;
@@ -22,7 +23,7 @@ import java.io.File;
 @Slf4j
 public class AiCodeGeneratorFacade {
     @Resource
-    private AiCodeGeneratorService aiCodeGeneratorService;
+    private AiCodeGeneratorServiceFactory aiCodeGeneratorServiceFactory;
 
     /**
      * 统一入口, 根据类型生成并保存代码
@@ -36,6 +37,8 @@ public class AiCodeGeneratorFacade {
         if (codeGenTypeEnum == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "生成模式不能为空");
         }
+        // 根据 appId 获取响应的 AI 服务实例
+        AiCodeGeneratorService aiCodeGeneratorService = aiCodeGeneratorServiceFactory.getAiCodeGeneratorService(appId);
         return switch (codeGenTypeEnum) {
             case HTML -> {
                 HtmlCodeResult htmlCode = aiCodeGeneratorService.generateHtmlCode(userMessage);
@@ -66,6 +69,8 @@ public class AiCodeGeneratorFacade {
         if (codeGenTypeEnum == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "生成模式不能为空");
         }
+        // 根据 appId 获取响应的 AI 服务实例
+        AiCodeGeneratorService aiCodeGeneratorService = aiCodeGeneratorServiceFactory.getAiCodeGeneratorService(appId);
         return switch (codeGenTypeEnum) {
             case HTML -> {
                 Flux<String> codeStream = aiCodeGeneratorService.generateHtmlCodeStream(userMessage);
@@ -101,43 +106,6 @@ public class AiCodeGeneratorFacade {
                 // 使用执行器保存代码
                 File saveDir = CodeFileSaverExecutor.executeSaver(parsedResult, codeGenTypeEnum, appId);
                 log.info("保存完成, 目录为: {}", saveDir.getAbsolutePath());
-            } catch (Exception e) {
-                log.error("保存失败", e);
-            }
-        });
-    }
-
-
-    /**
-     * 生成多文件代码并保存（流式）
-     */
-    private Flux<String> generateAndSaveMultiFileCodeStream(String userMessage) {
-        Flux<String> result = aiCodeGeneratorService.generateMaltiFileCodeStream(userMessage);
-        StringBuilder codeBuilder = new StringBuilder();
-        return result.doOnNext(codeBuilder::append).doOnComplete(() -> {
-            try {
-                String completeCode = codeBuilder.toString();
-                MultiFileCodeResult multiFileCodeResult = CodeParser.parseMultiFileCode(completeCode);
-                File saveDir = CodeFileSaver.saveMultiFileCodeResult(multiFileCodeResult);
-                log.info("保存完成, 目录为: {}", saveDir.getAbsolutePath());
-            } catch (Exception e) {
-                log.error("保存失败", e);
-            }
-        });
-    }
-
-    /**
-     * 生成HTML代码并保存（流式）
-     */
-    private Flux<String> generateAndSaveHtmlCodeStream(String userMessage) {
-        Flux<String> result = aiCodeGeneratorService.generateHtmlCodeStream(userMessage);
-        StringBuilder codeBuilder = new StringBuilder();
-        return result.doOnNext(codeBuilder::append).doOnComplete(() -> {
-            try {
-                String completeCode = codeBuilder.toString();
-                HtmlCodeResult htmlCodeResult = CodeParser.parseHtmlCode(completeCode);
-                File saveDir = CodeFileSaver.saveHtmlCodeResult(htmlCodeResult);
-                log.info("保存创建完成, 目录为: {}", saveDir.getAbsolutePath());
             } catch (Exception e) {
                 log.error("保存失败", e);
             }

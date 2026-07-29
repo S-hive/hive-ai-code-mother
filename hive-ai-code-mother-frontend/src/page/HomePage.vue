@@ -73,7 +73,7 @@ const onCreate = async () => {
     const res = await addApp({ initPrompt })
     if (res.data.code === 0 && res.data.data) {
       const appId = res.data.data
-      await router.push(`/app/chat/${appId}?init=1`)
+      await router.push(`/app/chat/${appId}`)
     } else {
       message.error('创建应用失败，' + res.data.message)
     }
