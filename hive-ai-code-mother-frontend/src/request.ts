@@ -1,13 +1,14 @@
 import axios from "axios"
 import { message } from 'ant-design-vue'
 import JSONbig from 'json-bigint'
+import { API_BASE_URL, DEFAULT_REQUEST_TIMEOUT } from '@/config/env'
 
 const jsonParser = JSONbig({ storeAsString: true })
 
 // 创建 Axios 实例
 const myAxios = axios.create({
-  baseURL: 'http://localhost:8123/api',
-  timeout: 60000,
+  baseURL: API_BASE_URL,
+  timeout: DEFAULT_REQUEST_TIMEOUT,
   withCredentials: true,
   transformResponse: [
     (data) => {

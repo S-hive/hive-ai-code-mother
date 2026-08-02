@@ -5,6 +5,7 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/zh-cn'
 import { buildAppDeployUrl } from '@/utils/appPreview'
+import { formatCodeGenType } from '@/utils/CodeGenType'
 
 dayjs.extend(relativeTime)
 dayjs.locale('zh-cn')
@@ -58,7 +59,7 @@ const openDeploy = () => {
           <div class="title">{{ app.appName || '未命名应用' }}</div>
           <div class="meta">{{ app.user?.userName || '未知作者' }}</div>
         </div>
-        <a-tag v-if="app.codeGenType">{{ app.codeGenType }}</a-tag>
+        <a-tag v-if="app.codeGenType">{{ formatCodeGenType(app.codeGenType) }}</a-tag>
       </div>
     </template>
   </div>

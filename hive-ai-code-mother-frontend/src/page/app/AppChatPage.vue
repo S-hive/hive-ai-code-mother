@@ -10,18 +10,27 @@ import {
   DeleteOutlined,
   EditOutlined,
   InfoCircleOutlined,
+  ReloadOutlined,
 } from '@ant-design/icons-vue'
 import logoUrl from '@/assets/logo.png'
+import AiMessageContent from '@/components/AiMessageContent.vue'
 import AppCodeViewer from '@/components/AppCodeViewer.vue'
 import AppPromptInput from '@/components/AppPromptInput.vue'
 import { deleteApp, deleteAppByAdmin, deployApp, getAppVoById } from '@/api/appController'
 import { listAppChatHistory } from '@/api/chatHistoryController'
+import {
+  DEPLOY_REQUEST_TIMEOUT,
+  PREVIEW_POLL_INTERVAL,
+  PREVIEW_POLL_TIMEOUT,
+} from '@/config/env'
 import { useLoginUserStore } from '@/stores/loginUser'
-import { buildAppPreviewUrl } from '@/utils/appPreview'
+import { collectGeneratedFilePaths } from '@/utils/aiMessage'
+import { buildAppPreviewUrl, buildAppSourceUrl } from '@/utils/appPreview'
+import { CodeGenTypeEnum } from '@/utils/CodeGenType'
 import { streamChatToGenCode } from '@/utils/sse'
 
 type ChatMessage = {
-  id?: number
+  id?: API.Id
   role: 'user' | 'ai'
   content: string
   createTime?: string
@@ -49,6 +58,9 @@ const deployModalOpen = ref(false)
 const detailModalOpen = ref(false)
 const deployedUrl = ref('')
 const previewUrl = ref('')
+const sourceBaseUrl = ref('')
+const generatedFiles = ref<string[]>([])
+const buildingPreview = ref(false)
 const previewKey = ref(0)
 const rightMode = ref<'preview' | 'code'>('preview')
 const messagesEl = ref<HTMLElement | null>(null)
@@ -58,8 +70,10 @@ const loadingMoreHistory = ref(false)
 const historyLoadSucceeded = ref(false)
 const totalHistoryCount = ref(0)
 let cancelStream: (() => void) | null = null
+let previewToken = 0
 
 const isAdmin = computed(() => loginUserStore.loginUser.userRole === 'admin')
+const isVueProject = computed(() => app.value?.codeGenType === CodeGenTypeEnum.VUE_PROJECT)
 const isOwner = computed(() => {
   const loginUserId = loginUserStore.loginUser.id
   const ownerId = app.value?.userId
@@ -75,17 +89,65 @@ const scrollToBottom = async () => {
   }
 }
 
-const showPreview = () => {
+const isPreviewReady = async (url: string) => {
+  try {
+    const response = await fetch(`${url}index.html?t=${Date.now()}`, {
+      credentials: 'include',
+      cache: 'no-store',
+    })
+    return response.ok
+  } catch {
+    return false
+  }
+}
+
+const pollPreviewReady = async (url: string, token: number) => {
+  const deadline = Date.now() + PREVIEW_POLL_TIMEOUT
+  while (Date.now() < deadline) {
+    if (token !== previewToken) return false
+    if (await isPreviewReady(url)) return true
+    await new Promise((resolve) => setTimeout(resolve, PREVIEW_POLL_INTERVAL))
+  }
+  return false
+}
+
+const showPreview = async (waitForBuild = false) => {
   const type = app.value?.codeGenType
-  if (!type || !app.value?.id) return
-  previewUrl.value = buildAppPreviewUrl(type, app.value.id)
+  const id = app.value?.id
+  if (!type || id == null) return
+
+  const token = ++previewToken
+  sourceBaseUrl.value = buildAppSourceUrl(type, id)
+  const url = buildAppPreviewUrl(type, id)
+
+  // Vue 工程的 dist 由后端在对话结束后异步构建，就绪前加载 iframe 只会拿到 404
+  if (type === CodeGenTypeEnum.VUE_PROJECT) {
+    buildingPreview.value = waitForBuild
+    const ready = waitForBuild ? await pollPreviewReady(url, token) : await isPreviewReady(url)
+    if (token !== previewToken) return
+    buildingPreview.value = false
+    if (!ready) {
+      if (waitForBuild) {
+        message.warning('Vue 项目构建尚未完成，可稍后点击刷新预览')
+      }
+      return
+    }
+  }
+
+  previewUrl.value = url
   previewKey.value += 1
 }
 
-const updatePreviewIfNeeded = () => {
+const updatePreviewIfNeeded = (waitForBuild = false) => {
   if (shouldShowPreview.value) {
-    showPreview()
+    void showPreview(waitForBuild)
   }
+}
+
+const refreshGeneratedFiles = () => {
+  generatedFiles.value = collectGeneratedFilePaths(
+    messages.value.filter((msg) => msg.role === 'ai').map((msg) => msg.content),
+  )
 }
 
 const toChatMessage = (item: API.ChatHistory): ChatMessage => ({
@@ -103,10 +165,11 @@ const mergeHistoryMessages = (records: API.ChatHistory[], prepend = false) => {
     const existingIds = new Set(messages.value.map((item) => item.id).filter((id) => id != null))
     const uniqueBatch = batch.filter((item) => item.id == null || !existingIds.has(item.id))
     messages.value = [...uniqueBatch, ...messages.value]
-    return
+  } else {
+    messages.value = batch
   }
 
-  messages.value = batch
+  refreshGeneratedFiles()
 }
 
 const loadChatHistory = async (loadMore = false) => {
@@ -210,13 +273,15 @@ const sendMessage = (text: string) => {
     onDone: async () => {
       generating.value = false
       cancelStream = null
+      refreshGeneratedFiles()
       await loadApp()
-      updatePreviewIfNeeded()
+      updatePreviewIfNeeded(true)
     },
     onError: (err) => {
       generating.value = false
       cancelStream = null
       messages.value[aiIndex].content += `\n[错误] ${err.message}`
+      refreshGeneratedFiles()
       message.error(err.message)
     },
   })
@@ -273,8 +338,12 @@ const onDeploy = async () => {
   if (id === null || deploying.value) return
 
   deploying.value = true
+  if (isVueProject.value) {
+    message.info('Vue 项目需要先完成构建，部署可能耗时数分钟，请耐心等待')
+  }
   try {
-    const res = await deployApp({ appId: id })
+    // Vue 工程部署会在后端同步执行 npm install 与 npm run build，远超默认超时
+    const res = await deployApp({ appId: id }, { timeout: DEPLOY_REQUEST_TIMEOUT })
     if (res.data.code === 0 && res.data.data) {
       deployedUrl.value = res.data.data
       deployModalOpen.value = true
@@ -328,6 +397,7 @@ onMounted(async () => {
 
 onBeforeUnmount(() => {
   cancelStream?.()
+  previewToken += 1
 })
 </script>
 
@@ -346,6 +416,9 @@ onBeforeUnmount(() => {
         ]"
       />
       <a-space class="header-actions">
+        <a-button title="刷新预览" :loading="buildingPreview" @click="showPreview(true)">
+          <template #icon><ReloadOutlined /></template>
+        </a-button>
         <a-button @click="openDetail">
           <template #icon><InfoCircleOutlined /></template>
           应用详情
@@ -376,7 +449,10 @@ onBeforeUnmount(() => {
             class="msg"
             :class="msg.role"
           >
-            <div class="bubble">{{ msg.content }}</div>
+            <div class="bubble">
+              <AiMessageContent v-if="msg.role === 'ai'" :content="msg.content" />
+              <template v-else>{{ msg.content }}</template>
+            </div>
           </div>
           <a-spin v-if="loadingHistory" class="history-loading" tip="加载对话历史中..." />
         </div>
@@ -392,17 +468,21 @@ onBeforeUnmount(() => {
       </section>
 
       <section class="preview-pane">
+        <div v-if="rightMode === 'preview' && buildingPreview" class="preview-state">
+          <a-spin tip="Vue 项目构建中，请稍候..." />
+        </div>
         <iframe
-          v-if="rightMode === 'preview' && previewUrl"
+          v-else-if="rightMode === 'preview' && previewUrl"
           :key="previewKey"
           class="preview-frame"
           :src="previewUrl"
           title="网站预览"
         />
         <AppCodeViewer
-          v-else-if="rightMode === 'code' && previewUrl"
-          :base-url="previewUrl"
+          v-else-if="rightMode === 'code' && sourceBaseUrl"
+          :base-url="sourceBaseUrl"
           :code-gen-type="app?.codeGenType"
+          :files="generatedFiles"
           :refresh-key="previewKey"
         />
         <a-empty
@@ -585,6 +665,13 @@ onBeforeUnmount(() => {
   color: #fff;
 }
 
+/* AI 回复包含工具调用与代码块，需要更大的展示宽度 */
+.msg.ai .bubble {
+  max-width: 95%;
+  min-width: 0;
+  white-space: normal;
+}
+
 .input-wrap {
   padding: 12px 16px 16px;
   border-top: 1px solid #f0f0f0;
@@ -605,6 +692,13 @@ onBeforeUnmount(() => {
   height: 100%;
   border: none;
   background: #fff;
+}
+
+.preview-state {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .deploy-success {

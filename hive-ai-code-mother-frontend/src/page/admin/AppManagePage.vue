@@ -34,7 +34,7 @@
           <span v-else>-</span>
         </template>
         <template v-else-if="column.dataIndex === 'codeGenType'">
-          {{ getCodeGenTypeLabel(record.codeGenType) }}
+          {{ formatCodeGenType(record.codeGenType, '-') }}
         </template>
         <template v-else-if="column.dataIndex === 'user'">
           {{ record.user?.userName || record.userId }}
@@ -64,7 +64,7 @@ import {
   listAppVoByPageByAdmin,
   updateAppByAdmin,
 } from '@/api/appController'
-import { CODE_GEN_TYPE_OPTIONS, getCodeGenTypeLabel } from '@/constants/codeGenType'
+import { CODE_GEN_TYPE_OPTIONS, formatCodeGenType } from '@/utils/CodeGenType'
 
 const router = useRouter()
 

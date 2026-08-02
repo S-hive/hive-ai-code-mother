@@ -1,3 +1,5 @@
+import { API_BASE_URL } from '@/config/env'
+
 export type StreamChatParams = {
   appId: API.Id
   message: string
@@ -12,7 +14,7 @@ export type StreamChatParams = {
 export function streamChatToGenCode(params: StreamChatParams): () => void {
   const { appId, message, onMessage, onDone, onError } = params
   const url =
-    `http://localhost:8123/api/app/chat/gen/code` +
+    `${API_BASE_URL}/app/chat/gen/code` +
     `?appId=${encodeURIComponent(String(appId))}` +
     `&message=${encodeURIComponent(message)}`
 

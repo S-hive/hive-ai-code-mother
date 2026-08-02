@@ -2,19 +2,23 @@
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { CopyOutlined } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
+import { CodeGenTypeEnum } from '@/utils/CodeGenType'
 
 const props = defineProps<{
   baseUrl: string
   codeGenType?: string
   refreshKey: number
+  /** Vue 工程模式没有固定文件名，由调用方传入本次生成的文件列表 */
+  files?: string[]
 }>()
 
-const files = computed(() =>
-  props.codeGenType === 'html'
-    ? ['index.html']
-    : ['index.html', 'style.css', 'script.js'],
-)
-const currentFile = ref('index.html')
+const files = computed(() => {
+  if (props.files?.length) return props.files
+  if (props.codeGenType === CodeGenTypeEnum.VUE_PROJECT) return []
+  if (props.codeGenType === CodeGenTypeEnum.HTML) return ['index.html']
+  return ['index.html', 'style.css', 'script.js']
+})
+const currentFile = ref('')
 const sourceCode = ref('')
 const loading = ref(false)
 const errorMessage = ref('')
@@ -25,12 +29,16 @@ const lineNumbers = computed(() =>
   sourceCode.value ? sourceCode.value.split('\n').map((_, index) => index + 1) : [],
 )
 
+const emptyDescription = computed(() =>
+  files.value.length === 0 ? '本次生成还没有写入文件' : '暂无源码内容',
+)
+
 const loadCode = async () => {
   const file = currentFile.value
   const currentRequestId = ++requestId
   controller?.abort()
 
-  if (!props.baseUrl) {
+  if (!props.baseUrl || !file) {
     sourceCode.value = ''
     errorMessage.value = ''
     loading.value = false
@@ -76,11 +84,15 @@ const copySourceCode = async () => {
   }
 }
 
-watch(files, (availableFiles) => {
-  if (!availableFiles.includes(currentFile.value)) {
-    currentFile.value = availableFiles[0]
-  }
-})
+watch(
+  files,
+  (availableFiles) => {
+    if (!availableFiles.includes(currentFile.value)) {
+      currentFile.value = availableFiles[0] ?? ''
+    }
+  },
+  { immediate: true },
+)
 
 watch([() => props.baseUrl, currentFile, () => props.refreshKey], loadCode, { immediate: true })
 
@@ -111,7 +123,7 @@ onBeforeUnmount(() => {
       show-icon
       :message="errorMessage"
     />
-    <a-empty v-else-if="!sourceCode" class="viewer-state" description="暂无源码内容" />
+    <a-empty v-else-if="!sourceCode" class="viewer-state" :description="emptyDescription" />
     <div v-else class="code-scroll">
       <div class="code-content">
         <pre class="line-numbers" aria-hidden="true"><code>{{ lineNumbers.join('\n') }}</code></pre>
