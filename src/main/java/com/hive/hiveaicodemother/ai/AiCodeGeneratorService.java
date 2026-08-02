@@ -2,7 +2,9 @@ package com.hive.hiveaicodemother.ai;
 
 import com.hive.hiveaicodemother.ai.model.HtmlCodeResult;
 import com.hive.hiveaicodemother.ai.model.MultiFileCodeResult;
+import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
 import reactor.core.publisher.Flux;
 
 public interface AiCodeGeneratorService {
@@ -42,5 +44,14 @@ public interface AiCodeGeneratorService {
      */
     @SystemMessage(fromResource = "prompt/codegen-multi-system-prompt.txt")
     Flux<String> generateMaltiFileCodeStream(String userMessage);
+
+    /**
+     * 流式生成 Vue 项目代码
+     *
+     * @param userMessage 用户提示词
+     * @return AI输出结果
+     */
+    @SystemMessage(fromResource = "prompt/codegen-vue-project-prompt.txt")
+    Flux<String> generateVueProjectCodeStream(@MemoryId Long appId, @UserMessage String userMessage);
 
 }
