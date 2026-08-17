@@ -1,23 +1,17 @@
 declare namespace API {
-  /**
-   * 后端主键为 Java Long，响应经 json-bigint 解析后为字符串，请求时两种形式都要允许。
-   * 注意：本文件由 openapi2ts 生成，重新生成后需要手动恢复 Id 相关改动。
-   */
-  type Id = number | string
-
   type AppAddRequest = {
     initPrompt?: string
   }
 
   type AppAdminUpdateRequest = {
-    id?: Id
+    id?: number
     appName?: string
     cover?: string
     priority?: number
   }
 
   type AppDeployRequest = {
-    appId?: Id
+    appId?: number
   }
 
   type AppQueryRequest = {
@@ -25,23 +19,23 @@ declare namespace API {
     pageSize?: number
     sortField?: string
     sortOrder?: string
-    id?: Id
+    id?: number
     appName?: string
     cover?: string
     initPrompt?: string
     codeGenType?: string
     deployKey?: string
     priority?: number
-    userId?: Id
+    userId?: number
   }
 
   type AppUpdateRequest = {
-    id?: Id
+    id?: number
     appName?: string
   }
 
   type AppVO = {
-    id?: Id
+    id?: number
     appName?: string
     cover?: string
     initPrompt?: string
@@ -49,7 +43,7 @@ declare namespace API {
     deployKey?: string
     deployedTime?: string
     priority?: number
-    userId?: Id
+    userId?: number
     createTime?: string
     updateTime?: string
     user?: UserVO
@@ -75,7 +69,7 @@ declare namespace API {
 
   type BaseResponseLong = {
     code?: number
-    data?: Id
+    data?: number
     message?: string
   }
 
@@ -116,11 +110,11 @@ declare namespace API {
   }
 
   type ChatHistory = {
-    id?: Id
+    id?: number
     message?: string
     messageType?: string
-    appId?: Id
-    userId?: Id
+    appId?: number
+    userId?: number
     createTime?: string
     updateTime?: string
     isDelete?: number
@@ -131,51 +125,55 @@ declare namespace API {
     pageSize?: number
     sortField?: string
     sortOrder?: string
-    id?: Id
+    id?: number
     message?: string
     messageType?: string
-    appId?: Id
-    userId?: Id
+    appId?: number
+    userId?: number
     lastCreateTime?: string
   }
 
   type chatToGenCodeParams = {
-    appId: Id
+    appId: number
     message: string
   }
 
   type DeleteRequest = {
-    id?: Id
+    id?: number
+  }
+
+  type downloadAppCodeParams = {
+    appId: number
   }
 
   type getAppVOByIdByAdminParams = {
-    id: Id
+    id: number
   }
 
   type getAppVOByIdParams = {
-    id: Id
+    id: number
   }
 
   type getInfoParams = {
-    id: Id
+    id: number
   }
 
   type getUserByIdParams = {
-    id: Id
+    id: number
   }
 
   type getUserVOByIdParams = {
-    id: Id
+    id: number
   }
 
   type listAppChatHistoryParams = {
-    appId: Id
+    appId: number
     pageSize?: number
     lastCreateTime?: string
   }
 
   type LoginUserVO = {
-    id?: Id
+    id?: number
     userAccount?: string
     userName?: string
     userAvatar?: string
@@ -226,7 +224,7 @@ declare namespace API {
   }
 
   type removeParams = {
-    id: Id
+    id: number
   }
 
   type ServerSentEventString = true
@@ -236,7 +234,7 @@ declare namespace API {
   }
 
   type User = {
-    id?: Id
+    id?: number
     userAccount?: string
     userPassword?: string
     userName?: string
@@ -267,7 +265,7 @@ declare namespace API {
     pageSize?: number
     sortField?: string
     sortOrder?: string
-    id?: Id
+    id?: number
     userName?: string
     userAccount?: string
     userProfile?: string
@@ -281,7 +279,7 @@ declare namespace API {
   }
 
   type UserUpdateRequest = {
-    id?: Id
+    id?: number
     userName?: string
     userAvatar?: string
     userProfile?: string
@@ -289,7 +287,7 @@ declare namespace API {
   }
 
   type UserVO = {
-    id?: Id
+    id?: number
     userAccount?: string
     userName?: string
     userAvatar?: string

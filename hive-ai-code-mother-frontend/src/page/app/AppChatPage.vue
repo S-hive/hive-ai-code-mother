@@ -8,6 +8,7 @@ import {
   CloudUploadOutlined,
   CopyOutlined,
   DeleteOutlined,
+  DownloadOutlined,
   EditOutlined,
   InfoCircleOutlined,
   ReloadOutlined,
@@ -27,6 +28,7 @@ import { useLoginUserStore } from '@/stores/loginUser'
 import { collectGeneratedFilePaths } from '@/utils/aiMessage'
 import { buildAppPreviewUrl, buildAppSourceUrl } from '@/utils/appPreview'
 import { CodeGenTypeEnum } from '@/utils/CodeGenType'
+import { downloadAppCodeZip } from '@/utils/downloadAppCode'
 import { streamChatToGenCode } from '@/utils/sse'
 
 type ChatMessage = {
@@ -53,6 +55,7 @@ const app = ref<API.AppVO>()
 const messages = ref<ChatMessage[]>([])
 const input = ref('')
 const generating = ref(false)
+const downloading = ref(false)
 const deploying = ref(false)
 const deployModalOpen = ref(false)
 const detailModalOpen = ref(false)
@@ -333,6 +336,22 @@ const onDelete = () => {
   })
 }
 
+const onDownload = async () => {
+  const id = appId.value
+  if (id === null || downloading.value) return
+
+  downloading.value = true
+  try {
+    await downloadAppCodeZip(id)
+    message.success('代码下载成功')
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : '请稍后重试'
+    message.error('下载失败，' + errorMessage)
+  } finally {
+    downloading.value = false
+  }
+}
+
 const onDeploy = async () => {
   const id = appId.value
   if (id === null || deploying.value) return
@@ -422,6 +441,10 @@ onBeforeUnmount(() => {
         <a-button @click="openDetail">
           <template #icon><InfoCircleOutlined /></template>
           应用详情
+        </a-button>
+        <a-button :loading="downloading" :disabled="downloading" @click="onDownload">
+          <template #icon><DownloadOutlined /></template>
+          下载代码
         </a-button>
         <a-button type="primary" :loading="deploying" :disabled="deploying" @click="onDeploy">
           <template #icon><CloudUploadOutlined /></template>
