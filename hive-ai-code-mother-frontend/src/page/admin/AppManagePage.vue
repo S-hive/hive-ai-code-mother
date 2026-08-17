@@ -30,7 +30,7 @@
     >
       <template #bodyCell="{ column, record }">
         <template v-if="column.dataIndex === 'cover'">
-          <a-image v-if="record.cover" :src="record.cover" :width="80" />
+          <a-image v-if="record.cover" :src="normalizeCoverUrl(record.cover)" :width="80" />
           <span v-else>-</span>
         </template>
         <template v-else-if="column.dataIndex === 'codeGenType'">
@@ -65,6 +65,7 @@ import {
   updateAppByAdmin,
 } from '@/api/appController'
 import { CODE_GEN_TYPE_OPTIONS, formatCodeGenType } from '@/utils/CodeGenType'
+import { normalizeCoverUrl } from '@/utils/coverUrl'
 
 const router = useRouter()
 

@@ -6,6 +6,7 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/zh-cn'
 import { buildAppDeployUrl } from '@/utils/appPreview'
 import { formatCodeGenType } from '@/utils/CodeGenType'
+import { normalizeCoverUrl } from '@/utils/coverUrl'
 
 dayjs.extend(relativeTime)
 dayjs.locale('zh-cn')
@@ -16,6 +17,8 @@ const props = defineProps<{
 }>()
 
 const router = useRouter()
+
+const coverUrl = computed(() => normalizeCoverUrl(props.app.cover))
 
 const timeText = computed(() => {
   if (!props.app.createTime) return ''
@@ -37,8 +40,8 @@ const openDeploy = () => {
   <div class="app-card" @click="goChat">
     <div class="cover-wrap" tabindex="0">
       <img
-        v-if="app.cover"
-        :src="app.cover"
+        v-if="coverUrl"
+        :src="coverUrl"
         :alt="app.appName"
         class="cover"
       />

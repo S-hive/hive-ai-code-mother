@@ -6,20 +6,13 @@
 
 _**User**_
 
-/review-bugbot  Review changes in the repository at "d:\\Liyalin\\javafail\\hive-ai-code-mother".
+/review-bugbot Review changes in the repository at "d:\\Liyalin\\javafail\\hive-ai-code-mother".
 
 ---
 
-_**Agent (claude-opus-5)**_
+_**Agent (composer-2.5)**_
 
 I'll run a Bugbot review on the branch changes in this repository.
-
-_**Agent (claude-opus-5)**_
-
-<tool-use data-tool-type="unknown" data-tool-name="task_v2"><details>
-<summary>Tool use: **task_v2**</summary>
-Cancelled
-</details></tool-use>
 
 ---
 
@@ -29,17 +22,11 @@ _**User**_
 
 ---
 
-_**Agent (claude-opus-5)**_
-
-<think><details><summary>Thought Process</summary>
-The user typed "/brainstorming" but that's not a recognized skill. They likely want to brainstorm something, though it's unclear what the topic is. Given the context of the AI code generator project and the interrupted bugbot review, I should ask what specifically they want to explore before diving in.
-</details></think>
-
-_**Agent (claude-opus-5)**_
+_**Agent (composer-2.5)**_
 
 There's no `brainstorming` skill available in this workspace, so I'll treat this as a request to brainstorm together. Let me get a quick read on the project so the ideas are grounded rather than generic.
 
-_**Agent (claude-opus-5)**_
+_**Agent (composer-2.5)**_
 
 <tool-use data-tool-type="unknown" data-tool-name="task_v2"><details>
 <summary>Tool use: **task_v2**</summary>
@@ -59,10 +46,2398 @@ Additional data:
 
 ```json
 {
-  "status": "loading",
-  "subagentComposerId": "4cf80e77-f832-4c2c-b4ca-27c5e71ad7b5"
+  "status": "success",
+  "terminationReason": "completed"
 }
 ```
-Status: **loading**
+Result:
+
+```json
+{
+  "agentId": "4cf80e77-f832-4c2c-b4ca-27c5e71ad7b5"
+}
+```
+Status: **completed**
 
 </details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+I couldn't find a `brainstorming` skill installed, so I've treated this as an open brainstorming session and read the codebase first so the ideas are specific to what you actually have.
+
+**Where the project stands.** You have a working AI app-builder: Spring Boot 3.5 + LangChain4j 1.1 backend, Vue 3 frontend, three generation modes (`html`, `multi_file`, `vue_project`), SSE streaming, Redis-backed chat memory, and a deploy step that copies build output to a served directory. Your uncommitted work is the Vue-project path: tool-calling file writes plus the JSON stream-message protocol (`ai_response` / `tool_request` / `tool_executed`) and the handler split between `SimpleTextStreamHandler` and `JsonMessageStreamHandler`.
+
+**The most interesting gaps I noticed**, roughly in order of how much they'd bite you:
+
+The frontend doesn't know Vue mode exists. `codeGenType.ts` lists only `html` and `multi_file`, but `AppController.addApp` hardcodes every new app to `VUE_PROJECT`. So the newest, most capable mode is the default and simultaneously invisible in the UI.
+
+You've vendored eight LangChain4j classes under `src/main/java/dev/langchain4j/` to patch streaming and tool-call behavior, and one of them still has a `System.out.println("OLOLO " + delta.toolCalls())`. Those files are deleted in your working tree per git status, which suggests you're already backing this out — worth deciding deliberately whether the patches go upstream, stay as documented overrides, or disappear because a version bump fixed them.
+
+The Vue build runs asynchronously after the stream closes, and nothing tells the user whether `npm run build` succeeded. A failed build currently looks identical to a slow one.
+
+`FileWriteTool` is your only tool. Adding read-file, list-directory, and edit-file turns the AI from a one-shot writer into something that can iterate on its own output — which is the difference between "generates an app" and "fixes the bug you just described."
+
+There's no `application.yml` in the repo and no README, so nobody else can run this.
+
+Where would you like to dig in?
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ask_question"><details>
+<summary>Tool use: **ask_question**</summary>
+
+Parameters:
+
+```json
+{
+  "questions": [
+    {
+      "allowMultiple": true,
+      "id": "topic",
+      "options": [
+        {
+          "id": "vue_e2e",
+          "label": "Finishing Vue project mode end-to-end (frontend mode selector, build status feedback, non-stream path) (Recommended)"
+        },
+        {
+          "id": "tools",
+          "label": "Expanding the AI's toolset — read/list/edit files so it can iterate and self-correct"
+        },
+        {
+          "id": "l4j",
+          "label": "What to do about the vendored LangChain4j patches under dev/langchain4j"
+        },
+        {
+          "id": "quality",
+          "label": "Reliability and testing — handler unit tests, mocked AI tests, error handling in the SSE path"
+        },
+        {
+          "id": "product",
+          "label": "Product direction — new features and where this platform could go next"
+        },
+        {
+          "id": "onboarding",
+          "label": "Making the repo runnable by others — config template, README, setup docs"
+        },
+        {
+          "id": "open",
+          "label": "Something else entirely — I have a topic in mind"
+        }
+      ],
+      "prompt": "What should we brainstorm about?"
+    }
+  ]
+}
+```
+Additional data:
+
+```json
+{
+  "status": "submitted"
+}
+```
+Result:
+
+```json
+{
+  "answers": [
+    {
+      "freeformText": "我修改了后端的接口，请根据我的后端生成适配的前端代码。",
+      "questionId": "topic"
+    }
+  ]
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+明白了 — 你改了后端接口，需要前端跟着适配。让我先看清楚后端到底改了什么，再看前端现在是怎么对接的。
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\controller\AppController.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: git --no-pager diff --stat HEAD &amp;&amp; echo &#34;=====UNTRACKED=====&#34; &amp;&amp; git --no-pager status --porcelain</summary>
+```bash
+git --no-pager diff --stat HEAD && echo "=====UNTRACKED=====" && git --no-pager status --porcelain
+```
+
+```
+����λ�� C:\Users\Liyal\AppData\Local\Temp\ps-script-f40d409c-a5ff-4e1c-aa65-ad0714d3c96c.ps1:7 �ַ�: 33
++ git --no-pager diff --stat HEAD && echo "=====UNTRACKED=====" && git  ...
++                                 ~~
+��ǡ�&&�����Ǵ˰汾�е���Ч���ָ�����
+����λ�� C:\Users\Liyal\AppData\Local\Temp\ps-script-f40d409c-a5ff-4e1c-aa65-ad0714d3c96c.ps1:7 �ַ�: 63
++ ...  --no-pager diff --stat HEAD && echo "=====UNTRACKED=====" && git --n ...
++                                                                ~~
+��ǡ�&&�����Ǵ˰汾�е���Ч���ָ�����
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidEndOfLine
+ 
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+PowerShell doesn't take `&&`; let me get the diff separately and read the new streaming classes.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\handler\JsonMessageStreamHandler.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\model\message\StreamMessageTypeEnum.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: git --no-pager status --porcelain; echo &#34;=====DIFF STAT=====&#34;; git --no-pager diff --stat HEAD</summary>
+```bash
+git --no-pager status --porcelain; echo "=====DIFF STAT====="; git --no-pager diff --stat HEAD
+```
+
+```
+AM .specstory/history/2026-08-02_13-31-40Z-repository-review-changes.md
+A  .specstory/history/2026-08-02_13-31-45Z-bugbot.md
+MM .specstory/statistics.json
+M  hive-ai-code-mother-frontend/.specstory/history/2026-07-21_05-33-45Z-hash-hash-1-1.md
+A  hive-ai-code-mother-frontend/src/config/env.ts
+A  hive-ai-code-mother-frontend/src/utils/CodeGenType.ts
+A  src/main/java/com/hive/hiveaicodemother/core/builder/VueProjectBuilder.java
+M  src/main/java/com/hive/hiveaicodemother/core/handler/JsonMessageStreamHandler.java
+M  src/main/java/com/hive/hiveaicodemother/service/impl/AppServiceImpl.java
+?? .specstory/history/2026-08-02_14-47-00Z-explore-project-structure.md
+=====DIFF STAT=====
+ ...26-08-02_13-31-40Z-repository-review-changes.md |  68 ++++++++++
+ .specstory/history/2026-08-02_13-31-45Z-bugbot.md  |  10 ++
+ .specstory/statistics.json                         |  18 +++
+ .../history/2026-07-21_05-33-45Z-hash-hash-1-1.md  |   2 +-
+ hive-ai-code-mother-frontend/src/config/env.ts     |  61 +++++++++
+ .../src/utils/CodeGenType.ts                       |  61 +++++++++
+ .../core/builder/VueProjectBuilder.java            | 138 +++++++++++++++++++++
+ .../core/handler/JsonMessageStreamHandler.java     |   8 ++
+ .../service/impl/AppServiceImpl.java               |  23 +++-
+ 9 files changed, 385 insertions(+), 4 deletions(-)
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Interesting — some frontend adaptation files are already staged. Let me look at the backend service diff and the current frontend state.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\CodeGenType.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\config\env.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: git --no-pager diff HEAD -- src/main/java/com/hive/hiveaicodemother/service/impl/AppServiceImpl.java</summary>
+```bash
+git --no-pager diff HEAD -- src/main/java/com/hive/hiveaicodemother/service/impl/AppServiceImpl.java
+```
+
+```
+diff --git a/src/main/java/com/hive/hiveaicodemother/service/impl/AppServiceImpl.java b/src/main/java/com/hive/hiveaicodemother/service/impl/AppServiceImpl.java
+index 709d0e0..ced3621 100644
+--- a/src/main/java/com/hive/hiveaicodemother/service/impl/AppServiceImpl.java
++++ b/src/main/java/com/hive/hiveaicodemother/service/impl/AppServiceImpl.java
+@@ -7,6 +7,7 @@ import cn.hutool.core.util.RandomUtil;
+ import cn.hutool.core.util.StrUtil;
+ import com.hive.hiveaicodemother.constant.AppConstant;
+ import com.hive.hiveaicodemother.core.AiCodeGeneratorFacade;
++import com.hive.hiveaicodemother.core.builder.VueProjectBuilder;
+ import com.hive.hiveaicodemother.core.handler.StreamHandlerExecutor;
+ import com.hive.hiveaicodemother.exception.BusinessException;
+ import com.hive.hiveaicodemother.exception.ErrorCode;
+@@ -59,6 +60,9 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
+     @Resource
+     private StreamHandlerExecutor streamHandlerExecutor;
+ 
++    @Resource
++    private VueProjectBuilder vueProjectBuilder;
++
+     @Override
+     public String deployApp(Long appId, User loginUser) {
+         // 1. 参数校验
+@@ -86,21 +90,34 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
+         if (!sourceDir.exists() || !sourceDir.isDirectory()) {
+             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "应用代码不存在，请先生成代码");
+         }
+-        // 7. 复制文件到部署目录
++        // 7. Vue 项目特殊处理: 执行构建
++        CodeGenTypeEnum codeGenTypeEnum = CodeGenTypeEnum.getEnumByValue(codeGenType);
++        if (codeGenTypeEnum == CodeGenTypeEnum.VUE_PROJECT) {
++            // Vue 项目需要构建
++            boolean buildSuccess = vueProjectBuilder.buildProject(sourceDirPath);
++            ThrowUtils.throwIf(!buildSuccess, ErrorCode.SYSTEM_ERROR, "Vue 项目构建失败，请检查代码和依赖");
++            // 检查 dist 目录是否存在
++            File distDir = new File(sourceDirPath, "dist");
++            ThrowUtils.throwIf(!distDir.exists(), ErrorCode.SYSTEM_ERROR, "Vue 项目构建完成但
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+`src/config/env.ts` contains a copy-paste of the CodeGenType content rather than env config — I'll note that. Let me survey the frontend to see what's actually wired up.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\builder\VueProjectBuilder.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="task_v2"><details>
+<summary>Tool use: **task_v2**</summary>
+
+Parameters:
+
+```json
+{
+  "description": "Survey frontend chat integration",
+  "model": "composer-2.5-fast",
+  "name": "explore",
+  "prompt": "Explore the Vue 3 frontend at d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend with \"very thorough\" thoroughness. I need to adapt the frontend to recent backend changes, so I need exact current contents and file paths.\n\nPlease report back with FULL FILE CONTENTS (or the relevant large excerpts) of:\n\n1. `src/utils/` — list every file. In particular, is there an existing `codeGenType.ts` (lowercase c) in addition to the new `CodeGenType.ts` (uppercase C)? If so show its contents. Also show `src/utils/sse.ts` if it exists.\n2. `src/config/` — list every file and show contents.\n3. The app chat page (likely `src/pages/app/AppChatPage.vue`) — show the FULL contents. I need to see: how it opens the SSE connection to `/app/chat/gen/code`, how it parses events (the `d` field wrapper and the `done` event), how it renders messages, how it builds the preview URL, and how it handles deployment.\n4. Any other page that references codeGenType: `src/pages/app/AppEditPage.vue`, `src/pages/admin/AppManagePage.vue`, `src/pages/HomePage.vue`, and any app-creation UI. Show the parts that reference codeGenType or formatCodeGenType.\n5. `src/api/` — list files, and show `src/api/appController.ts` and `src/api/typings.d.ts` (or wherever AppVO / AppAddRequest types are defined).\n6. `src/request.ts` or wherever axios base URL is configured. Show contents.\n7. `vite.config.ts` and any `.env*` files — show contents (I need to know the dev server proxy and base URL setup).\n8. Search the whole frontend src for these strings and report every hit with file path and line: \"codeGenType\", \"CodeGenType\", \"vue_project\", \"multi_file\", \"static/\", \"EventSource\", \"deployKey\", \"1234\" (port numbers), \"8123\" (backend port).\n9. Are there any Vue components under `src/components/` related to chat messages, markdown rendering, or code display? List them and show any markdown-rendering component.\n\nReport exact file paths. Do not modify any files.",
+  "subagentType": "explore"
+}
+```
+Additional data:
+
+```json
+{
+  "status": "success",
+  "terminationReason": "completed"
+}
+```
+Result:
+
+```json
+{
+  "agentId": "cbc8e79f-a918-44fd-9108-0654a998c7d4"
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\controller\StaticResourceController.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\package.json</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now I have the full picture. Let me read the remaining frontend files I'll need to touch.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCodeViewer.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\request.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCodeViewer.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\request.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCard.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\constants\codeGenType.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\appController.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\admin\AppManagePage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+I have the full picture now. Here's what's out of sync and what I'll fix.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="todo_write"><details>
+<summary>Tool use: **todo_write**</summary>
+
+Parameters:
+
+```json
+{
+  "todos": [
+    {
+      "content": "Rewrite src/config/env.ts as real base-URL config (it's currently a copy-paste of CodeGenType)",
+      "id": "1",
+      "status": "in_progress"
+    },
+    {
+      "content": "Consolidate code-gen type definitions into src/utils/CodeGenType.ts, add vue_project everywhere, delete src/constants/codeGenType.ts",
+      "id": "2",
+      "status": "pending"
+    },
+    {
+      "content": "Fix preview URL for vue_project (serve dist/) and route all hardcoded localhost:8123 through env config",
+      "id": "3",
+      "status": "pending"
+    },
+    {
+      "content": "Add parser + component for the new tool-call stream format (选择工具 / 工具调用 写入文件 + code fences)",
+      "id": "4",
+      "status": "pending"
+    },
+    {
+      "content": "Teach AppCodeViewer to show the Vue project's generated file list",
+      "id": "5",
+      "status": "pending"
+    },
+    {
+      "content": "Update AppChatPage: structured rendering, wait for async Vue build before preview, long deploy timeout",
+      "id": "6",
+      "status": "pending"
+    },
+    {
+      "content": "Run type-check and lint",
+      "id": "7",
+      "status": "pending"
+    }
+  ]
+}
+```
+Result:
+
+```json
+{
+  "finalTodos": [
+    {
+      "content": "Rewrite src/config/env.ts as real base-URL config (it's currently a copy-paste of CodeGenType)",
+      "id": "1",
+      "status": "in_progress"
+    },
+    {
+      "content": "Consolidate code-gen type definitions into src/utils/CodeGenType.ts, add vue_project everywhere, delete src/constants/codeGenType.ts",
+      "id": "2",
+      "status": "pending"
+    },
+    {
+      "content": "Fix preview URL for vue_project (serve dist/) and route all hardcoded localhost:8123 through env config",
+      "id": "3",
+      "status": "pending"
+    },
+    {
+      "content": "Add parser + component for the new tool-call stream format (选择工具 / 工具调用 写入文件 + code fences)",
+      "id": "4",
+      "status": "pending"
+    },
+    {
+      "content": "Teach AppCodeViewer to show the Vue project's generated file list",
+      "id": "5",
+      "status": "pending"
+    },
+    {
+      "content": "Update AppChatPage: structured rendering, wait for async Vue build before preview, long deploy timeout",
+      "id": "6",
+      "status": "pending"
+    },
+    {
+      "content": "Run type-check and lint",
+      "id": "7",
+      "status": "pending"
+    }
+  ],
+  "success": true
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Starting with the config layer.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\config\env.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\CodeGenType.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now removing the duplicate constants module and pointing the admin page at the single source.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="delete_file"><details>
+<summary>Tool use: **delete_file**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\admin\AppManagePage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\admin\AppManagePage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now the preview URLs — this is the important one, since a Vue project's servable output lives in `dist/`, not at the project root.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\appPreview.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\sse.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\sse.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\request.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now the parser for the new stream format. The Vue-project stream is no longer plain text — it carries tool-selection markers and fenced file writes.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\aiMessage.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now the component that renders those segments as file cards instead of a wall of raw text.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AiMessageContent.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="todo_write"><details>
+<summary>Tool use: **todo_write**</summary>
+
+Parameters:
+
+```json
+{
+  "todos": [
+    {
+      "content": "Rewrite src/config/env.ts as real base-URL config (it's currently a copy-paste of CodeGenType)",
+      "id": "1",
+      "status": "completed"
+    },
+    {
+      "content": "Consolidate code-gen type definitions into src/utils/CodeGenType.ts, add vue_project everywhere, delete src/constants/codeGenType.ts",
+      "id": "2",
+      "status": "completed"
+    },
+    {
+      "content": "Fix preview URL for vue_project (serve dist/) and route all hardcoded localhost:8123 through env config",
+      "id": "3",
+      "status": "completed"
+    },
+    {
+      "content": "Add parser + component for the new tool-call stream format (选择工具 / 工具调用 写入文件 + code fences)",
+      "id": "4",
+      "status": "completed"
+    },
+    {
+      "content": "Teach AppCodeViewer to show the Vue project's generated file list",
+      "id": "5",
+      "status": "in_progress"
+    },
+    {
+      "content": "Update AppChatPage: structured rendering, wait for async Vue build before preview, long deploy timeout",
+      "id": "6",
+      "status": "pending"
+    },
+    {
+      "content": "Run type-check and lint",
+      "id": "7",
+      "status": "pending"
+    }
+  ]
+}
+```
+Result:
+
+```json
+{
+  "finalTodos": [
+    {
+      "content": "Rewrite src/config/env.ts as real base-URL config (it's currently a copy-paste of CodeGenType)",
+      "id": "1",
+      "status": "completed"
+    },
+    {
+      "content": "Consolidate code-gen type definitions into src/utils/CodeGenType.ts, add vue_project everywhere, delete src/constants/codeGenType.ts",
+      "id": "2",
+      "status": "completed"
+    },
+    {
+      "content": "Fix preview URL for vue_project (serve dist/) and route all hardcoded localhost:8123 through env config",
+      "id": "3",
+      "status": "completed"
+    },
+    {
+      "content": "Add parser + component for the new tool-call stream format (选择工具 / 工具调用 写入文件 + code fences)",
+      "id": "4",
+      "status": "completed"
+    },
+    {
+      "content": "Teach AppCodeViewer to show the Vue project's generated file list",
+      "id": "5",
+      "status": "in_progress"
+    },
+    {
+      "content": "Update AppChatPage: structured rendering, wait for async Vue build before preview, long deploy timeout",
+      "id": "6",
+      "status": "pending"
+    },
+    {
+      "content": "Run type-check and lint",
+      "id": "7",
+      "status": "pending"
+    }
+  ],
+  "initialTodos": [
+    {
+      "content": "Rewrite src/config/env.ts as real base-URL config (it's currently a copy-paste of CodeGenType)",
+      "id": "1",
+      "status": "in_progress"
+    },
+    {
+      "content": "Consolidate code-gen type definitions into src/utils/CodeGenType.ts, add vue_project everywhere, delete src/constants/codeGenType.ts",
+      "id": "2",
+      "status": "pending"
+    },
+    {
+      "content": "Fix preview URL for vue_project (serve dist/) and route all hardcoded localhost:8123 through env config",
+      "id": "3",
+      "status": "pending"
+    },
+    {
+      "content": "Add parser + component for the new tool-call stream format (选择工具 / 工具调用 写入文件 + code fences)",
+      "id": "4",
+      "status": "pending"
+    },
+    {
+      "content": "Teach AppCodeViewer to show the Vue pro
+… (output truncated)
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCodeViewer.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCodeViewer.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCodeViewer.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCodeViewer.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCodeViewer.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now the chat page itself — this is where most of the adaptation lands.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now the preview logic, which has to account for the Vue build running asynchronously after the stream ends.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now the deploy call, which for Vue projects now blocks on a full `npm install` plus build.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now the template: structured AI messages, a build-in-progress state, and a manual preview refresh.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Finally the app card, which was showing the raw `vue_project` string.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCard.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\AppCard.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now let me type-check the whole frontend.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: npm run type-check</summary>
+```bash
+npm run type-check
+```
+
+```
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> hive-ai-code-mother-frontend@0.0.0 type-check
+> vue-tsc --build
+
+src/page/admin/AppManagePage.vue(121,26): error TS2694: Namespace 'API' has no exported member 'Id'.
+src/page/admin/AppManagePage.vue(126,29): error TS2694: Namespace 'API' has no exported member 'Id'.
+src/page/admin/AppManagePage.vue(143,28): error TS2694: Namespace 'API' has no exported member 'Id'.
+src/page/admin/UserManagePage.vue(135,34): error TS2694: Namespace 'API' has no exported member 'Id'.
+src/page/app/AppChatPage.vue(246,36): error TS2322: Type 'string' is not assignable to type 'number'.
+src/page/app/AppChatPage.vue(320,38): error TS2322: Type 'string' is not assignable to type 'number'.
+src/page/app/AppChatPage.vue(321,31): error TS2322: Type 'string' is not assignable to type 'number'.
+src/page/app/AppChatPage.vue(346,35): error TS2322: Type 'string' is not assignable to type 'number'.
+src/page/app/AppEditPage.vue(41,37): error TS2322: Type 'string' is not assignable to type 'number'.
+src/page/app/AppEditPage.vue(42,30): error TS2322: Type 'string' is not assignable to type 'number'.
+src/page/app/AppEditPage.vue(67,11): error TS2322: Type 'string' is not assignable to type 'number'.
+src/page/app/AppEditPage.vue(73,11): error TS2322: Type 'string' is not assignable to type 'number'.
+src/utils/appPreview.ts(7,67): error TS2694: Namespace 'API' has no exported member 'Id'.
+src/utils/appPreview.ts(15,68): error TS2694: Namespace 'API' has no exported member 'Id'.
+src/utils/sse.ts(4,14): error TS2694: Namespace 'API' has no exported member 'Id'.
+npm notice
+npm notice New minor version of npm available! 11.12.1 -> 11.19.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.19.0
+npm notice To update run: npm install -g npm@11.19.0
+npm notice
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+These errors are pre-existing — `AppEditPage.vue` and `UserManagePage.vue` are files I never touched. The generated API typings lost the `API.Id` type, so the build is broken on the baseline. Let me look.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Confirmed: the regenerated OpenAPI typings dropped the `Id` type. Since `json-bigint` parses Java `Long` IDs as strings, every ID field needs to accept both. Let me restore that.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\typings.d.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: npm run type-check</summary>
+```bash
+npm run type-check
+```
+
+```
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> hive-ai-code-mother-frontend@0.0.0 type-check
+> vue-tsc --build
+
+src/page/app/AppChatPage.vue(154,3): error TS2322: Type 'Id | undefined' is not assignable to type 'number | undefined'.
+  Type 'string' is not assignable to type 'number'.
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: npm run type-check</summary>
+```bash
+npm run type-check
+```
+
+```
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> hive-ai-code-mother-frontend@0.0.0 type-check
+> vue-tsc --build
+
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Type-check passes now. Let me run lint and a production build to be sure.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: npm run lint</summary>
+```bash
+npm run lint
+```
+
+```
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> hive-ai-code-mother-frontend@0.0.0 lint
+> eslint . --fix
+
+
+D:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\appController.ts
+  1:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+D:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\chatHistoryController.ts
+  1:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+D:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\healthController.ts
+  1:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+D:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\index.ts
+  1:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+D:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\staticResourceController.ts
+  1:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+D:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\api\userController.ts
+  1:1  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+D:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\stores\loginUser.ts
+  19:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 7 problems (7 errors, 0 warn
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+All seven lint errors are pre-existing (generated API files and `loginUser.ts`); none come from my changes. Let me confirm the production build compiles.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: npm run build-only</summary>
+```bash
+npm run build-only
+```
+
+```
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> hive-ai-code-mother-frontend@0.0.0 build-only
+> vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 3308 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          0.45 kB │ gzip:   0.33 kB
+dist/assets/logo-B7Wluc1U.png           28.46 kB
+dist/assets/background-Ka9zUI9d.png    804.64 kB
+dist/assets/index-DPwfvJ5q.css          17.77 kB │ gzip:   4.77 kB
+dist/assets/index-Dv0dbap8.js        1,647.06 kB │ gzip: 511.94 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 20.79s
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+The build passes. Let me verify the parser against the exact string format the backend emits.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\parser-check.mjs</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: node parser-check.mjs</summary>
+```bash
+node parser-check.mjs
+```
+
+```
+file:///D:/Liyalin/javafail/hive-ai-code-mother/hive-ai-code-mother-frontend/parser-check-impl.mjs:25
+const appendText = (segments, raw: string) => {
+                                 ^
+
+SyntaxError: Unexpected token ':'
+    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:146:18)
+    at #translate (node:internal/modules/esm/loader:497:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:544:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:148:19)
+
+Node.js v20.20.2
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\parser-check.mjs</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: node parser-check.mjs</summary>
+```bash
+node parser-check.mjs
+```
+
+```
+--- 完整消息 ---
+[
+  {
+    "kind": "text",
+    "text": "好的，我来创建一个待办应用。"
+  },
+  {
+    "kind": "tool-select",
+    "toolName": "写入文件"
+  },
+  {
+    "kind": "file",
+    "path": "src/App.vue",
+    "language": "vue",
+    "code": "<template>\n  <div>hi</div>\n</template>"
+  },
+  {
+    "kind": "tool-select",
+    "toolName": "写入文件"
+  },
+  {
+    "kind": "file",
+    "path": "package.json",
+    "language": "json",
+    "code": "{\n  \"name\": \"todo\"\n}"
+  },
+  {
+    "kind": "text",
+    "text": "已经生成完毕，你可以预览效果。"
+  }
+]
+--- 文件列表 ---
+[ 'src/App.vue', 'package.json' ]
+--- 流式未闭合 ---
+[
+  {
+    "kind": "text",
+    "text": "开始生成"
+  },
+  {
+    "kind": "tool-select",
+    "toolName": "写入文件"
+  },
+  {
+    "kind": "file",
+    "path": "src/main.ts",
+    "language": "ts",
+    "code": "import { createApp }"
+  }
+]
+--- 普通代码块 ---
+[
+  {
+    "kind": "text",
+    "text": "这是页面："
+  },
+  {
+    "kind": "code",
+    "language": "html",
+    "code": "<h1>hi</h1>"
+  },
+  {
+    "kind": "text",
+    "text": "完成"
+  }
+]
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+The parser handles all four cases correctly, including a code block that's still mid-stream. Cleaning up the scratch file.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="delete_file"><details>
+<summary>Tool use: **delete_file**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: git --no-pager status --porcelain</summary>
+```bash
+git --no-pager status --porcelain
+```
+
+```
+AM .specstory/history/2026-08-02_13-31-40Z-repository-review-changes.md
+A  .specstory/history/2026-08-02_13-31-45Z-bugbot.md
+MM .specstory/statistics.json
+M  hive-ai-code-mother-frontend/.specstory/history/2026-07-21_05-33-45Z-hash-hash-1-1.md
+ M hive-ai-code-mother-frontend/src/api/index.ts
+ M hive-ai-code-mother-frontend/src/api/typings.d.ts
+ M hive-ai-code-mother-frontend/src/components/AppCard.vue
+ M hive-ai-code-mother-frontend/src/components/AppCodeViewer.vue
+AM hive-ai-code-mother-frontend/src/config/env.ts
+ D hive-ai-code-mother-frontend/src/constants/codeGenType.ts
+ M hive-ai-code-mother-frontend/src/page/admin/AppManagePage.vue
+ M hive-ai-code-mother-frontend/src/page/app/AppChatPage.vue
+ M hive-ai-code-mother-frontend/src/request.ts
+AM hive-ai-code-mother-frontend/src/utils/CodeGenType.ts
+ M hive-ai-code-mother-frontend/src/utils/appPreview.ts
+ M hive-ai-code-mother-frontend/src/utils/sse.ts
+A  src/main/java/com/hive/hiveaicodemother/core/builder/VueProjectBuilder.java
+M  src/main/java/com/hive/hiveaicodemother/core/handler/JsonMessageStreamHandler.java
+M  src/main/java/com/hive/hiveaicodemother/service/impl/AppServiceImpl.java
+?? .specstory/history/2026-08-02_14-47-00Z-explore-project-structure.md
+?? .specstory/history/2026-08-02_14-49-53Z-survey-frontend-chat-integration.md
+?? hive-ai-code-mother-frontend/src/components/AiMessageContent.vue
+?? hive-ai-code-mother-frontend/src/utils/aiMessage.ts
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+`src/api/index.ts` was modified — `npm run lint` runs with `--fix`, so let me check what it touched.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: git --no-pager diff -- hive-ai-code-mother-frontend/src/api/index.ts</summary>
+```bash
+git --no-pager diff -- hive-ai-code-mother-frontend/src/api/index.ts
+```
+
+```
+diff --git a/hive-ai-code-mother-frontend/src/api/index.ts b/hive-ai-code-mother-frontend/src/api/index.ts
+index b0b5532..1205002 100644
+--- a/hive-ai-code-mother-frontend/src/api/index.ts
++++ b/hive-ai-code-mother-frontend/src/api/index.ts
+@@ -1,5 +1,5 @@
+ // @ts-ignore
+-/* eslint-disable */
++ 
+ // API 更新时间：
+ // API 唯一标识：
+ import * as userController from './userController'
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+`eslint --fix` stripped the `/* eslint-disable */` header from that generated file. Reverting it.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: git checkout -- hive-ai-code-mother-frontend/src/api/index.ts; git --no-pager status --porcelain -- hive-ai-code-mother-frontend/src/api/</summary>
+```bash
+git checkout -- hive-ai-code-mother-frontend/src/api/index.ts; git --no-pager status --porcelain -- hive-ai-code-mother-frontend/src/api/
+```
+
+```
+ M hive-ai-code-mother-frontend/src/api/typings.d.ts
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints"><details>
+<summary>Tool use: **read_lints**</summary>
+
+Parameters:
+
+```json
+{
+  "paths": [
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\utils\\aiMessage.ts",
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\components\\AiMessageContent.vue",
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\components\\AppCodeViewer.vue",
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\page\\app\\AppChatPage.vue",
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\config\\env.ts",
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\utils\\appPreview.ts",
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\page\\admin\\AppManagePage.vue"
+  ]
+}
+```
+Result:
+
+```json
+{
+  "linterErrorsByFile": [
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\utils\\aiMessage.ts"
+    },
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\components\\AiMessageContent.vue"
+    },
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\components\\AppCodeViewer.vue"
+    },
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\page\\app\\AppChatPage.vue"
+    },
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\config\\env.ts"
+    },
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\utils\\appPreview.ts"
+    },
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\page\\admin\\AppManagePage.vue"
+    }
+  ]
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="todo_write"><details>
+<summary>Tool use: **todo_write**</summary>
+
+Parameters:
+
+```json
+{
+  "todos": [
+    {
+      "content": "Rewrite src/config/env.ts as real base-URL config (it's currently a copy-paste of CodeGenType)",
+      "id": "1",
+      "status": "completed"
+    },
+    {
+      "content": "Consolidate code-gen type definitions into src/utils/CodeGenType.ts, add vue_project everywhere, delete src/constants/codeGenType.ts",
+      "id": "2",
+      "status": "completed"
+    },
+    {
+      "content": "Fix preview URL for vue_project (serve dist/) and route all hardcoded localhost:8123 through env config",
+      "id": "3",
+      "status": "completed"
+    },
+    {
+      "content": "Add parser + component for the new tool-call stream format (选择工具 / 工具调用 写入文件 + code fences)",
+      "id": "4",
+      "status": "completed"
+    },
+    {
+      "content": "Teach AppCodeViewer to show the Vue project's generated file list",
+      "id": "5",
+      "status": "completed"
+    },
+    {
+      "content": "Update AppChatPage: structured rendering, wait for async Vue build before preview, long deploy timeout",
+      "id": "6",
+      "status": "completed"
+    },
+    {
+      "content": "Run type-check and lint",
+      "id": "7",
+      "status": "completed"
+    }
+  ]
+}
+```
+Result:
+
+```json
+{
+  "finalTodos": [
+    {
+      "content": "Rewrite src/config/env.ts as real base-URL config (it's currently a copy-paste of CodeGenType)",
+      "id": "1",
+      "status": "completed"
+    },
+    {
+      "content": "Consolidate code-gen type definitions into src/utils/CodeGenType.ts, add vue_project everywhere, delete src/constants/codeGenType.ts",
+      "id": "2",
+      "status": "completed"
+    },
+    {
+      "content": "Fix preview URL for vue_project (serve dist/) and route all hardcoded localhost:8123 through env config",
+      "id": "3",
+      "status": "completed"
+    },
+    {
+      "content": "Add parser + component for the new tool-call stream format (选择工具 / 工具调用 写入文件 + code fences)",
+      "id": "4",
+      "status": "completed"
+    },
+    {
+      "content": "Teach AppCodeViewer to show the Vue project's generated file list",
+      "id": "5",
+      "status": "completed"
+    },
+    {
+      "content": "Update AppChatPage: structured rendering, wait for async Vue build before preview, long deploy timeout",
+      "id": "6",
+      "status": "completed"
+    },
+    {
+      "content": "Run type-check and lint",
+      "id": "7",
+      "status": "completed"
+    }
+  ],
+  "initialTodos": [
+    {
+      "content": "Rewrite src/config/env.ts as real base-URL config (it's currently a copy-paste of CodeGenType)",
+      "id": "1",
+      "status": "completed"
+    },
+    {
+      "content": "Consolidate code-gen type definitions into src/utils/CodeGenType.ts, add vue_project everywhere, delete src/constants/codeGenType.ts",
+      "id": "2",
+      "status": "completed"
+    },
+    {
+      "content": "Fix preview URL for vue_project (serve dist/) and route all hardcoded localhost:8123 through env config",
+      "id": "3",
+      "status": "completed"
+    },
+    {
+      "content": "Add parser + component for the new tool-call stream format (选择工具 / 工具调用 写入文件 + code fences)",
+      "id": "4",
+      "status": "completed"
+    },
+    {
+      "content": "Teach AppCodeViewer to show the V
+… (output truncated)
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+前端已经适配完成，`npm run type-check` 和 `npm run build` 都通过了，解析器也用后端的真实输出格式验证过。
+
+## 后端改了什么，前端为什么必须跟着改
+
+你的后端现在把新建应用默认设成了 `vue_project`，而这个模式和前面两个模式在三个地方本质不同，前端原来的假设全部失效：
+
+**1. 流式内容不再是纯文本。** `JsonMessageStreamHandler` 会把工具调用信息拼进消息里，格式是 `[选择工具] 写入文件` 和 `[工具调用] 写入文件 <路径>` 加一个围栏代码块。前端原来是 `<div class="bubble">{{ msg.content }}</div>`，会把整个 Vue 工程的源码当成一坨纯文本铺在气泡里。
+
+**2. 预览地址指错了目录。** Vue 工程生成的是**源码**，`vue_project_{appId}/index.html` 引用的是 `/src/main.ts`，浏览器直接打开是白屏。能跑的页面在 `dist/` 下。
+
+**3. 构建是异步的，而部署是同步的。** `buildProjectAsync` 在对话流结束后才启动，所以 `onDone` 那一刻 `dist/` 还不存在；反过来 `deployApp` 会同步跑 `npm install` + `npm run build`（超时上限 5 分钟 + 3 分钟），而 axios 的超时是 60 秒——Vue 应用一点部署必然报错。
+
+## 做了哪些改动
+
+聊天区新增了 `AiMessageContent.vue`，把消息解析成文本、工具标签、文件卡片三种片段。每个写入的文件是一张可折叠的卡片，带路径和复制按钮，代码区限高滚动，不会把对话撑爆。解析器 `utils/aiMessage.ts` 特意支持**未闭合的代码块**，这样流式输出到一半也能正常渲染。
+
+预览方面，`buildAppPreviewUrl` 对 `vue_project` 返回 `dist/` 路径，其余模式不变；同时拆出 `buildAppSourceUrl` 给代码查看器用（源码在工程根目录，不在 `dist`）。生成结束后前端会轮询 `dist/index.html`，期间显示"Vue 项目构建中"，就绪后才刷新 iframe，顶栏也加了个手动刷新按钮。代码查看器不再硬编码 `index.html/style.css/script.js`，Vue 模式下改用从工具调用里提取出来的真实文件列表。
+
+部署调用单独传了 10 分钟超时，Vue 应用点部署时会先提示耗时较长。
+
+另外顺手统一了三份互相冲突的代码生成类型定义——`config/env.ts` 里原本是 `CodeGenType.ts` 的复制粘贴（应该是误操作），现在改成了真正的基础地址配置，三处硬编码的 `localhost:8123` 都走它，可以用 `VITE_BACKEND_ORIGIN` 覆盖；`constants/codeGenType.ts` 删掉了，它缺 `vue_project`，导致管理页筛选不到 Vue 应用、标签显示原始英文值。
+
+## 一个需要你知道的顺带修复
+
+前端在我改之前 `npm run type-check` 就是失败的，16 个错误。原因是 `src/api/typings.d.ts` 重新生成过，丢掉了自定义的 `API.Id` 类型。后端主键是 Java `Long`，经 `json-bigint`（`storeAsString: true`）解析后运行时其实是字符串，所以 ID 字段必须同时接受 `number | string`。我把 `type Id = number | string` 加回去并应用到了各个 ID 字段，并在注释里标注了**重新跑 `openapi2ts` 会覆盖掉这处改动**。
+
+还有一处不影响运行但值得一提：`AppController.addApp` 的注释写的是"暂时设置为多文件生成"，代码实际设的是 `VUE_PROJECT`。
+
+前端目前没有让用户选择生成模式的入口（`AppAddRequest` 只有 `initPrompt`，模式完全由后端定）。要支持用户自选的话需要后端在 `AppAddRequest` 里加 `codeGenType` 字段，我没有动后端——需要的话可以接着做。
+
+---
+
+_**User**_
+
+代码部署成功但是预览失败: Whitelabel Error Page
+This application has no explicit mapping for /error, so you are seeing this as a fallback.
+
+Mon Aug 03 01:14:37 CST 2026
+There was an unexpected error (type=Internal Server Error, status=500).
+
+---
+
+_**Agent (composer-2.5)**_
+
+预览地址返回 500 而不是 404，说明请求打到了 `StaticResourceController` 并在里面抛异常了。让我先确认磁盘上的构建产物长什么样。
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": true,
+  "outputMode": "files_with_matches",
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\src\\main\\resources",
+  "pattern": "vue_project|base|vite.config"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "files_with_matches",
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\src\\main\\resources",
+  "pattern": "vue_project|base|vite.config",
+  "topFiles": [
+    {
+      "matchCount": 1,
+      "uri": "src\\main\\resources\\prompt\\codegen-vue-project-prompt.txt"
+    }
+  ],
+  "totalFiles": 1,
+  "totalMatches": 1
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Get-ChildItem tmp\code_output -Directory | Select-Object -ExpandProperty Name</summary>
+```bash
+Get-ChildItem tmp\code_output -Directory | Select-Object -ExpandProperty Name
+```
+
+```
+html_2075879976487120896
+multi_file_2075818064365780992
+multi_file_2075880274861494272
+multi_file_2075880502226329600
+multi_file_2075881441540804608
+multi_file_2075881677977874432
+multi_file_2075881893950918656
+multi_file_2075882142547357696
+multi_file_2075882492616552448
+multi_file_2075882799912230912
+multi_file_2075924159059017728
+multi_file_2075924901341753344
+multi_file_2079167535832879104
+multi_file_2079475880259162112
+multi_file_2079476975882670080
+multi_file_437087778640904192
+multi_file_437140568423751680
+multi_file_437142884283539456
+multi_file_437149660483641344
+multi_file_437156444212518912
+multi_file_437180759087734784
+multi_file_439985940657590272
+multi_file_439993184149295104
+multi_file_439993469445853184
+multi_file_440069941392994304
+vue_project_441509399887806464
+vue_project_441569950961750016
+vue_project_441572564378046464
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Get-ChildItem tmp\code_output\vue_project_441572564378046464 -Recurse -Depth 1 -Force | Select-Object FullName, PSIsContainer, Length | Format-Table -AutoSize -Wrap</summary>
+```bash
+Get-ChildItem tmp\code_output\vue_project_441572564378046464 -Recurse -Depth 1 -Force | Select-Object FullName, PSIsContainer, Length | Format-Table -AutoSize -Wrap
+```
+
+```
+
+FullName                                                                                                              
+--------                                                                                                              
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\dist                           
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\node_modules                   
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\src                            
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\index.html                     
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\package-lock.json              
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\package.json                   
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\vite.config.js                 
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\dist\assets                    
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\dist\index.html                
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\node_modules\.bin              
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\node_modules\@babel            
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\node_modules\@esbuild          
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\node_modules\@jridgewell       
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\node_modules\@vitejs           
+D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_4415725643
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+构建产物是有的。关键在 `dist/index.html` 里的资源路径写法。
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\dist\index.html</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\vue_project_441572564378046464\vite.config.js</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+`base: './'` is already correct and assets are relative, so the build is fine. Let me confirm the 500 is the directory request itself.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: $base=&#39;http://localhost:8123/api/static/vue_project_441572564378046464&#39;
+foreach ($p in @(&#39;/dist/&#39;,&#39;/dist/index.html&#39;,&#39;/dist&#39;,&#39;/&#39;)) {
+  try {
+    $r = Invoke-WebRequest -Uri &#34;$base$p&#34; -MaximumRedirection 0 -ErrorAction Stop
+    &#34;{0,-20} -&gt; {1}&#34; -f $p, $r.StatusCode
+  } catch {
+    $code = $_.Exception.Response.StatusCode.value__
+    &#34;{0,-20} -&gt; {1}&#34; -f $p, $code
+  }
+}</summary>
+```bash
+$base='http://localhost:8123/api/static/vue_project_441572564378046464'
+foreach ($p in @('/dist/','/dist/index.html','/dist','/')) {
+  try {
+    $r = Invoke-WebRequest -Uri "$base$p" -MaximumRedirection 0 -ErrorAction Stop
+    "{0,-20} -> {1}" -f $p, $r.StatusCode
+  } catch {
+    $code = $_.Exception.Response.StatusCode.value__
+    "{0,-20} -> {1}" -f $p, $code
+  }
+}
+```
+
+```
+/dist/               -> 500
+/dist/index.html     -> 
+/dist                -> 500
+/                    -> 
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: $base=&#39;http://localhost:8123/api/static/vue_project_441572564378046464&#39;
+foreach ($p in @(&#39;/dist/&#39;,&#39;/dist/index.html&#39;,&#39;/dist/assets/index-4fcc8b1a.js&#39;)) {
+  try {
+    $r = Invoke-WebRequest -Uri &#34;$base$p&#34; -MaximumRedirection 0 -ErrorAction Stop
+    &#34;{0,-34} -&gt; {1} {2} bytes&#34; -f $p, [int]$r.StatusCode, $r.RawContentLength
+  } catch {
+    &#34;{0,-34} -&gt; ERR {1}&#34; -f $p, [int]$_.Exception.Response.StatusCode.value__
+  }
+}</summary>
+```bash
+$base='http://localhost:8123/api/static/vue_project_441572564378046464'
+foreach ($p in @('/dist/','/dist/index.html','/dist/assets/index-4fcc8b1a.js')) {
+  try {
+    $r = Invoke-WebRequest -Uri "$base$p" -MaximumRedirection 0 -ErrorAction Stop
+    "{0,-34} -> {1} {2} bytes" -f $p, [int]$r.StatusCode, $r.RawContentLength
+  } catch {
+    "{0,-34} -> ERR {1}" -f $p, [int]$_.Exception.Response.StatusCode.value__
+  }
+}
+```
+
+```
+/dist/                             -> ERR 500
+/dist/index.html                   -> ERR 0
+/dist/assets/index-4fcc8b1a.js     -> ERR 0
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+`Invoke-WebRequest` is muddying the results. Let me use curl for a clean read.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: $base=&#39;http://localhost:8123/api/static/vue_project_441572564378046464&#39;
+foreach ($p in @(&#39;/dist/&#39;,&#39;/dist/index.html&#39;,&#39;/dist/assets/index-4fcc8b1a.js&#39;,&#39;/&#39;)) {
+  $code = curl.exe -s -o NUL -w &#34;%{http_code}&#34; &#34;$base$p&#34;
+  &#34;{0,-34} -&gt; {1}&#34; -f $p, $code
+}</summary>
+```bash
+$base='http://localhost:8123/api/static/vue_project_441572564378046464'
+foreach ($p in @('/dist/','/dist/index.html','/dist/assets/index-4fcc8b1a.js','/')) {
+  $code = curl.exe -s -o NUL -w "%{http_code}" "$base$p"
+  "{0,-34} -> {1}" -f $p, $code
+}
+```
+
+```
+/dist/                             -> 500
+/dist/index.html                   -> 200
+/dist/assets/index-4fcc8b1a.js     -> 200
+/                                  -> 200
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Confirmed the root cause. `/dist/` returns 500 while `/dist/index.html` and the assets return 200 — so the build and the asset paths are fine, and the failure is in `StaticResourceController`.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\controller\StaticResourceController.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+There it is: only the top-level `/` maps to `index.html`. For `/dist/`, `file.exists()` is true because it's a *directory*, and wrapping a directory in `FileSystemResource` throws when Spring writes the body. Let me make directory handling general.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\controller\StaticResourceController.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+A Vue build also emits asset types the content-type map doesn't cover, which would be served as `application/octet-stream`.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\controller\StaticResourceController.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Same trailing-slash trap exists on the deploy URL — the backend returns `.../{key}/` but the frontend card builds it without the slash.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\appPreview.ts</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now let me verify the controller compiles.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\controller\StaticResourceController.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: .\mvnw.cmd -q -o compile -DskipTests</summary>
+```bash
+.\mvnw.cmd -q -o compile -DskipTests
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Backend compiles. Let me see how the running instance was started, since the fix needs a restart to verify.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: $conn = Get-NetTCPConnection -LocalPort 8123 -State Listen -ErrorAction SilentlyContinue
+if ($conn) {
+  $p = Get-Process -Id $conn[0].OwningProcess
+  &#34;PID: $($p.Id)  Name: $($p.ProcessName)&#34;
+  (Get-CimInstance Win32_Process -Filter &#34;ProcessId=$($p.Id)&#34;).CommandLine.Substring(0,[Math]::Min(400,(Get-CimInstance Win32_Process -Filter &#34;ProcessId=$($p.Id)&#34;).CommandLine.Length))
+} else { &#34;no listener on 8123&#34; }</summary>
+```bash
+$conn = Get-NetTCPConnection -LocalPort 8123 -State Listen -ErrorAction SilentlyContinue
+if ($conn) {
+  $p = Get-Process -Id $conn[0].OwningProcess
+  "PID: $($p.Id)  Name: $($p.ProcessName)"
+  (Get-CimInstance Win32_Process -Filter "ProcessId=$($p.Id)").CommandLine.Substring(0,[Math]::Min(400,(Get-CimInstance Win32_Process -Filter "ProcessId=$($p.Id)").CommandLine.Length))
+} else { "no listener on 8123" }
+```
+
+```
+PID: 31376  Name: java
+C:\Users\Liyal\.jdks\ms-21.0.11\bin\java.exe -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true "-Dmanagement.endpoints.jmx.exposure.include=*" "-javaagent:C:\Users\Liyal\AppData\Local\Programs\IntelliJ IDEA 2026.1\lib\idea_rt.jar=57796" -Dfile.encoding=UTF-8
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+The backend is running from IntelliJ, so I won't touch that process. Instead I'll boot a second instance on a spare port to verify the fix for real.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: .\mvnw.cmd -o spring-boot:run &#34;-Dspring-boot.run.arguments=--server.port=8124&#34;</summary>
+```bash
+.\mvnw.cmd -o spring-boot:run "-Dspring-boot.run.arguments=--server.port=8124"
+```
+
+```
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.hive:hive-ai-code-mother:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.mysql:mysql-connector-j:jar -> duplicate declaration of version (?) @ line 113, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] --------------------< com.hive:hive-ai-code-mother >--------------------
+[INFO] Building hive-ai-code-mother 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.16:run (default-cli) > test-compile @ hive-ai-code-mother >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ hive-ai-code-mother ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ hive-ai-code-mother ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ hive-ai-code-mother ---
+[INFO] skip non existing resourceDirectory D:\Liyalin\javafail\hive-ai-code-mother\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ hive-ai-code-mother ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 7 source files with javac [debug parameters release 21] to target\test-classes
+[INFO] /D:/Liyalin/javafail/hive-ai-code-mother/src/test/java/com/hive/hiveaicodemother/core/CodeParserTest.java: D:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\c
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Offline mode blocked the plugin download. Let me instead build a classpath and launch the main class directly.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: .\mvnw.cmd -o -q dependency:build-classpath &#34;-Dmdep.outputFile=target/cp.txt&#34;; if (Test-Path target/cp.txt) { &#34;OK: $((Get-Item target/cp.txt).Length) bytes&#34; } else { &#34;FAILED&#34; }</summary>
+```bash
+.\mvnw.cmd -o -q dependency:build-classpath "-Dmdep.outputFile=target/cp.txt"; if (Test-Path target/cp.txt) { "OK: $((Get-Item target/cp.txt).Length) bytes" } else { "FAILED" }
+```
+
+```
+[ERROR] No plugin found for prefix 'dependency' in the current project and in the plugin groups [org.springframework.boot, org.cyclonedx, org.flywaydb, io.github.git-commit-id, org.jooq, org.jetbrains.kotlin, org.liquibase, org.graalvm.buildtools, org.apache.maven.plugins, org.codehaus.mojo] available from the repositories [local (C:\Users\Liyal\.m2\repository), nexus-aliyun (http://maven.aliyun.com/nexus/content/groups/public)] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
+FAILED
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: .\mvnw.cmd spring-boot:run &#34;-Dspring-boot.run.arguments=--server.port=8124&#34;</summary>
+```bash
+.\mvnw.cmd spring-boot:run "-Dspring-boot.run.arguments=--server.port=8124"
+```
+
+```
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.hive:hive-ai-code-mother:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.mysql:mysql-connector-j:jar -> duplicate declaration of version (?) @ line 113, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] --------------------< com.hive:hive-ai-code-mother >--------------------
+[INFO] Building hive-ai-code-mother 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.16:run (default-cli) > test-compile @ hive-ai-code-mother >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ hive-ai-code-mother ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ hive-ai-code-mother ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ hive-ai-code-mother ---
+[INFO] skip non existing resourceDirectory D:\Liyalin\javafail\hive-ai-code-mother\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ hive-ai-code-mother ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.16:run (default-cli) < test-compile @ hive-ai-code-mother <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.16:run (default-cli) @ hive-ai-code-mother ---
+Downloading from nexus-aliyun: http://maven.aliyun.com/nexus/content/groups/public/org/springframework/boot/spring-b
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+The pom's `spring-boot-maven-plugin` has a malformed `<exclude>` block that breaks `spring-boot:run`. Rather than chase that, let me verify the new file-resolution logic directly against the real directory.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: C:\Users\Liyal\AppData\Local\Temp\StaticPathCheck.java</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: java &#34;$env:TEMP\StaticPathCheck.java&#34; &#34;d:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output&#34;</summary>
+```bash
+java "$env:TEMP\StaticPathCheck.java" "d:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output"
+```
+
+```
+"/dist/"                           -> 200 index.html (380 bytes)
+"/dist"                            -> 301 -> /dist/
+"/dist/index.html"                 -> 200 index.html (380 bytes)
+"/dist/assets/index-4fcc8b1a.js"   -> 200 index-4fcc8b1a.js (91392 bytes)
+"/"                                -> 200 index.html (290 bytes)
+""                                 -> 301 -> /
+"/nope.html"                       -> 404
+"/../../../pom.xml"                -> 404 (Խ��)
+"/dist/../src/App.vue"             -> 200 App.vue (991 bytes)
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+All cases behave correctly now. Cleaning up the scratch file and re-verifying the frontend.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="delete_file"><details>
+<summary>Tool use: **delete_file**</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: npm run type-check</summary>
+```bash
+npm run type-check
+```
+
+```
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> hive-ai-code-mother-frontend@0.0.0 type-check
+> vue-tsc --build
+
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+问题不在构建产物，在后端的静态资源接口。**需要在 IntelliJ 里重启后端**（当前跑的 PID 31376 还是旧代码），重启后预览就正常了。
+
+## 定位过程
+
+先确认构建产物本身没问题——`dist/index.html` 和 `dist/assets/` 都在，生成的 `vite.config.js` 里 `base: './'` 也是对的，资源引用是相对路径 `./assets/index-4fcc8b1a.js`。
+
+然后直接打接口，结果很说明问题：
+
+| 请求路径 | 状态码 |
+|---|---|
+| `/dist/` | **500** |
+| `/dist/index.html` | 200 |
+| `/dist/assets/index-4fcc8b1a.js` | 200 |
+
+文件能取到，目录取不到。原因在 `StaticResourceController`：它只把**顶层**的 `/` 映射成 `index.html`。
+
+```47:53:src/main/java/com/hive/hiveaicodemother/controller/StaticResourceController.java
+            // 默认返回 index.html
+            if (resourcePath.equals("/")) {
+                resourcePath = "/index.html";
+            }
+```
+
+访问 `/dist/` 时 `resourcePath` 是 `/dist/`，不等于 `/`，所以拼出来的路径指向 **dist 目录本身**。接着 `file.exists()` 对目录返回 true，于是代码把一个目录包进 `FileSystemResource` 返回，Spring 写响应体时抛异常 → 500 → Whitelabel 页面。
+
+这也解释了为什么前端的构建就绪轮询是通过的：它探测的是 `dist/index.html`（200），探测成功后才把 iframe 指向 `dist/`（500）。
+
+## 改了什么
+
+`StaticResourceController` 现在对**任意层级**的目录都回退到该目录下的 `index.html`，而不只是顶层。同时补了一个容易被忽略的点：目录地址不带结尾斜杠时先 301 重定向补上，否则页面里的 `./assets/...` 会解析到上一级去。
+
+顺带在这个方法里加了目录越界校验（`../` 跳出应用目录时返回 404），以及补全了 Content-Type 映射——Vue 构建会产出 `.svg`、`.woff2`、`.json` 等，原来一律按 `application/octet-stream` 返回，字体和 SVG 可能加载不出来。
+
+前端改了一处同类问题：`buildAppDeployUrl` 生成的地址没有结尾斜杠（后端 `deployApp` 返回的是带斜杠的），首页卡片"查看作品"打开已部署的 Vue 应用时会因为相对路径解析到上一级而白屏。
+
+## 验证
+
+因为不方便动你 IDE 里跑着的进程，我把新的路径解析逻辑单独抽出来对着真实目录跑了一遍：
+
+```
+"/dist/"                           -> 200 index.html (380 bytes)
+"/dist"                            -> 301 -> /dist/
+"/dist/assets/index-4fcc8b1a.js"   -> 200 index-4fcc8b1a.js (91392 bytes)
+"/"                                -> 200 index.html (290 bytes)
+"/../../../pom.xml"                -> 404 (越界)
+```
+
+后端 `mvnw compile` 通过，前端 `type-check` 通过。
+
+## 另外发现一个 pom 的问题
+
+我本想起一个临时实例来端到端验证，但 `mvnw spring-boot:run` 起不来：
+
+```
+Unable to parse configuration of mojo spring-boot-maven-plugin:3.5.16:run
+for parameter version: Cannot find 'version' in class org.springframework.boot.maven.Exclude
+```
+
+`spring-boot-maven-plugin` 的 `<exclude>` 配置里写了 `<version>`，而 `Exclude` 只接受 `groupId` 和 `artifactId`。另外 `pom.xml` 第 113 行附近 `com.mysql:mysql-connector-j` 被重复声明了。这两个不影响 IDEA 运行（IDEA 直接调 main 方法，不走这个插件），但命令行跑不起来，要不要我一并修掉？
+
+---
+
+_**User**_
+
+修改
+
+---
+
+_**Agent (composer-2.5)**_
+
+好的，我来修掉 pom 里那两个问题。
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\pom.xml</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Both problems are visible. First, the duplicate `mysql-connector-j` declaration.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\pom.xml</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+Now the `<exclude>` block — `Exclude` only accepts `groupId` and `artifactId`, so the `<version>` element is what breaks `spring-boot:run`.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\pom.xml</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: .\mvnw.cmd -o -q compile -DskipTests</summary>
+```bash
+.\mvnw.cmd -o -q compile -DskipTests
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<think><details><summary>Thought Process</summary>
+The duplicate declaration warning is gone, so now I'm ready to test whether `spring-boot:run` actually works and verify the static resource fix is functioning properly on port 8124.
+</details></think>
+
+_**Agent (composer-2.5)**_
+
+No more duplicate-declaration warning. Now `spring-boot:run` should work — which also lets me finally verify the preview fix end to end.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: .\mvnw.cmd spring-boot:run &#34;-Dspring-boot.run.arguments=--server.port=8124&#34;</summary>
+```bash
+.\mvnw.cmd spring-boot:run "-Dspring-boot.run.arguments=--server.port=8124"
+```
+
+```
+]633;C[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.hive:hive-ai-code-mother >--------------------
+[INFO] Building hive-ai-code-mother 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.16:run (default-cli) > test-compile @ hive-ai-code-mother >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ hive-ai-code-mother ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ hive-ai-code-mother ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ hive-ai-code-mother ---
+[INFO] skip non existing resourceDirectory D:\Liyalin\javafail\hive-ai-code-mother\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ hive-ai-code-mother ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.16:run (default-cli) < test-compile @ hive-ai-code-mother <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.16:run (default-cli) @ hive-ai-code-mother ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-08-03T01:37:13.172+08:00  INFO 25436 --- [hive-ai-code-mother-backend] [           main] c.h.h.HiveAiCodeMotherApplication        : Starting HiveAiCodeMotherApplication using Java 21.0.11 with PID 25436 (D:\Liyalin\javafail\hive-ai-code-mother\target\classes started by Liyal in D:\Liyalin\javafail\hive-ai-code-mother)
+2026-08-03T01:37:13.174+08:00  I
+… (output truncated)
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<think><details><summary>Thought Process</summary>
+The app is running on port 8124 and the controller was already compiled from my earlier build, so I'm ready to test the endpoint with a curl request.
+</details></think>
+
+_**Agent (composer-2.5)**_
+
+`spring-boot:run` works now, and the instance is up on 8124 with the fixed controller. Let me test the exact URL that was failing.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: $base=&#39;http://localhost:8124/api/static/vue_project_441572564378046464&#39;
+foreach ($p in @(&#39;/dist/&#39;,&#39;/dist&#39;,&#39;/dist/index.html&#39;,&#39;/dist/assets/index-4fcc8b1a.js&#39;,&#39;/nope.html&#39;)) {
+  $r = curl.exe -s -o NUL -w &#34;%{http_code} %{redirect_url}&#34; &#34;$base$p&#34;
+  &#34;{0,-34} -&gt; {1}&#34; -f $p, $r
+}
+&#34;--- 内容校验 ---&#34;
+curl.exe -s &#34;$base/dist/&#34; | Select-String -Pattern &#39;assets&#39;</summary>
+```bash
+$base='http://localhost:8124/api/static/vue_project_441572564378046464'
+foreach ($p in @('/dist/','/dist','/dist/index.html','/dist/assets/index-4fcc8b1a.js','/nope.html')) {
+  $r = curl.exe -s -o NUL -w "%{http_code} %{redirect_url}" "$base$p"
+  "{0,-34} -> {1}" -f $p, $r
+}
+"--- 内容校验 ---"
+curl.exe -s "$base/dist/" | Select-String -Pattern 'assets'
+```
+
+```
+/dist/                             -> 200 
+/dist                              -> 301 http://localhost:8124/api/static/vue_project_441572564378046464/dist/
+/dist/index.html                   -> 200 
+/dist/assets/index-4fcc8b1a.js     -> 200 
+/nope.html                         -> 404 
+--- ����У�� ---
+
+  <script type="module" crossorigin src="./assets/index-4fcc8b1a.js"></script>
+  <link rel="stylesheet" href="./assets/index-cda18609.css">
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<think><details><summary>Thought Process</summary>
+I've verified the deployment is working correctly—the dist folder serves with proper redirects, assets load successfully, and 404s work as expected. Now I'm shutting down the test instance.
+
+I need to kill the Java process (PID 25436) and the Maven wrapper (PID 14424) cleanly so the database connection doesn't linger.
+</details></think>
+
+_**Agent (composer-2.5)**_
+
+Verified end to end on a real running instance: `/dist/` now returns 200 with the correct relative asset paths, `/dist` redirects, assets load, missing files 404. Let me shut the verification instance down.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Stop-Process -Id 25436 -Force -ErrorAction SilentlyContinue
+Stop-Process -Id 14424 -Force -ErrorAction SilentlyContinue
+Start-Sleep -Seconds 2
+if (Get-NetTCPConnection -LocalPort 8124 -State Listen -ErrorAction SilentlyContinue) { &#34;8124 still listening&#34; } else { &#34;8124 released&#34; }
+if (Get-NetTCPConnection -LocalPort 8123 -State Listen -ErrorAction SilentlyContinue) { &#34;8123 (your IDEA app) still running - untouched&#34; } else { &#34;8123 not listening&#34; }</summary>
+```bash
+Stop-Process -Id 25436 -Force -ErrorAction SilentlyContinue
+Stop-Process -Id 14424 -Force -ErrorAction SilentlyContinue
+Start-Sleep -Seconds 2
+if (Get-NetTCPConnection -LocalPort 8124 -State Listen -ErrorAction SilentlyContinue) { "8124 still listening" } else { "8124 released" }
+if (Get-NetTCPConnection -LocalPort 8123 -State Listen -ErrorAction SilentlyContinue) { "8123 (your IDEA app) still running - untouched" } else { "8123 not listening" }
+```
+
+```
+8124 released
+8123 (your IDEA app) still running - untouched
+
+```
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="await"><details>
+<summary>Tool use: **await**</summary>
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+<think><details><summary>Thought Process</summary>
+The pom fixes are complete, and I've verified the preview fix end-to-end. The IDEA app on 8123 still needs to be restarted to pick up the StaticResourceController changes.
+</details></think>
+
+_**Agent (composer-2.5)**_
+
+pom 的两个问题都修好了，而且因为 `spring-boot:run` 能跑起来了，我顺带把上一轮的预览修复做了**真实的端到端验证**。
+
+## pom 改了什么
+
+`spring-boot-maven-plugin` 的 `<exclude>` 里删掉了 `<version>`。这个插件的 `Exclude` 类只有 `groupId` 和 `artifactId` 两个字段，多出来的 `<version>` 会让 Maven 在解析 mojo 配置时直接失败，所以任何命令行下的 `spring-boot:run` / `repackage` 都跑不了。排除 lombok 本来也不需要指定版本。
+
+另外删掉了重复声明的 `com.mysql:mysql-connector-j`（两处内容完全一样，保留了「mysql」注释下的那一处）。现在 `mvnw compile` 输出干净，之前那条 `must be unique ... duplicate declaration of version` 警告没有了。
+
+## 顺带完成的验证
+
+之前只能把路径解析逻辑抽出来单测，现在插件能用了，我在 8124 端口起了个临时实例跑真实请求（**没有动你 IDEA 里 8123 的进程**）：
+
+| 请求路径 | 修复前 | 修复后 |
+|---|---|---|
+| `/dist/` | 500 | **200** |
+| `/dist` | 500 | 301 → `/dist/` |
+| `/dist/assets/index-4fcc8b1a.js` | 200 | 200 |
+| `/nope.html` | 404 | 404 |
+
+返回的 HTML 内容也确认过了，引用的是相对路径：
+
+```html
+<script type="module" crossorigin src="./assets/index-4fcc8b1a.js"></script>
+<link rel="stylesheet" href="./assets/index-cda18609.css">
+```
+
+配合 `/dist/` 这个带斜杠的地址，这些相对路径会正确解析到 `/api/static/vue_project_{appId}/dist/assets/...`。验证实例已经停掉，8124 端口释放了。
+
+## 还需要你做一件事
+
+**在 IntelliJ 里重启后端**。8123 上跑的进程仍然是修复前的代码，重启后 Vue 项目预览才会正常。
+
+---
+
+_**User**_
+
+<timestamp>Monday, Aug 3, 2026, 1:41 AM (UTC+8)</timestamp>
+<system_notification>
+The following task has notified. If you were already aware, ignore this notification and do not restate prior responses.
+
+<task>
+kind: shell
+status: success
+task_id: 785519:task_progress:2
+title: Verification server startup
+tool_call_id: toolu_01HTw85jqdnegJgfUgsffWwG
+detail: Shell output has pattern /Started HiveAiCodeMotherApplication|APPLICATION FAILED TO START|BUILD FAILURE/. This is occurrence number 2. Latest match: BUILD FAILURE. The title message is being displayed to the user.
+output_path: C:\Users\Liyal\.cursor\projects\d-Liyalin-javafail-hive-ai-code-mother\terminals\785519.txt
+</task>
+</system_notification>
+<user_query>Briefly inform the user about the task result and perform any follow-up actions (if needed).</user_query>
+
+---
+
+_**Agent (composer-2.5)**_
+
+<think><details><summary>Thought Process</summary>
+The notification shows a BUILD FAILURE for shell 785519, which makes sense since I terminated the process — Maven would naturally report that as a failure. Let me check the terminal output to verify it's just from the kill signal and nothing else unexpected.
+</details></think>
+
+_**Agent (composer-2.5)**_
+
+That notification is from the verification server shell. Let me confirm it's just the shutdown I triggered.
+
+_**Agent (composer-2.5)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: C:\Users\Liyal\.cursor\projects\d-Liyalin-javafail-hive-ai-code-mother\terminals\785519.txt</summary>
+
+</details></tool-use>
+
+_**Agent (composer-2.5)**_
+
+这条通知是预期内的，不需要处理。
+
+那个 `BUILD FAILURE` 就是我停掉临时验证实例造成的——`Process terminated with exit code: -1`，也就是 Maven 发现它托管的 Java 进程被外部杀掉了，于是把这次 `spring-boot:run` 标记为失败。日志里能看清完整过程：应用在 01:37 正常启动（`Started HiveAiCodeMotherApplication in 4.592 seconds`），01:40 处理了我发过去的那批验证请求，01:41 我主动结束了它。
+
+验证结论不变：`/dist/` 已经从 500 变成 200。8124 端口已释放，你 IDEA 里 8123 上的进程全程没被动过。
+
+唯一还需要你做的仍然是**在 IntelliJ 里重启后端**，让 8123 加载上修复后的 `StaticResourceController`。
+
+---
+
+_**User**_
+
+封面图还是看不到
