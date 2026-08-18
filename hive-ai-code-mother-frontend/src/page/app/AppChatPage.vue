@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Modal, message } from 'ant-design-vue'
 import axios from 'axios'
@@ -10,6 +10,7 @@ import {
   DeleteOutlined,
   DownloadOutlined,
   EditOutlined,
+  HighlightOutlined,
   InfoCircleOutlined,
   ReloadOutlined,
 } from '@ant-design/icons-vue'
@@ -26,10 +27,15 @@ import {
 } from '@/config/env'
 import { useLoginUserStore } from '@/stores/loginUser'
 import { collectGeneratedFilePaths } from '@/utils/aiMessage'
-import { buildAppPreviewUrl, buildAppSourceUrl } from '@/utils/appPreview'
+import { buildAppPreviewPath, buildAppSourceUrl } from '@/utils/appPreview'
 import { CodeGenTypeEnum, formatCodeGenType } from '@/utils/CodeGenType'
 import { downloadAppCodeZip } from '@/utils/downloadAppCode'
 import { streamChatToGenCode } from '@/utils/sse'
+import {
+  appendSelectedElementToMessage,
+  formatSelectedElementSummary,
+  useVisualEdit,
+} from '@/utils/visualEdit'
 
 type ChatMessage = {
   id?: API.Id
@@ -67,6 +73,7 @@ const buildingPreview = ref(false)
 const previewKey = ref(0)
 const rightMode = ref<'preview' | 'code'>('preview')
 const messagesEl = ref<HTMLElement | null>(null)
+const previewIframe = ref<HTMLIFrameElement | null>(null)
 const hasMoreHistory = ref(false)
 const loadingHistory = ref(false)
 const loadingMoreHistory = ref(false)
@@ -74,6 +81,15 @@ const historyLoadSucceeded = ref(false)
 const totalHistoryCount = ref(0)
 let cancelStream: (() => void) | null = null
 let previewToken = 0
+
+const {
+  editMode: visualEditMode,
+  selectedElement,
+  toggleEditMode,
+  clearSelection,
+  resetVisualEdit,
+  onPreviewFrameLoad,
+} = useVisualEdit(previewIframe)
 
 const isAdmin = computed(() => loginUserStore.loginUser.userRole === 'admin')
 const isVueProject = computed(() => app.value?.codeGenType === CodeGenTypeEnum.VUE_PROJECT)
@@ -121,7 +137,7 @@ const showPreview = async (waitForBuild = false) => {
 
   const token = ++previewToken
   sourceBaseUrl.value = buildAppSourceUrl(type, id)
-  const url = buildAppPreviewUrl(type, id)
+  const url = buildAppPreviewPath(type, id)
 
   // Vue 工程的 dist 由后端在对话结束后异步构建，就绪前加载 iframe 只会拿到 404
   if (type === CodeGenTypeEnum.VUE_PROJECT) {
@@ -292,8 +308,24 @@ const sendMessage = (text: string) => {
 
 const onSubmit = () => {
   const text = input.value
+  if (!text.trim()) return
+
+  const messageToSend = appendSelectedElementToMessage(text, selectedElement.value)
   input.value = ''
-  sendMessage(text)
+  resetVisualEdit()
+  sendMessage(messageToSend)
+}
+
+const onToggleVisualEdit = async () => {
+  if (!previewUrl.value) {
+    message.warning('请先生成网站后再进行可视化编辑')
+    return
+  }
+  if (rightMode.value !== 'preview') {
+    rightMode.value = 'preview'
+    await nextTick()
+  }
+  await toggleEditMode()
 }
 
 const openDetail = () => {
@@ -418,6 +450,12 @@ onBeforeUnmount(() => {
   cancelStream?.()
   previewToken += 1
 })
+
+watch(rightMode, (mode) => {
+  if (mode !== 'preview' && visualEditMode.value) {
+    resetVisualEdit()
+  }
+})
 </script>
 
 <template>
@@ -483,26 +521,54 @@ onBeforeUnmount(() => {
           <a-spin v-if="loadingHistory" class="history-loading" tip="加载对话历史中..." />
         </div>
         <div class="input-wrap">
+          <a-alert
+            v-if="selectedElement"
+            type="info"
+            closable
+            show-icon
+            class="selected-element-alert"
+            @close="clearSelection"
+          >
+            <template #message>已选中页面元素</template>
+            <template #description>
+              {{ formatSelectedElementSummary(selectedElement) }}
+            </template>
+          </a-alert>
           <AppPromptInput
             v-model="input"
             variant="chat"
             placeholder="描述越详细，页面越具体，可以一步一步完善生成效果"
             :loading="generating"
             @submit="onSubmit"
-          />
+          >
+            <template #actions>
+              <a-button
+                size="small"
+                :type="visualEditMode ? 'primary' : 'default'"
+                :disabled="!previewUrl || generating"
+                @click="onToggleVisualEdit"
+              >
+                <template #icon><HighlightOutlined /></template>
+                {{ visualEditMode ? '退出编辑' : '可视化编辑' }}
+              </a-button>
+            </template>
+          </AppPromptInput>
         </div>
       </section>
 
-      <section class="preview-pane">
+      <section class="preview-pane" :class="{ 'preview-pane-editing': visualEditMode }">
         <div v-if="rightMode === 'preview' && buildingPreview" class="preview-state">
           <a-spin tip="Vue 项目构建中，请稍候..." />
         </div>
         <iframe
           v-else-if="rightMode === 'preview' && previewUrl"
+          ref="previewIframe"
           :key="previewKey"
           class="preview-frame"
+          :class="{ 'preview-frame-editing': visualEditMode }"
           :src="previewUrl"
           title="网站预览"
+          @load="onPreviewFrameLoad"
         />
         <AppCodeViewer
           v-else-if="rightMode === 'code' && sourceBaseUrl"
@@ -714,14 +780,32 @@ onBeforeUnmount(() => {
   border-top: 1px solid #f0f0f0;
 }
 
+.selected-element-alert {
+  margin-bottom: 10px;
+}
+
+.preview-pane-editing {
+  box-shadow: inset 0 0 0 2px #1677ff;
+}
+
+.preview-frame-editing {
+  cursor: crosshair;
+}
+
 .preview-pane {
   min-width: 0;
   min-height: 0;
   display: flex;
+  flex-direction: column;
   align-items: stretch;
-  justify-content: center;
   overflow: hidden;
   background: #fafafa;
+}
+
+.preview-pane > * {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
 }
 
 .preview-frame {

@@ -9,6 +9,7 @@ import {
   ToolOutlined,
 } from '@ant-design/icons-vue'
 import { parseAiMessage } from '@/utils/aiMessage'
+import { renderMarkdown } from '@/utils/markdown'
 
 const props = defineProps<{
   content: string
@@ -42,7 +43,11 @@ const copyCode = async (code: string) => {
 <template>
   <div class="ai-message">
     <template v-for="(segment, index) in segments" :key="index">
-      <div v-if="segment.kind === 'text'" class="segment-text">{{ segment.text }}</div>
+      <div
+        v-if="segment.kind === 'text'"
+        class="segment-text markdown-body"
+        v-html="renderMarkdown(segment.text)"
+      />
 
       <div v-else-if="segment.kind === 'tool-select'" class="segment-tool">
         <ToolOutlined />
@@ -80,8 +85,78 @@ const copyCode = async (code: string) => {
 }
 
 .segment-text {
-  white-space: pre-wrap;
   word-break: break-word;
+}
+
+.segment-text :deep(p) {
+  margin: 0 0 8px;
+}
+
+.segment-text :deep(p:last-child) {
+  margin-bottom: 0;
+}
+
+.segment-text :deep(h1),
+.segment-text :deep(h2),
+.segment-text :deep(h3),
+.segment-text :deep(h4) {
+  margin: 12px 0 8px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.segment-text :deep(h1) {
+  font-size: 18px;
+}
+
+.segment-text :deep(h2) {
+  font-size: 16px;
+}
+
+.segment-text :deep(h3) {
+  font-size: 15px;
+}
+
+.segment-text :deep(ul),
+.segment-text :deep(ol) {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+
+.segment-text :deep(li) {
+  margin-bottom: 4px;
+}
+
+.segment-text :deep(strong) {
+  font-weight: 600;
+}
+
+.segment-text :deep(code) {
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.segment-text :deep(pre) {
+  margin: 8px 0;
+  padding: 10px 12px;
+  overflow: auto;
+  border-radius: 8px;
+  background: #f6f8fa;
+}
+
+.segment-text :deep(pre code) {
+  padding: 0;
+  background: transparent;
+}
+
+.segment-text :deep(blockquote) {
+  margin: 8px 0;
+  padding-left: 12px;
+  border-left: 3px solid #d9d9d9;
+  color: #595959;
 }
 
 .segment-tool {

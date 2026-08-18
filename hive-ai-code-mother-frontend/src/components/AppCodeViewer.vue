@@ -3,6 +3,8 @@ import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { CopyOutlined } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
 import { CodeGenTypeEnum } from '@/utils/CodeGenType'
+import { highlightCode } from '@/utils/codeHighlight'
+import 'highlight.js/styles/github.min.css'
 
 const props = defineProps<{
   baseUrl: string
@@ -32,6 +34,8 @@ const lineNumbers = computed(() =>
 const emptyDescription = computed(() =>
   files.value.length === 0 ? '本次生成还没有写入文件' : '暂无源码内容',
 )
+
+const highlightedCode = computed(() => highlightCode(sourceCode.value, currentFile.value))
 
 const loadCode = async () => {
   const file = currentFile.value
@@ -127,7 +131,7 @@ onBeforeUnmount(() => {
     <div v-else class="code-scroll">
       <div class="code-content">
         <pre class="line-numbers" aria-hidden="true"><code>{{ lineNumbers.join('\n') }}</code></pre>
-        <pre class="source-code"><code>{{ sourceCode }}</code></pre>
+        <pre class="source-code"><code class="hljs" v-html="highlightedCode" /></pre>
       </div>
     </div>
   </div>
@@ -179,13 +183,17 @@ onBeforeUnmount(() => {
   flex: 1;
   min-height: 0;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
   background: #fafafa;
 }
 
 .code-content {
   display: flex;
-  width: max-content;
+  flex: 1;
   min-width: 100%;
+  min-height: 100%;
+  width: max-content;
   font-family: Consolas, 'Courier New', monospace;
   font-size: 13px;
   line-height: 1.6;
@@ -198,6 +206,8 @@ onBeforeUnmount(() => {
 }
 
 .line-numbers {
+  flex: none;
+  align-self: stretch;
   min-width: 52px;
   padding-right: 12px !important;
   color: #8c8c8c;
@@ -208,8 +218,20 @@ onBeforeUnmount(() => {
 }
 
 .source-code {
+  flex: 1;
+  align-self: stretch;
+  min-width: 0;
   padding-left: 16px !important;
   padding-right: 16px !important;
-  color: #262626;
+  background: #fff;
+}
+
+.source-code code {
+  display: block;
+  min-width: fit-content;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background: transparent;
 }
 </style>

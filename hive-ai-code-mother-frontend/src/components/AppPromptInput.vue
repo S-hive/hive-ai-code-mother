@@ -55,15 +55,18 @@ const onSubmit = () => {
           优化
         </a-button>
       </div>
-      <a-button
-        type="primary"
-        shape="circle"
-        :loading="loading"
-        :disabled="loading"
-        @click="onSubmit"
-      >
-        <template #icon><ArrowUpOutlined /></template>
-      </a-button>
+      <div class="toolbar-right">
+        <slot name="actions" />
+        <a-button
+          type="primary"
+          shape="circle"
+          :loading="loading"
+          :disabled="loading"
+          @click="onSubmit"
+        >
+          <template #icon><ArrowUpOutlined /></template>
+        </a-button>
+      </div>
     </div>
   </div>
 </template>
@@ -86,6 +89,12 @@ const onSubmit = () => {
 
 .toolbar-left {
   display: flex;
+  gap: 8px;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
   gap: 8px;
 }
 </style>
