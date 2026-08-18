@@ -1,5 +1,6 @@
 package com.hive.hiveaicodemother.service;
 
+import com.hive.hiveaicodemother.model.dto.app.AppAddRequest;
 import com.hive.hiveaicodemother.model.dto.app.AppQueryRequest;
 import com.hive.hiveaicodemother.model.entity.App;
 import com.hive.hiveaicodemother.model.entity.User;
@@ -16,6 +17,14 @@ import java.util.List;
  * @author <a href="https://github.com/S-hive">S-hive</a>
  */
 public interface AppService extends IService<App> {
+
+    /**
+     * 创建应用
+     * @param appAddRequest
+     * @param loginUser
+     * @return
+     */
+    Long createApp(AppAddRequest appAddRequest, User loginUser);
 
     /**
      * 应用部署

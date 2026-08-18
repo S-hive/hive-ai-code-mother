@@ -27,7 +27,7 @@ import {
 import { useLoginUserStore } from '@/stores/loginUser'
 import { collectGeneratedFilePaths } from '@/utils/aiMessage'
 import { buildAppPreviewUrl, buildAppSourceUrl } from '@/utils/appPreview'
-import { CodeGenTypeEnum } from '@/utils/CodeGenType'
+import { CodeGenTypeEnum, formatCodeGenType } from '@/utils/CodeGenType'
 import { downloadAppCodeZip } from '@/utils/downloadAppCode'
 import { streamChatToGenCode } from '@/utils/sse'
 
@@ -426,6 +426,9 @@ onBeforeUnmount(() => {
       <div class="header-left" @click="router.push('/')">
         <img :src="logoUrl" alt="logo" class="logo" />
         <span class="app-name">{{ app?.appName || '应用对话' }}</span>
+        <a-tag v-if="app?.codeGenType" class="code-gen-tag">
+          {{ formatCodeGenType(app.codeGenType) }}
+        </a-tag>
       </div>
       <a-segmented
         v-model:value="rightMode"
@@ -520,6 +523,11 @@ onBeforeUnmount(() => {
     <a-modal v-model:open="detailModalOpen" title="应用详情" :footer="null" width="450px">
       <div class="app-detail">
         <div class="detail-row">
+          <span class="detail-label">生成类型：</span>
+          <a-tag v-if="app?.codeGenType">{{ formatCodeGenType(app.codeGenType) }}</a-tag>
+          <span v-else>-</span>
+        </div>
+        <div class="detail-row">
           <span class="detail-label">创建者：</span>
           <div class="creator">
             <a-avatar :src="app?.user?.userAvatar">
@@ -596,6 +604,12 @@ onBeforeUnmount(() => {
 
 .app-name {
   font-weight: 600;
+}
+
+.code-gen-tag {
+  flex: none;
+  margin: 0;
+  cursor: pointer;
 }
 
 .header-actions {
