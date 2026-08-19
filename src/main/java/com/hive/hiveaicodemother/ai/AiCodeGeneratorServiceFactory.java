@@ -2,7 +2,7 @@ package com.hive.hiveaicodemother.ai;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
-import com.hive.hiveaicodemother.ai.tools.FileWriteTool;
+import com.hive.hiveaicodemother.ai.tools.*;
 import com.hive.hiveaicodemother.exception.BusinessException;
 import com.hive.hiveaicodemother.exception.ErrorCode;
 import com.hive.hiveaicodemother.model.enums.CodeGenTypeEnum;
@@ -38,6 +38,9 @@ public class AiCodeGeneratorServiceFactory {
 
     @Resource
     private StreamingChatModel reasoningStreamingChatModel;
+
+    @Resource
+    private ToolManager toolManager;
 
     /**
      * 默认提供一个 Bean
@@ -75,7 +78,7 @@ public class AiCodeGeneratorServiceFactory {
      */
     public AiCodeGeneratorService getAiCodeGeneratorService(long appId, CodeGenTypeEnum codeGenType) {
         String cacheKey = buildCacheKey(appId, codeGenType);
-        return serviceCache.get(cacheKey, Key -> createAiCodeGeneratorService(appId,codeGenType));
+        return serviceCache.get(cacheKey, Key -> createAiCodeGeneratorService(appId, codeGenType));
     }
 
     /**
@@ -98,16 +101,15 @@ public class AiCodeGeneratorServiceFactory {
         chatHistoryService.loadChatHistoryToMemory(appId, chatMemory, 20);
         return switch (codeGenType) {
             // Vue 项目生成, 使用工具调用和推理模型
-            case VUE_PROJECT ->
-                 AiServices.builder(AiCodeGeneratorService.class)
-                        .chatModel(chatModel)
-                        .streamingChatModel(reasoningStreamingChatModel)
-                        .chatMemoryProvider(memoryId -> chatMemory)
-                        .tools(new FileWriteTool())
-                        //处理工具调用幻觉问题
-                        .hallucinatedToolNameStrategy(toolExecutionRequest ->
-                                ToolExecutionResultMessage.from(toolExecutionRequest, "Error: there is no tool called " + toolExecutionRequest.name()))
-                        .build();
+            case VUE_PROJECT -> AiServices.builder(AiCodeGeneratorService.class)
+                    .chatModel(chatModel)
+                    .streamingChatModel(reasoningStreamingChatModel)
+                    .chatMemoryProvider(memoryId -> chatMemory)
+                    .tools(toolManager.getAllTools())
+                    //处理工具调用幻觉问题
+                    .hallucinatedToolNameStrategy(toolExecutionRequest ->
+                            ToolExecutionResultMessage.from(toolExecutionRequest, "Error: there is no tool called " + toolExecutionRequest.name()))
+                    .build();
 
             // HTML 和 多文件生成, 使用流式对话模型
             case MULTI_FILE, HTML -> AiServices.builder(AiCodeGeneratorService.class)
@@ -121,6 +123,7 @@ public class AiCodeGeneratorServiceFactory {
 
     /**
      * 构造缓存键
+     *
      * @param appId
      * @param codeGenType
      * @return
