@@ -7,7 +7,8 @@
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-Brainstorming mode activated.</details></think>
+Brainstorming mode activated.
+</details></think>
 
 _**Agent (default)**_
 
@@ -16,58 +17,37 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\user\UserLoginPage.vue</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\user\UserLoginPage.vue</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\docs\superpowers\plans\2026-07-07-basic-layout.md</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\docs\superpowers\plans\2026-07-07-basic-layout.md</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **2** results in **1** directory</summary>
 
-Directory: **** (2 files)
+Directory: **``** (2 files)
 
 | File |
 |------|
 | `docs/superpowers/specs/2026-07-07-basic-layout-design.md` |
 | `docs/superpowers/plans/2026-07-07-basic-layout.md` |
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **6** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (6 files)
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother`** (6 files)
 
 | File |
 |------|
@@ -77,59 +57,33 @@ Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (6 files)
 | `../docs/superpowers/plans/2026-07-07-basic-layout.md` |
 | `../docs/superpowers/specs/2026-07-07-basic-layout-design.md` |
 | `../.specstory/history/2026-07-07_07-51-40Z-superpowers-plugin-addition.md` |
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\router\index.ts</summary>
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\router\index.ts</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\GlobalHeader.vue</summary>
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\GlobalHeader.vue</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\README.md</summary>
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\README.md</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: git log --oneline -10</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: git log --oneline -10</summary>
 ```bash
 git log --oneline -10
 ```
@@ -137,21 +91,14 @@ git log --oneline -10
 ```
 Rejected: Review cancelled or failed
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **83** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (83 files)
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother`** (83 files)
 
 | File |
 |------|
@@ -238,38 +185,19 @@ Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (83 files)
 | `../src/main/java/com/hive/hiveaicodemother/model/enums/UserRoleEnum.java` |
 | `../.mvn/wrapper/maven-wrapper.properties` |
 | `../hive-ai-code-mother-frontend/src/request.ts` |
+</details></tool-use>
 
-</details>
-</tool-use>
+_**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\user\UserRegisterPage.vue</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\user\UserRegisterPage.vue</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
-
-</details></tool-use>
-
-_**Agent (default)**_
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\stores\loginUser.ts</summary>
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\stores\loginUser.ts</summary>
 
 </details></tool-use>
 
@@ -298,7 +226,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 AiCodeGeneratorServiceTest.java 运行时出现错误。
 
-正在分析该测试的 Spring Boot 条件评估报告，准备读取测试文件及相关配置以定位问题。</details></think>
+正在分析该测试的 Spring Boot 条件评估报告，准备读取测试文件及相关配置以定位问题。
+</details></think>
 
 _**Agent (default)**_
 
@@ -307,23 +236,15 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceTest.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceTest.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -366,98 +287,57 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (0 files)
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother`** (0 files)
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (0 files)
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother`** (0 files)
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在查看主应用、工厂、服务接口、pom.xml 和测试配置文件，以定位运行时错误原因。</details></think>
+正在查看主应用、工厂、服务接口、pom.xml 和测试配置文件，以定位运行时错误原因。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorService.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorService.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactoryTest.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactoryTest.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **4** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources** (4 files)
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources`** (4 files)
 
 | File |
 |------|
@@ -465,37 +345,20 @@ Directory: **d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources** (4 fil
 | `../src\main\resources\prompt\codegen-html-system-prompt.txt` |
 | `../src\main\resources\mapper\UserMapper.xml` |
 | `../src\main\resources\application.yaml` |
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother\src\test\resources** (0 files)
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother\src\test\resources`** (0 files)
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -538,13 +401,6 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -552,72 +408,48 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 正在查看 application.yaml、pom.xml 和主应用类，以排查测试运行时的配置问题。
 
-准备运行测试以查看完整错误信息。</details></think>
+准备运行测试以查看完整错误信息。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\pom.xml</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\pom.xml</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\HiveAiCodeMotherApplication.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\HiveAiCodeMotherApplication.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: cd "d:\Liyalin\javafail\hive-ai-code-mother" && mvn test -Dtest=AiCodeGeneratorServiceTest -q 2>&1</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: cd &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34; &amp;&amp; mvn test -Dtest=AiCodeGeneratorServiceTest -q 2&gt;&amp;1</summary>
 ```bash
 cd "d:\Liyalin\javafail\hive-ai-code-mother" && mvn test -Dtest=AiCodeGeneratorServiceTest -q 2>&1
 ```
 
 ```
 ����λ�� C:\Users\Liyal\AppData\Local\Temp\ps-script-2a4c4264-804d-43e8-991e-ae48c6d1326f.ps1:7 �ַ�: 46
-+ cd "d:\Liyalin\javafail\hive-ai-code-mother" &amp;&amp; mvn test -Dtest=AiCod ...
++ cd "d:\Liyalin\javafail\hive-ai-code-mother" && mvn test -Dtest=AiCod ...
 +                                              ~~
-��ǡ�&amp;&amp;�����Ǵ˰汾�е���Ч���ָ�����
+��ǡ�&&�����Ǵ˰汾�е���Ч���ָ�����
     + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
     + FullyQualifiedErrorId : InvalidEndOfLine
  
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -625,13 +457,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 PowerShell 不支持 `&&` 操作符。
 
-考虑改用 `;` 或分隔命令来替代 `&&`。</details></think>
+考虑改用 `;` 或分隔命令来替代 `&&`。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorServiceTest 2>&1</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorServiceTest 2&gt;&amp;1</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorServiceTest 2>&1
 ```
@@ -640,14 +472,14 @@ Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGe
 [INFO] Scanning for projects...
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.hive:hive-ai-code-mother:jar:0.0.1-SNAPSHOT
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.mysql:mysql-connector-j:jar -&gt; duplicate declaration of version (?) @ line 90, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.mysql:mysql-connector-j:jar -> duplicate declaration of version (?) @ line 90, column 21
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
 [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
 [WARNING] 
 [INFO] 
-[INFO] --------------------&lt; com.hive:hive-ai-code-mother &gt;--------------------
+[INFO] --------------------< com.hive:hive-ai-code-mother >--------------------
 [INFO] Building hive-ai-code-mother 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
@@ -658,1811 +490,15 @@ Progress (1): 2.3 kB                    Downloaded from aliyunmaven: https://m
 Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.pom
 Progress (1): 5.9 kB                    Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.pom (5.9 kB at 13 kB/s)
 Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/org/apache/opennlp/opennlp/2.5.4/opennlp-2.5.4.pom
-Progress (1): 7.2/20 kBProgress (1): 15/20 kB Progress (1): 20 kB                      Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/org/apache/opennlp/opennlp/2.5.4/opennlp-2.5.4.pom (20 kB at 49 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-open-ai-spring-boot-starter/1.1.0-beta7/langchain4j-open-ai-spring-boot-starter-1.1.0-beta7.pom
-Progress (1): 2.8 kB                    Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-open-ai-spring-boot-starter/1.1.0-beta7/langchain4j-open-ai-spring-boot-starter-1.1.0-beta7.pom (2.8 kB at 6.6 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-open-ai/1.1.0/langchain4j-open-ai-1.1.0.pom
-Progress (1): 2.7 kB                    Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-open-ai/1.1.0/langchain4j-open-ai-1.1.0.pom (2.7 kB at 6.6 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-http-client/1.1.0/langchain4j-http-client-1.1.0.pom
-Progress (1): 1.8 kB                    Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-http-client/1.1.0/langchain4j-http-client-1.1.0.pom (1.8 kB at 4.9 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-http-client-spring-restclient/1.1.0-beta7/langchain4j-http-client-spring-restclient-1.1.0-beta7.pom
-Progress (1): 2.1 kB                    Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-http-client-spring-restclient/1.1.0-beta7/langchain4j-http-client-spring-restclient-1.1.0-beta7.pom (2.1 kB at 3.2 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/org/springframework/boot/spring-boot-starter-aop/3.5.16/spring-boot-starter-aop-3.5.16.pom
-Progress (1): 1.9/2.5 kBProgress (1): 2.5 kB                        Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/org/springframework/boot/spring-boot-starter-aop/3.5.16/spring-boot-starter-aop-3.5.16.pom (2.5 kB at 7.4 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.pom
-Progress (1): 1.7 kB                    Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.pom (1.7 kB at 13 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-core/1.1.0/langchain4j-core-1.1.0.jar
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j/1.1.0/langchain4j-1.1.0.jar
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-open-ai-spring-boot-starter/1.1.0-beta7/langchain4j-open-ai-spring-boot-starter-1.1.0-beta7.jar
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-open-ai/1.1.0/langchain4j-open-ai-1.1.0.jar
-Progress (1): 3.3/212 kBProgress (1): 20/212 kB Progress (1): 36/212 kBProgress (2): 36/212 kB | 0.4/21 kBProgress (2): 36/212 kB | 17/21 kB Progress (2): 36/212 kB | 21 kB   Progress (2): 52/212 kB | 21 kBProgress (3): 52/212 kB | 21 kB | 7.3/223 kBProgress (3): 69/212 kB | 21 kB | 7.3/223 kBProgress (3): 69/212 kB | 21 kB | 15/223 kB Progress (3): 69/212 kB | 21 kB | 32/223 kBProgress (3): 85/212 kB | 21 kB | 32/223 kBProgress (3): 102/212 kB | 21 kB | 32/223 kBProgress (4): 102/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 102/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 102/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 118/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 118/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 118/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 118/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 134/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 142/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 158/212 kB | 21 kB | 32/223 kB | 0/1.4 MBProgress (4): 158/212 kB | 21 kB | 48/223 kB | 0/1.4 MBProgress (4): 167/212 kB | 21 kB | 48/223 kB | 0/1.4 MBProgress (4): 183/212 kB | 21 kB | 48/223 kB | 0/1.4 MBProgress (4): 190/212 kB | 21 kB | 48/223 kB | 0/1.4 MBProgress (4): 190/212 kB | 21 kB | 64/223 kB | 0/1.4 MBProgress (4): 207/212 kB | 21 kB | 64/223 kB | 0/1.4 MBProgress (4): 212 kB | 21 kB | 64/223 kB | 0/1.4 MB    Progress (4): 212 kB | 21 kB | 81/223 kB | 0/1.4 MBProgress (4): 212 kB | 21 kB | 97/223 kB | 0/1.4 MBProgress (4): 212 kB | 21 kB | 97/223 kB | 0/1.4 MBProgress (4): 212 kB | 21 kB | 97/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 97/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 97/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 114/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 114/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 114/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 114/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 114/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 114/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 114/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 130/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 130/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 146/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 163/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 163/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 163/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 179/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 179/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 179/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 179/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 179/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 179/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 179/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 179/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 196/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 212/223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MB    Progress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.1/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.2/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.3/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.4/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.5/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.5/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.5/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.5/1.4 MBProgress (4): 212 kB | 21 kB | 223 kB | 0.5/1.4 MBProgress (5): 212 kB | 21 kB | 223 kB | 0.5/1.4 MB | 0.4/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.5/1.4 MB | 0.4/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.5/1.4 MB | 17/378 kB Progress (5): 212 kB | 21 kB | 223 kB | 0.5/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.5/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.5/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.5/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.6/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.6/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.6/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.6/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.6/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.6/1.4 MB | 33/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.6/1.4 MB | 50/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.6/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.7/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.7/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.7/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.7/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.7/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.7/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.7/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.7/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 53/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 56/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 62/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 78/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 85/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 101/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 118/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.8/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.9/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.9/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.9/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.9/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.9/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.9/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 0.9/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.0/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.1/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.1/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.1/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.1/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.1/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.1/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.1/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 134/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 151/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 167/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 183/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 200/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 206/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 223/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 227/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 231/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 247/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 264/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 280/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 291/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 295/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 298/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 315/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 331/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 347/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 364/378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 378 kB    Progress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.2/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.3/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.3/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.3/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.3/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.3/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.3/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.4/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.4/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.4/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.4/1.4 MB | 378 kBProgress (5): 212 kB | 21 kB | 223 kB | 1.4 MB | 378 kB                                                           Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j/1.1.0/langchain4j-1.1.0.jar (212 kB at 390 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-http-client/1.1.0/langchain4j-http-client-1.1.0.jar
-Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-open-ai/1.1.0/langchain4j-open-ai-1.1.0.jar (223 kB at 418 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-http-client-spring-restclient/1.1.0-beta7/langchain4j-http-client-spring-restclient-1.1.0-beta7.jar
-Progress (4): 21 kB | 1.4 MB | 378 kB | 7.3/9.2 kBProgress (4): 21 kB | 1.4 MB | 378 kB | 9.2 kB    Progress (5): 21 kB | 1.4 MB | 378 kB | 9.2 kB | 6.3/21 kBProgress (5): 21 kB | 1.4 MB | 378 kB | 9.2 kB | 15/21 kB Progress (5): 21 kB | 1.4 MB | 378 kB | 9.2 kB | 21 kB                                                         Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-open-ai-spring-boot-starter/1.1.0-beta7/langchain4j-open-ai-spring-boot-starter-1.1.0-beta7.jar (21 kB at 30 kB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/org/springframework/boot/spring-boot-starter-aop/3.5.16/spring-boot-starter-aop-3.5.16.jar
-Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar (1.4 MB at 1.8 MB/s)
-Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar
-Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-core/1.1.0/langchain4j-core-1.1.0.jar (378 kB at 482 kB/s)
-Progress (3): 9.2 kB | 21 kB | 0/2.2 MBProgress (3): 9.2 kB | 21 kB | 0/2.2 MBProgress (3): 9.2 kB | 21 kB | 0/2.2 MBProgress (3): 9.2 kB | 21 kB | 0/2.2 MBProgress (3): 9.2 kB | 21 kB | 0/2.2 MBProgress (3): 9.2 kB | 21 kB | 0/2.2 MBProgress (3): 9.2 kB | 21 kB | 0/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.1/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.2/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.3/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.4/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.5/2.2 MBProgress (3): 9.2 kB | 21 kB | 0.6/2.2 MBProgress (4): 9.2 kB | 21 kB | 0.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 0.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.0/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.1/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.1/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.1/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.1/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.1/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.1/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.1/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.2/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.2/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.2/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.2/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.2/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.2/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.2/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.3/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.3/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.3/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.3/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.3/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.3/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.3/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.4/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.5/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.6/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.7/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.8/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.9/2.2 MB | 4.8 kBProgress (4): 9.2 kB | 21 kB | 1.9/2.2 MB | 4.8 kB                                                  Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-http-client-spring-restclient/1.1.0-beta7/langchain4j-http-client-spring-restclient-1.1.0-beta7.jar (9.2 kB at 9.4 kB/s)
-Progress (3): 21 kB | 2.0/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.0/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.0/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.0/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.0/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.0/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.0/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.0/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.1/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.2/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.2/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.2/2.2 MB | 4.8 kBProgress (3): 21 kB | 2.2 MB | 4.8 kB                                         Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar (2.2 MB at 2.0 MB/s)
-Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-http-client/1.1.0/langchain4j-http-client-1.1.0.jar (21 kB at 14 kB/s)
-Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/org/springframework/boot/spring-boot-starter-aop/3.5.16/spring-boot-starter-aop-3.5.16.jar (4.8 kB at 3.1 kB/s)
-[INFO] 
-[INFO] --- resources:3.3.1:resources (default-resources) @ hive-ai-code-mother ---
-[INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO] Copying 3 resources from src\main\resources to target\classes
-[INFO] 
-[INFO] --- compiler:3.14.1:compile (default-compile) @ hive-ai-code-mother ---
-[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is automatically retrieved.
-[INFO] Recompiling the module because of changed dependency.
-[INFO] Compiling 30 source files with javac [debug parameters release 21] to target\classes
-[INFO] 
-[INFO] --- resources:3.3.1:testResources (default-testResources) @ hive-ai-code-mother ---
-[INFO] skip non existing resourceDirectory D:\Liyalin\javafail\hive-ai-code-mother\src\test\resources
-[INFO] 
-[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ hive-ai-code-mother ---
-[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is automatically retrieved.
-[INFO] Recompiling the module because of changed dependency.
-[INFO] Compiling 3 source files with javac [debug parameters release 21] to target\test-classes
-[INFO] 
-[INFO] --- surefire:3.5.6:test (default-test) @ hive-ai-code-mother ---
-[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest
-11:56:06.526 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest]: AiCodeGeneratorServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:56:06.757 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.hive.hiveaicodemother.HiveAiCodeMotherApplication for test class com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _&#96; | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
-
- :: Spring Boot ::               (v3.5.16)
-
-2026-07-11T11:56:07.462+08:00  INFO 27904 --- [hive-ai-code-mother] [           main] c.h.h.ai.AiCodeGeneratorServiceTest      : Starting AiCodeGeneratorServiceTest using Java 21.0.11 with PID 27904 (started by Liyal in D:\Liyalin\javafail\hive-ai-code-mother)
-2026-07-11T11:56:07.464+08:00  INFO 27904 --- [hive-ai-code-mother] [           main] c.h.h.ai.AiCodeGeneratorServiceTest      : No active profile set, falling back to 1 default profile: "default"
-2026-07-11T11:56:09.739+08:00  WARN 27904 --- [hive-ai-code-mother] [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiCodeGeneratorServiceFactory': Injection of resource dependencies failed
-mvn : 
-����λ�� C:\Users\Liyal\AppData\Local\Temp\ps-script-6a6d7358-59ce-415d-ad5f-a6d605054583.ps1:7 �ַ�: 57
-+ ... hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorServiceTest 2&gt;&amp;1
-+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-============================
-CONDITIONS EVALUATION REPORT
-============================
-Positive matches:
------------------
-   AopAutoConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.auto=true) matched (OnPropertyCondition)
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration matched:
-      - @ConditionalOnClass found required class 'org.aspectj.weaver.Advice' (OnClassCondition)
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration.CglibAutoProxyConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
-   ApplicationAvailabilityAutoConfiguration#applicationAvailability matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.availability.ApplicationAvailability; SearchStrategy
-: all) did not find any beans (OnBeanCondition)
-   DataSourceAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedde
-d.EmbeddedDatabaseType' (OnClassCondition)
-      - @ConditionalOnMissingBean (types: io.r2dbc.spi.ConnectionFactory; SearchStrategy: all) did not find any beans (
-OnBeanCondition)
-   DataSourceAutoConfiguration.PooledDataSourceConfiguration matched:
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceConditio
-n.PooledDataSourceAvailable PooledDataSource found supported DataSource; NestedCondition on DataSourceAutoConfiguration
-.PooledDataSourceCondition.ExplicitType @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.d
-atasource.type' (DataSourceAutoConfiguration.PooledDataSourceCondition)
-      - @ConditionalOnMissingBean (types: javax.sql.DataSource,javax.sql.XADataSource; SearchStrategy: all) did not fin
-d any beans (OnBeanCondition)
-   DataSourceAutoConfiguration.PooledDataSourceConfiguration#jdbcConnectionDetails matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.jdbc.JdbcConnectionDetails; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   DataSourceConfiguration.Hikari matched:
-      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
-      - @ConditionalOnProperty (spring.datasource.type=com.zaxxer.hikari.HikariDataSource) matched (OnPropertyCondition
-)
-      - @ConditionalOnMissingBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCond
-ition)
-   DataSourceInitializationConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassC
-ondition)
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSourc
-e'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitia
-lizer,org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer; SearchStrategy: all) did not f
-ind any beans (OnBeanCondition)
-   DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration matched:
-      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
-   DataSourceTransactionManagerAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate'
-, 'org.springframework.transaction.TransactionManager' (OnClassCondition)
-   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration matched:
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSourc
-e' (OnBeanCondition)
-   DispatcherServletAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-   DispatcherServletAutoConfiguration.DispatcherServletConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
-      - Default DispatcherServlet did not find dispatcher servlet beans (DispatcherServletAutoConfiguration.DefaultDisp
-atcherServletCondition)
-   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
-      - DispatcherServlet Registration did not find servlet registration bean (DispatcherServletAutoConfiguration.Dispa
-tcherServletRegistrationCondition)
-   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration matched:
-      - @ConditionalOnBean (names: dispatcherServlet types: org.springframework.web.servlet.DispatcherServlet; SearchSt
-rategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
-   ErrorMvcAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.Dispatch
-erServlet' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-   ErrorMvcAutoConfiguration#basicErrorController matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorController; SearchStrategy: c
-urrent) did not find any beans (OnBeanCondition)
-   ErrorMvcAutoConfiguration#errorAttributes matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorAttributes; SearchStrategy: c
-urrent) did not find any beans (OnBeanCondition)
-   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver matched:
-      - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean '
-dispatcherServlet'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.servlet.error.ErrorVie
-wResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
-      - @ConditionalOnBooleanProperty (server.error.whitelabel.enabled=true) matched (OnPropertyCondition)
-      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition
-)
-   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: al
-l) did not find any beans (OnBeanCondition)
-   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
-      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   FlexTransactionAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'com.mybatisflex.core.row.Db' (OnClassCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) did 
-not find any beans (OnBeanCondition)
-   GenericCacheConfiguration matched:
-      - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration automatic cache type (CacheConditi
-on)
-   HttpClientAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.client.ClientHttpRequestFactory' (OnClassCon
-dition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebAppl
-ication did not find reactive web application classes (NotReactiveWebApplicationCondition)
-   HttpClientAutoConfiguration#clientHttpRequestFactoryBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder&lt;?&gt;; Sear
-chStrategy: all) did not find any beans (OnBeanCondition)
-   HttpClientAutoConfiguration#clientHttpRequestFactorySettings matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.ClientHttpRequestFactorySettings; Search
-Strategy: all) did not find any beans (OnBeanCondition)
-   HttpEncodingAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondi
-tion)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBooleanProperty (server.servlet.encoding.enabled=true) matched (OnPropertyCondition)
-   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) 
-did not find any beans (OnBeanCondition)
-   HttpMessageConvertersAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCond
-ition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactive
-WebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAuto
-Configuration.NotReactiveWebApplicationCondition)
-   HttpMessageConvertersAutoConfiguration#messageConverters matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.http.HttpMessageConverters; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.StringHttpMessageConverter' (OnCla
-ssCondition)
-   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy
-: all) did not find any beans (OnBeanCondition)
-   JacksonAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
-   JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' 
-(OnClassCondition)
-   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' 
-(OnClassCondition)
-   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchSt
-rategy: all) did not find any beans (OnBeanCondition)
-   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' 
-(OnClassCondition)
-   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
-      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not fin
-d any beans (OnBeanCondition)
-   JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClas
-sCondition)
-   JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
-      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
-      - @ConditionalOnPreferredJsonMapper JACKSON no property was configured and Jackson is the default (OnPreferredJso
-nMapperCondition)
-      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jackso
-nObjectMapper' (OnBeanCondition)
-   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration#mappingJackson2HttpMessag
-eConverter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter i
-gnored: org.springframework.hateoas.server.mvc.TypeConstrainedMappingJackson2HttpMessageConverter,org.springframework.d
-ata.rest.webmvc.alps.AlpsJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   JdbcClientAutoConfiguration matched:
-      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate; Sear
-chStrategy: all) found a single bean 'namedParameterJdbcTemplate'; @ConditionalOnMissingBean (types: org.springframewor
-k.jdbc.core.simple.JdbcClient; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   JdbcTemplateAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate'
- (OnClassCondition)
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSourc
-e' (OnBeanCondition)
-   JdbcTemplateConfiguration matched:
-      - @ConditionalOnMissingBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) did not fi
-nd any beans (OnBeanCondition)
-   Knife4jAutoConfiguration matched:
-      - @ConditionalOnProperty (knife4j.enable=true) matched (OnPropertyCondition)
-   Knife4jAutoConfiguration#knife4jJakartaOperationCustomizer matched:
-      - @ConditionalOnMissingBean (types: com.github.xiaoymin.knife4j.spring.extension.Knife4jJakartaOperationCustomize
-r; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   Knife4jAutoConfiguration#knife4jOpenApiCustomizer matched:
-      - @ConditionalOnMissingBean (types: com.github.xiaoymin.knife4j.spring.extension.Knife4jOpenApiCustomizer; Search
-Strategy: all) did not find any beans (OnBeanCondition)
-   LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
-      - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCo
-ndition)
-   MultipartAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.multipart.suppor
-t.StandardServletMultipartResolver', 'jakarta.servlet.MultipartConfigElement' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBooleanProperty (spring.servlet.multipart.enabled=true) matched (OnPropertyCondition)
-   MultipartAutoConfiguration#multipartConfigElement matched:
-      - @ConditionalOnMissingBean (types: jakarta.servlet.MultipartConfigElement; SearchStrategy: all) did not find any
- beans (OnBeanCondition)
-   MultipartAutoConfiguration#multipartResolver matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did
- not find any beans (OnBeanCondition)
-   MultipleOpenApiSupportConfiguration matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on MultipleOpenApiSupportCondition.OnActuatorDifferentP
-ort @ConditionalOnProperty (springdoc.show-actuator) did not find property 'springdoc.show-actuator'; NestedCondition o
-n MultipleOpenApiSupportCondition.OnMultipleOpenApiSupportCondition AnyNestedCondition 1 matched 1 did not; NestedCondi
-tion on MultipleOpenApiGroupsCondition.OnGroupConfigProperty @ConditionalOnProperty (springdoc.group-configs[0].group) 
-matched; NestedCondition on MultipleOpenApiGroupsCondition.OnGroupedOpenApiBean @ConditionalOnBean (types: org.springdo
-c.core.models.GroupedOpenApi; SearchStrategy: all) did not find any beans of type org.springdoc.core.models.GroupedOpen
-Api (MultipleOpenApiSupportCondition)
-   MultipleOpenApiSupportConfiguration#multipleOpenApiResource matched:
-      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.api.MultipleOpenApiWebMvcResource; SearchStrategy: all) 
-did not find any beans (OnBeanCondition)
-   MybatisFlexAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.apache.ibatis.session.SqlSessionFactory', 'org.mybatis.spring.S
-qlSessionFactoryBean' (OnClassCondition)
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSourc
-e' (OnBeanCondition)
-   MybatisFlexAutoConfiguration#sqlSessionFactory matched:
-      - @ConditionalOnMissingBean (types: org.apache.ibatis.session.SqlSessionFactory; SearchStrategy: all) did not fin
-d any beans (OnBeanCondition)
-   MybatisFlexAutoConfiguration#sqlSessionTemplate matched:
-      - @ConditionalOnMissingBean (types: org.mybatis.spring.SqlSessionTemplate; SearchStrategy: all) did not find any 
-beans (OnBeanCondition)
-   MybatisLanguageDriverAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.apache.ibatis.scripting.LanguageDriver' (OnClassCondition)
-   NamedParameterJdbcTemplateConfiguration matched:
-      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a 
-single bean 'jdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJd
-bcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   NoOpCacheConfiguration matched:
-      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration automatic cache type (CacheCondition)
-   PersistenceExceptionTranslationAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPos
-tProcessor' (OnClassCondition)
-   PersistenceExceptionTranslationAutoConfiguration#persistenceExceptionTranslationPostProcessor matched:
-      - @ConditionalOnBooleanProperty (spring.dao.exceptiontranslation.enabled=true) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcess
-or; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; Sea
-rchStrategy: current) did not find any beans (OnBeanCondition)
-   RestClientAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.client.RestClient' (OnClassCondition)
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on NotReactiveWebApplicationOrVirtualThreadsExecutorEna
-bledCondition.VirtualThreadsExecutorEnabled found non-matching nested conditions @ConditionalOnThreading did not find V
-IRTUAL; NestedCondition on NotReactiveWebApplicationOrVirtualThreadsExecutorEnabledCondition.NotReactiveWebApplication 
-NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebApplication 
-did not find reactive web application classes (NotReactiveWebApplicationOrVirtualThreadsExecutorEnabledCondition)
-   RestClientAutoConfiguration#httpMessageConvertersRestClientCustomizer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.client.HttpMessageConvertersRestCl
-ientCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   RestClientAutoConfiguration#restClientBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.client.RestClient$Builder; SearchStrategy: all) did n
-ot find any beans (OnBeanCondition)
-   RestClientAutoConfiguration#restClientBuilderConfigurer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.client.RestClientBuilderConfigurer
-; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   RestClientAutoConfiguration#restClientSsl matched:
-      - @ConditionalOnBean (types: org.springframework.boot.ssl.SslBundles; SearchStrategy: all) found bean 'sslBundleR
-egistry'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.client.RestClientSsl; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   RestTemplateAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.client.RestTemplate' (OnClassCondition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebAppl
-ication did not find reactive web application classes (NotReactiveWebApplicationCondition)
-   RestTemplateAutoConfiguration#restTemplateBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.web.client.RestTemplateBuilder; SearchStrategy: all)
- did not find any beans (OnBeanCondition)
-   ServletWebServerFactoryAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRequest' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-   ServletWebServerFactoryAutoConfiguration.TomcatConfiguration matched:
-      - @ConditionalOnClass found required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
-   ServletWebServerFactoryConfiguration.EmbeddedTomcat matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.apache.catalina.startup.Tomcat', 'or
-g.apache.coyote.UpgradeProtocol' (OnClassCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.server.ServletWebServerFactory; SearchSt
-rategy: current) did not find any beans (OnBeanCondition)
-   SimpleCacheConfiguration matched:
-      - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration automatic cache type (CacheConditio
-n)
-   SpringDocConfigProperties matched:
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SpringDocConfiguration matched:
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-   SpringDocConfiguration#fileSupportConverter matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.FileSupportConverter; SearchStrategy: all) did 
-not find any beans (OnBeanCondition)
-   SpringDocConfiguration#openAPIBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.OpenAPIService; SearchStrategy: all) did not find 
-any beans (OnBeanCondition)
-   SpringDocConfiguration#operationBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.OperationService; SearchStrategy: all) did not fin
-d any beans (OnBeanCondition)
-   SpringDocConfiguration#parameterBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.GenericParameterService; SearchStrategy: all) did 
-not find any beans (OnBeanCondition)
-   SpringDocConfiguration#polymorphicModelConverter matched:
-      - @ConditionalOnProperty (springdoc.model-converters.polymorphic-converter.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.PolymorphicModelConverter; SearchStrategy: all)
- did not find any beans (OnBeanCondition)
-   SpringDocConfiguration#requestBodyBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.RequestBodyService; SearchStrategy: all) did not f
-ind any beans (OnBeanCondition)
-   SpringDocConfiguration#responseSupportConverter matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.ResponseSupportConverter; SearchStrategy: all) 
-did not find any beans (OnBeanCondition)
-   SpringDocConfiguration#schemaPropertyDeprecatingConverter matched:
-      - @ConditionalOnProperty (springdoc.model-converters.deprecating-converter.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.SchemaPropertyDeprecatingConverter; SearchStrat
-egy: all) did not find any beans (OnBeanCondition)
-   SpringDocConfiguration#securityParser matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.SecurityService; SearchStrategy: all) did not find
- any beans (OnBeanCondition)
-   SpringDocConfiguration#springDocCustomizers matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.customizers.SpringDocCustomizers; SearchStrategy: all) did
- not find any beans (OnBeanCondition)
-   SpringDocConfiguration#springDocProviders matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringDocProviders; SearchStrategy: all) did not
- find any beans (OnBeanCondition)
-   SpringDocConfiguration#springdocBeanFactoryPostProcessor matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.context.properties.bind.BindResult' (OnClass
-Condition)
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on CacheOrGroupedOpenApiCondition.OnCacheDisabled found
- non-matching nested conditions @ConditionalOnProperty (springdoc.cache.disabled) did not find property 'springdoc.cach
-e.disabled'; NestedCondition on CacheOrGroupedOpenApiCondition.OnMultipleOpenApiSupportCondition AnyNestedCondition 1 m
-atched 1 did not; NestedCondition on MultipleOpenApiSupportCondition.OnActuatorDifferentPort @ConditionalOnProperty (sp
-ringdoc.show-actuator) did not find property 'springdoc.show-actuator'; NestedCondition on MultipleOpenApiSupportCondit
-ion.OnMultipleOpenApiSupportCondition AnyNestedCondition 1 matched 1 did not; NestedCondition on MultipleOpenApiGroupsC
-ondition.OnGroupConfigProperty @ConditionalOnProperty (springdoc.group-configs[0].group) matched; NestedCondition on Mu
-ltipleOpenApiGroupsCondition.OnGroupedOpenApiBean @ConditionalOnBean (types: org.springdoc.core.models.GroupedOpenApi; 
-SearchStrategy: all) did not find any beans of type org.springdoc.core.models.GroupedOpenApi (CacheOrGroupedOpenApiCond
-ition)
-   SpringDocConfiguration#springdocObjectMapperProvider matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.providers.ObjectMapperProvider; SearchStrategy: all) did n
-ot find any beans (OnBeanCondition)
-   SpringDocConfiguration.SpringDocSpringDataWebPropertiesProvider matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.autoconfigure.data.web.SpringDataWebProperti
-es' (OnClassCondition)
-   SpringDocConfiguration.SpringDocSpringDataWebPropertiesProvider#springDataWebPropertiesProvider matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringDataWebPropertiesProvider; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-   SpringDocConfiguration.WebConversionServiceConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.autoconfigure.web.format.WebConversionServic
-e' (OnClassCondition)
-   SpringDocUIConfiguration matched:
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SpringDocWebMvcConfiguration matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SpringDocWebMvcConfiguration#openApiResource matched:
-      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.api.OpenApiWebMvcResource; SearchStrategy: all) did not 
-find any beans (OnBeanCondition)
-   SpringDocWebMvcConfiguration#requestBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.core.service.RequestService; SearchStrategy: all) did no
-t find any beans (OnBeanCondition)
-   SpringDocWebMvcConfiguration#responseBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.GenericResponseService; SearchStrategy: all) did n
-ot find any beans (OnBeanCondition)
-   SpringDocWebMvcConfiguration#springWebProvider matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringWebProvider; SearchStrategy: all) did not 
-find any beans (OnBeanCondition)
-   SpringDocWebMvcConfiguration.SpringDocWebMvcRouterConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.servlet.function.RouterFunction' (OnClassCond
-ition)
-   SpringDocWebMvcConfiguration.SpringDocWebMvcRouterConfiguration#routerFunctionProvider matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.core.providers.RouterFunctionWebMvcProvider; SearchStrat
-egy: all) did not find any beans (OnBeanCondition)
-   SqlInitializationAutoConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.sql.init.enabled=true) matched (OnPropertyCondition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on SqlInitializationAutoConfiguration.SqlInitializati
-onModeCondition.ModeIsNever @ConditionalOnProperty (spring.sql.init.mode=never) did not find property 'spring.sql.init.
-mode' (SqlInitializationAutoConfiguration.SqlInitializationModeCondition)
-   SslAutoConfiguration#sslBundleRegistry matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.ssl.SslBundleRegistry,org.springframework.boot.ssl.S
-slBundles; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   SwaggerConfig matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SwaggerConfig#indexPageTransformer matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerIndexTransformer; SearchStrategy: all) did not
- find any beans (OnBeanCondition)
-   SwaggerConfig#swaggerConfigResource matched:
-      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerConfigResource; SearchStrategy: all) did not f
-ind any beans (OnBeanCondition)
-   SwaggerConfig#swaggerResourceResolver matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerResourceResolver; SearchStrategy: all) did not
- find any beans (OnBeanCondition)
-   SwaggerConfig#swaggerWebMvcConfigurer matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerWebMvcConfigurer; SearchStrategy: all) did not
- find any beans (OnBeanCondition)
-   SwaggerConfig#swaggerWelcome matched:
-      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc; SearchStrategy: all) did not fi
-nd any beans (OnBeanCondition)
-   SwaggerUiConfigParameters matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SwaggerUiConfigProperties matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SwaggerUiOAuthProperties matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   TaskExecutionAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (On
-ClassCondition)
-   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
-      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: al
-l) did not find any beans (OnBeanCondition)
-   TaskExecutorConfigurations.AsyncConfigurerConfiguration#applicationTaskExecutorAsyncConfigurer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: al
-l) did not find any beans (OnBeanCondition)
-   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
-   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.Model
-Condition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode';
- NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (typ
-es: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCo
-ndition)
-   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
-      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
-   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: 
-all) did not find any beans (OnBeanCondition)
-   TaskSchedulingAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (O
-nClassCondition)
-   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy
-: all) did not find any beans (OnBeanCondition)
-      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
-   TaskSchedulingConfigurations.ThreadPoolTaskSchedulerBuilderConfiguration#threadPoolTaskSchedulerBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-   TransactionAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassC
-ondition)
-   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
-      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 
-'transactionManager'; @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionM
-anagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
-   TransactionAutoConfiguration.TransactionTemplateConfiguration matched:
-      - @ConditionalOnSingleCandidate (types: org.springframework.transaction.PlatformTransactionManager; SearchStrateg
-y: all) found a single bean 'transactionManager' (OnBeanCondition)
-   TransactionAutoConfiguration.TransactionTemplateConfiguration#transactionTemplate matched:
-      - @ConditionalOnMissingBean (types: org.springframework.transaction.support.TransactionOperations; SearchStrategy
-: all) did not find any beans (OnBeanCondition)
-   TransactionManagerCustomizationAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassC
-ondition)
-   TransactionManagerCustomizationAutoConfiguration#platformTransactionManagerCustomizers matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomiz
-ers; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.Dispatch
-erServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
- SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration#formContentFilter matched:
-      - @ConditionalOnBooleanProperty (spring.mvc.formcontent.filter.enabled=true) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did no
-t find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
-      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition
-)
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
-      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
-      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
-      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondit
-ion)
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springfram
-ework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
-      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defa
-ultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.
-springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCon
-dition)
-   WebSocketServletAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'jakarta.websocket.server.ServerContainer
-' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-   WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.tomcat.websocket.s
-erver.WsSci' (OnClassCondition)
-   WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration#websocketServletWebServerCustomizer matched:
-      - @ConditionalOnMissingBean (names: websocketServletWebServerCustomizer; SearchStrategy: all) did not find any be
-ans (OnBeanCondition)
-Negative matches:
------------------
-   ActiveMQAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.jms.ConnectionFactory' (OnClassCondition)
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration.JdkDynamicAutoProxyConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-
-target-class' (OnPropertyCondition)
-   AopAutoConfiguration.ClassProxyingConfiguration:
-      Did not match:
-         - @ConditionalOnMissingClass found unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
-   ArtemisAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.jms.ConnectionFactory' (OnClassCondition)
-   AutoConfig#openAiChatModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.chat-model.api-key) did not find property 'langchain4j.open-ai.c
-hat-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiChatModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.chat-model.api-key) did not find property 'langchain4j.open-ai.c
-hat-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiEmbeddingModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.embedding-model.api-key) did not find property 'langchain4j.open
--ai.embedding-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiEmbeddingModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.embedding-model.api-key) did not find property 'langchain4j.open
--ai.embedding-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiImageModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.image-model.api-key) did not find property 'langchain4j.open-ai.
-image-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiImageModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.image-model.api-key) did not find property 'langchain4j.open-ai.
-image-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiLanguageModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.language-model.api-key) did not find property 'langchain4j.open-
-ai.language-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiLanguageModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.language-model.api-key) did not find property 'langchain4j.open-
-ai.language-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiModerationModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.moderation-model.api-key) did not find property 'langchain4j.ope
-n-ai.moderation-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiModerationModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.moderation-model.api-key) did not find property 'langchain4j.ope
-n-ai.moderation-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingChatModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-chat-model.api-key) did not find property 'langchain4j
-.open-ai.streaming-chat-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingChatModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-chat-model.api-key) did not find property 'langchain4j
-.open-ai.streaming-chat-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingChatModelTaskExecutor:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-chat-model.api-key) did not find property 'langchain4j
-.open-ai.streaming-chat-model.api-key' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnMissingClass did not find unwanted class 'io.micrometer.context.ContextSnapshotFactory' (OnCla
-ssCondition)
-   AutoConfig#openAiStreamingChatModelTaskExecutorWithContextPropagation:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.context.ContextSnapshotFactory' (OnClassCondi
-tion)
-   AutoConfig#openAiStreamingLanguageModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-language-model.api-key) did not find property 'langcha
-in4j.open-ai.streaming-language-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingLanguageModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-language-model.api-key) did not find property 'langcha
-in4j.open-ai.streaming-language-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingLanguageModelTaskExecutor:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-language-model.api-key) did not find property 'langcha
-in4j.open-ai.streaming-language-model.api-key' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnMissingClass did not find unwanted class 'io.micrometer.context.ContextSnapshotFactory' (OnCla
-ssCondition)
-   AutoConfig#openAiStreamingLanguageModelTaskExecutorWithContextPropagation:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.context.ContextSnapshotFactory' (OnClassCondi
-tion)
-   BatchAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.batch.core.launch.JobLauncher' (OnClass
-Condition)
-   Cache2kCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
-   CacheAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) di
-d not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
-   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFact
-oryBean' (OnClassCondition)
-         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluat
-ionReport.AncestorsMatchedCondition)
-   CaffeineCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondit
-ion)
-   CassandraAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondit
-ion)
-   CassandraDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondit
-ion)
-   CassandraReactiveDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondit
-ion)
-   CassandraReactiveRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.cassandra.ReactiveSession' (OnClas
-sCondition)
-   CassandraRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondit
-ion)
-   org.springframework.boot.autoconfigure.http.client.reactive.ClientHttpConnectorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Mono' (OnClassCondition)
-   org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient'
- (OnClassCondition)
-   CodecsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient'
- (OnClassCondition)
-   CouchbaseAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-   CouchbaseCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-   CouchbaseDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
-   CouchbaseReactiveDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-   CouchbaseReactiveRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-   CouchbaseRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
-   DataSourceAutoConfiguration.EmbeddedDatabaseConfiguration:
-      Did not match:
-         - EmbeddedDataSource spring.datasource.url is set (DataSourceAutoConfiguration.EmbeddedDatabaseCondition)
-   DataSourceCheckpointRestoreConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.crac.Resource' (OnClassCondition)
-   DataSourceConfiguration.Dbcp2:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition
-)
-   DataSourceConfiguration.Generic:
-      Did not match:
-         - @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (OnPropertyCo
-ndition)
-   DataSourceConfiguration.OracleUcp:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSourceImpl', 'oracle.jdbc.OracleC
-onnection' (OnClassCondition)
-   DataSourceConfiguration.Tomcat:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
-   DataSourceJmxConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) found different value in property 'spring.jmx.enable
-d' (OnPropertyCondition)
-   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition
-)
-   DataSourcePoolMetadataProvidersConfiguration.OracleUcpPoolDataSourceMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSource', 'oracle.jdbc.OracleConne
-ction' (OnClassCondition)
-   DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
-   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration#transactionManager:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) f
-ound beans of type 'org.springframework.transaction.TransactionManager' transactionManager (OnBeanCondition)
-   DispatcherServletAutoConfiguration.DispatcherServletConfiguration#multipartResolver:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not
- find any beans of type org.springframework.web.multipart.MultipartResolver (OnBeanCondition)
-   ElasticsearchClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'co.elastic.clients.elasticsearch.ElasticsearchClient' (OnCl
-assCondition)
-   ElasticsearchDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.elc.Elasticse
-archTemplate' (OnClassCondition)
-   ElasticsearchRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.repository.Elasticse
-archRepository' (OnClassCondition)
-   ElasticsearchRestClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.elasticsearch.client.RestClientBuilder' (OnClassConditi
-on)
-   EmbeddedLdapAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.unboundid.ldap.listener.InMemoryDirectoryServer' (OnCla
-ssCondition)
-   EmbeddedWebServerFactoryCustomizerAutoConfiguration:
-      Did not match:
-         - Application is deployed as a WAR file. (OnWarDeploymentCondition)
-      Matched:
-         - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-   ErrorWebFluxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' 
-(OnClassCondition)
-   FlywayAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.flywaydb.core.Flyway' (OnClassCondition)
-   FreeMarkerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
-   GraphQlAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlQueryByExampleAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlQuerydslAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.querydsl.core.Query' (OnClassCondition)
-   GraphQlRSocketAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlReactiveQueryByExampleAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlReactiveQuerydslAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.querydsl.core.Query' (OnClassCondition)
-   GraphQlWebFluxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlWebFluxSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlWebMvcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlWebMvcSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GroovyTemplateAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
-   GsonAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
-   GsonHttpMessageConvertersConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
-   H2ConsoleAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.h2.server.web.JakartaWebServlet' (OnClassCondition)
-   HazelcastAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
-   HazelcastCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
-   HazelcastJpaDependencyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
-   HibernateJpaAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.persistence.EntityManager' (OnClassCondition)
-   HttpHandlerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.DispatcherHandler' (OnClas
-sCondition)
-   HypermediaAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.hateoas.EntityModel' (OnClassCondition)
-   InfinispanCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCache
-Manager' (OnClassCondition)
-   IntegrationAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.integration.config.EnableIntegration' (
-OnClassCondition)
-   JCacheCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
-   JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCon
-dition)
-   JdbcRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.jdbc.repository.config.AbstractJdb
-cConfiguration' (OnClassCondition)
-   JerseyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.glassfish.jersey.server.spring.SpringComponentProvider'
- (OnClassCondition)
-   JmsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.jms.Message' (OnClassCondition)
-   JmxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) found different value in property 'spring.jmx.enable
-d' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
-   JndiConnectionFactoryAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.jms.core.JmsTemplate' (OnClassCondition
-)
-   JndiDataSourceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'spring.datasource.jndi-name' (On
-PropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embe
-dded.EmbeddedDatabaseType' (OnClassCondition)
-   JooqAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.jooq.DSLContext' (OnClassCondition)
-   JpaRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.jpa.repository.JpaRepository' (OnC
-lassCondition)
-   JsonbAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
-   JsonbHttpMessageConvertersConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
-   JtaAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.transaction.Transaction' (OnClassCondition)
-   KafkaAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.kafka.core.KafkaTemplate' (OnClassCondi
-tion)
-   Knife4jAutoConfiguration#corsFilter:
-      Did not match:
-         - @ConditionalOnProperty (knife4j.cors=true) did not find property 'knife4j.cors' (OnPropertyCondition)
-   Knife4jAutoConfiguration#productionSecurityFilter:
-      Did not match:
-         - @ConditionalOnProperty (knife4j.production=true) did not find property 'knife4j.production' (OnPropertyCondi
-tion)
-   Knife4jAutoConfiguration#securityBasicAuthFilter:
-      Did not match:
-         - @ConditionalOnProperty (knife4j.basic.enable=true) did not find property 'knife4j.basic.enable' (OnPropertyC
-ondition)
-   Knife4jInsightAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (knife4j.insight.enable=true) did not find property 'knife4j.insight.enable' (OnPrope
-rtyCondition)
-   LdapAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.ldap.core.ContextSource' (OnClassCondit
-ion)
-   LdapRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.ldap.repository.LdapRepository' (O
-nClassCondition)
-   LiquibaseAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'liquibase.change.DatabaseChange' (OnClassCondition)
-   MailSenderAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.mail.internet.MimeMessage' (OnClassCondition)
-   MailSenderValidatorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.mail.test-connection=true) did not find property 'spring.mail.test-con
-nection' (OnPropertyCondition)
-   MessageSourceAutoConfiguration:
-      Did not match:
-         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCond
-ition)
-   MongoAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
-   MongoDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
-   MongoReactiveAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCon
-dition)
-   MongoReactiveDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCon
-dition)
-   MongoReactiveRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCon
-dition)
-   MongoRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
-   MultiDataSourceAutoConfiguration:
-      Did not match:
-         - 'mybatis-flex.datasource' is necessary. (ConditionalOnMybatisFlexDatasource.OnMybatisFlexDataSourceCondition
-)
-   MultipleOpenApiSupportConfiguration.SpringDocWebMvcActuatorDifferentConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.endpoint.web.servlet.WebMv
-cEndpointHandlerMapping' (OnClassCondition)
-   MustacheAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
-   MybatisFlexAdminAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (mybatis-flex.admin-config.enable=true) did not find property 'enable' (OnPropertyCon
-dition)
-   MybatisFlexAutoConfiguration.MapperScannerRegistrarNotFoundConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.mybatis.spring.mapper.MapperFactoryBean,org.mybatis.spring.mapper.Mapp
-erScannerConfigurer; SearchStrategy: all) found beans of type 'org.mybatis.spring.mapper.MapperScannerConfigurer' com.h
-ive.hiveaicodemother.HiveAiCodeMotherApplication#MapperScannerRegistrar#0 (OnBeanCondition)
-   MybatisLanguageDriverAutoConfiguration.FreeMarkerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'org.mybatis.scripting.freemarker.FreeMarkerLanguageDriver
-', 'org.mybatis.scripting.freemarker.FreeMarkerLanguageDriverConfig' (OnClassCondition)
-   MybatisLanguageDriverAutoConfiguration.LegacyFreeMarkerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.mybatis.scripting.freemarker.FreeMarkerLanguageDriver' 
-(OnClassCondition)
-   MybatisLanguageDriverAutoConfiguration.LegacyVelocityConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.mybatis.scripting.velocity.Driver' (OnClassCondition)
-   MybatisLanguageDriverAutoConfiguration.ThymeleafConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.mybatis.scripting.thymeleaf.ThymeleafLanguageDriver' (O
-nClassCondition)
-   MybatisLanguageDriverAutoConfiguration.VelocityConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'org.mybatis.scripting.velocity.VelocityLanguageDriver', '
-org.mybatis.scripting.velocity.VelocityLanguageDriverConfig' (OnClassCondition)
-   Neo4jAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   Neo4jDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   Neo4jReactiveDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   Neo4jReactiveRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   Neo4jRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   NettyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.netty.util.NettyRuntime' (OnClassCondition)
-   OAuth2AuthorizationServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.authorization.OA
-uth2Authorization' (OnClassCondition)
-   OAuth2AuthorizationServerJwtAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.nimbusds.jose.jwk.source.JWKSource' (OnClassCondition)
-   OAuth2ClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.Cli
-entRegistration' (OnClassCondition)
-   OAuth2ClientWebSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.configur
-ation.EnableWebSecurity' (OnClassCondition)
-   OAuth2ResourceServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.authent
-ication.BearerTokenAuthenticationToken' (OnClassCondition)
-   ProjectInfoAutoConfiguration#buildProperties:
-      Did not match:
-         - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.pro
-perties}' (OnResourceCondition)
-   ProjectInfoAutoConfiguration#gitProperties:
-      Did not match:
-         - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvail
-ableCondition)
-   PulsarAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.pulsar.client.api.PulsarClient' (OnClassConditio
-n)
-   PulsarReactiveAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.pulsar.client.api.PulsarClient' (OnClassConditio
-n)
-   QuartzAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.quartz.Scheduler' (OnClassCondition)
-   R2dbcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
-   R2dbcDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.r2dbc.core.R2dbcEntityTemplate' (O
-nClassCondition)
-   R2dbcInitializationConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'io.r2dbc.spi.ConnectionFactory', 'org.springframework.r2d
-bc.connection.init.DatabasePopulator' (OnClassCondition)
-   R2dbcProxyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.r2dbc.proxy.ProxyConnectionFactory' (OnClassCondition)
-   R2dbcRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
-   R2dbcTransactionManagerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.r2dbc.connection.R2dbcTransactionManage
-r' (OnClassCondition)
-   RSocketGraphQlClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   RSocketMessagingAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
-   RSocketRequesterAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
-   RSocketSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.rsocket.core.SecuritySocketAcc
-eptorInterceptor' (OnClassCondition)
-   RSocketServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.rsocket.core.RSocketServer' (OnClassCondition)
-   RSocketStrategiesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.netty.buffer.PooledByteBufAllocator' (OnClassCondition)
-   RabbitAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.rabbitmq.client.Channel' (OnClassCondition)
-   ReactiveElasticsearchClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'co.elastic.clients.transport.ElasticsearchTransport' (OnCla
-ssCondition)
-   ReactiveElasticsearchRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Mono' (OnClassCondition)
-   ReactiveMultipartAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' 
-(OnClassCondition)
-   ReactiveOAuth2ClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
-   ReactiveOAuth2ClientWebSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
-   ReactiveOAuth2ResourceServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive
-.EnableWebFluxSecurity' (OnClassCondition)
-   ReactiveSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
-   ReactiveUserDetailsServiceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.ReactiveAuthent
-icationManager' (OnClassCondition)
-   ReactiveWebServerFactoryAutoConfiguration:
-      Did not match:
-         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
-   ReactorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Hooks' (OnClassCondition)
-   RedisAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.core.RedisOperations' (OnCla
-ssCondition)
-   RedisCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFa
-ctory' (OnClassCondition)
-   RedisReactiveAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
-   RedisRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.repository.configuration.Ena
-bleRedisRepositories' (OnClassCondition)
-   RepositoryRestMvcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.webmvc.config.RepositoryRestM
-vcConfiguration' (OnClassCondition)
-   Saml2RelyingPartyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.saml2.provider.service.registr
-ation.RelyingPartyRegistrationRepository' (OnClassCondition)
-   SecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.DefaultAuthenti
-cationEventPublisher' (OnClassCondition)
-   SecurityFilterAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.http.SessionCreationPol
-icy' (OnClassCondition)
-   SendGridAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.sendgrid.SendGrid' (OnClassCondition)
-   ServletWebServerFactoryAutoConfiguration.ForwardedHeaderFilterConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-hea
-ders-strategy' (OnPropertyCondition)
-   ServletWebServerFactoryConfiguration.EmbeddedJetty:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util
-.Loader', 'org.eclipse.jetty.ee10.webapp.WebAppContext' (OnClassCondition)
-   ServletWebServerFactoryConfiguration.EmbeddedUndertow:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnCl
-assCondition)
-   SessionAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.session.Session' (OnClassCondition)
-   SpringApplicationAdminJmxAutoConfiguration:
-      Did not match:
-2026-07-11T11:56:09.787+08:00  INFO 27904 --- [hive-ai-code-mother] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-07-11T11:56:09.837+08:00 ERROR 27904 --- [hive-ai-code-mother] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'dev.langchain4j.model.chat.ChatModel' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'dev.langchain4j.model.chat.ChatModel' in your configuration.
-
-2026-07-11T11:56:09.845+08:00  WARN 27904 --- [hive-ai-code-mother] [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest@6ee88e21]
-
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@110b7837 testClass = com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b8729ff, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74287ea3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@17d919b6, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@264f218, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@2e570ded, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6531a794, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@53c53b03], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiCodeGeneratorServiceFactory': Injection of resource dependencies failed
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1457) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.16.jar:3.5.16]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.16.jar:3.5.16]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.16.jar:3.5.16]
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:151) ~[spring-boot-test-3.5.16.jar:3.5.16]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.19.jar:6.2.19]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.19.jar:6.2.19]
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.5.16.jar:3.5.16]
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:590) ~[spring-boot-test-3.5.16.jar:3.5.16]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:151) ~[spring-boot-test-3.5.16.jar:3.5.16]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.5.16.jar:3.5.16]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.19.jar:6.2.19]
-	... 80 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'dev.langchain4j.model.chat.ChatModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@jakarta.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2322) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:598) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369) ~[spring-context-6.2.19.jar:6.2.19]
-	... 104 common frames omitted
-
-         - @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.applicat
-ion.admin.enabled' (OnPropertyCondition)
-   SpringDataWebAutoConfiguration:
-      Did not match:
-2026-07-11T11:56:09.892+08:00  WARN 27904 --- [hive-ai-code-mother] [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest@27a6fef2]
-
-java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@110b7837 testClass = com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b8729ff, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74287ea3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@17d919b6, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@264f218, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@2e570ded, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6531a794, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@53c53b03], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:145) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
-
-         - @ConditionalOnClass did not find required class 'org.springframework.data.web.PageableHandlerMethodArgumentR
-esolver' (OnClassCondition)
-   SpringDocConfiguration#propertiesResolverForSchema:
-      Did not match:
-         - @ConditionalOnProperty (springdoc.api-docs.resolve-schema-properties) did not find property 'springdoc.api-d
-ocs.resolve-schema-properties' (OnPropertyCondition)
-   SpringDocConfiguration#propertyCustomizingConverter:
-      Did not match:
-         - @ConditionalOnBean (types: org.springdoc.core.customizers.PropertyCustomizer; SearchStrategy: all) did not f
-ind any beans of type org.springdoc.core.customizers.PropertyCustomizer (OnBeanCondition)
-   SpringDocConfiguration#springdocBeanFactoryPostProcessor2:
-      Did not match:
-         - @ConditionalOnMissingClass found unwanted class 'org.springframework.boot.context.properties.bind.BindResult
-' (OnClassCondition)
-   SpringDocConfiguration.QuerydslProvider:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.querydsl.binding.QuerydslBindingsF
-actory' (OnClassCondition)
-   SpringDocConfiguration.SpringDocActuatorConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web
-.WebEndpointProperties' (OnClassCondition)
-   SpringDocConfiguration.SpringDocRepositoryRestConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.core.config.RepositoryRestCon
-figuration' (OnClassCondition)
-   SpringDocConfiguration.SpringDocWebFluxSupportConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
-   SpringDocDataRestConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.core.config.RepositoryRestCon
-figuration' (OnClassCondition)
-   SpringDocFunctionCatalogConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.cloud.function.web.function.FunctionEnd
-pointInitializer' (OnClassCondition)
-   SpringDocGroovyConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'groovy.lang.MetaClass' (OnClassCondition)
-   SpringDocHateoasConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.hateoas.server.LinkRelationProvider' (O
-nClassCondition)
-   SpringDocJacksonKotlinModuleConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.module.kotlin.KotlinModule' (OnClassC
-ondition)
-   SpringDocJavadocConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.github.therapi.runtimejavadoc.CommentFormatter' (OnClas
-sCondition)
-   SpringDocKotlinConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'kotlin.coroutines.Continuation' (OnClassCondition)
-   SpringDocKotlinxConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'kotlinx.coroutines.flow.Flow' (OnClassCondition)
-   SpringDocPageableConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.domain.Pageable' (OnClassCondition
-)
-   SpringDocSecurityConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.web.SecurityFilterChain' (OnCl
-assCondition)
-   SpringDocSortConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.domain.Sort' (OnClassCondition)
-   SpringDocWebMvcConfiguration.SpringDocWebMvcActuatorConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.endpoint.web.servlet.WebMv
-cEndpointHandlerMapping' (OnClassCondition)
-   SwaggerConfig#springWebProvider:
-      Did not match:
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.599 s &lt;&lt;&lt; FAILURE! -- in com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest
-[ERROR] com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest.generateHtmlCode -- Time elapsed: 0.020 s &lt;&lt;&lt; ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@110b7837 testClass = com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b8729ff, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74287ea3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@17d919b6, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@264f218, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@2e570ded, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6531a794, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@53c53b03], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiCodeGeneratorServiceFactory': Injection of resource dependencies failed
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1457)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:151)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:590)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:151)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	... 19 more
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'dev.langchain4j.model.chat.ChatModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@jakarta.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:598)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369)
-	... 43 more
-
-[ERROR] com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest.generateMaltiFileCode -- Time elapsed: 0.001 s &lt;&lt;&lt; ERROR!
-java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@110b7837 testClass = com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b8729ff, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74287ea3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@17d919b6, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@264f218, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@2e570ded, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6531a794, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@53c53b03], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:145)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-         - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringWebProvider; SearchStrategy: all) found
- beans of type 'org.springdoc.core.providers.SpringWebProvider' springWebProvider (OnBeanCondition)
-   SwaggerConfig#swaggerUiConfigParameters:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springdoc.core.properties.SwaggerUiConfigParameters; SearchStrategy: a
-ll) found beans of type 'org.springdoc.core.properties.SwaggerUiConfigParameters' org.springdoc.core.properties.Swagger
-UiConfigParameters (OnBeanCondition)
-   SwaggerConfig#swaggerUiHome:
-      Did not match:
-         - @ConditionalOnProperty (springdoc.swagger-ui.use-root-path=true) did not find property 'springdoc.swagger-ui
-.use-root-path' (OnPropertyCondition)
-   SwaggerConfig.SwaggerActuatorWelcomeConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.endpoint.web.servlet.WebMv
-cEndpointHandlerMapping' (OnClassCondition)
-   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
-      Did not match:
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Errors: 
-[ERROR]   AiCodeGeneratorServiceTest.generateHtmlCode ? IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@110b7837 testClass = com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b8729ff, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74287ea3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@17d919b6, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@264f218, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@2e570ded, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6531a794, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@53c53b03], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-[ERROR]   AiCodeGeneratorServiceTest.generateMaltiFileCode ? IllegalState ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [WebMergedContextConfiguration@110b7837 testClass = com.hive.hiveaicodemother.ai.AiCodeGeneratorServiceTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b8729ff, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74287ea3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@17d919b6, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@264f218, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@2e570ded, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6531a794, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@53c53b03], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-[INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
-[INFO] 
-         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrate
-gy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuil
-der (OnBeanCondition)
-   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
-      Did not match:
-         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
-   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter:
-      Did not match:
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.456 s
-[INFO] Finished at: 2026-07-11T11:56:11+08:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project hive-ai-code-mother: 
-[ERROR] 
-[ERROR] See D:\Liyalin\javafail\hive-ai-code-mother\target\surefire-reports for the individual test results.
-[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -&gt; [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; Sear
-chStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcess
-or (OnBeanCondition)
-   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilderVirtualThre
-ads:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrat
-egy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder' simpleAsyncTaskSchedulerB
-uilder (OnBeanCondition)
-   TaskSchedulingConfigurations.TaskSchedulerConfiguration:
-      Did not match:
-         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; Sear
-chStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcess
-or (OnBeanCondition)
-   ThymeleafAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring6.SpringTemplateEngine' (OnClassConditi
-on)
-   TransactionAutoConfiguration#transactionalOperator:
-      Did not match:
-         - @ConditionalOnSingleCandidate (types: org.springframework.transaction.ReactiveTransactionManager; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   TransactionAutoConfiguration.AspectJTransactionManagementConfiguration:
-      Did not match:
-         - @ConditionalOnBean did not find required type 'org.springframework.transaction.aspectj.AbstractTransactionAs
-pect' (OnBeanCondition)
-         - @ConditionalOnBean (types: org.springframework.transaction.aspectj.AbstractTransactionAspect; SearchStrategy
-: all) did not find any beans of type org.springframework.transaction.aspectj.AbstractTransactionAspect (OnBeanConditio
-n)
-   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.JdkDynamicAutoProxyConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-
-target-class' (OnPropertyCondition)
-   UserDetailsServiceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.AuthenticationM
-anager' (OnClassCondition)
-   ValidationAutoConfiguration:
-      Did not match:
-         - @ConditionalOnResource did not find resource 'classpath:META-INF/services/jakarta.validation.spi.ValidationP
-rovider' (OnResourceCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassConditi
-on)
-   WebClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient'
- (OnClassCondition)
-   WebFluxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' 
-(OnClassCondition)
-   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.mvc.hiddenmethod.filter.enabled=true) did not find property 'spring.mv
-c.hiddenmethod.filter.enabled' (OnPropertyCondition)
-   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.mvc.problemdetails.enabled=true) did not find property 'spring.mvc.pro
-blemdetails.enabled' (OnPropertyCondition)
-   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
-      Did not match:
-         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceCha
-inCondition)
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy:
- all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondi
-tion)
-   WebServiceTemplateAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.oxm.Marshaller' (OnClassCondition)
-   WebServicesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.ws.transport.http.MessageDispatcherServ
-let' (OnClassCondition)
-   WebSessionIdResolverAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Mono' (OnClassCondition)
-   WebSocketMessagingAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.socket.config.annotation.Delegating
-WebSocketMessageBrokerConfiguration' (OnClassCondition)
-   WebSocketReactiveAutoConfiguration:
-      Did not match:
-         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
-   WebSocketServletAutoConfiguration.JettyWebSocketConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.eclipse.jetty.ee10.websocket.jakarta.server.config.Jaka
-rtaWebSocketServletContainerInitializer' (OnClassCondition)
-   WebSocketServletAutoConfiguration.UndertowWebSocketConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.undertow.websockets.jsr.Bootstrap' (OnClassCondition)
-   XADataSourceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.transaction.TransactionManager' (OnClassCondition)
-Exclusions:
------------
-    None
-Unconditional classes:
-----------------------
-    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
-    org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
-    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
-    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
-    dev.langchain4j.openai.spring.AutoConfig
-    cn.hutool.extra.spring.SpringUtil
-    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
-    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
-
+Progress (1): 7.2/20
+… (output truncated)
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -2501,26 +537,18 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在查看测试输出文件，以定位实际报错信息。</details></think>
+正在查看测试输出文件，以定位实际报错信息。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -2551,25 +579,12 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: C:\Users\Liyal\.cursor\projects\d-Liyalin-javafail-hive-ai-code-mother\agent-tools\96162057-162d-4e99-88f8-dbcf47695c6c.txt</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: C:\Users\Liyal\.cursor\projects\d-Liyalin-javafail-hive-ai-code-mother\agent-tools\96162057-162d-4e99-88f8-dbcf47695c6c.txt</summary>
 
 </details></tool-use>
 
@@ -2578,14 +593,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 已定位到根本原因：缺少类型为 dev.langchain4j 的合格 Bean。
 
-进一步分析发现，application.yaml 中缺少 langchain4j 所需的 OpenAI 配置（如 API key）。AutoConfig 虽然被无条件加载，但因缺少必要属性而未能创建 ChatModel Bean。需要确认文档中所需的配置项。</details></think>
+进一步分析发现，application.yaml 中缺少 langchain4j 所需的 OpenAI 配置（如 API key）。AutoConfig 虽然被无条件加载，但因缺少必要属性而未能创建 ChatModel Bean。需要确认文档中所需的配置项。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -2616,34 +630,19 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: C:\Users\Liyal\.cursor\projects\d-Liyalin-javafail-hive-ai-code-mother\agent-tools\96162057-162d-4e99-88f8-dbcf47695c6c.txt</summary>
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: C:\Users\Liyal\.cursor\projects\d-Liyalin-javafail-hive-ai-code-mother\agent-tools\96162057-162d-4e99-88f8-dbcf47695c6c.txt</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="web_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="web_search"><details>
 <summary>Tool use: **web_search**</summary>
-
 
 Parameters:
 
@@ -2659,28 +658,12 @@ Result:
   "isFinal": true,
   "references": [
     {
-      "chunk": "Links:\n1. [](https://camel.apache.org/manual/langchain4j-spring-boot-integration.html)\n2. [plugins/developer-kit-java/skills/langchain4j-spring-boot-integration/references/configuration.md at HEAD · giuseppe-trisciuoglio/developer-kit](https://github.com/giuseppe-trisciuoglio/developer-kit/blob/HEAD/plugins/developer-kit-java/skills/langchain4j-spring-boot-integration/references/configuration.md)\n3. [docs/docs/tutorials/spring-boot-integration.md](https://github.com/langchain4j/langchain4j/blob/main/docs/docs/tutorials/spring-boot-integration.md)\n4. [docs/docs/integrations/language-models/open-ai.md at main · langchain4j/langchain4j](https://github.com/langchain4j/langchain4j/blob/main/docs/docs/integrations/language-models/open-ai.md)\n5. [docs/docs/tutorials/spring-boot-integration.md](https://github.com/langchain4j/langchain4j/blob/5ea11e8e/docs/docs/tutorials/spring-boot-integration.md)\n\nSynthesis:\nTo configure a ChatModel using the langchain4j-open-ai-spring-boot-starter in your application.yml, use the following structure [1][2]:\n\nlangchain4j:\n open-ai:\n chat-model:\n api-key: ${OPENAI_API_KEY}\n model-name: gpt-4o\n temperature: 0.7\n log-requests: true\n log-responses: true\n\nThis configuration automatically creates a ChatModel bean that you can autowire into your classes [3][4]. For streaming, replace chat-model with streaming-chat-model in the property path [3][2]. If you have multiple models, use explicit wiring with @AiService(wiringMode = EXPLICIT, chatModel = \"beanName\") [5][6].\n\nHighlights:\n\u003cresult id=\"1\"\u003e\n\u003ctitle\u003e\u003c/title\u003e\n\u003curl\u003ehttps://camel.apache.org/manual/langchain4j-spring-boot-integration.html\u003c/url\u003e\n\u003ccontent\u003e- &#96;langchain4j-open-ai-spring-boot-starter&#96; - OpenAI (GPT-3.5, GPT-4, etc.)\n \n- &#96;langchain4j-azure-open-ai-spring-boot-starter&#96; - Azure OpenAI\n \n- &#96;langchain4j-google-ai-gemini-spring-boot-starter&#96; - Google Gemini\n \n- &#96;langchain4j-ollama-spring-boot-starter&#96; - Ollama (local models)\n \n- &#96;langchain4j-anthropic-spring-boot-\n...\nAnthropic Claude\n \n- &#96;langchain4\n...\n-mistral\n...\nMistral AI\n...\n- &#96;langchain4\n...\nhugging-face\n...\nHugging Face\n \n-\n...\n-vertex-\n...\n&#96; - Google Vertex AI\n...\n###\n...\n&#96;&#96;&#96;xml\n\u003cdependencies\u003e\n    \u003c!--\n...\ndependency\u003e\n        \u003cgroupId\u003eorg\n...\n\u003c/groupId\u003e\n        \u003cartifactId\u003ecamel-\n...\n\u003c/artifactId\u003e\n    \u003c/dependency\u003e\n...\n\u003c!-- Camel LangChain4j Component --\u003e\n    \u003cdependency\u003e\n        \u003cgroupId\u003eorg\n...\napache.camel.springboot\u003c/groupId\u003e\n        \u003cartifactId\u003ecamel-langchain4j-chat-starter\u003c/artifactId\u003e\n    \u003c/dependency\u003e\n\n    \u003c!-- LangChain4j Spring Boot Starter for OpenAI --\u003e\n    \u003cdependency\u003e\n        \u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\n        \u003cartifactId\u003elangchain4j-open-ai-spring-boot-starter\u003c/artifactId\u003e\n        \u003cversion\u003e1.10.0\u003c/version\u003e\n    \u003c/dependency\u003e\n\u003c/dependencies\u003e\n...\nConfigure the LangChain4j provider in &#96;application.properties&#96; or &#96;application.yml&#96;:\n...\napplication.properties\n...\n&#96;&#96;&#96;properties\n# OpenAI Chat Model Configuration\nlangchain4j.open-ai.chat-model.api-key=${OPENAI_API_KEY}\nlangchain4j.open-ai.chat-model.model-name=gpt-4o\nlangchain4j.open-ai.chat-model.temperature=0.7\nlangchain4j.open-ai.chat-model.max-tokens=1000\n...\n=${OPENAI\n...\nmodel.model\n...\napplication.yml\n...\n&#96;&#96;&#96;yaml\nlangchain4j:\n  open-ai:\n    chat-model:\n      api-key: ${OPENAI_API_KEY}\n      model-name: gpt-4o\n      temperature: 0.7\n      max-tokens: 1000\n    embedding-model:\n      api-key: ${OPENAI_API_KEY}\n      model-name: text-embedding-ada-002\n&#96;&#96;&#96;\n...\napplication.properties\n...\n&#96;&#96;&#96;properties\nlangchain4j.open-ai.chat-model.api-key=${OPENAI_API_KEY}\nlangchain4j.open-ai.chat-model.model-name=gpt-4o\nlangchain4j.open-ai.chat-model.temperature=0.7\n...\napplication.yml\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"2\"\u003e\n\u003ctitle\u003eplugins/developer-kit-java/skills/langchain4j-spring-boot-integration/references/configuration.md at HEAD · giuseppe-trisciuoglio/developer-kit\u003c/title\u003e\n\u003curl\u003ehttps://github.com/giuseppe-trisciuoglio/developer-kit/blob/HEAD/plugins/developer-kit-java/skills/langchain4j-spring-boot-integration/references/configuration.md\u003c/url\u003e\n\u003ccontent\u003e-tokens: 1000\n      log-requests: true\n      log-responses: true\n      timeout: PT60S\n      max-retries: 3\n      organization: ${OPENAI_ORGANIZATION:}\n\n    embedding-model:\n      api-key: ${OPENAI_API_KEY}\n      model-name: text-embedding-3-small\n      dimensions: 1536\n      timeout: PT60S\n\n    streaming-chat-model:\n      api-key: ${OPENAI_API_KEY}\n      model-name: gpt-4o-mini\n      temperature: 0.7\n      max-tokens: 2000\n\n  # Azure OpenAI Configuration\n  azure-open-ai:\n    chat-model:\n      endpoint: ${AZURE_OPENAI_ENDPOINT}\n      api-key: ${AZURE_OPENAI_KEY}\n      deployment-name: gpt-4o\n      service-version: 2024-02-15-preview\n      temperature: 0.7\n      max-tokens: 1000\n      log-requests-and-responses: true\n\n    embedding-model:\n      endpoint: ${AZURE_OPENAI_ENDPOINT}\n      api-key: ${AZURE_OPENAI_KEY}\n      deployment-name: text-embedding-3-small\n      dimensions: 1536\n\n  # Anthropic Configuration\n  anthropic:\n    chat-model:\n      api-key: ${ANTHROPIC_API_KEY}\n      model-name: claude-3-5-sonnet-20241022\n      max-tokens: 4000\n      temperature: 0.7\n\n    streaming-chat-model:\n      api-key: ${ANTHROPIC_API_KEY}\n      model-name: claude-3-5-sonnet-20241022\n\n  # Ollama Configuration\n  ollama:\n    chat-model:\n      base-url: http://localhost:11434\n      model-name: llama3.1\n      temperature: 0.8\n      timeout: PT60S\n\n  # Memory Configuration\n  memory:\n    store-type: in-memory  # in-memory, postgresql, mysql, mongodb\n    max-messages: 20\n    window-size: 10\n\n  # Vector Store Configuration\n  vector-store:\n    type: in-memory  # in-memory, pinecone, weaviate, qdrant, postgresql\n    pinecone:\n      api-key: ${PINECONE_API_KEY}\n      index-name: my-index\n      namespace: production\n    qdrant:\n      host: localhost\n      port: 6333\n      collection-name: documents\n    weaviate:\n      host: localhost\n      port: 8080\n      collection-name: Documents\n    postgresql:\n      table: document_embeddings\n      dimension: 1536\n&#96;&#96;&#96;\n\n### Spring Profiles Configuration\n\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"3\"\u003e\n\u003ctitle\u003edocs/docs/tutorials/spring-boot-integration.md\u003c/title\u003e\n\u003curl\u003ehttps://github.com/langchain4j/langchain4j/blob/main/docs/docs/tutorials/spring-boot-integration.md\u003c/url\u003e\n\u003ccontent\u003e[embedding models](/\n...\n[embedding stores](/category/embedding-stores\n...\nuse one of\n...\n[Spring Boot starters](https://github.com/langchain4j/langchain\n...\nj-spring), \nimport the corresponding dependency.\n...\nThe naming convention for the Spring Boot starter dependency is: \n- &#96;langchain4j-{integration-name}-spring-boot-starter&#96; for **Spring Boot 3** \n- &#96;langchain4j-{integration-name}-spring-boot4-starter&#96; for **Spring Boot 4** \n \nFor example, for OpenAI (&#96;langchain4j-open-ai&#96;): \n \n**Spring Boot 3:** \n &#96;&#96;&#96;xml\r\n \u003cdependency\u003e\r\n     \u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\r\n     \u003cartifactId\u003elangchain4j-open-ai-spring-boot-starter\u003c/artifactId\u003e\r\n     \u003cversion\u003e1.17.2-beta27\u003c/version\u003e\r\n \u003c/dependency\u003e\n...\n&#96;&#96;&#96;\r\n \n**Spring Boot 4:** \n&#96;&#96;&#96;xml\r\n\u003cdependency\u003e\r\n    \u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\r\n    \u003cartifactId\u003elangchain4j-open-ai-spring-boot4-starter\u003c/artifactId\u003e\r\n    \u003cversion\u003e1.17.2-beta27\u003c/version\u003e\r\n\u003c/dependency\u003e\r\n&#96;&#96;&#96;\r\n \nThen, you can configure model parameters in the &#96;application.properties&#96; file as follows: \n&#96;&#96;&#96;\r\nlangchain4j.open-ai.chat-model.api-key=${OPENAI_API_KEY}\r\nlangchain4j.open-ai.chat-model.model-name=gpt-4o\r\nlangchain4j.open-ai.chat-model.log-requests=true\r\nlangchain4j.open-ai.chat-model.log-responses=true\r\n...\r\n&#96;&#96;&#96;\r\n \nIn this case, an instance of &#96;OpenAiChatModel&#96; (an implementation of a &#96;ChatModel&#96;) will be automatically created, \nand you can autowire it where needed: \n&#96;&#96;&#96;java\r\n@RestController\r\npublic class ChatController {\r\n\r\n    ChatModel chatModel;\r\n\r\n    public ChatController(ChatModel chatModel) {\r\n        this.chatModel = chatModel;\r\n    }\r\n\r\n    @GetMapping(\"/chat\")\r\n    public String model(@RequestParam(value = \"message\", defaultValue = \"Hello\") String message) {\r\n        return chatModel.chat(message);\r\n    }\r\n}\n...\n&#96;&#96;&#96;\r\n \nIf you need an instance of a &#96;StreamingChatModel&#96;, \nuse the &#96;streaming-chat-model&#96; instead of the &#96;chat-model&#96; properties: \n&#96;&#96;&#96;\r\nlangchain4j.open-ai.streaming-chat-model.api-key=${OPENAI_API_KEY}\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"4\"\u003e\n\u003ctitle\u003edocs/docs/integrations/language-models/open-ai.md at main · langchain4j/langchain4j\u003c/title\u003e\n\u003curl\u003ehttps://github.com/langchain4j/langchain4j/blob/main/docs/docs/integrations/language-models/open-ai.md\u003c/url\u003e\n\u003ccontent\u003edependency\u003e\n...\n\u003e1.12.2-beta22\u003c/\n...\n\u003e\n\u003c/\n...\n### Spring Boot\n...\nAdd to the &#96;application.properties&#96;:\n...\n&#96;&#96;&#96;properties\n# Mandatory properties:\nlangchain4j.open-ai.chat-model.api-key=${OPENAI_API_KEY}\nlangchain4j.open-ai.chat-model.model-name=gpt-4o-mini\n...\n# Optional properties:\nlangchain4j.open-ai.chat-model.base-url=...\nlangchain4j.open-ai.chat-model.custom-headers=...\nlangchain4j.open-ai.chat-model.frequency-penalty=...\nlangchain4j.open-ai.chat-model.log-requests=...\nlangchain4j.open-ai.chat-model.log-responses=...\nlangchain4j.open-ai.chat-model.logit-bias=...\nlangchain4j.open-ai.chat-model.max-retries=...\nlangchain4j.open-ai.chat-model.max-completion-tokens=...\nlangchain4j.open-ai.chat-model.max-tokens=...\nlangchain4j.open-ai.chat-model.metadata=...\nlangchain4j.open-ai.chat-model.organization-id=...\nlangchain4j.open-ai.chat-model.parallel-tool-calls=...\nlangchain4j.open-ai.chat-model.presence-penalty=...\n...\nlangchain4j.open-ai.chat-model.project-id=...\nlangchain4j.open-ai.chat-model.reasoning-effort=...\nlangchain4j.open-ai.chat-model.response-format=...\nlangchain4j.open-ai.chat-model.return-thinking=...\nlangchain4j.open-ai.chat-model.seed=...\nlangchain4j.open-ai.chat-model.service-tier=...\nlangchain4j.open-ai.chat-model.stop=...\nlangchain4j.open-ai.chat-model.store=...\nlangchain4j.open-ai.chat-model.strict-schema=...\nlangchain4j.open-ai.chat-model.strict-tools=...\nlangchain4j.open-ai.chat-model.supported-capabilities=...\nlangchain4j.open-ai.chat-model.temperature=...\nlangchain4j.open-ai.chat-model.timeout=...\nlangchain4j.open-ai.chat-model.top-p=\nlangchain4j.open-ai.chat-model.user=...\n...\n# Optional Property: Custom Parameters (user-defined key=value) \nlangchain4j.open-ai.chat-model.custom-parameters.\u003ckey\u003e=\u003cvalue\u003e\n...\nThis configuration will create an &#96;OpenAiChatModel&#96; bean,\nwhich can be either used by an [AI Service](https://docs.langchain4j.dev/tutorials/spring-boot-integration/#langchain4j-spring-boot-starter)\nor autowired where needed, for example:\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"5\"\u003e\n\u003ctitle\u003edocs/docs/tutorials/spring-boot-integration.md\u003c/title\u003e\n\u003curl\u003ehttps://github.com/langchain4j/langchain4j/blob/5ea11e8e/docs/docs/tutorials/spring-boot-integration.md\u003c/url\u003e\n\u003ccontent\u003eBoot Starters\n...\nSpring Boot starters help with creating and configuring \n[language models](/category/language-models), \n[embedding models](/category/embedding-models), \n[embedding stores](/category/embedding-stores), \nand other core LangChain4j components through properties. \n \nTo use one of the [Spring Boot starters](https://github.com/langchain4j/langchain4j-spring), \nimport the corresponding dependency. \n \nThe naming convention for the Spring Boot starter dependency is: &#96;langchain4j-{integration-name}-spring-boot-starter&#96;. \n \nFor example, for OpenAI (&#96;langchain4j-open-ai&#96;), the dependency name would be &#96;langchain4j-open-ai-spring-boot-starter&#96;: \n&#96;&#96;&#96;xml\r\n\u003cdependency\u003e\r\n    \u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\r\n    \u003cartifactId\u003elangchain4j-open-ai-spring-boot-starter\u003c/artifactId\u003e\r\n    \u003cversion\u003e1.10.0-beta18\u003c/version\u003e\r\n\u003c/dependency\u003e\r\n&#96;&#96;&#96;\r\n \nThen, you can configure model parameters in the &#96;application.properties&#96; file as follows: \n&#96;&#96;&#96;\r\nlangchain4j.open-ai.chat-model.api-key=${OPENAI_API_KEY}\r\nlangchain4j.open-ai.chat-model.model-name=gpt-4o\r\nlangchain4j.open-ai.chat-model.log-requests=true\r\nlangchain4j.open-ai.chat-model.log-responses=true\r\n...\r\n&#96;&#96;&#96;\r\n \nIn this case, an instance of &#96;OpenAiChatModel&#96; (an implementation of a &#96;ChatModel&#96;) will be automatically created, \nand you can autowire it where needed: \n&#96;&#96;&#96;java\r\n@RestController\r\npublic class ChatController {\r\n\r\n    ChatModel chatModel;\r\n\r\n    public ChatController(ChatModel chatModel) {\r\n        this.chatModel = chatModel;\r\n    }\r\n\r\n    @GetMapping(\"/chat\")\r\n    public String model(@RequestParam(value = \"message\", defaultValue = \"Hello\") String message) {\r\n        return chatModel.chat(message);\r\n    }\r\n}\n...\n&#96;&#96;&#96;\r\n \nIf you need an instance of a &#96;StreamingChatModel&#96;, \nuse the &#96;streaming-chat-model&#96; instead of the &#96;chat-model&#96; properties: \n&#96;&#96;&#96;\r\nlangchain4j.open-ai.streaming\n...\nchat-model.api-key=${OPENAI_API_KEY}\n...\nlang\n...\n-name=\n...\n-4o-mini\n...\n#\n...\nama\n...\n-model.base-\n...\n11434\r\nlang\n...\n.model-name=\u003c/content\u003e\n\u003c/result\u003e",
-      "title": "Web search results"
-    },
-    {
-      "chunk": "Full page text written to file: C:\\Users\\Liyal\\.cursor\\projects\\d-Liyalin-javafail-hive-ai-code-mother\\agent-tools\\414a3cd6-601d-4bd6-b41b-a6f95274fb88.txt\nSize: 22.8 KB, 819 lines\nUse shell / grep / read_file on this path to inspect the page; no follow-up fetch is needed.",
-      "title": "plugins/developer-kit-java/skills/langchain4j-spring-boot-integration/references/configuration.md at HEAD · giuseppe-trisciuoglio/developer-kit",
-      "url": "https://github.com/giuseppe-trisciuoglio/developer-kit/blob/HEAD/plugins/developer-kit-java/skills/langchain4j-spring-boot-integration/references/configuration.md"
-    }
-  ],
-  "rejected": false
-}
+      "chunk": "Links:\n1. [](https://camel.apache.org/manual/langchain4j-spring-boot-integration.html)\n2. [plugins/developer-kit-java/skills/langchain4j-spring-boot-integration/references/configuration.md at HEAD · giuseppe-trisciuoglio/developer-kit](https://github.com/giuseppe-trisciuoglio/developer-kit/blob/HEAD/plugins/developer-kit-java/skills/langchain4j-spring-boot-integration/references/configuration.md)\n3. [docs/docs/tutorials/spring-boot-integration.md](https://github.com/langchain4j/langchain4j/blob/main/docs/docs/tutorials/spring-boot-integration.md)\n4. [docs/docs/integrations/language-models/open-ai.md at main · langchain4j/langchain4j](https://github.com/langchain4j/langchain4j/blob/main/docs/docs/integrations/language-models/open-ai.md)\n5. [docs/docs/tutorials/spring-boot-integration.md](https://github.com/langchain4j/langchain4j/blob/5ea11e8e/docs/docs/tutorials/spring-boot-integration.md)\n\nSynthesis:\nTo configure a ChatModel using the langchain4j-open-ai-spring-boot-starter in your application.yml, use the following structure [1][2]:\n\nlangchain4j:\n open-ai:\n chat-model:\n api-key: ${OPENAI_API_KEY}\n model-name: gpt-4o\n temperature: 0.7\n log-requests: true\n log-responses: true\n\nThis configuration automatically creates a ChatModel bean that you can autowire into your classes [3][4]. For streaming, replace chat-model with streaming-chat-model in the property path [3][2]. If you have multiple models, use explicit wiring with @AiService(wiringMode = EXPLICIT, chatModel = \"beanName\") [5][6].\n\nHighlights:\n\u003cresult id=\"1\"\u003e\n\u003ctitle\u003e\u003c/title\u003e\n\u003curl\u003ehttps://camel.apache.org/manual/langchain4j-spring-boot-integration.html\u003c/url\u003e\n\u003ccontent\u003e- `langchain4j-open-ai-spring-boot-starter` - OpenAI (GPT-3.5, GPT-4, etc.)\n \n- `langchain4j-azure-open-ai-spring-boot-starter` - Azure OpenAI\n \n- `langchain4j-google-ai-gemini-spring-boot-starter`
+… (output truncated)
 ```
 User decision: **accepted**
 
 Status: **completed**
-
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="web_search"><details>
-<summary>Tool use: **web_search**</summary>
 
 </details></tool-use>
 
@@ -2689,14 +672,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 已定位问题根源。application.yaml 缺少 langchain4j open-ai chat-model 的必要配置。
 
-具体缺少 `langchain4j.open-ai.chat-model.api-key` 配置，导致 `ChatModel` 注入失败。准备通过环境变量占位符 `${OPENAI_API_KEY}` 补全该配置，并检查现有配置文件中是否已有相关密钥。</details></think>
+具体缺少 `langchain4j.open-ai.chat-model.api-key` 配置，导致 `ChatModel` 注入失败。准备通过环境变量占位符 `${OPENAI_API_KEY}` 补全该配置，并检查现有配置文件中是否已有相关密钥。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -2739,29 +721,14 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **0** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (0 files)
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother`** (0 files)
 </details></tool-use>
 
 _**Agent (default)**_
@@ -2771,14 +738,13 @@ _**Agent (default)**_
 
 集成测试会调用真实 AI 接口，因此需要有效的 API 密钥。正在考虑通过环境变量或 application-test.yaml 来配置测试专用的 langchain4j 参数。
 
-已确认根因是缺少 `langchain4j.open-ai.chat-model.api-key`。准备直接在 application.yaml 中补充该配置，并检查项目是否支持国内大模型（如 DashScope、DeepSeek）。</details></think>
+已确认根因是缺少 `langchain4j.open-ai.chat-model.api-key`。准备直接在 application.yaml 中补充该配置，并检查项目是否支持国内大模型（如 DashScope、DeepSeek）。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -2817,13 +783,6 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -2843,7 +802,8 @@ _**Agent (default)**_
 
 Spring Boot 3 不允许环境变量缺失时解析 `${OPENAI_API_KEY}` 占位符，否则启动会直接失败。因此配置中应直接写 `${OPENAI_API_KEY}`，由用户自行设置环境变量。若需在测试中临时使用，可借助 `@TestPropertySource` 或 `src/test/resources/application.yaml` 注入密钥。
 
-决定将配置直接加入主 application.yaml，而非单独放在测试资源目录。准备用虚拟密钥运行测试，验证 Spring 上下文能否正常启动。</details></think>
+决定将配置直接加入主 application.yaml，而非单独放在测试资源目录。准备用虚拟密钥运行测试，验证 Spring 上下文能否正常启动。
+</details></think>
 
 _**Agent (default)**_
 
@@ -2852,47 +812,33 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-准备用无 API key 和假密钥分别运行测试，以区分占位符解析错误与上下文加载问题。</details></think>
+准备用无 API key 和假密钥分别运行测试，以区分占位符解析错误与上下文加载问题。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; $env:OPENAI_API_KEY="test-key-for-context-load"; mvn test -Dtest=AiCodeGeneratorServiceTest#generateHtmlCode 2>&1 | Select-String -Pattern "APPLICATION FAILED|No qualifying bean|BUILD SUCCESS|BUILD FAILURE|Tests run|IllegalState|401|Unauthorized|api-key" | Select-Object -First 20</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; $env:OPENAI_API_KEY=&#34;test-key-for-context-load&#34;; mvn test -Dtest=AiCodeGeneratorServiceTest#generateHtmlCode 2&gt;&amp;1 | Select-String -Pattern &#34;APPLICATION FAILED|No qualifying bean|BUILD SUCCESS|BUILD FAILURE|Tests run|IllegalState|401|Unauthorized|api-key&#34; | Select-Object -First 20</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; $env:OPENAI_API_KEY="test-key-for-context-load"; mvn test -Dtest=AiCodeGeneratorServiceTest#generateHtmlCode 2>&1 | Select-String -Pattern "APPLICATION FAILED|No qualifying bean|BUILD SUCCESS|BUILD FAILURE|Tests run|IllegalState|401|Unauthorized|api-key" | Select-Object -First 20
 ```
 
 ```
 
-[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 52.79 s &lt;&lt;&lt; FAILURE! -- in com.hive.hiveaicodem
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 52.79 s <<< FAILURE! -- in com.hive.hiveaicodem
 other.ai.AiCodeGeneratorServiceTest
 [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
 [INFO] BUILD FAILURE
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -2900,13 +846,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 上下文已加载，耗时52秒，说明实际调用了API。
 
-错误已从上下文加载阶段转移到测试执行阶段。需要获取测试失败的详细信息。</details></think>
+错误已从上下文加载阶段转移到测试执行阶段。需要获取测试失败的详细信息。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; $env:OPENAI_API_KEY="test-key-for-context-load"; mvn test -Dtest=AiCodeGeneratorServiceTest#generateHtmlCode 2>&1 | Select-String -Pattern "Caused by|Exception|Error|401|Unauthorized|invalid" | Select-Object -First 15</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; $env:OPENAI_API_KEY=&#34;test-key-for-context-load&#34;; mvn test -Dtest=AiCodeGeneratorServiceTest#generateHtmlCode 2&gt;&amp;1 | Select-String -Pattern &#34;Caused by|Exception|Error|401|Unauthorized|invalid&#34; | Select-Object -First 15</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; $env:OPENAI_API_KEY="test-key-for-context-load"; mvn test -Dtest=AiCodeGeneratorServiceTest#generateHtmlCode 2>&1 | Select-String -Pattern "Caused by|Exception|Error|401|Unauthorized|invalid" | Select-Object -First 15
 ```
@@ -2938,20 +884,9 @@ Caused by: java.net.SocketTimeoutException: Connect timed out
 ls      : A retriable exception occurred. Remaining retries: 1 of 2
 dev.langchain4j.exception.TimeoutException: I/O error on POST request for "https://api.openai.com/v1/chat/completions":
  Connect timed out
-	at dev.langchain4j.internal.ExceptionMapper.withExceptionMapper(ExceptionMapper.java:29) ~[langchain4j-core-1.1.0.jar:
-na]
-	at dev.langchain4j.internal.RetryUtils.lambda$withRetryMappingExceptions$2(RetryUtils.java:324) ~[langchain4j-core-1.1
-.0.jar:na]
-	at dev.langchain4j.internal.RetryUtils.withRetryMappingExceptions(RetryUtils.java:324) ~[langchain4j-core-1.1.0.jar:na
-]
-
+	at dev.langchain4j.internal.ExceptionMapper.w
+… (output truncated)
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -2963,7 +898,8 @@ Spring 上下文现已加载成功。
 
 之前的 ApplicationContext 启动问题已通过添加 langchain4j 配置修复。
 
-请设置 OPENAI_API_KEY 环境变量。如果使用国内 API（如 DeepSeek），还需配置 base-url。</details></think>
+请设置 OPENAI_API_KEY 环境变量。如果使用国内 API（如 DeepSeek），还需配置 base-url。
+</details></think>
 
 _**Agent (default)**_
 
@@ -3053,7 +989,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 用户在询问 LangChain4j 是否提供轻量级本地大模型，以便替代需要配置 OpenAI API 密钥的方案。
 
-正在确认 LangChain4j 支持的轻量本地模型选项。重点查看 Ollama 等本地部署方案，准备给出具体配置建议。</details></think>
+正在确认 LangChain4j 支持的轻量本地模型选项。重点查看 Ollama 等本地部署方案，准备给出具体配置建议。
+</details></think>
 
 _**Agent (default)**_
 
@@ -3062,10 +999,8 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="web_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="web_search"><details>
 <summary>Tool use: **web_search**</summary>
-
 
 Parameters:
 
@@ -3081,42 +1016,19 @@ Result:
   "isFinal": true,
   "references": [
     {
-      "chunk": "Links:\n1. [LangChain4j with Ollama: Connect to Local LLMs - BootcampToProd](https://bootcamptoprod.com/langchain4j-with-ollama/)\n2. [](https://camel.apache.org/manual/langchain4j-spring-boot-integration.html)\n3. [Langchain4J musings](https://blog.frankel.ch/langchain4j-musings/)\n4. [Spring Boot Integration | langchain4j/langchain4j | DeepWiki](https://deepwiki.com/langchain4j/langchain4j/6.1-spring-boot-integration)\n5. [BootcampToProd/langchain4j-chatmodel-ollama-demo](https://github.com/BootcampToProd/langchain4j-chatmodel-ollama-demo)\n\nSynthesis:\nLangChain4j provides a Spring Boot starter for Ollama that simplifies integration with lightweight local models [1][2]. To get started, include the following dependency in your pom.xml [1][3]:\n\n\u003cdependency\u003e\n \u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\n \u003cartifactId\u003elangchain4j-ollama-spring-boot-starter\u003c/artifactId\u003e\n\u003c/dependency\u003e\n\nConfigure the connection in your application.yml to point to your local Ollama server [1][2]:\n\nlangchain4j:\n ollama:\n chat-model:\n base-url: http://localhost:11434\n model-name: llama3.2\n\nThis automatically configures a ChatLanguageModel bean, allowing you to inject it directly into your services [3][4]. Ensure you have pulled your chosen model using the Ollama CLI before running your application [1][5][6].\n\nHighlights:\n\u003cresult id=\"1\"\u003e\n\u003ctitle\u003eLangChain4j with Ollama: Connect to Local LLMs - BootcampToProd\u003c/title\u003e\n\u003curl\u003ehttps://bootcamptoprod.com/langchain4j-with-ollama/\u003c/url\u003e\n\u003ccontent\u003e\u003cdependencies\u003e\n\t\u003c!-- Spring Boot Web for REST endpoints --\u003e\n\t\u003cdependency\u003e\n\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\u003cartifactId\u003espring-boot-starter-web\u003c/artifactId\u003e\n\t\u003c/dependency\u003e\n  \u003c!-- LangChain4j Ollama Spring Boot Starter --\u003e\n\t\u003cdependency\u003e\n\t\t\u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\n\t\t\u003cartifactId\u003elangchain4j-ollama-spring-boot-starter\u003c/artifactId\u003e\n\t\u003c/dependency\u003e\n\u003c/dependencies\u003e\n...\n- spring-boot-starter-web: Provides all the essential components for building REST APIs, including embedded Tomcat server and web MVC capabilities.\n- langchain4j-ollama-spring-boot-starter: The key dependency that enables LangChain4j to communicate with the Ollama API. It triggers Spring Boot’s auto-configuration to create a ChatModel bean, utilizing the specific connection details (like base URL and model name) that we define in our application properties.\n...\n- langchain4j-bom:\n...\nlangchain4j:\n  ollama:\n    chat-model:\n      base-url: http://localhost:11434    # Points to the local Ollama server endpoint\n      model-name: gemma3:1b               # Target model identifier (must be a model pulled in Ollama)\n      log-requests: true                  # Enable logging to see requests (useful for debugging)\n      log-responses: true                 # Enable logging to see responses (useful for debugging)\n      \n&#96;&#96;&#96;\n...\n- model-name: Specifies which model to use. This must exactly match the model identifier you downloaded via the CLI (e.g., gemma3:1b). When your application sends a request, Ollama checks if this model is available locally and loads it into memory to generate the response.\n...\n- Hardware Requirements: Running LLMs locally is resource-intensive. While lightweight models like gemma3:1b work well on standard laptops (8GB RAM), larger models like mistral or llama3 typically require more resources for optimal performance.\n...\n-name&#96;\n...\n&#96; to the desired model (e\n...\ng.,&#96;llama3.2:1b&#96; or&#96;mistral:7b&#96;), make sure you’ve pulled that model using&#96;ollama pull&#96;, then restart your\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"2\"\u003e\n\u003ctitle\u003e\u003c/title\u003e\n\u003curl\u003ehttps://camel.apache.org/manual/langchain4j-spring-boot-integration.html\u003c/url\u003e\n\u003ccontent\u003e- &#96;langchain4j-open-ai-spring-boot-starter&#96; - OpenAI (GPT-3.5, GPT-4, etc.)\n \n- &#96;langchain4j-azure-open-ai-spring-boot-starter&#96; - Azure OpenAI\n \n- &#96;langchain4j-google-ai-gemini-spring-boot-starter&#96; - Google Gemini\n \n- &#96;langchain4j-ollama-spring-boot-starter&#96; - Ollama (local models)\n \n- &#96;langchain4j-anthropic-spring-boot-starter&#96; - Anthropic Claude\n \n- &#96;langchain4j-mistral-ai-spring-boot-starter&#96; - Mistral AI\n \n- &#96;langchain4j-hugging-face-spring-boot-starter&#96; - Hugging Face\n \n- &#96;langchain4j-vertex-ai-spring-boot-starter&#96; - Google Vertex AI\n \n\n### Embedding\n...\n### Example 3: Ollama (Local LLM)\n...\npom.xml\n...\n&#96;&#96;&#96;xml\n\u003cdependencies\u003e\n    \u003cdependency\u003e\n        \u003cgroupId\u003eorg.apache.camel.springboot\u003c/groupId\u003e\n        \u003cartifactId\u003ecamel-spring-boot-starter\u003c/artifactId\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n        \u003cgroupId\u003eorg.apache.camel.springboot\u003c/groupId\u003e\n        \u003cartifactId\u003ecamel-langchain4j-chat-starter\u003c/artifactId\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n        \u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\n        \u003cartifactId\u003elangchain4j-ollama-spring-boot-starter\u003c/artifactId\u003e\n        \u003cversion\u003e1.10.0\u003c/version\u003e\n    \u003c/dependency\u003e\n\u003c/dependencies\u003e\n...\napplication.properties\n...\n&#96;&#96;&#96;properties\nlangchain4j.ollama.chat-model.base-url=http://localhost:11434\nlangchain4j.ollama.chat-model.model-name=llama2\nlangchain4j.ollama.chat-model.temperature=0.8\n...\n### Ollama Configuration\n...\n&#96;&#96;&#96;properties\n# Chat Model\nlangchain4j.ollama.chat-model.base-url=http://localhost:11434\nlangchain4j.ollama.chat-model.model-name=llama2\nlangchain4j.ollama.chat-model.temperature=0.8\nlangchain4j.ollama.chat-model.timeout=60s\n...\n# Embedding Model\nlangchain4j.ollama.embedding-model.base-url=http://localhost:11434\nlangchain4j.ollama.embedding-model.model-name=nomic-embed-text\n...\nchat-model\n...\nOPENAI_API_KEY}\n...\nmodel-name: gpt-4o\n...\nchat-model\n...\nhttp://localhost:11434\n      model-name: llama2\n...\n&#96;&#96;&#96;yaml\nlangchain4j:\n  ollama:\n    chat-model:\n      base-url: http://localhost:11434\n      model-name: llama2\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"3\"\u003e\n\u003ctitle\u003eLangchain4J musings\u003c/title\u003e\n\u003curl\u003ehttps://blog.frankel.ch/langchain4j-musings/\u003c/url\u003e\n\u003ccontent\u003echose LangChain4J and Ollama because they are well-known and meet my specific requirements\n...\nthis project.\n...\nLangChain4j provides a Spring Boot integration starter. Here’s our minimal dependencies:\n...\n&#96;&#96;&#96;\n\u003cdependencies\u003e\n    \u003cdependency\u003e\n        \u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n        \u003cartifactId\u003espring-boot-starter-web\u003c/artifactId\u003e\n    \u003c/dependency\u003e\n    \u003cdependency\u003e\n        \u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\n        \u003cartifactId\u003elangchain4j-ollama-spring-boot-starter\u003c/artifactId\u003e\n        \u003cversion\u003e0.35.0\u003c/version\u003e\n    \u003c/dependency\u003e\n\u003c/dependencies\u003e\n&#96;&#96;&#96;\n...\nLangChain4J’s Spring Boot starter automatically creates a&#96;ChatLanguageModel&#96; from the exact dependency set - here, Ollama. Furthermore, it offers lots of configuration options via Spring Boot.\n...\n&#96;&#96;&#96;\nlangchain4j.ollama.chat-model:\n  base-url: http://localhost:11434                                       (1)\n  model-name: llama3.2                                                   (2)\n...\nWhen the app starts, LangChain4j creates a bean of type&#96;ChatLanguageModel&#96; and adds it to the context. Note that the concrete type depends on the dependency found on the classpath.\n...\nuse, I’\n...\n&#96;&#96;&#96;\nservices:\n  langchain4j:\n    build:\n      context: .\n    environment:\n      LANGCHAIN4J_OLLAMA_CHAT_MODEL_BASE_URL: http://ollama:11434        (1)\n    ports:\n      - \"8080:8080\"\n    depends_on:\n      - ollama\n  ollama:\n    image: ollama/ollama                                                 (2)\n    volumes:\n      - ./ollama:/root/.ollama                                           (3)\n...\nAs mentioned above, Ollama is a runtime with switchable models. There’s no model by default. To download a model,&#96;docker exec&#96; into the container and run the following command:\n...\n&#96;&#96;&#96;\nollama run llama3.2\n...\nBe careful,&#96;llama3.2&#96; is a whopping 20Gb; for this reason, you want to avoid downloading the model from each&#96;docker compose up&#96;. This is the reason for the volume mapping above.\n...\n.,&#96;tinyllama&#96;.\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"4\"\u003e\n\u003ctitle\u003eSpring Boot Integration | langchain4j/langchain4j | DeepWiki\u003c/title\u003e\n\u003curl\u003ehttps://deepwiki.com/langchain4j/langchain4j/6.1-spring-boot-integration\u003c/url\u003e\n\u003ccontent\u003eThis document covers the Spring Boot integration layer for LangChain4j, which provides auto-configuration of LangChain4j components through Spring Boot starters and enables declarative AI Services using Spring's dependency injection framework. The integration consists of two main parts: (1) provider-specific starters that auto-configure model instances from application properties, and (2) the core &#96;langchain4j-spring-boot-starter&#96; that enables &#96;@AiService&#96; bean creation with automatic component wiring.\n...\nThe LangChain4j Spring Boot integration eliminates boilerplate configuration code by leveraging Spring Boot's auto-configuration mechanism. Instead of manually instantiating &#96;ChatModel&#96;, &#96;EmbeddingModel&#96;, or AI Services using builders, developers configure these components through &#96;application.properties&#96; or &#96;application.yml&#96; and autowire them as Spring beans.\n...\n* **Integration starters** (e.g., &#96;langchain4j-open-ai-spring-boot-starter&#96;) -\n...\n-configure provider-specific components like\n...\n, embedding, and image models. [\n...\n/docs/tutorials/spring-boot-integration.md12-25](https://github.com/langchain4j/langchain4j/blob/6185599e/docs/docs/tutorials/spring-boot-integration.md?plain=1\n...\nL12\n...\n* **Core starter** (&#96;langchain4j-spring-boot-starter&#96;) - Auto-configures the AI Services framework, RAG components, and tool execution logic. [docs/docs/tutorials/spring-boot-integration.md83-98](https://github.com/langchain4j/langchain4j/blob/6185599e/docs/docs/tutorials/spring-boot-integration.md?plain=1#L83-L98)\n...\nSpring Boot\n...\nchain4j-{integration}-spring\n...\nlangchain4j-{integration}-spring-boot4-\n...\nIntegration starters auto-configure various model types based on properties. Common components include:\n...\n**Example for Ollama Chat Model:**\n...\nThe &#96;langchain4j-spring-boot-\n...\n&#96; scans the classpath, finds\n...\ninterfaces, and registers\n...\nas beans.\n...\n/docs/tutorials/\n...\n21-1\n...\n.com/langchain4\n...\n/langchain4\n...\n/blob/618\n...\n/docs/docs/tutorials/\u003c/content\u003e\n\u003c/result\u003e\n\n\u003cresult id=\"5\"\u003e\n\u003ctitle\u003eBootcampToProd/langchain4j-chatmodel-ollama-demo\u003c/title\u003e\n\u003curl\u003ehttps://github.com/BootcampToProd/langchain4j-chatmodel-ollama-demo\u003c/url\u003e\n\u003ccontent\u003eA simple Spring Boot application demonstrating how to configure the LangChain4j ChatModel to interact with local Large Language Models served by Ollama.\n...\n# LangChain4j with Ollama: Connect to Local LLMs\n...\nThis repository demonstrates how to connect a LangChain4j application to a local Large Language Model (LLM) served by Ollama. It enables you to build private, offline, and zero-cost AI applications right on your machine.\n...\nThis application is a practical guide to connecting LangChain4j with AI models that are running locally via Ollama, covering:\n...\n- **Ollama Integration**: Seamlessly connect your Java application to the Ollama server.\n- **Private AI Execution**: Run powerful models like Gemma or Llama 3 completely offline.\n- **Zero-Cost Development**: Experiment and build with LLMs without worrying about API bills or rate limits.\n- **LangChain4j Configuration**: Learn how to use the &#96;langchain4j-ollama-spring-boot-starter&#96; to configure your &#96;ChatModel&#96; with just a few lines of properties.\n...\n## 🛠️ Prerequisites \u0026 Setup\n...\nTo run this application, you will need the following:\n...\n1. **Java 21+ \u0026 Maven**: Ensure you have Java 21 and Maven installed.\n2. **Ollama**: Install the latest version of Ollama for your operating system.\n3. **A Local Model**: You must have an LLM downloaded through Ollama.\n...\n**For detailed instructions on how to download and manage models with Ollama, please follow the setup guide in our comprehensive article:** \n👉 [**Click here for Detailed Instructions**](https://bootcamptoprod.com/langchain4j-with-ollama/#4-installing-and-setting-up-ollama)\u003c/content\u003e\n\u003c/result\u003e",
-      "title": "Web search results"
-    },
-    {
-      "chunk": "Full page text written to file: C:\\Users\\Liyal\\.cursor\\projects\\d-Liyalin-javafail-hive-ai-code-mother\\agent-tools\\63362d35-c16c-4866-a944-ba11bc57e54c.txt\nSize: 21.1 KB, 531 lines\nUse shell / grep / read_file on this path to inspect the page; no follow-up fetch is needed.",
-      "title": "LangChain4j with Ollama: Connect to Local LLMs - BootcampToProd",
-      "url": "https://bootcamptoprod.com/langchain4j-with-ollama/"
-    },
-    {
-      "chunk": "Full page text written to file: C:\\Users\\Liyal\\.cursor\\projects\\d-Liyalin-javafail-hive-ai-code-mother\\agent-tools\\ba8f23fe-c151-4e9a-b1a5-ac866baf2364.txt\nSize: 19.7 KB, 176 lines\nUse shell / grep / read_file on this path to inspect the page; no follow-up fetch is needed.",
-      "title": "Spring Boot Integration | langchain4j/langchain4j | DeepWiki",
-      "url": "https://deepwiki.com/langchain4j/langchain4j/6.1-spring-boot-integration"
-    }
-  ],
-  "rejected": false
-}
+      "chunk": "Links:\n1. [LangChain4j with Ollama: Connect to Local LLMs - BootcampToProd](https://bootcamptoprod.com/langchain4j-with-ollama/)\n2. [](https://camel.apache.org/manual/langchain4j-spring-boot-integration.html)\n3. [Langchain4J musings](https://blog.frankel.ch/langchain4j-musings/)\n4. [Spring Boot Integration | langchain4j/langchain4j | DeepWiki](https://deepwiki.com/langchain4j/langchain4j/6.1-spring-boot-integration)\n5. [BootcampToProd/langchain4j-chatmodel-ollama-demo](https://github.com/BootcampToProd/langchain4j-chatmodel-ollama-demo)\n\nSynthesis:\nLangChain4j provides a Spring Boot starter for Ollama that simplifies integration with lightweight local models [1][2]. To get started, include the following dependency in your pom.xml [1][3]:\n\n\u003cdependency\u003e\n \u003cgroupId\u003edev.langchain4j\u003c/groupId\u003e\n \u003cartifactId\u003elangchain4j-ollama-spring-boot-starter\u003c/artifactId\u003e\n\u003c/dependency\u003e\n\nConfigure the connection in your application.yml to point to your local Ollama server [1][2]:\n\nlangchain4j:\n ollama:\n chat-model:\n base-url: http://localhost:11434\n model-name: llama3.2\n\nThis automatically configures a ChatLanguageModel bean, allowing you to inject it directly into your services [3][4]. Ensure you have pulled your chosen model using the Ollama CLI before running your application [1][5][6].\n\nHighlights:\n\u003cresult id=\"1\"\u003e\n\u003ctitle\u003eLangChain4j with Ollama: Connect to Local LLMs - BootcampToProd\u003c/title\u003e\n\u003curl\u003ehttps://bootcamptoprod.com/langchain4j-with-ollama/\u003c/url\u003e\n\u003ccontent\u003e\u003cdependencies\u003e\n\t\u003c!-- Spring Boot Web for REST endpoints --\u003e\n\t\u003cdependency\u003e\n\t\t\u003cgroupId\u003eorg.springframework.boot\u003c/groupId\u003e\n\t\t\u003cartifactId\u003espring-boot-starter-web\u003c/artifactId\u003e\n\t\u003c/dependency\u003e\n  \u003c!-- LangChain4j Ollama Spring Boo
+… (output truncated)
 ```
 User decision: **accepted**
 
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="web_search"><details>
-<summary>Tool use: **web_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -3142,25 +1054,12 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
 
 </details></tool-use>
 
@@ -3173,14 +1072,13 @@ LangChain4j 本身不捆绑模型，它是一个框架。用户提到的“轻�
 
 同时保留 OpenAI 与 Ollama 的 starter 可能导致 ChatModel Bean 冲突。建议通过 Spring Profile 区分环境，或为工厂注入器添加 @Qualifier 注解来消除歧义。
 
-LangChain4j 确实没有内置模型。若需本地开发或测试，可将项目 starter 切换为 Ollama，直接拉取 qwen2.5:0.5b 等轻量本地模型即可，无需 API Key。我也可以协助完成迁移。</details></think>
+LangChain4j 确实没有内置模型。若需本地开发或测试，可将项目 starter 切换为 Ollama，直接拉取 qwen2.5:0.5b 等轻量本地模型即可，无需 API Key。我也可以协助完成迁移。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -3207,35 +1105,20 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **3** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother\docs** (3 files)
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother\docs`** (3 files)
 
 | File |
 |------|
 | `../docs/superpowers/plans/2026-07-07-basic-layout.md` |
 | `../docs/superpowers/specs/2026-07-07-basic-layout-design.md` |
 | `../docs/superpowers/specs/2026-07-08-user-register-page-design.md` |
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -3252,7 +1135,8 @@ LangChain4j 本身不内置大模型，它只是抽象层。用户提到的"轻�
 
 如果同时存在两个 starter，可能会产生多个 ChatModel bean，需要排除某个自动配置或使用 profile 来区分。
 
-用户可能误以为 LangChain4j 内置了无需 API 密钥的轻量大模型。实际上它只是抽象层，不会自带任何模型。</details></think>
+用户可能误以为 LangChain4j 内置了无需 API 密钥的轻量大模型。实际上它只是抽象层，不会自带任何模型。
+</details></think>
 
 _**Agent (default)**_
 
@@ -3341,7 +1225,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 用户在问为什么排除了 *.yaml 之后，application.yaml 仍然会出现在 git status 中。
 
-`.gitignore` 只对未跟踪文件生效。如果 application.yaml 在添加到忽略规则之前已被 Git 追踪，它仍会显示在状态中。需要检查该文件是否已追踪，并确认 `.gitignore` 的内容。</details></think>
+`.gitignore` 只对未跟踪文件生效。如果 application.yaml 在添加到忽略规则之前已被 Git 追踪，它仍会显示在状态中。需要检查该文件是否已追踪，并确认 `.gitignore` 的内容。
+</details></think>
 
 _**Agent (default)**_
 
@@ -3350,22 +1235,15 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\.gitignore</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\.gitignore</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; git status --short; git ls-files "**/application.yaml"; git check-ignore -v "src/main/resources/application.yaml" 2>&1</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; git status --short; git ls-files &#34;**/application.yaml&#34;; git check-ignore -v &#34;src/main/resources/application.yaml&#34; 2&gt;&amp;1</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; git status --short; git ls-files "**/application.yaml"; git check-ignore -v "src/main/resources/application.yaml" 2>&1
 ```
@@ -3399,12 +1277,6 @@ A  src/test/java/com/hive/hiveaicodemother/ai/AiCodeGeneratorServiceTest.java
 .gitignore:2:**/*.yaml	src/main/resources/application.yaml
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -3414,13 +1286,13 @@ _**Agent (default)**_
 
 已定位问题根源：`.gitignore` 只对未跟踪的文件生效。由于 `application.yaml` 已被 Git 追踪，即使添加了 `**/*.yaml` 规则，Git 仍会将其视为已删除（`D`）并继续跟踪其变更。
 
-若文件仍在本地且状态为修改（M），同样是因为它已被 Git 追踪。接下来将确认该文件是否仍存在于本地。</details></think>
+若文件仍在本地且状态为修改（M），同样是因为它已被 Git 追踪。接下来将确认该文件是否仍存在于本地。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; Test-Path "src/main/resources/application.yaml"; git log --oneline -3 -- "src/main/resources/application.yaml"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; Test-Path &#34;src/main/resources/application.yaml&#34;; git log --oneline -3 -- &#34;src/main/resources/application.yaml&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; Test-Path "src/main/resources/application.yaml"; git log --oneline -3 -- "src/main/resources/application.yaml"
 ```
@@ -3431,12 +1303,6 @@ True
 20f3db2 项目初始化
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -3444,13 +1310,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 正在分析 git 状态显示 `D` 的原因。该文件在工作树中仍然存在，但索引可能将其标记为已删除，或者它已被暂存为删除状态。
 
-`D ` 表示该文件已被暂存为删除状态，但磁盘上仍保留着副本。这通常是因为之前执行过 `git rm --cached`，导致索引记录了删除操作而文件未被实际移除。接下来需要查看更详细的 git 状态输出来确认具体原因。</details></think>
+`D ` 表示该文件已被暂存为删除状态，但磁盘上仍保留着副本。这通常是因为之前执行过 `git rm --cached`，导致索引记录了删除操作而文件未被实际移除。接下来需要查看更详细的 git 状态输出来确认具体原因。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; git status "src/main/resources/application.yaml"; git diff --cached -- "src/main/resources/application.yaml" | Select-Object -First 5; git diff -- "src/main/resources/application.yaml" | Select-Object -First 5</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; git status &#34;src/main/resources/application.yaml&#34;; git diff --cached -- &#34;src/main/resources/application.yaml&#34; | Select-Object -First 5; git diff -- &#34;src/main/resources/application.yaml&#34; | Select-Object -First 5</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; git status "src/main/resources/application.yaml"; git diff --cached -- "src/main/resources/application.yaml" | Select-Object -First 5; git diff -- "src/main/resources/application.yaml" | Select-Object -First 5
 ```
@@ -3460,7 +1326,7 @@ On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
-  (use "git restore --staged &lt;file&gt;..." to unstage)
+  (use "git restore --staged <file>..." to unstage)
 	deleted:    src/main/resources/application.yaml
 
 diff --git a/src/main/resources/application.yaml b/src/main/resources/application.yaml
@@ -3470,12 +1336,6 @@ index c4f1425..0000000
 +++ /dev/null
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -3485,7 +1345,8 @@ _**Agent (default)**_
 
 `.gitignore` 只能忽略未被追踪的新文件。`application.yaml` 已经提交到仓库，因此即使添加了 `*.yaml` 规则，Git 仍会将其显示为已删除（staged）状态。只有新生成的 YAML 文件才会被忽略。
 
-需要执行 `git rm --cached application.yaml` 将其从索引移除。随后提交即可取消追踪，此时 `.gitignore` 才会生效。</details></think>
+需要执行 `git rm --cached application.yaml` 将其从索引移除。随后提交即可取消追踪，此时 `.gitignore` 才会生效。
+</details></think>
 
 _**Agent (default)**_
 
@@ -3570,7 +1431,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 正在分析 CodeParserTest.java 解析失败的原因。
 
-准备先阅读测试文件和相关生产代码，从源头定位解析失败的具体原因。</details></think>
+准备先阅读测试文件和相关生产代码，从源头定位解析失败的具体原因。
+</details></think>
 
 _**Agent (default)**_
 
@@ -3579,23 +1441,15 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\core\CodeParserTest.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\core\CodeParserTest.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -3630,64 +1484,39 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在查看 CodeParser.java 及相关模型类，准备运行测试以定位具体失败原因。</details></think>
+正在查看 CodeParser.java 及相关模型类，准备运行测试以定位具体失败原因。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\model\HtmlCodeResult.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\model\HtmlCodeResult.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\model\MultiFileCodeResult.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\model\MultiFileCodeResult.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=CodeParserTest 2>&1</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=CodeParserTest 2&gt;&amp;1</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=CodeParserTest 2>&1
 ```
@@ -3696,14 +1525,14 @@ Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=CodePars
 [INFO] Scanning for projects...
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.hive:hive-ai-code-mother:jar:0.0.1-SNAPSHOT
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.mysql:mysql-connector-j:jar -&gt; duplicate declaration of version (?) @ line 95, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.mysql:mysql-connector-j:jar -> duplicate declaration of version (?) @ line 95, column 21
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
 [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
 [WARNING] 
 [INFO] 
-[INFO] --------------------&lt; com.hive:hive-ai-code-mother &gt;--------------------
+[INFO] --------------------< com.hive:hive-ai-code-mother >--------------------
 [INFO] Building hive-ai-code-mother 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
@@ -3713,80 +1542,9 @@ Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/io/proj
 Progress (1): 2.1 kB                    Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/io/projectreactor/reactor-core/3.7.19/reactor-core-3.7.19.pom (2.1 kB at 4.8 kB/s)
 Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-reactor/1.1.0-beta7/langchain4j-reactor-1.1.0-beta7.jar
 Downloading from aliyunmaven: https://maven.aliyun.com/repository/public/io/projectreactor/reactor-core/3.7.19/reactor-core-3.7.19.jar
-Progress (1): 0/1.9 MBProgress (1): 0/1.9 MBProgress (1): 0/1.9 MBProgress (1): 0/1.9 MBProgress (1): 0.1/1.9 MBProgress (1): 0.1/1.9 MBProgress (1): 0.1/1.9 MBProgress (1): 0.1/1.9 MBProgress (1): 0.1/1.9 MBProgress (1): 0.1/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.2/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.3/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.4/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.5/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.6/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.7/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.8/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 0.9/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.0/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.1/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.2/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.3/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.4/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.5/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.6/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.7/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.8/1.9 MBProgress (1): 1.9/1.9 MBProgress (1): 1.9/1.9 MBProgress (1): 1.9/1.9 MBProgress (1): 1.9 MB                        Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/io/projectreactor/reactor-core/3.7.19/reactor-core-3.7.19.jar (1.9 MB at 7.0 MB/s)
-Progress (1): 1.9/4.1 kBProgress (1): 4.1 kB                        Downloaded from aliyunmaven: https://maven.aliyun.com/repository/public/dev/langchain4j/langchain4j-reactor/1.1.0-beta7/langchain4j-reactor-1.1.0-beta7.jar (4.1 kB at 6.6 kB/s)
-[INFO] 
-[INFO] --- resources:3.3.1:resources (default-resources) @ hive-ai-code-mother ---
-[INFO] Copying 1 resource from src\main\resources to target\classes
-[INFO] Copying 3 resources from src\main\resources to target\classes
-[INFO] 
-[INFO] --- compiler:3.14.1:compile (default-compile) @ hive-ai-code-mother ---
-[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is automatically retrieved.
-[INFO] Recompiling the module because of changed dependency.
-[INFO] Compiling 36 source files with javac [debug parameters release 21] to target\classes
-[INFO] 
-[INFO] --- resources:3.3.1:testResources (default-testResources) @ hive-ai-code-mother ---
-[INFO] skip non existing resourceDirectory D:\Liyalin\javafail\hive-ai-code-mother\src\test\resources
-[INFO] 
-[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ hive-ai-code-mother ---
-[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is automatically retrieved.
-[INFO] Recompiling the module because of changed dependency.
-[INFO] Compiling 5 source files with javac [debug parameters release 21] to target\test-classes
-[INFO] 
-[INFO] --- surefire:3.5.6:test (default-test) @ hive-ai-code-mother ---
-[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.hive.hiveaicodemother.core.CodeParserTest
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.080 s &lt;&lt;&lt; FAILURE! -- in com.hive.hiveaicodemother.core.CodeParserTest
-[ERROR] com.hive.hiveaicodemother.core.CodeParserTest.parseMultiFileCode -- Time elapsed: 0.011 s &lt;&lt;&lt; FAILURE!
-org.opentest4j.AssertionFailedError: expected: not &lt;null&gt;
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:304)
-	at com.hive.hiveaicodemother.core.CodeParserTest.parseMultiFileCode(CodeParserTest.java:63)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Failures: 
-[ERROR]   CodeParserTest.parseMultiFileCode:63 expected: not &lt;null&gt;
-[INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.428 s
-[INFO] Finished at: 2026-07-11T17:04:50+08:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project hive-ai-code-mother: There are test failures.
-[ERROR] 
-[ERROR] See D:\Liyalin\javafail\hive-ai-code-mother\target\surefire-reports for the individual test results.
-[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -&gt; [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
+Progress (1): 0/1.9 MBProgress (1): 0/1.9 MBProgress (1): 0/1.9 MBProgress (1): 0/1.9 MBProgress (1): 0.1/1.9 MBProgress (1): 0.1/1.9
+… (output truncated)
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -3804,7 +1562,8 @@ _**Agent (default)**_
 
 准备在 CodeParser.java 中添加紧凑的 NDJSON 日志，输出到工作区根目录的 debug-2894ab.log。通过日志观察各正则表达式对测试数据的实际匹配结果，以定位具体解析失败的位置。
 
-正在编写具体的日志写入代码。计划记录每个正则表达式是否命中、围栏附近的文本片段，以及 parseHtmlCode 的回退路径。这些日志将输出到 debug-2894ab.log，用于定位解析失败的具体位置。</details></think>
+正在编写具体的日志写入代码。计划记录每个正则表达式是否命中、围栏附近的文本片段，以及 parseHtmlCode 的回退路径。这些日志将输出到 debug-2894ab.log，用于定位解析失败的具体位置。
+</details></think>
 
 _**Agent (default)**_
 
@@ -3813,46 +1572,22 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
 
 </details></tool-use>
 
@@ -3861,31 +1596,29 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 调试模式要求用户自行复现问题。我将删除日志文件并运行测试，以便收集日志信息。
 
-先删除日志文件并运行测试生成日志，随后分析结果并提供复现步骤供用户验证。</details></think>
+先删除日志文件并运行测试生成日志，随后分析结果并提供复现步骤供用户验证。
+</details></think>
 
 _**Agent (default)**_
 
-File not found: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log
-
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
-
+File not found: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=CodeParserTest -q 2>&1 | Select-String -Pattern "FAILURE|Tests run|BUILD"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=CodeParserTest -q 2&gt;&amp;1 | Select-String -Pattern &#34;FAILURE|Tests run|BUILD&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=CodeParserTest -q 2>&1 | Select-String -Pattern "FAILURE|Tests run|BUILD"
 ```
 
 ```
 
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.073 s &lt;&lt;&lt; FAILURE! -- in com.hive.hiveaicodem
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.073 s <<< FAILURE! -- in com.hive.hiveaicodem
 other.core.CodeParserTest
-[ERROR] com.hive.hiveaicodemother.core.CodeParserTest.parseMultiFileCode -- Time elapsed: 0.009 s &lt;&lt;&lt; FAILURE!
+[ERROR] com.hive.hiveaicodemother.core.CodeParserTest.parseMultiFileCode -- Time elapsed: 0.009 s <<< FAILURE!
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 [ERROR] Failures: 
@@ -3895,54 +1628,36 @@ other.core.CodeParserTest
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在查找调试日志文件。Surefire 从 target 目录运行，日志可能位于项目根目录或其他工作目录。</details></think>
+正在查找调试日志文件。Surefire 从 target 目录运行，日志可能位于项目根目录或其他工作目录。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **1** result in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (1 file)
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother`** (1 file)
 
 | File |
 |------|
 | `../.\debug-2894ab.log` |
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-已定位到该文件，准备读取内容进行分析。</details></think>
+已定位到该文件，准备读取内容进行分析。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
 
 </details></tool-use>
 
@@ -3955,14 +1670,13 @@ parseMultiFileCode 的多文件解析同样失败。html 和 css 围栏均未匹
 
 测试数据本身格式错误：CSS 缺少 opening 围栏，JS 围栏未闭合。正在权衡应修复测试数据还是增强解析器的容错能力。
 
-测试似乎预期解析器支持带标签的宽松格式（如 "html 格式"），而非严格的 markdown 围栏。parseHtmlCode 的 fallback 仅使首个测试偶然通过。需要确认 AI 实际输出格式，再决定是增强解析器兼容性，还是修正测试数据。</details></think>
+测试似乎预期解析器支持带标签的宽松格式（如 "html 格式"），而非严格的 markdown 围栏。parseHtmlCode 的 fallback 仅使首个测试偶然通过。需要确认 AI 实际输出格式，再决定是增强解析器兼容性，还是修正测试数据。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -4005,38 +1719,19 @@ Additional data:
 ```
 Status: **completed**
 
+</details></tool-use>
 
-</details>
-</tool-use>
+_**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\prompt\codegen-html-system-prompt.txt</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\prompt\codegen-html-system-prompt.txt</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
-
-</details></tool-use>
-
-_**Agent (default)**_
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\prompt\codegen-multi-system-prompt.txt</summary>
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\prompt\codegen-multi-system-prompt.txt</summary>
 
 </details></tool-use>
 
@@ -4053,7 +1748,8 @@ _**Agent (default)**_
 
 进一步发现 parseHtmlCode 的测试数据同样缺少标准围栏，且用户可能期望解析器能兼容非标准格式输出。虽然日志已提供充分证据，但仍需确认用户是否希望增强解析器的容错能力。
 
-已确定最终修复方案：直接修正 CodeParserTest.java 的测试数据，使其完全符合系统提示中要求的标准 Markdown 代码围栏格式。同时会一并修正 parseHtmlCode 测试用例，保持一致性。接下来将更新测试文件并重新运行，通过日志验证修复效果。</details></think>
+已确定最终修复方案：直接修正 CodeParserTest.java 的测试数据，使其完全符合系统提示中要求的标准 Markdown 代码围栏格式。同时会一并修正 parseHtmlCode 测试用例，保持一致性。接下来将更新测试文件并重新运行，通过日志验证修复效果。
+</details></think>
 
 _**Agent (default)**_
 
@@ -4062,27 +1758,12 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\core\CodeParserTest.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\core\CodeParserTest.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="write" data-tool-name="delete_file">
-<details><summary>Tool use: **delete_file**</summary>
-
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
@@ -4094,39 +1775,28 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 正在更新调试日志，使用后缀运行ID来验证运行。
 
-发现现有 instrumentation 日志仍使用前缀 runId。将改为后缀并运行测试验证，同时检查日志输出。</details></think>
+发现现有 instrumentation 日志仍使用前缀 runId。将改为后缀并运行测试验证，同时检查日志输出。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=CodeParserTest -q 2>&1 | Select-String -Pattern "FAILURE|Tests run|BUILD SUCCESS|BUILD FAILURE"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=CodeParserTest -q 2&gt;&amp;1 | Select-String -Pattern &#34;FAILURE|Tests run|BUILD SUCCESS|BUILD FAILURE&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=CodeParserTest -q 2>&1 | Select-String -Pattern "FAILURE|Tests run|BUILD SUCCESS|BUILD FAILURE"
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-测试已通过，正在查看后修复日志。</details></think>
+测试已通过，正在查看后修复日志。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
 
 </details></tool-use>
 
@@ -4135,7 +1805,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 正在分析 parseHtmlCode 的后缀验证结果。htmlFenceFound 为 true，usedFallback 为 false，contentHasHtmlFence 为 true。
 
-parseMultiFileCode 同样检测到 htmlFenceFound、jsFenceFound 等标记。测试已通过。需要用户按调试模式提供复现步骤。暂不移除插桩代码。</details></think>
+parseMultiFileCode 同样检测到 htmlFenceFound、jsFenceFound 等标记。测试已通过。需要用户按调试模式提供复现步骤。暂不移除插桩代码。
+</details></think>
 
 _**Agent (default)**_
 
@@ -4196,7 +1867,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 用户确认修复已生效。
 
-正在移除 CodeParser.java 中的调试日志代码。</details></think>
+正在移除 CodeParser.java 中的调试日志代码。
+</details></think>
 
 _**Agent (default)**_
 
@@ -4205,25 +1877,12 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="write" data-tool-name="delete_file">
-<details><summary>Tool use: **delete_file**</summary>
-
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
@@ -4235,57 +1894,35 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 用户确认已正常工作。
 
-准备从 CodeParser.java 中移除调试代码。</details></think>
+准备从 CodeParser.java 中移除调试代码。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeParser.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-调试代码已清理完毕。</details></think>
+调试代码已清理完毕。
+</details></think>
 
 _**Agent (default)**_
 
@@ -4308,7 +1945,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 正在分析 `AiCodeGeneratorFacadeTest.java` 第 28 行的测试报错。
 
-准备先读取测试文件和相关生产代码，再运行测试以捕获实际错误信息。</details></think>
+准备先读取测试文件和相关生产代码，再运行测试以捕获实际错误信息。
+</details></think>
 
 _**Agent (default)**_
 
@@ -4317,23 +1955,15 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacadeTest.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\test\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacadeTest.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -4376,38 +2006,25 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在查看 AiCodeGeneratorFacade 的实现及相关文件，准备运行该测试。</details></think>
+正在查看 AiCodeGeneratorFacade 的实现及相关文件，准备运行该测试。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2&gt;&amp;1</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1
 ```
@@ -4416,14 +2033,14 @@ Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGe
 [INFO] Scanning for projects...
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for com.hive:hive-ai-code-mother:jar:0.0.1-SNAPSHOT
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.mysql:mysql-connector-j:jar -&gt; duplicate declaration of version (?) @ line 95, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.mysql:mysql-connector-j:jar -> duplicate declaration of version (?) @ line 95, column 21
 [WARNING] 
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
 [WARNING] 
 [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
 [WARNING] 
 [INFO] 
-[INFO] --------------------&lt; com.hive:hive-ai-code-mother &gt;--------------------
+[INFO] --------------------< com.hive:hive-ai-code-mother >--------------------
 [INFO] Building hive-ai-code-mother 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
@@ -4440,1678 +2057,21 @@ Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGe
 [INFO] skip non existing resourceDirectory D:\Liyalin\javafail\hive-ai-code-mother\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ hive-ai-code-mother ---
-[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is automatically retrieved.
-[INFO] Nothing to compile - all classes are up to date.
-[INFO] 
-[INFO] --- surefire:3.5.6:test (default-test) @ hive-ai-code-mother ---
-[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest
-17:46:23.766 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest]: AiCodeGeneratorFacadeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:46:23.968 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.hive.hiveaicodemother.HiveAiCodeMotherApplication for test class com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _&#96; | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
-
- :: Spring Boot ::               (v3.5.16)
-
-2026-07-11T17:46:24.712+08:00  INFO 32080 --- [hive-ai-code-mother] [           main] c.h.h.core.AiCodeGeneratorFacadeTest     : Starting AiCodeGeneratorFacadeTest using Java 21.0.11 with PID 32080 (started by Liyal in D:\Liyalin\javafail\hive-ai-code-mother)
-2026-07-11T17:46:24.714+08:00  INFO 32080 --- [hive-ai-code-mother] [           main] c.h.h.core.AiCodeGeneratorFacadeTest     : No active profile set, falling back to 1 default profile: "default"
-2026-07-11T17:46:27.135+08:00  WARN 32080 --- [hive-ai-code-mother] [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiCodeGeneratorServiceFactory': Injection of resource dependencies failed
-mvn : 
-����λ�� C:\Users\Liyal\AppData\Local\Temp\ps-script-eed72000-a848-472e-bc26-88972e9171a1.ps1:92 �ַ�: 57
-+ ... de-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSave ...
-+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-============================
-CONDITIONS EVALUATION REPORT
-============================
-Positive matches:
------------------
-   AopAutoConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.auto=true) matched (OnPropertyCondition)
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration matched:
-      - @ConditionalOnClass found required class 'org.aspectj.weaver.Advice' (OnClassCondition)
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration.CglibAutoProxyConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
-   ApplicationAvailabilityAutoConfiguration#applicationAvailability matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.availability.ApplicationAvailability; SearchStrategy
-: all) did not find any beans (OnBeanCondition)
-   AutoConfig#openAiChatModel matched:
-      - @ConditionalOnProperty (langchain4j.open-ai.chat-model.api-key) matched (OnPropertyCondition)
-   AutoConfig#openAiChatModelHttpClientBuilder matched:
-      - @ConditionalOnProperty (langchain4j.open-ai.chat-model.api-key) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (names: openAiChatModelHttpClientBuilder; SearchStrategy: all) did not find any beans
- (OnBeanCondition)
-   org.springframework.boot.autoconfigure.http.client.reactive.ClientHttpConnectorAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.http.client.reactive.ClientHttpConnector', 'rea
-ctor.core.publisher.Mono' (OnClassCondition)
-      - Detected ClientHttpConnectorBuilder (ConditionalOnClientHttpConnectorBuilderDetection)
-   ClientHttpConnectorAutoConfiguration#clientHttpConnector matched:
-      - @ConditionalOnMissingBean (types: org.springframework.http.client.reactive.ClientHttpConnector; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-   ClientHttpConnectorAutoConfiguration#clientHttpConnectorBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder&lt;?&gt;; 
-SearchStrategy: all) did not find any beans (OnBeanCondition)
-   ClientHttpConnectorAutoConfiguration#clientHttpConnectorSettings matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.reactive.ClientHttpConnectorSettings; Se
-archStrategy: all) did not find any beans (OnBeanCondition)
-   DataSourceAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedde
-d.EmbeddedDatabaseType' (OnClassCondition)
-      - @ConditionalOnMissingBean (types: io.r2dbc.spi.ConnectionFactory; SearchStrategy: all) did not find any beans (
-OnBeanCondition)
-   DataSourceAutoConfiguration.PooledDataSourceConfiguration matched:
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceConditio
-n.PooledDataSourceAvailable PooledDataSource found supported DataSource; NestedCondition on DataSourceAutoConfiguration
-.PooledDataSourceCondition.ExplicitType @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.d
-atasource.type' (DataSourceAutoConfiguration.PooledDataSourceCondition)
-      - @ConditionalOnMissingBean (types: javax.sql.DataSource,javax.sql.XADataSource; SearchStrategy: all) did not fin
-d any beans (OnBeanCondition)
-   DataSourceAutoConfiguration.PooledDataSourceConfiguration#jdbcConnectionDetails matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.jdbc.JdbcConnectionDetails; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   DataSourceConfiguration.Hikari matched:
-      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
-      - @ConditionalOnProperty (spring.datasource.type=com.zaxxer.hikari.HikariDataSource) matched (OnPropertyCondition
-)
-      - @ConditionalOnMissingBean (types: javax.sql.DataSource; SearchStrategy: all) did not find any beans (OnBeanCond
-ition)
-   DataSourceInitializationConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassC
-ondition)
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSourc
-e'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitia
-lizer,org.springframework.boot.autoconfigure.sql.init.SqlR2dbcScriptDatabaseInitializer; SearchStrategy: all) did not f
-ind any beans (OnBeanCondition)
-   DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration matched:
-      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
-   DataSourceTransactionManagerAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate'
-, 'org.springframework.transaction.TransactionManager' (OnClassCondition)
-   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration matched:
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSourc
-e' (OnBeanCondition)
-   DispatcherServletAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-   DispatcherServletAutoConfiguration.DispatcherServletConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
-      - Default DispatcherServlet did not find dispatcher servlet beans (DispatcherServletAutoConfiguration.DefaultDisp
-atcherServletCondition)
-   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
-      - DispatcherServlet Registration did not find servlet registration bean (DispatcherServletAutoConfiguration.Dispa
-tcherServletRegistrationCondition)
-   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration matched:
-      - @ConditionalOnBean (names: dispatcherServlet types: org.springframework.web.servlet.DispatcherServlet; SearchSt
-rategy: all) found bean 'dispatcherServlet' (OnBeanCondition)
-   ErrorMvcAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.Dispatch
-erServlet' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-   ErrorMvcAutoConfiguration#basicErrorController matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorController; SearchStrategy: c
-urrent) did not find any beans (OnBeanCondition)
-   ErrorMvcAutoConfiguration#errorAttributes matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.error.ErrorAttributes; SearchStrategy: c
-urrent) did not find any beans (OnBeanCondition)
-   ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration#conventionErrorViewResolver matched:
-      - @ConditionalOnBean (types: org.springframework.web.servlet.DispatcherServlet; SearchStrategy: all) found bean '
-dispatcherServlet'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.servlet.error.ErrorVie
-wResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
-      - @ConditionalOnBooleanProperty (server.error.whitelabel.enabled=true) matched (OnPropertyCondition)
-      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition
-)
-   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#beanNameViewResolver matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: al
-l) did not find any beans (OnBeanCondition)
-   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
-      - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   FlexTransactionAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'com.mybatisflex.core.row.Db' (OnClassCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) did 
-not find any beans (OnBeanCondition)
-   GenericCacheConfiguration matched:
-      - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration automatic cache type (CacheConditi
-on)
-   HttpClientAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.client.ClientHttpRequestFactory' (OnClassCon
-dition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebAppl
-ication did not find reactive web application classes (NotReactiveWebApplicationCondition)
-   HttpClientAutoConfiguration#clientHttpRequestFactoryBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder&lt;?&gt;; Sear
-chStrategy: all) did not find any beans (OnBeanCondition)
-   HttpClientAutoConfiguration#clientHttpRequestFactorySettings matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.ClientHttpRequestFactorySettings; Search
-Strategy: all) did not find any beans (OnBeanCondition)
-   HttpEncodingAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondi
-tion)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBooleanProperty (server.servlet.encoding.enabled=true) matched (OnPropertyCondition)
-   HttpEncodingAutoConfiguration#characterEncodingFilter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.filter.CharacterEncodingFilter; SearchStrategy: all) 
-did not find any beans (OnBeanCondition)
-   HttpMessageConvertersAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCond
-ition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactive
-WebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAuto
-Configuration.NotReactiveWebApplicationCondition)
-   HttpMessageConvertersAutoConfiguration#messageConverters matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.http.HttpMessageConverters; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.StringHttpMessageConverter' (OnCla
-ssCondition)
-   HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy
-: all) did not find any beans (OnBeanCondition)
-   JacksonAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
-   JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' 
-(OnClassCondition)
-   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' 
-(OnClassCondition)
-   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchSt
-rategy: all) did not find any beans (OnBeanCondition)
-   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' 
-(OnClassCondition)
-   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
-      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not fin
-d any beans (OnBeanCondition)
-   JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClas
-sCondition)
-   JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
-      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
-      - @ConditionalOnPreferredJsonMapper JACKSON no property was configured and Jackson is the default (OnPreferredJso
-nMapperCondition)
-      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jackso
-nObjectMapper' (OnBeanCondition)
-   JacksonHttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration#mappingJackson2HttpMessag
-eConverter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.MappingJackson2HttpMessageConverter i
-gnored: org.springframework.hateoas.server.mvc.TypeConstrainedMappingJackson2HttpMessageConverter,org.springframework.d
-ata.rest.webmvc.alps.AlpsJsonHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   JdbcClientAutoConfiguration matched:
-      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate; Sear
-chStrategy: all) found a single bean 'namedParameterJdbcTemplate'; @ConditionalOnMissingBean (types: org.springframewor
-k.jdbc.core.simple.JdbcClient; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   JdbcTemplateAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate'
- (OnClassCondition)
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSourc
-e' (OnBeanCondition)
-   JdbcTemplateConfiguration matched:
-      - @ConditionalOnMissingBean (types: org.springframework.jdbc.core.JdbcOperations; SearchStrategy: all) did not fi
-nd any beans (OnBeanCondition)
-   Knife4jAutoConfiguration matched:
-      - @ConditionalOnProperty (knife4j.enable=true) matched (OnPropertyCondition)
-   Knife4jAutoConfiguration#knife4jJakartaOperationCustomizer matched:
-      - @ConditionalOnMissingBean (types: com.github.xiaoymin.knife4j.spring.extension.Knife4jJakartaOperationCustomize
-r; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   Knife4jAutoConfiguration#knife4jOpenApiCustomizer matched:
-      - @ConditionalOnMissingBean (types: com.github.xiaoymin.knife4j.spring.extension.Knife4jOpenApiCustomizer; Search
-Strategy: all) did not find any beans (OnBeanCondition)
-   LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
-      - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCo
-ndition)
-   MultipartAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.multipart.suppor
-t.StandardServletMultipartResolver', 'jakarta.servlet.MultipartConfigElement' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBooleanProperty (spring.servlet.multipart.enabled=true) matched (OnPropertyCondition)
-   MultipartAutoConfiguration#multipartConfigElement matched:
-      - @ConditionalOnMissingBean (types: jakarta.servlet.MultipartConfigElement; SearchStrategy: all) did not find any
- beans (OnBeanCondition)
-   MultipartAutoConfiguration#multipartResolver matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did
- not find any beans (OnBeanCondition)
-   MultipleOpenApiSupportConfiguration matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on MultipleOpenApiSupportCondition.OnActuatorDifferentP
-ort @ConditionalOnProperty (springdoc.show-actuator) did not find property 'springdoc.show-actuator'; NestedCondition o
-n MultipleOpenApiSupportCondition.OnMultipleOpenApiSupportCondition AnyNestedCondition 1 matched 1 did not; NestedCondi
-tion on MultipleOpenApiGroupsCondition.OnGroupConfigProperty @ConditionalOnProperty (springdoc.group-configs[0].group) 
-matched; NestedCondition on MultipleOpenApiGroupsCondition.OnGroupedOpenApiBean @ConditionalOnBean (types: org.springdo
-c.core.models.GroupedOpenApi; SearchStrategy: all) did not find any beans of type org.springdoc.core.models.GroupedOpen
-Api (MultipleOpenApiSupportCondition)
-   MultipleOpenApiSupportConfiguration#multipleOpenApiResource matched:
-      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.api.MultipleOpenApiWebMvcResource; SearchStrategy: all) 
-did not find any beans (OnBeanCondition)
-   MybatisFlexAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.apache.ibatis.session.SqlSessionFactory', 'org.mybatis.spring.S
-qlSessionFactoryBean' (OnClassCondition)
-      - @ConditionalOnSingleCandidate (types: javax.sql.DataSource; SearchStrategy: all) found a single bean 'dataSourc
-e' (OnBeanCondition)
-   MybatisFlexAutoConfiguration#sqlSessionFactory matched:
-      - @ConditionalOnMissingBean (types: org.apache.ibatis.session.SqlSessionFactory; SearchStrategy: all) did not fin
-d any beans (OnBeanCondition)
-   MybatisFlexAutoConfiguration#sqlSessionTemplate matched:
-      - @ConditionalOnMissingBean (types: org.mybatis.spring.SqlSessionTemplate; SearchStrategy: all) did not find any 
-beans (OnBeanCondition)
-   MybatisLanguageDriverAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.apache.ibatis.scripting.LanguageDriver' (OnClassCondition)
-   NamedParameterJdbcTemplateConfiguration matched:
-      - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a 
-single bean 'jdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJd
-bcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   NoOpCacheConfiguration matched:
-      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration automatic cache type (CacheCondition)
-   PersistenceExceptionTranslationAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPos
-tProcessor' (OnClassCondition)
-   PersistenceExceptionTranslationAutoConfiguration#persistenceExceptionTranslationPostProcessor matched:
-      - @ConditionalOnBooleanProperty (spring.dao.exceptiontranslation.enabled=true) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcess
-or; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; Sea
-rchStrategy: current) did not find any beans (OnBeanCondition)
-   ReactorAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'reactor.core.publisher.Hooks' (OnClassCondition)
-   RestClientAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.client.RestClient' (OnClassCondition)
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on NotReactiveWebApplicationOrVirtualThreadsExecutorEna
-bledCondition.VirtualThreadsExecutorEnabled found non-matching nested conditions @ConditionalOnThreading did not find V
-IRTUAL; NestedCondition on NotReactiveWebApplicationOrVirtualThreadsExecutorEnabledCondition.NotReactiveWebApplication 
-NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebApplication 
-did not find reactive web application classes (NotReactiveWebApplicationOrVirtualThreadsExecutorEnabledCondition)
-   RestClientAutoConfiguration#httpMessageConvertersRestClientCustomizer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.client.HttpMessageConvertersRestCl
-ientCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   RestClientAutoConfiguration#restClientBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.client.RestClient$Builder; SearchStrategy: all) did n
-ot find any beans (OnBeanCondition)
-   RestClientAutoConfiguration#restClientBuilderConfigurer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.client.RestClientBuilderConfigurer
-; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   RestClientAutoConfiguration#restClientSsl matched:
-      - @ConditionalOnBean (types: org.springframework.boot.ssl.SslBundles; SearchStrategy: all) found bean 'sslBundleR
-egistry'; @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.client.RestClientSsl; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   RestTemplateAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.client.RestTemplate' (OnClassCondition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebAppl
-ication did not find reactive web application classes (NotReactiveWebApplicationCondition)
-   RestTemplateAutoConfiguration#restTemplateBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.web.client.RestTemplateBuilder; SearchStrategy: all)
- did not find any beans (OnBeanCondition)
-   ServletWebServerFactoryAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRequest' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-   ServletWebServerFactoryAutoConfiguration.TomcatConfiguration matched:
-      - @ConditionalOnClass found required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
-   ServletWebServerFactoryConfiguration.EmbeddedTomcat matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.apache.catalina.startup.Tomcat', 'or
-g.apache.coyote.UpgradeProtocol' (OnClassCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.boot.web.servlet.server.ServletWebServerFactory; SearchSt
-rategy: current) did not find any beans (OnBeanCondition)
-   SimpleCacheConfiguration matched:
-      - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration automatic cache type (CacheConditio
-n)
-   SpringDocConfigProperties matched:
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SpringDocConfiguration matched:
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-   SpringDocConfiguration#fileSupportConverter matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.FileSupportConverter; SearchStrategy: all) did 
-not find any beans (OnBeanCondition)
-   SpringDocConfiguration#openAPIBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.OpenAPIService; SearchStrategy: all) did not find 
-any beans (OnBeanCondition)
-   SpringDocConfiguration#operationBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.OperationService; SearchStrategy: all) did not fin
-d any beans (OnBeanCondition)
-   SpringDocConfiguration#parameterBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.GenericParameterService; SearchStrategy: all) did 
-not find any beans (OnBeanCondition)
-   SpringDocConfiguration#polymorphicModelConverter matched:
-      - @ConditionalOnProperty (springdoc.model-converters.polymorphic-converter.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.PolymorphicModelConverter; SearchStrategy: all)
- did not find any beans (OnBeanCondition)
-   SpringDocConfiguration#requestBodyBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.RequestBodyService; SearchStrategy: all) did not f
-ind any beans (OnBeanCondition)
-   SpringDocConfiguration#responseSupportConverter matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.ResponseSupportConverter; SearchStrategy: all) 
-did not find any beans (OnBeanCondition)
-   SpringDocConfiguration#schemaPropertyDeprecatingConverter matched:
-      - @ConditionalOnProperty (springdoc.model-converters.deprecating-converter.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.SchemaPropertyDeprecatingConverter; SearchStrat
-egy: all) did not find any beans (OnBeanCondition)
-   SpringDocConfiguration#securityParser matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.SecurityService; SearchStrategy: all) did not find
- any beans (OnBeanCondition)
-   SpringDocConfiguration#springDocCustomizers matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.customizers.SpringDocCustomizers; SearchStrategy: all) did
- not find any beans (OnBeanCondition)
-   SpringDocConfiguration#springDocProviders matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringDocProviders; SearchStrategy: all) did not
- find any beans (OnBeanCondition)
-   SpringDocConfiguration#springdocBeanFactoryPostProcessor matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.context.properties.bind.BindResult' (OnClass
-Condition)
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on CacheOrGroupedOpenApiCondition.OnCacheDisabled found
- non-matching nested conditions @ConditionalOnProperty (springdoc.cache.disabled) did not find property 'springdoc.cach
-e.disabled'; NestedCondition on CacheOrGroupedOpenApiCondition.OnMultipleOpenApiSupportCondition AnyNestedCondition 1 m
-atched 1 did not; NestedCondition on MultipleOpenApiSupportCondition.OnActuatorDifferentPort @ConditionalOnProperty (sp
-ringdoc.show-actuator) did not find property 'springdoc.show-actuator'; NestedCondition on MultipleOpenApiSupportCondit
-ion.OnMultipleOpenApiSupportCondition AnyNestedCondition 1 matched 1 did not; NestedCondition on MultipleOpenApiGroupsC
-ondition.OnGroupConfigProperty @ConditionalOnProperty (springdoc.group-configs[0].group) matched; NestedCondition on Mu
-ltipleOpenApiGroupsCondition.OnGroupedOpenApiBean @ConditionalOnBean (types: org.springdoc.core.models.GroupedOpenApi; 
-SearchStrategy: all) did not find any beans of type org.springdoc.core.models.GroupedOpenApi (CacheOrGroupedOpenApiCond
-ition)
-   SpringDocConfiguration#springdocObjectMapperProvider matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.providers.ObjectMapperProvider; SearchStrategy: all) did n
-ot find any beans (OnBeanCondition)
-   SpringDocConfiguration.SpringDocSpringDataWebPropertiesProvider matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.autoconfigure.data.web.SpringDataWebProperti
-es' (OnClassCondition)
-   SpringDocConfiguration.SpringDocSpringDataWebPropertiesProvider#springDataWebPropertiesProvider matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringDataWebPropertiesProvider; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-   SpringDocConfiguration.SpringDocWebFluxSupportConfiguration matched:
-      - @ConditionalOnClass found required class 'reactor.core.publisher.Flux' (OnClassCondition)
-   SpringDocConfiguration.SpringDocWebFluxSupportConfiguration#webFluxSupportConverter matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.WebFluxSupportConverter; SearchStrategy: all) d
-id not find any beans (OnBeanCondition)
-   SpringDocConfiguration.WebConversionServiceConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.autoconfigure.web.format.WebConversionServic
-e' (OnClassCondition)
-   SpringDocUIConfiguration matched:
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SpringDocWebMvcConfiguration matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SpringDocWebMvcConfiguration#openApiResource matched:
-      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.api.OpenApiWebMvcResource; SearchStrategy: all) did not 
-find any beans (OnBeanCondition)
-   SpringDocWebMvcConfiguration#requestBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.core.service.RequestService; SearchStrategy: all) did no
-t find any beans (OnBeanCondition)
-   SpringDocWebMvcConfiguration#responseBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.service.GenericResponseService; SearchStrategy: all) did n
-ot find any beans (OnBeanCondition)
-   SpringDocWebMvcConfiguration#springWebProvider matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringWebProvider; SearchStrategy: all) did not 
-find any beans (OnBeanCondition)
-   SpringDocWebMvcConfiguration.SpringDocWebMvcRouterConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.servlet.function.RouterFunction' (OnClassCond
-ition)
-   SpringDocWebMvcConfiguration.SpringDocWebMvcRouterConfiguration#routerFunctionProvider matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.core.providers.RouterFunctionWebMvcProvider; SearchStrat
-egy: all) did not find any beans (OnBeanCondition)
-   SqlInitializationAutoConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.sql.init.enabled=true) matched (OnPropertyCondition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on SqlInitializationAutoConfiguration.SqlInitializati
-onModeCondition.ModeIsNever @ConditionalOnProperty (spring.sql.init.mode=never) did not find property 'spring.sql.init.
-mode' (SqlInitializationAutoConfiguration.SqlInitializationModeCondition)
-   SslAutoConfiguration#sslBundleRegistry matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.ssl.SslBundleRegistry,org.springframework.boot.ssl.S
-slBundles; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   SwaggerConfig matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SwaggerConfig#indexPageTransformer matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerIndexTransformer; SearchStrategy: all) did not
- find any beans (OnBeanCondition)
-   SwaggerConfig#swaggerConfigResource matched:
-      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerConfigResource; SearchStrategy: all) did not f
-ind any beans (OnBeanCondition)
-   SwaggerConfig#swaggerResourceResolver matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerResourceResolver; SearchStrategy: all) did not
- find any beans (OnBeanCondition)
-   SwaggerConfig#swaggerWebMvcConfigurer matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerWebMvcConfigurer; SearchStrategy: all) did not
- find any beans (OnBeanCondition)
-   SwaggerConfig#swaggerWelcome matched:
-      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc; SearchStrategy: all) did not fi
-nd any beans (OnBeanCondition)
-   SwaggerUiConfigParameters matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SwaggerUiConfigProperties matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   SwaggerUiOAuthProperties matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found 
-bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
-   TaskExecutionAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (On
-ClassCondition)
-   TaskExecutorConfigurations.AsyncConfigurerConfiguration matched:
-      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: al
-l) did not find any beans (OnBeanCondition)
-   TaskExecutorConfigurations.AsyncConfigurerConfiguration#applicationTaskExecutorAsyncConfigurer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.scheduling.annotation.AsyncConfigurer; SearchStrategy: al
-l) did not find any beans (OnBeanCondition)
-   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
-   TaskExecutorConfigurations.TaskExecutorConfiguration matched:
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.Model
-Condition @ConditionalOnProperty (spring.task.execution.mode=force) did not find property 'spring.task.execution.mode';
- NestedCondition on TaskExecutorConfigurations.OnExecutorCondition.ExecutorBeanCondition @ConditionalOnMissingBean (typ
-es: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (TaskExecutorConfigurations.OnExecutorCo
-ndition)
-   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutor matched:
-      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
-   TaskExecutorConfigurations.ThreadPoolTaskExecutorBuilderConfiguration#threadPoolTaskExecutorBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskExecutorBuilder; SearchStrategy: 
-all) did not find any beans (OnBeanCondition)
-   TaskSchedulingAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (O
-nClassCondition)
-   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrategy
-: all) did not find any beans (OnBeanCondition)
-      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
-   TaskSchedulingConfigurations.ThreadPoolTaskSchedulerBuilderConfiguration#threadPoolTaskSchedulerBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder; SearchStrategy:
- all) did not find any beans (OnBeanCondition)
-   TransactionAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassC
-ondition)
-   TransactionAutoConfiguration.EnableTransactionManagementConfiguration matched:
-      - @ConditionalOnBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) found bean 
-'transactionManager'; @ConditionalOnMissingBean (types: org.springframework.transaction.annotation.AbstractTransactionM
-anagementConfiguration; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
-   TransactionAutoConfiguration.TransactionTemplateConfiguration matched:
-      - @ConditionalOnSingleCandidate (types: org.springframework.transaction.PlatformTransactionManager; SearchStrateg
-y: all) found a single bean 'transactionManager' (OnBeanCondition)
-   TransactionAutoConfiguration.TransactionTemplateConfiguration#transactionTemplate matched:
-      - @ConditionalOnMissingBean (types: org.springframework.transaction.support.TransactionOperations; SearchStrategy
-: all) did not find any beans (OnBeanCondition)
-   TransactionManagerCustomizationAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassC
-ondition)
-   TransactionManagerCustomizationAutoConfiguration#platformTransactionManagerCustomizers matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomiz
-ers; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.Dispatch
-erServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
- SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration#formContentFilter matched:
-      - @ConditionalOnBooleanProperty (spring.mvc.formcontent.filter.enabled=true) matched (OnPropertyCondition)
-      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did no
-t find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#flashMapManager matched:
-      - @ConditionalOnMissingBean (names: flashMapManager; SearchStrategy: all) did not find any beans (OnBeanCondition
-)
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#localeResolver matched:
-      - @ConditionalOnMissingBean (names: localeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#themeResolver matched:
-      - @ConditionalOnMissingBean (names: themeResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
-      - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondit
-ion)
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
-      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springfram
-ework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
-      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defa
-ultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver types: org.
-springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCon
-dition)
-   WebSocketServletAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'jakarta.websocket.server.ServerContainer
-' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-   WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.tomcat.websocket.s
-erver.WsSci' (OnClassCondition)
-   WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration#websocketServletWebServerCustomizer matched:
-      - @ConditionalOnMissingBean (names: websocketServletWebServerCustomizer; SearchStrategy: all) did not find any be
-ans (OnBeanCondition)
-Negative matches:
------------------
-   ActiveMQAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.jms.ConnectionFactory' (OnClassCondition)
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration.JdkDynamicAutoProxyConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-
-target-class' (OnPropertyCondition)
-   AopAutoConfiguration.ClassProxyingConfiguration:
-      Did not match:
-         - @ConditionalOnMissingClass found unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
-   ArtemisAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.jms.ConnectionFactory' (OnClassCondition)
-   AutoConfig#openAiEmbeddingModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.embedding-model.api-key) did not find property 'langchain4j.open
--ai.embedding-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiEmbeddingModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.embedding-model.api-key) did not find property 'langchain4j.open
--ai.embedding-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiImageModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.image-model.api-key) did not find property 'langchain4j.open-ai.
-image-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiImageModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.image-model.api-key) did not find property 'langchain4j.open-ai.
-image-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiLanguageModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.language-model.api-key) did not find property 'langchain4j.open-
-ai.language-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiLanguageModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.language-model.api-key) did not find property 'langchain4j.open-
-ai.language-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiModerationModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.moderation-model.api-key) did not find property 'langchain4j.ope
-n-ai.moderation-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiModerationModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.moderation-model.api-key) did not find property 'langchain4j.ope
-n-ai.moderation-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingChatModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-chat-model.api-key) did not find property 'langchain4j
-.open-ai.streaming-chat-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingChatModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-chat-model.api-key) did not find property 'langchain4j
-.open-ai.streaming-chat-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingChatModelTaskExecutor:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-chat-model.api-key) did not find property 'langchain4j
-.open-ai.streaming-chat-model.api-key' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnMissingClass did not find unwanted class 'io.micrometer.context.ContextSnapshotFactory' (OnCla
-ssCondition)
-   AutoConfig#openAiStreamingChatModelTaskExecutorWithContextPropagation:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.context.ContextSnapshotFactory' (OnClassCondi
-tion)
-   AutoConfig#openAiStreamingLanguageModel:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-language-model.api-key) did not find property 'langcha
-in4j.open-ai.streaming-language-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingLanguageModelHttpClientBuilder:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-language-model.api-key) did not find property 'langcha
-in4j.open-ai.streaming-language-model.api-key' (OnPropertyCondition)
-   AutoConfig#openAiStreamingLanguageModelTaskExecutor:
-      Did not match:
-         - @ConditionalOnProperty (langchain4j.open-ai.streaming-language-model.api-key) did not find property 'langcha
-in4j.open-ai.streaming-language-model.api-key' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnMissingClass did not find unwanted class 'io.micrometer.context.ContextSnapshotFactory' (OnCla
-ssCondition)
-   AutoConfig#openAiStreamingLanguageModelTaskExecutorWithContextPropagation:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.context.ContextSnapshotFactory' (OnClassCondi
-tion)
-   BatchAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.batch.core.launch.JobLauncher' (OnClass
-Condition)
-   Cache2kCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
-   CacheAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) di
-d not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
-   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFact
-oryBean' (OnClassCondition)
-         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluat
-ionReport.AncestorsMatchedCondition)
-   CaffeineCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondit
-ion)
-   CassandraAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondit
-ion)
-   CassandraDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondit
-ion)
-   CassandraReactiveDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondit
-ion)
-   CassandraReactiveRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.cassandra.ReactiveSession' (OnClas
-sCondition)
-   CassandraRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondit
-ion)
-   org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient'
- (OnClassCondition)
-   ClientHttpConnectorAutoConfiguration.ReactorNetty:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'reactor.netty.http.client.HttpClient' (OnClassCondition)
-   CodecsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient'
- (OnClassCondition)
-   CouchbaseAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-   CouchbaseCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-   CouchbaseDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
-   CouchbaseReactiveDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-   CouchbaseReactiveRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-   CouchbaseRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
-   DataSourceAutoConfiguration.EmbeddedDatabaseConfiguration:
-      Did not match:
-         - EmbeddedDataSource spring.datasource.url is set (DataSourceAutoConfiguration.EmbeddedDatabaseCondition)
-   DataSourceCheckpointRestoreConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.crac.Resource' (OnClassCondition)
-   DataSourceConfiguration.Dbcp2:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition
-)
-   DataSourceConfiguration.Generic:
-      Did not match:
-         - @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (OnPropertyCo
-ndition)
-   DataSourceConfiguration.OracleUcp:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSourceImpl', 'oracle.jdbc.OracleC
-onnection' (OnClassCondition)
-   DataSourceConfiguration.Tomcat:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
-   DataSourceJmxConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) found different value in property 'spring.jmx.enable
-d' (OnPropertyCondition)
-   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition
-)
-   DataSourcePoolMetadataProvidersConfiguration.OracleUcpPoolDataSourceMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSource', 'oracle.jdbc.OracleConne
-ction' (OnClassCondition)
-   DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
-   DataSourceTransactionManagerAutoConfiguration.JdbcTransactionManagerConfiguration#transactionManager:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.transaction.TransactionManager; SearchStrategy: all) f
-ound beans of type 'org.springframework.transaction.TransactionManager' transactionManager (OnBeanCondition)
-   DispatcherServletAutoConfiguration.DispatcherServletConfiguration#multipartResolver:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.web.multipart.MultipartResolver; SearchStrategy: all) did not
- find any beans of type org.springframework.web.multipart.MultipartResolver (OnBeanCondition)
-   ElasticsearchClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'co.elastic.clients.elasticsearch.ElasticsearchClient' (OnCl
-assCondition)
-   ElasticsearchDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.elc.Elasticse
-archTemplate' (OnClassCondition)
-   ElasticsearchRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.repository.Elasticse
-archRepository' (OnClassCondition)
-   ElasticsearchRestClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.elasticsearch.client.RestClientBuilder' (OnClassConditi
-on)
-   EmbeddedLdapAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.unboundid.ldap.listener.InMemoryDirectoryServer' (OnCla
-ssCondition)
-   EmbeddedWebServerFactoryCustomizerAutoConfiguration:
-      Did not match:
-         - Application is deployed as a WAR file. (OnWarDeploymentCondition)
-      Matched:
-         - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-   ErrorWebFluxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' 
-(OnClassCondition)
-   FlywayAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.flywaydb.core.Flyway' (OnClassCondition)
-   FreeMarkerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
-   GraphQlAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlQueryByExampleAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlQuerydslAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.querydsl.core.Query' (OnClassCondition)
-   GraphQlRSocketAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlReactiveQueryByExampleAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlReactiveQuerydslAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.querydsl.core.Query' (OnClassCondition)
-   GraphQlWebFluxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlWebFluxSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlWebMvcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GraphQlWebMvcSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   GroovyTemplateAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
-   GsonAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
-   GsonHttpMessageConvertersConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
-   H2ConsoleAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.h2.server.web.JakartaWebServlet' (OnClassCondition)
-   HazelcastAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
-   HazelcastCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
-   HazelcastJpaDependencyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
-   HibernateJpaAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.persistence.EntityManager' (OnClassCondition)
-   HttpHandlerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.DispatcherHandler' (OnClas
-sCondition)
-   HypermediaAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.hateoas.EntityModel' (OnClassCondition)
-   InfinispanCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCache
-Manager' (OnClassCondition)
-   IntegrationAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.integration.config.EnableIntegration' (
-OnClassCondition)
-   JCacheCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
-   JacksonHttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCon
-dition)
-   JdbcRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.jdbc.repository.config.AbstractJdb
-cConfiguration' (OnClassCondition)
-   JerseyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.glassfish.jersey.server.spring.SpringComponentProvider'
- (OnClassCondition)
-   JmsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.jms.Message' (OnClassCondition)
-   JmxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) found different value in property 'spring.jmx.enable
-d' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
-   JndiConnectionFactoryAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.jms.core.JmsTemplate' (OnClassCondition
-)
-   JndiDataSourceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'spring.datasource.jndi-name' (On
-PropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embe
-dded.EmbeddedDatabaseType' (OnClassCondition)
-   JooqAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.jooq.DSLContext' (OnClassCondition)
-   JpaRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.jpa.repository.JpaRepository' (OnC
-lassCondition)
-   JsonbAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
-   JsonbHttpMessageConvertersConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
-   JtaAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.transaction.Transaction' (OnClassCondition)
-   KafkaAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.kafka.core.KafkaTemplate' (OnClassCondi
-tion)
-   Knife4jAutoConfiguration#corsFilter:
-      Did not match:
-         - @ConditionalOnProperty (knife4j.cors=true) did not find property 'knife4j.cors' (OnPropertyCondition)
-   Knife4jAutoConfiguration#productionSecurityFilter:
-      Did not match:
-         - @ConditionalOnProperty (knife4j.production=true) did not find property 'knife4j.production' (OnPropertyCondi
-tion)
-   Knife4jAutoConfiguration#securityBasicAuthFilter:
-      Did not match:
-         - @ConditionalOnProperty (knife4j.basic.enable=true) did not find property 'knife4j.basic.enable' (OnPropertyC
-ondition)
-   Knife4jInsightAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (knife4j.insight.enable=true) did not find property 'knife4j.insight.enable' (OnPrope
-rtyCondition)
-   LdapAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.ldap.core.ContextSource' (OnClassCondit
-ion)
-   LdapRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.ldap.repository.LdapRepository' (O
-nClassCondition)
-   LiquibaseAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'liquibase.change.DatabaseChange' (OnClassCondition)
-   MailSenderAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.mail.internet.MimeMessage' (OnClassCondition)
-   MailSenderValidatorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.mail.test-connection=true) did not find property 'spring.mail.test-con
-nection' (OnPropertyCondition)
-   MessageSourceAutoConfiguration:
-      Did not match:
-         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCond
-ition)
-   MongoAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
-   MongoDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
-   MongoReactiveAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCon
-dition)
-   MongoReactiveDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCon
-dition)
-   MongoReactiveRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCon
-dition)
-   MongoRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
-   MultiDataSourceAutoConfiguration:
-      Did not match:
-         - 'mybatis-flex.datasource' is necessary. (ConditionalOnMybatisFlexDatasource.OnMybatisFlexDataSourceCondition
-)
-   MultipleOpenApiSupportConfiguration.SpringDocWebMvcActuatorDifferentConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.endpoint.web.servlet.WebMv
-cEndpointHandlerMapping' (OnClassCondition)
-   MustacheAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
-   MybatisFlexAdminAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (mybatis-flex.admin-config.enable=true) did not find property 'enable' (OnPropertyCon
-dition)
-   MybatisFlexAutoConfiguration.MapperScannerRegistrarNotFoundConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.mybatis.spring.mapper.MapperFactoryBean,org.mybatis.spring.mapper.Mapp
-erScannerConfigurer; SearchStrategy: all) found beans of type 'org.mybatis.spring.mapper.MapperScannerConfigurer' com.h
-ive.hiveaicodemother.HiveAiCodeMotherApplication#MapperScannerRegistrar#0 (OnBeanCondition)
-   MybatisLanguageDriverAutoConfiguration.FreeMarkerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'org.mybatis.scripting.freemarker.FreeMarkerLanguageDriver
-', 'org.mybatis.scripting.freemarker.FreeMarkerLanguageDriverConfig' (OnClassCondition)
-   MybatisLanguageDriverAutoConfiguration.LegacyFreeMarkerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.mybatis.scripting.freemarker.FreeMarkerLanguageDriver' 
-(OnClassCondition)
-   MybatisLanguageDriverAutoConfiguration.LegacyVelocityConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.mybatis.scripting.velocity.Driver' (OnClassCondition)
-   MybatisLanguageDriverAutoConfiguration.ThymeleafConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.mybatis.scripting.thymeleaf.ThymeleafLanguageDriver' (O
-nClassCondition)
-   MybatisLanguageDriverAutoConfiguration.VelocityConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'org.mybatis.scripting.velocity.VelocityLanguageDriver', '
-org.mybatis.scripting.velocity.VelocityLanguageDriverConfig' (OnClassCondition)
-   Neo4jAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   Neo4jDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   Neo4jReactiveDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   Neo4jReactiveRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   Neo4jRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
-   NettyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.netty.util.NettyRuntime' (OnClassCondition)
-   OAuth2AuthorizationServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.authorization.OA
-uth2Authorization' (OnClassCondition)
-   OAuth2AuthorizationServerJwtAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.nimbusds.jose.jwk.source.JWKSource' (OnClassCondition)
-   OAuth2ClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.Cli
-entRegistration' (OnClassCondition)
-   OAuth2ClientWebSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.configur
-ation.EnableWebSecurity' (OnClassCondition)
-   OAuth2ResourceServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.authent
-ication.BearerTokenAuthenticationToken' (OnClassCondition)
-   ProjectInfoAutoConfiguration#buildProperties:
-      Did not match:
-         - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.pro
-perties}' (OnResourceCondition)
-   ProjectInfoAutoConfiguration#gitProperties:
-      Did not match:
-         - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvail
-ableCondition)
-   PulsarAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.pulsar.client.api.PulsarClient' (OnClassConditio
-n)
-   PulsarReactiveAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.pulsar.client.api.PulsarClient' (OnClassConditio
-n)
-   QuartzAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.quartz.Scheduler' (OnClassCondition)
-   R2dbcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
-   R2dbcDataAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.r2dbc.core.R2dbcEntityTemplate' (O
-nClassCondition)
-   R2dbcInitializationConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'io.r2dbc.spi.ConnectionFactory', 'org.springframework.r2d
-bc.connection.init.DatabasePopulator' (OnClassCondition)
-   R2dbcProxyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.r2dbc.proxy.ProxyConnectionFactory' (OnClassCondition)
-   R2dbcRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
-   R2dbcTransactionManagerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.r2dbc.connection.R2dbcTransactionManage
-r' (OnClassCondition)
-   RSocketGraphQlClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'graphql.GraphQL' (OnClassCondition)
-   RSocketMessagingAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
-   RSocketRequesterAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
-   RSocketSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.rsocket.core.SecuritySocketAcc
-eptorInterceptor' (OnClassCondition)
-   RSocketServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.rsocket.core.RSocketServer' (OnClassCondition)
-   RSocketStrategiesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.netty.buffer.PooledByteBufAllocator' (OnClassCondition)
-   RabbitAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.rabbitmq.client.Channel' (OnClassCondition)
-   ReactiveElasticsearchClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'co.elastic.clients.transport.ElasticsearchTransport' (OnCla
-ssCondition)
-   ReactiveElasticsearchRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.elc.ReactiveE
-lasticsearchClient' (OnClassCondition)
-   ReactiveMultipartAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' 
-(OnClassCondition)
-   ReactiveOAuth2ClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.Cli
-entRegistration' (OnClassCondition)
-   ReactiveOAuth2ClientWebSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive
-.EnableWebFluxSecurity' (OnClassCondition)
-   ReactiveOAuth2ResourceServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive
-.EnableWebFluxSecurity' (OnClassCondition)
-   ReactiveSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive
-.EnableWebFluxSecurity' (OnClassCondition)
-   ReactiveUserDetailsServiceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.ReactiveAuthent
-icationManager' (OnClassCondition)
-   ReactiveWebServerFactoryAutoConfiguration:
-      Did not match:
-         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
-   RedisAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.core.RedisOperations' (OnCla
-ssCondition)
-   RedisCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFa
-ctory' (OnClassCondition)
-   RedisReactiveAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.ReactiveRedisConn
-ectionFactory' (OnClassCondition)
-   RedisRepositoriesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.repository.configuration.Ena
-bleRedisRepositories' (OnClassCondition)
-   RepositoryRestMvcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.webmvc.config.RepositoryRestM
-vcConfiguration' (OnClassCondition)
-   Saml2RelyingPartyAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.saml2.provider.service.registr
-ation.RelyingPartyRegistrationRepository' (OnClassCondition)
-   SecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.DefaultAuthenti
-cationEventPublisher' (OnClassCondition)
-   SecurityFilterAutoConfiguration:
-      Did not match:
-2026-07-11T17:46:27.164+08:00  INFO 32080 --- [hive-ai-code-mother] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-07-11T17:46:27.192+08:00 ERROR 32080 --- [hive-ai-code-mother] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'dev.langchain4j.model.chat.StreamingChatModel' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'dev.langchain4j.model.chat.StreamingChatModel' in your configuration.
-
-2026-07-11T17:46:27.198+08:00  WARN 32080 --- [hive-ai-code-mother] [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest@8077c97]
-
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@27358a19 testClass = com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@34129c78, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3e62d773, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1ebea008, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@452e19ca, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@3cfdd820, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7bf3a5d8, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@a45f9ddd], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiCodeGeneratorServiceFactory': Injection of resource dependencies failed
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1457) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.16.jar:3.5.16]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.16.jar:3.5.16]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.16.jar:3.5.16]
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:151) ~[spring-boot-test-3.5.16.jar:3.5.16]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.19.jar:6.2.19]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.19.jar:6.2.19]
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.5.16.jar:3.5.16]
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:590) ~[spring-boot-test-3.5.16.jar:3.5.16]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:151) ~[spring-boot-test-3.5.16.jar:3.5.16]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.5.16.jar:3.5.16]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.19.jar:6.2.19]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.19.jar:6.2.19]
-	... 80 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'dev.langchain4j.model.chat.StreamingChatModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@jakarta.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2322) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:598) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738) ~[spring-context-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.19.jar:6.2.19]
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369) ~[spring-context-6.2.19.jar:6.2.19]
-	... 104 common frames omitted
-
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.http.SessionCreationPol
-icy' (OnClassCondition)
-   SendGridAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.sendgrid.SendGrid' (OnClassCondition)
-   ServletWebServerFactoryAutoConfiguration.ForwardedHeaderFilterConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-hea
-ders-strategy' (OnPropertyCondition)
-   ServletWebServerFactoryConfiguration.EmbeddedJetty:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util
-.Loader', 'org.eclipse.jetty.ee10.webapp.WebAppContext' (OnClassCondition)
-   ServletWebServerFactoryConfiguration.EmbeddedUndertow:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnCl
-assCondition)
-   SessionAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.session.Session' (OnClassCondition)
-   SpringApplicationAdminJmxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.applicat
-ion.admin.enabled' (OnPropertyCondition)
-   SpringDataWebAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.web.PageableHandlerMethodArgumentR
-esolver' (OnClassCondition)
-   SpringDocConfiguration#propertiesResolverForSchema:
-      Did not match:
-         - @ConditionalOnProperty (springdoc.api-docs.resolve-schema-properties) did not find property 'springdoc.api-d
-ocs.resolve-schema-properties' (OnPropertyCondition)
-   SpringDocConfiguration#propertyCustomizingConverter:
-      Did not match:
-         - @ConditionalOnBean (types: org.springdoc.core.customizers.PropertyCustomizer; SearchStrategy: all) did not f
-ind any beans of type org.springdoc.core.customizers.PropertyCustomizer (OnBeanCondition)
-   SpringDocConfiguration#springdocBeanFactoryPostProcessor2:
-      Did not match:
-         - @ConditionalOnMissingClass found unwanted class 'org.springframework.boot.context.properties.bind.BindResult
-' (OnClassCondition)
-   SpringDocConfiguration.QuerydslProvider:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.querydsl.binding.QuerydslBindingsF
-actory' (OnClassCondition)
-   SpringDocConfiguration.SpringDocActuatorConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web
-.WebEndpointProperties' (OnClassCondition)
-   SpringDocConfiguration.SpringDocRepositoryRestConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.core.config.RepositoryRestCon
-figuration' (OnClassCondition)
-   SpringDocDataRestConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.core.config.RepositoryRestCon
-figuration' (OnClassCondition)
-   SpringDocFunctionCatalogConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.cloud.function.web.function.FunctionEnd
-pointInitializer' (OnClassCondition)
-   SpringDocGroovyConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'groovy.lang.MetaClass' (OnClassCondition)
-   SpringDocHateoasConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.hateoas.server.LinkRelationProvider' (O
-nClassCondition)
-   SpringDocJacksonKotlinModuleConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.module.kotlin.KotlinModule' (OnClassC
-ondition)
-   SpringDocJavadocConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.github.therapi.runtimejavadoc.CommentFormatter' (OnClas
-sCondition)
-   SpringDocKotlinConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'kotlin.coroutines.Continuation' (OnClassCondition)
-   SpringDocKotlinxConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'kotlinx.coroutines.flow.Flow' (OnClassCondition)
-   SpringDocPageableConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.domain.Pageable' (OnClassCondition
-)
-   SpringDocSecurityConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.web.SecurityFilterChain' (OnCl
-assCondition)
-   SpringDocSortConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.domain.Sort' (OnClassCondition)
-   SpringDocWebMvcConfiguration.SpringDocWebMvcActuatorConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.endpoint.web.servlet.WebMv
-cEndpointHandlerMapping' (OnClassCondition)
-   SwaggerConfig#springWebProvider:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringWebProvider; SearchStrategy: all) found
- beans of type 'org.springdoc.core.providers.SpringWebProvider' springWebProvider (OnBeanCondition)
-   SwaggerConfig#swaggerUiConfigParameters:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springdoc.core.properties.SwaggerUiConfigParameters; SearchStrategy: a
-ll) found beans of type 'org.springdoc.core.properties.SwaggerUiConfigParameters' org.springdoc.core.properties.Swagger
-UiConfigParameters (OnBeanCondition)
-   SwaggerConfig#swaggerUiHome:
-      Did not match:
-         - @ConditionalOnProperty (springdoc.swagger-ui.use-root-path=true) did not find property 'springdoc.swagger-ui
-.use-root-path' (OnPropertyCondition)
-   SwaggerConfig.SwaggerActuatorWelcomeConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.endpoint.web.servlet.WebMv
-cEndpointHandlerMapping' (OnClassCondition)
-   TaskExecutorConfigurations.SimpleAsyncTaskExecutorBuilderConfiguration#simpleAsyncTaskExecutorBuilderVirtualThreads:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder; SearchStrate
-gy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskExecutorBuilder' simpleAsyncTaskExecutorBuil
-der (OnBeanCondition)
-   TaskExecutorConfigurations.TaskExecutorConfiguration#applicationTaskExecutorVirtualThreads:
-      Did not match:
-         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
-   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter:
-      Did not match:
-[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.705 s &lt;&lt;&lt; FAILURE! -- in com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest
-[ERROR] com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest.generateAndSaveCodeStream -- Time elapsed: 0.016 s &lt;&lt;&lt; ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@27358a19 testClass = com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@34129c78, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3e62d773, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1ebea008, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@452e19ca, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@3cfdd820, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7bf3a5d8, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@a45f9ddd], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aiCodeGeneratorServiceFactory': Injection of resource dependencies failed
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1457)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:151)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:590)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:151)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	... 19 more
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'dev.langchain4j.model.chat.StreamingChatModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@jakarta.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2322)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1740)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:598)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:576)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:738)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369)
-	... 43 more
-
-         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; Sear
-chStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcess
-or (OnBeanCondition)
-   TaskSchedulingConfigurations.SimpleAsyncTaskSchedulerBuilderConfiguration#simpleAsyncTaskSchedulerBuilderVirtualThre
-ads:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder; SearchStrat
-egy: all) found beans of type 'org.springframework.boot.task.SimpleAsyncTaskSchedulerBuilder' simpleAsyncTaskSchedulerB
-uilder (OnBeanCondition)
-   TaskSchedulingConfigurations.TaskSchedulerConfiguration:
-      Did not match:
-         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; Sear
-chStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcess
-or (OnBeanCondition)
-   ThymeleafAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring6.SpringTemplateEngine' (OnClassConditi
-on)
-   TransactionAutoConfiguration#transactionalOperator:
-      Did not match:
-         - @ConditionalOnSingleCandidate (types: org.springframework.transaction.ReactiveTransactionManager; SearchStra
-tegy: all) did not find any beans (OnBeanCondition)
-   TransactionAutoConfiguration.AspectJTransactionManagementConfiguration:
-      Did not match:
-         - @ConditionalOnBean did not find required type 'org.springframework.transaction.aspectj.AbstractTransactionAs
-pect' (OnBeanCondition)
-         - @ConditionalOnBean (types: org.springframework.transaction.aspectj.AbstractTransactionAspect; SearchStrategy
-: all) did not find any beans of type org.springframework.transaction.aspectj.AbstractTransactionAspect (OnBeanConditio
-n)
-   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.JdkDynamicAutoProxyConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-
-target-class' (OnPropertyCondition)
-   UserDetailsServiceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.AuthenticationM
-anager' (OnClassCondition)
-   ValidationAutoConfiguration:
-      Did not match:
-         - @ConditionalOnResource did not find resource 'classpath:META-INF/services/jakarta.validation.spi.ValidationP
-rovider' (OnResourceCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassConditi
-on)
-   WebClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient'
- (OnClassCondition)
-   WebFluxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' 
-(OnClassCondition)
-   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.mvc.hiddenmethod.filter.enabled=true) did not find property 'spring.mv
-c.hiddenmethod.filter.enabled' (OnPropertyCondition)
-   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.mvc.problemdetails.enabled=true) did not find property 'spring.mvc.pro
-blemdetails.enabled' (OnPropertyCondition)
-   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
-      Did not match:
-         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceCha
-inCondition)
-   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy:
- all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondi
-tion)
-   WebServiceTemplateAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.oxm.Marshaller' (OnClassCondition)
-   WebServicesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.ws.transport.http.MessageDispatcherServ
-let' (OnClassCondition)
-   WebSessionIdResolverAutoConfiguration:
-      Did not match:
-         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
-   WebSocketMessagingAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.socket.config.annotation.Delegating
-WebSocketMessageBrokerConfiguration' (OnClassCondition)
-   WebSocketReactiveAutoConfiguration:
-      Did not match:
-         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
-   WebSocketServletAutoConfiguration.JettyWebSocketConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.eclipse.jetty.ee10.websocket.jakarta.server.config.Jaka
-rtaWebSocketServletContainerInitializer' (OnClassCondition)
-   WebSocketServletAutoConfiguration.UndertowWebSocketConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.undertow.websockets.jsr.Bootstrap' (OnClassCondition)
-   XADataSourceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.transaction.TransactionManager' (OnClassCondition)
-Exclusions:
------------
-    None
-Unconditional classes:
-----------------------
-    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
-    org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
-    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
-    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
-    dev.langchain4j.openai.spring.AutoConfig
-    cn.hutool.extra.spring.SpringUtil
-    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
-    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Errors: 
-[ERROR]   AiCodeGeneratorFacadeTest.generateAndSaveCodeStream ? IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@27358a19 testClass = com.hive.hiveaicodemother.core.AiCodeGeneratorFacadeTest, locations = [], classes = [com.hive.hiveaicodemother.HiveAiCodeMotherApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@34129c78, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3e62d773, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1ebea008, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@452e19ca, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@3cfdd820, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@7bf3a5d8, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@a45f9ddd], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-[INFO] 
-[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  9.029 s
-[INFO] Finished at: 2026-07-11T17:46:29+08:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project hive-ai-code-mother: 
-[ERROR] 
-[ERROR] See D:\Liyalin\javafail\hive-ai-code-mother\target\surefire-reports for the individual test results.
-[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -&gt; [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
+[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is
+… (output truncated)
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在查看测试报错信息，并检查 AiCodeGeneratorService 的流方法。</details></think>
+正在查看测试报错信息，并检查 AiCodeGeneratorService 的流方法。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -6142,38 +2102,19 @@ Additional data:
 ```
 Status: **completed**
 
+</details></tool-use>
 
-</details>
-</tool-use>
+_**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorService.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorService.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
-
-</details></tool-use>
-
-_**Agent (default)**_
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
 
 </details></tool-use>
 
@@ -6182,27 +2123,20 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 测试第28行报错，原因是缺少 `dev.langchain4j.model.chat.StreamingChatModel` 类型的 Spring Bean。
 
-怀疑 application.yaml 中只配置了 chat-model，缺少 streaming-chat-model 的相关配置。准备检查该文件和条件报告。</details></think>
+怀疑 application.yaml 中只配置了 chat-model，缺少 streaming-chat-model 的相关配置。准备检查该文件和条件报告。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -6233,13 +2167,6 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -6265,7 +2192,8 @@ _**Agent (default)**_
 
 决定将 `streaming-chat-model` 的配置与 `chat-model` 完全对齐，避免暴露 API 密钥。调试日志中不会记录密钥信息。
 
-方法名互换属于代码层面的明显错误，但当前测试失败日志无法证实这一点，因此暂不处理。优先修复 `application.yaml` 的 streaming 配置，运行测试验证后，再根据实际结果判断是否需要修正 Facade 中的逻辑错误。</details></think>
+方法名互换属于代码层面的明显错误，但当前测试失败日志无法证实这一点，因此暂不处理。优先修复 `application.yaml` 的 streaming 配置，运行测试验证后，再根据实际结果判断是否需要修正 Facade 中的逻辑错误。
+</details></think>
 
 _**Agent (default)**_
 
@@ -6274,71 +2202,37 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-File not found: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log
 
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
-
+File not found: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log
 </details></tool-use>
 
 _**Agent (default)**_
@@ -6346,13 +2240,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 重新运行测试以验证假设。工厂日志不会执行，因为上下文失败。
 
-先运行测试记录修复前状态。随后将 streaming-chat-model 配置加入 application.yaml，与 chat-model 设置保持一致。</details></think>
+先运行测试记录修复前状态。随后将 streaming-chat-model 配置加入 application.yaml，与 chat-model 设置保持一致。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2>&1 | Select-String -Pattern "StreamingChatModel|streaming-chat-model|BUILD|Tests run|IllegalState" | Select-Object -First 10</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2&gt;&amp;1 | Select-String -Pattern &#34;StreamingChatModel|streaming-chat-model|BUILD|Tests run|IllegalState&#34; | Select-Object -First 10</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2>&1 | Select-String -Pattern "StreamingChatModel|streaming-chat-model|BUILD|Tests run|IllegalState" | Select-Object -First 10
 ```
@@ -6364,10 +2258,10 @@ Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGe
  (OnBeanCondition)
       - Detected ClientHttpConnectorBuilder (ConditionalOnClientHttpConnectorBuilderDetection)
    ClientHttpConnectorAutoConfiguration#clientHttpConnectorBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder&lt;?&gt;; 
+      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.reactive.ClientHttpConnectorBuilder<?>; 
 SearchStrategy: all) did not find any beans (OnBeanCondition)
    HttpClientAutoConfiguration#clientHttpRequestFactoryBuilder matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder&lt;?&gt;; Sear
+      - @ConditionalOnMissingBean (types: org.springframework.boot.http.client.ClientHttpRequestFactoryBuilder<?>; Sear
 chStrategy: all) did not find any beans (OnBeanCondition)
    JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
       - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' 
@@ -6375,24 +2269,18 @@ chStrategy: all) did not find any beans (OnBeanCondition)
    JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-准备查看输出文件或运行更简单的命令来定位测试报错。</details></think>
+准备查看输出文件或运行更简单的命令来定位测试报错。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "StreamingChatModel|Tests run|BUILD SUCCESS|BUILD FAILURE|No qualifying bean"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2&gt;&amp;1 | Select-String -Pattern &#34;StreamingChatModel|Tests run|BUILD SUCCESS|BUILD FAILURE|No qualifying bean&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "StreamingChatModel|Tests run|BUILD SUCCESS|BUILD FAILURE|No qualifying bean"
 ```
@@ -6409,7 +2297,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 .model.chat.StreamingChatModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency a
 nnotations: {@jakarta.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAI
 NER, type=java.lang.Object.class, mappedName="")}
-[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.141 s &lt;&lt;&lt; FAILURE! -- in com.hive.hiveaicodem
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.141 s <<< FAILURE! -- in com.hive.hiveaicodem
 other.core.AiCodeGeneratorFacadeTest
 Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'dev.langchain4j
 .model.chat.StreamingChatModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency a
@@ -6419,12 +2307,6 @@ NER, type=java.lang.Object.class, mappedName="")}
 [INFO] BUILD FAILURE
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -6438,7 +2320,8 @@ _**Agent (default)**_
 
 先应用 streaming-chat-model 配置并运行测试。待日志证实 MULTI_FILE 实际调用 generateHtmlCodeStream 后，再修正流式方法的交换问题。
 
-决定自行修复 streaming-chat-model 配置并运行测试，直接获取修复后的日志，无需用户协助。</details></think>
+决定自行修复 streaming-chat-model 配置并运行测试，直接获取修复后的日志，无需用户协助。
+</details></think>
 
 _**Agent (default)**_
 
@@ -6447,38 +2330,28 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\resources\application.yaml</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-File not found: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log
-
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
-
+File not found: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-该测试调用了真实 API，需设置较长超时时间。</details></think>
+该测试调用了真实 API，需设置较长超时时间。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "Tests run|BUILD SUCCESS|BUILD FAILURE|StreamingChatModel|IllegalState|ERROR"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2&gt;&amp;1 | Select-String -Pattern &#34;Tests run|BUILD SUCCESS|BUILD FAILURE|StreamingChatModel|IllegalState|ERROR&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "Tests run|BUILD SUCCESS|BUILD FAILURE|StreamingChatModel|IllegalState|ERROR"
 ```
@@ -6491,29 +2364,18 @@ odeGeneratorFacadeTest
 [INFO] BUILD SUCCESS
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-测试已通过。正在查看调试日志以分析假设 D。</details></think>
+测试已通过。正在查看调试日志以分析假设 D。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
 
 </details></tool-use>
 
@@ -6526,7 +2388,8 @@ _**Agent (default)**_
 
 日志已确认 MULTI_FILE 与 HTML 方法的生成逻辑确实被交换。我将修复该逻辑错误：generateAndSaveMultiFileCodeStream 应调用 generateMaltiFileCodeStream 并使用 parseMultiFileCode 与 saveMultiFileCodeResult；generateAndSaveHtmlCodeStream 应调用 generateHtmlCodeStream 并使用 parseHtmlCode。
 
-修正方法交换后，将重新运行测试验证。调试模式下保持前置日志记录不变。</details></think>
+修正方法交换后，将重新运行测试验证。调试模式下保持前置日志记录不变。
+</details></think>
 
 _**Agent (default)**_
 
@@ -6535,14 +2398,8 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
@@ -6551,31 +2408,17 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 发现方法实现与 Javadoc 存在互换，将一并修复。
 
-generateAndSaveMultiFileCodeStream 应处理 mufile，generateAndSaveHtmlCodeStream 应处理 html.lti。</details></think>
+generateAndSaveMultiFileCodeStream 应处理 mufile，generateAndSaveHtmlCodeStream 应处理 html.lti。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="write" data-tool-name="delete_file">
-<details><summary>Tool use: **delete_file**</summary>
-
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
@@ -6585,13 +2428,13 @@ _**Agent (default)**_
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在运行修复后的验证测试。</details></think>
+正在运行修复后的验证测试。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "Tests run|BUILD SUCCESS|BUILD FAILURE|ERROR"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2&gt;&amp;1 | Select-String -Pattern &#34;Tests run|BUILD SUCCESS|BUILD FAILURE|ERROR&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "Tests run|BUILD SUCCESS|BUILD FAILURE|ERROR"
 ```
@@ -6604,29 +2447,18 @@ odeGeneratorFacadeTest
 [INFO] BUILD SUCCESS
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-测试仍然通过。正在读取后修复日志以确认假设 D 的修复。</details></think>
+测试仍然通过。正在读取后修复日志以确认假设 D 的修复。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
 
 </details></tool-use>
 
@@ -6635,7 +2467,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 修复后的日志确认 streamingChatModelPresent 为 true。
 
-codeGenType 已设为 MULTI_FILE，且 calledServiceMethod 与预期一致。请用户提供复现步骤，待确认后再移除插桩代码。</details></think>
+codeGenType 已设为 MULTI_FILE，且 calledServiceMethod 与预期一致。请用户提供复现步骤，待确认后再移除插桩代码。
+</details></think>
 
 _**Agent (default)**_
 
@@ -6690,7 +2523,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 The user confirmed the issue is fixed. I will remove the debug instrumentation from AiCodeGeneratorServiceFactory.java and AiCodeGeneratorFacade.java.
 
-I will also delete the debug log file if it exists.</details></think>
+I will also delete the debug log file if it exists.
+</details></think>
 
 _**Agent (default)**_
 
@@ -6699,38 +2533,19 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="write" data-tool-name="delete_file">
-<details><summary>Tool use: **delete_file**</summary>
-
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
@@ -6740,65 +2555,34 @@ _**Agent (default)**_
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-Removing debug instrumentation from both files while preserving the actual fixes.</details></think>
+Removing debug instrumentation from both files while preserving the actual fixes.
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorServiceFactory.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
@@ -6807,14 +2591,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 Instrumentation cleanup is complete.
 
-Verifying no debug logs remain.</details></think>
+Verifying no debug logs remain.
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -6845,19 +2628,13 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-Instrumentation has been fully removed from the source code. Only specstory history retains it, which is acceptable. Cleanup is complete.</details></think>
+Instrumentation has been fully removed from the source code. Only specstory history retains it, which is acceptable. Cleanup is complete.
+</details></think>
 
 _**Agent (default)**_
 
@@ -6884,7 +2661,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 正在分析 `AiCodeGeneratorFacadeTest.java` 中 `generateAndSaveCodeStream` 测试的保存失败问题。
 
-错误发生在流式处理完成后的 `doOnComplete` 回调中。接下来将阅读 `AiCodeGeneratorFacade`、`CodeParser` 和 `CodeFileSaver` 的相关代码，运行测试以获取完整异常信息，并添加日志定位保存失败的具体原因。</details></think>
+错误发生在流式处理完成后的 `doOnComplete` 回调中。接下来将阅读 `AiCodeGeneratorFacade`、`CodeParser` 和 `CodeFileSaver` 的相关代码，运行测试以获取完整异常信息，并添加日志定位保存失败的具体原因。
+</details></think>
 
 _**Agent (default)**_
 
@@ -6893,23 +2671,15 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -6948,20 +2718,12 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "保存失败|ERROR|Exception|Caused by|Tests run|BUILD"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2&gt;&amp;1 | Select-String -Pattern &#34;保存失败|ERROR|Exception|Caused by|Tests run|BUILD&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "保存失败|ERROR|Exception|Caused by|Tests run|BUILD"
 ```
@@ -6986,12 +2748,6 @@ odeGeneratorFacadeTest
 [INFO] BUILD SUCCESS
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -7001,26 +2757,20 @@ _**Agent (default)**_
 
 本地测试通过是因为异常被 doOnComplete 捕获并仅记录日志。正在分析 CodeFileSaver 的具体实现，怀疑问题可能出在多文件解析、空值校验或流式收集时序上。
 
-还怀疑 AI 流输出格式与 CodeParser 不匹配，或存在文件路径/权限问题。准备查看 CodeFileSaver 源码，并增加详细日志来复现该错误。</details></think>
+还怀疑 AI 流输出格式与 CodeParser 不匹配，或存在文件路径/权限问题。准备查看 CodeFileSaver 源码，并增加详细日志来复现该错误。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "保存"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2&gt;&amp;1 | Select-String -Pattern &#34;保存&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "保存"
 ```
@@ -7031,12 +2781,6 @@ Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGe
       : �������, Ŀ¼Ϊ: D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\multi_file_2075881677977874432
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -7056,7 +2800,8 @@ _**Agent (default)**_
 
 重新审视 Reactor 语义后发现，doOnComplete 在上游发出 onComplete 时同步执行，且 block() 会等待整个管道终止。因此 collectList().block() 不应在保存逻辑完成后才返回，此前怀疑的线程切换导致保存跳过并不成立，需要继续排查其他根因。
 
-测试断言通过是因为流数据已收集完毕，保存失败仅触发异步日志。根因仍是解析器返回空内容导致写入异常。接下来将添加日志埋点，记录异常信息、内容长度、围栏存在性及各字段解析结果，以精确定位空值来源。</details></think>
+测试断言通过是因为流数据已收集完毕，保存失败仅触发异步日志。根因仍是解析器返回空内容导致写入异常。接下来将添加日志埋点，记录异常信息、内容长度、围栏存在性及各字段解析结果，以精确定位空值来源。
+</details></think>
 
 _**Agent (default)**_
 
@@ -7065,56 +2810,30 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-File not found: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log
 
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
-
+File not found: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log
 </details></tool-use>
 
 _**Agent (default)**_
@@ -7122,18 +2841,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 怀疑上一次的代码替换将 debugLog 插入了错误位置。它可能被加在了 generateAndSaveHtmlCodeStream 方法之后，而非类级别。
 
-准备读取文件以确认结构。</details></think>
+准备读取文件以确认结构。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
@@ -7146,13 +2860,13 @@ _**Agent (default)**_
 
 怀疑流式输出末尾缺少闭合的
 
-怀疑正则要求围栏标签后必须换行，但 AI 输出可能直接跟内容，导致提取失败。准备先运行测试并查看日志。</details></think>
+怀疑正则要求围栏标签后必须换行，但 AI 输出可能直接跟内容，导致提取失败。准备先运行测试并查看日志。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2>&1 | Select-String -Pattern "保存失败|保存完成|BUILD"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2&gt;&amp;1 | Select-String -Pattern &#34;保存失败|保存完成|BUILD&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2>&1 | Select-String -Pattern "保存失败|保存完成|BUILD"
 ```
@@ -7166,46 +2880,28 @@ mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
         : ����ʧ��
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-测试再次报错"保存失败"。准备查看调试日志文件。</details></think>
+测试再次报错"保存失败"。准备查看调试日志文件。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "NullPointer|IllegalArgument|保存失败" -Context 0,3</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2&gt;&amp;1 | Select-String -Pattern &#34;NullPointer|IllegalArgument|保存失败&#34; -Context 0,3</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream 2>&1 | Select-String -Pattern "NullPointer|IllegalArgument|保存失败" -Context 0,3
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -7223,7 +2919,8 @@ _**Agent (default)**_
 
 决定采用跳过策略而非空字符串兜底。若 CSS 或 JS 内容为空，则直接跳过写入，避免生成空文件。正在考虑是否需要同步改进 CodeParser 以增强对内联代码的解析能力。
 
-确认 AI 将 CSS/JS 内联在 HTML 中是多文件提示下的合理行为，因此无需额外改造 CodeParser。决定仅修改 CodeFileSaver.writeToFile，遇到 null 或空白内容时直接跳过写入，避免空指针异常。HTML 本身存在且正常，因此无需要求 HTML 必须有值。保留现有日志埋点用于验证修复效果。</details></think>
+确认 AI 将 CSS/JS 内联在 HTML 中是多文件提示下的合理行为，因此无需额外改造 CodeParser。决定仅修改 CodeFileSaver.writeToFile，遇到 null 或空白内容时直接跳过写入，避免空指针异常。HTML 本身存在且正常，因此无需要求 HTML 必须有值。保留现有日志埋点用于验证修复效果。
+</details></think>
 
 _**Agent (default)**_
 
@@ -7232,27 +2929,12 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="write" data-tool-name="delete_file">
-<details><summary>Tool use: **delete_file**</summary>
-
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
@@ -7264,13 +2946,13 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 需要在 `saveMultiFileCodeResult` 中增加空值校验。若 `html` 为 null，应抛出有意义的错误。
 
-日志显示 html 字段实际存在。接下来将多次运行测试验证修复效果，确认缺少 css/js 时保存是否能正常通过。</details></think>
+日志显示 html 字段实际存在。接下来将多次运行测试验证修复效果，确认缺少 css/js 时保存是否能正常通过。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
-<details><summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2>&1 | Select-String -Pattern "保存失败|保存完成|ERROR.*Facade|BUILD"</summary>
-
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2** • Run command: Set-Location &#34;d:\Liyalin\javafail\hive-ai-code-mother&#34;; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2&gt;&amp;1 | Select-String -Pattern &#34;保存失败|保存完成|ERROR.*Facade|BUILD&#34;</summary>
 ```bash
 Set-Location "d:\Liyalin\javafail\hive-ai-code-mother"; mvn test -Dtest=AiCodeGeneratorFacadeTest#generateAndSaveCodeStream -q 2>&1 | Select-String -Pattern "保存失败|保存完成|ERROR.*Facade|BUILD"
 ```
@@ -7284,29 +2966,18 @@ mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
         : �������, Ŀ¼Ϊ: D:\Liyalin\javafail\hive-ai-code-mother\tmp\code_output\multi_file_2075882492616552448
 
 ```
-</details>
-</tool-use>
-
-<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
-<summary>Tool use: **run_terminal_command_v2**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-保存现已成功。正在读取 post-fix 日志以确认跳过 CSS/JS 的情况。</details></think>
+保存现已成功。正在读取 post-fix 日志以确认跳过 CSS/JS 的情况。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\debug-2894ab.log</summary>
 
 </details></tool-use>
 
@@ -7315,7 +2986,8 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 本次运行全部通过，未出现任何错误。
 
-修复已处理 CSS/JS 为空的边界情况。将再次运行验证，并提供复现步骤供确认。测试期间会保留相关日志。</details></think>
+修复已处理 CSS/JS 为空的边界情况。将再次运行验证，并提供复现步骤供确认。测试期间会保留相关日志。
+</details></think>
 
 _**Agent (default)**_
 
@@ -7358,52 +3030,33 @@ The issue has been fixed. Please clean up the instrumentation.
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-Removing debug instrumentation from CodeFileSaver.java and AiCodeGeneratorFacade.java.</details></think>
+Removing debug instrumentation from CodeFileSaver.java and AiCodeGeneratorFacade.java.
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **1** result in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother** (1 file)
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother`** (1 file)
 
 | File |
 |------|
 | `../src/main/java/com/hive/hiveaicodemother/core/CodeFileSaver.java` |
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -7411,61 +3064,31 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 I will remove the instrumentation from both files.
 
-Merging duplicate javadoc on writeToFile in CodeFileSaver. Deleting the debug log file. Checking for a duplicate file named codeFileSaver.java.</details></think>
+Merging duplicate javadoc on writeToFile in CodeFileSaver. Deleting the debug log file. Checking for a duplicate file named codeFileSaver.java.
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\CodeFileSaver.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
-
-<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-
-</tool-use>
-
 <tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
-<summary>Tool use: **edit_file_v2**</summary>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
-
-<tool-use data-tool-type="write" data-tool-name="delete_file">
-<details><summary>Tool use: **delete_file**</summary>
-
-
-</details>
-</tool-use>
 
 <tool-use data-tool-type="write" data-tool-name="delete_file"><details>
 <summary>Tool use: **delete_file**</summary>
@@ -7474,10 +3097,8 @@ _**Agent (default)**_
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -7508,13 +3129,6 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
@@ -7522,32 +3136,26 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 An agent log remains in AiCodeGeneratorFacade. The previous replacement likely failed partially or duplicated the code.
 
-Re-reading the file to locate the remaining instrumentation.</details></think>
+Re-reading the file to locate the remaining instrumentation.
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-The file appears clean. The prior grep result was likely stale or cached.</details></think>
+The file appears clean. The prior grep result was likely stale or cached.
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -7573,19 +3181,13 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-The instrumentation cleanup is complete.</details></think>
+The instrumentation cleanup is complete.
+</details></think>
 
 _**Agent (default)**_
 
@@ -7607,40 +3209,27 @@ _**User**_
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在分析 CodeParserExecutor 与 CodeFileSaverExecutor 的业务差异。</details></think>
+正在分析 CodeParserExecutor 与 CodeFileSaverExecutor 的业务差异。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\parser\CodeParserExecutor.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\parser\CodeParserExecutor.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\saver\CodeFileSaverExecutor.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\saver\CodeFileSaverExecutor.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
-<details>
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
 <summary>Tool use: **ripgrep_raw_search**</summary>
-
 
 Parameters:
 
@@ -7679,27 +3268,20 @@ Additional data:
 ```
 Status: **completed**
 
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
-<summary>Tool use: **ripgrep_raw_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-正在查看解析器与保存器的模板实现，以及 AiCodeGeneratorFacade 的调用逻辑，以便完整说明两者在业务上的差异。</details></think>
+正在查看解析器与保存器的模板实现，以及 AiCodeGeneratorFacade 的调用逻辑，以便完整说明两者在业务上的差异。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **5** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother\src\main\java** (5 files)
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother\src\main\java`** (5 files)
 
 | File |
 |------|
@@ -7708,22 +3290,14 @@ Directory: **d:\Liyalin\javafail\hive-ai-code-mother\src\main\java** (5 files)
 | `../src\main\java\com\hive\hiveaicodemother\core\parser\MultiFileCodeParser.java` |
 | `../src\main\java\com\hive\hiveaicodemother\core\parser\CodeParser.java` |
 | `../src\main\java\com\hive\hiveaicodemother\core\CodeParser.java` |
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="search" data-tool-name="glob_file_search">
-<details>
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
 <summary>Tool use: **glob_file_search** • Searched codebase "" • **5** results in **1** directory</summary>
 
-Directory: **d:\Liyalin\javafail\hive-ai-code-mother\src\main\java** (5 files)
+Directory: **`d:\Liyalin\javafail\hive-ai-code-mother\src\main\java`** (5 files)
 
 | File |
 |------|
@@ -7732,69 +3306,39 @@ Directory: **d:\Liyalin\javafail\hive-ai-code-mother\src\main\java** (5 files)
 | `../src/main/java/com/hive/hiveaicodemother/saver/CodeFileSaverTemplate.java` |
 | `../src/main/java/com/hive/hiveaicodemother/saver/CodeFileSaverExecutor.java` |
 | `../src/main/java/com/hive/hiveaicodemother/saver/MultiFileCodeFileSaverTemplate.java` |
-
-</details>
-</tool-use>
-
-<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
-<summary>Tool use: **glob_file_search**</summary>
-
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
 <think><details><summary>Thought Process</summary>
-已初步理清整体脉络。接下来将查看解析器与保存器的模板代码，以获取更具体的业务细节。</details></think>
+已初步理清整体脉络。接下来将查看解析器与保存器的模板代码，以获取更具体的业务细节。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\parser\HtmlCodeParser.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\parser\HtmlCodeParser.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\saver\HtmlCodeFileSaverTemplate.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\saver\HtmlCodeFileSaverTemplate.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\saver\MultiFileCodeFileSaverTemplate.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\saver\MultiFileCodeFileSaverTemplate.java</summary>
 
 </details></tool-use>
 
@@ -7811,7 +3355,8 @@ _**Agent (default)**_
 关键业务流程差异：
 
 - **非流式场景**：AI 直接返回结构化对象，仅需 Saver 执行器，无需 Parser。
-- **流式场景**：AI 返回原始文本片段，必须先经过 Parser 转换，再由 Saver 持久化到磁盘。</details></think>
+- **流式场景**：AI 返回原始文本片段，必须先经过 Parser 转换，再由 Saver 持久化到磁盘。
+</details></think>
 
 _**Agent (default)**_
 
@@ -7899,31 +3444,20 @@ _**Agent (default)**_
 <think><details><summary>Thought Process</summary>
 正在分析 `AiCodeGeneratorFacade` 中 `generateAndSaveCode` 与 `generateAndSaveCodeStream` 的实现差异。
 
-需要先读取该文件源码，才能准确对比两个方法的实现差异。</details></think>
+需要先读取该文件源码，才能准确对比两个方法的实现差异。
+</details></think>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\core\AiCodeGeneratorFacade.java</summary>
 
 </details></tool-use>
 
 _**Agent (default)**_
 
-<tool-use data-tool-type="read" data-tool-name="read_file_v2">
-<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorService.java</summary>
-
-</details>
-</tool-use>
-
 <tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
-<summary>Tool use: **read_file_v2**</summary>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\ai\AiCodeGeneratorService.java</summary>
 
 </details></tool-use>
 
@@ -7940,7 +3474,8 @@ _**Agent (default)**_
 - 执行时长不同：阻塞式与实时分块
 - 业务场景不同：后端批量处理与前端 SSE 实时展示
 
-另外，文件中还存在未使用的死代码方法。</details></think>
+另外，文件中还存在未使用的死代码方法。
+</details></think>
 
 _**Agent (default)**_
 

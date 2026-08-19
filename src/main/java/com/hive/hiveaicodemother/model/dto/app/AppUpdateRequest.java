@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 用户更新自己的应用请求
+ * 更新应用请求
  */
 @Data
 public class AppUpdateRequest implements Serializable {
@@ -22,4 +22,3 @@ public class AppUpdateRequest implements Serializable {
 
     private static final long serialVersionUID = 1L;
 }
-

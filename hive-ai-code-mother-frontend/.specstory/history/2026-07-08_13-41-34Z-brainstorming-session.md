@@ -953,3 +953,459 @@ _**Agent (default)**_
 **修改：** 将参数类型改为 `id?: number`，并用 `id == null` 做空值判断（与 `UserVO.id` 的可选类型一致）。
 
 `npm run type-check` 已通过。
+
+---
+
+_**User**_
+
+修复@src/components/GlobalHeader.vue 错误 
+
+---
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在检查 GlobalHeader.vue 中的错误。</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\GlobalHeader.vue</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints">
+<details>
+<summary>Tool use: **read_lints**</summary>
+
+
+Parameters:
+
+```json
+{
+  "paths": [
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\components\\GlobalHeader.vue"
+  ]
+}
+```
+Result:
+
+```json
+{
+  "linterErrorsByFile": [
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\components\\GlobalHeader.vue"
+    }
+  ]
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints"><details>
+<summary>Tool use: **read_lints**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在检查 GlobalHeader.vue 中的错误。
+
+发现 `menuItems` 存在命名冲突。第 5 行从 `@/config/menu` 导入了该变量，但第 34 行又将其重新声明为计算属性，导致导入被遮蔽。这使得第 34 行和第 38 行的 `filterMenus` 与 `find` 都引用到了未定义的计算属性本身，而非原始配置数据。
+
+还发现模板中使用了未导入的 LogoutOutlined 组件。接下来将查看菜单配置并运行类型检查以定位全部错误。</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\config\menu.ts</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
+<details><summary>Tool use: **run_terminal_command_v2** • Run command: npm --prefix "d:/Liyalin/javafail/hive-ai-code-mother/hive-ai-code-mother-frontend" run type-check</summary>
+
+```bash
+npm --prefix "d:/Liyalin/javafail/hive-ai-code-mother/hive-ai-code-mother-frontend" run type-check
+```
+
+```
+
+&gt; hive-ai-code-mother-frontend@0.0.0 type-check
+&gt; vue-tsc --build
+
+src/components/GlobalHeader.vue(5,10): error TS2440: Import declaration conflicts with local declaration of 'menuItems'.
+src/components/GlobalHeader.vue(17,27): error TS2339: Property 'find' does not exist on type 'ComputedRef&lt;ItemType[] | undefined&gt;'.
+src/components/GlobalHeader.vue(17,33): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/components/GlobalHeader.vue(34,7): error TS7022: 'menuItems' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+src/components/GlobalHeader.vue(34,48): error TS7024: Function implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
+src/components/GlobalHeader.vue(38,32): error TS7006: Parameter 'm' implicitly has an 'any' type.
+
+```
+</details>
+</tool-use>
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+发现 GlobalHeader.vue 中存在命名冲突：`menuItems` 同时被从配置文件导入，又在组件内声明为计算属性。
+
+还发现三处问题：计算属性 `menuItems` 自引用导致循环依赖；`selectedKeys` 和 `handleMenuClick` 误将 ComputedRef 当作数组调用 `.find()`；模板中使用了未导入的 `LogoutOutlined`。正在检查是否还有其他菜单配置。</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src",
+  "pattern": "menuItems|/admin"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src",
+  "pattern": "menuItems|/admin",
+  "topFiles": [
+    {
+      "matchCount": 6,
+      "uri": "src\\components\\GlobalHeader.vue"
+    },
+    {
+      "matchCount": 1,
+      "uri": "src\\config\\menu.ts"
+    },
+    {
+      "matchCount": 1,
+      "uri": "src\\access.ts"
+    },
+    {
+      "matchCount": 2,
+      "uri": "src\\router\\index.ts"
+    }
+  ],
+  "totalFiles": 4,
+  "totalMatches": 10
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\stores\loginUser.ts</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在分析 GlobalHeader.vue 的错误并准备修复。
+
+发现两个具体问题：导入的 `menuItems` 与计算属性命名冲突，需重命名；`filterMenus` 的类型参数为 `MenuProps['items']`，但实际传入的是 `MenuItem[]`，需要修正过滤逻辑。
+
+还发现 `loginUserStore` 在声明前被引用，需要将其前置到 `filterMenus` 之前。另外 Pinia setup store 解构后会丢失响应性，直接访问 `loginUserStore.loginUser` 可能无法正确获取值，需要改用 `.value` 或调整解构方式。
+
+确认 Pinia 2+ 通过 store 实例访问时会自动解包 ref，因此 `loginUserStore.loginUser` 直接使用即可。
+
+具体修复方案已明确：将配置中的菜单导入重命名为 `originMenuItems`，再创建计算属性 `visibleMenuItems` 来过滤菜单项。
+
+已确定最终代码结构：将 `menuItems` 重命名为 `originMenuItems` 并导入配置文件，把 `loginUserStore` 声明提前到 `filterMenus` 之前，同时把 `filterMenus` 的参数类型从 `MenuProps['items']` 修正为 `MenuItem[]`。模板和点击处理函数将统一使用 `visibleMenuItems`，selectedKeys 也基于该数组匹配路径。
+
+已完成 `filterMenus` 的具体实现：仅当用户存在且角色为 admin 时才保留菜单项。`visibleMenuItems` 计算属性已基于 `originMenuItems` 创建。`selectedKeys` 和 `handleMenuClick` 都改用 `visibleMenuItems.value` 来匹配路径和跳转路由。模板循环渲染 `visibleMenuItems` 中的菜单项。
+
+还需从 @ant-design/icons-vue 导入 LogoutOutlined 图标，并确认该依赖是否已安装。</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\package.json",
+  "pattern": "icons-vue"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\package.json",
+  "pattern": "icons-vue",
+  "topFiles": [],
+  "totalFiles": 0,
+  "totalMatches": 0
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\access.ts</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+发现 @ant-design/icons-vue 未在 package.json 中声明。
+
+LogoutOutlined 可能导致运行时错误。正在考虑从 @ant-design/icons-vue 导入该图标，或改用纯文本。同时检查 ant-design-vue 是否已内置图标库。</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend",
+  "pattern": "@ant-design/icons|Outlined"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend",
+  "pattern": "@ant-design/icons|Outlined",
+  "topFiles": [
+    {
+      "matchCount": 1,
+      "uri": ".\\src\\components\\GlobalHeader.vue"
+    },
+    {
+      "matchCount": 6,
+      "uri": ".\\package-lock.json"
+    }
+  ],
+  "totalFiles": 2,
+  "totalMatches": 7
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+@ant-design/icons-vue 是通过 ant-design-vue 传递依赖的。
+
+正在全面修复 GlobalHeader.vue。计划导入 LogoutOutlined，将 originMenuItems 重命名为 originMenuItems，把 loginUserStore 移到 filterMenus 之前，并把 filterMenus 的参数类型改为 MenuItem[]。还会新增 visibleMenuItems 计算属性，修正 selectedKeys 和 handleMenuClick 对响应式对象的访问方式，同时移除未使用的 MenuProps 导入。
+
+确认 Pinia setup store 中读取 `loginUserStore.loginUser` 时会自动解包响应式值，因此 visibleMenuItems 能正确响应登录状态变化。准备输出修复后的文件。</details></think>
+
+_**Agent (default)**_
+
+发现 `menuItems` 命名冲突和循环引用，正在修复。
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\GlobalHeader.vue</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\components\GlobalHeader.vue</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+正在重新运行类型检查和代码检查。</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
+<details><summary>Tool use: **run_terminal_command_v2** • Run command: npm --prefix "d:/Liyalin/javafail/hive-ai-code-mother/hive-ai-code-mother-frontend" run type-check</summary>
+
+```bash
+npm --prefix "d:/Liyalin/javafail/hive-ai-code-mother/hive-ai-code-mother-frontend" run type-check
+```
+
+```
+
+&gt; hive-ai-code-mother-frontend@0.0.0 type-check
+&gt; vue-tsc --build
+
+
+```
+</details>
+</tool-use>
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints">
+<details>
+<summary>Tool use: **read_lints**</summary>
+
+
+Parameters:
+
+```json
+{
+  "paths": [
+    "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\components\\GlobalHeader.vue"
+  ]
+}
+```
+Result:
+
+```json
+{
+  "linterErrorsByFile": [
+    {
+      "relativeWorkspacePath": "d:\\Liyalin\\javafail\\hive-ai-code-mother\\hive-ai-code-mother-frontend\\src\\components\\GlobalHeader.vue"
+    }
+  ]
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints"><details>
+<summary>Tool use: **read_lints**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+GlobalHeader.vue 的错误已全部修复。</details></think>
+
+_**Agent (default)**_
+
+已修复 `GlobalHeader.vue` 中的错误，`npm run type-check` 已通过。
+
+**问题原因：**
+
+1. **命名冲突** — 从 `@/config/menu` 导入的 `menuItems` 与本地 `computed` 同名，导致循环引用
+2. **类型错误** — `computed` 返回的是 `ComputedRef`，不能直接调用 `.find()`
+3. **变量顺序** — `filterMenus` 使用了尚未声明的 `loginUserStore`
+4. **缺少导入** — 模板中使用了 `LogoutOutlined` 但未 import
+
+**修复内容：**
+
+- 将配置菜单重命名为 `originMenuItems`，过滤后的菜单命名为 `visibleMenuItems`
+- `filterMenus` 改为接收 `MenuItem[]`，按 admin 权限过滤
+- `selectedKeys` / `handleMenuClick` 通过 `visibleMenuItems.value` 访问
+- 补充 `LogoutOutlined` 和 `MenuItem` 类型导入
+- 将 `loginUserStore` 提前到使用它的函数之前

@@ -60,7 +60,7 @@ const doLogout = async () => {
 </script>
 
 <template>
-  <a-layout-header class="global-header">
+  <a-layout-header class="global-header" :class="{ 'home-header': route.path === '/' }">
     <div class="header-left" @click="goHome">
       <img :src="logoUrl" alt="logo" class="logo" />
       <span class="site-title">{{ SITE_TITLE }}</span>
@@ -108,6 +108,21 @@ const doLogout = async () => {
   border-bottom: 1px solid #f0f0f0;
   height: 64px;
   line-height: 64px;
+}
+
+.home-header {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.global-header :deep(.ant-menu-item:hover),
+.global-header :deep(.ant-menu-item-selected) {
+  color: #1677ff;
+  background: transparent;
+}
+
+.global-header :deep(.ant-menu-item::after) {
+  border-bottom: none !important;
 }
 
 .header-left {

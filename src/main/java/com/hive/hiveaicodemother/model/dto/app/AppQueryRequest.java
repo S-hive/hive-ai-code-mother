@@ -6,9 +6,6 @@ import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
-/**
- * 应用查询请求
- */
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class AppQueryRequest extends PageRequest implements Serializable {

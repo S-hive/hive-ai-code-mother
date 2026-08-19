@@ -15,6 +15,10 @@ import org.springframework.web.servlet.HandlerMapping;
 
 import java.io.File;
 
+/**
+ * 静态资源访问
+ * http://localhost:8123/api/static/{deployKey}[/{fileName}]
+ */
 @RestController
 @RequestMapping("/static")
 public class StaticResourceController {
@@ -34,27 +38,30 @@ public class StaticResourceController {
             // 获取资源路径
             String resourcePath = (String) request.getAttribute(HandlerMapping.PATH_WITHIN_HANDLER_MAPPING_ATTRIBUTE);
             resourcePath = resourcePath.substring(("/static/" + deployKey).length());
-            // 如果是目录访问（不带斜杠），重定向到带斜杠的URL
-            if (resourcePath.isEmpty()) {
-                HttpHeaders headers = new HttpHeaders();
-                headers.add("Location", request.getRequestURI() + "/");
-                return new ResponseEntity<>(headers, HttpStatus.MOVED_PERMANENTLY);
+            File appDir = new File(PREVIEW_ROOT_DIR, deployKey).getCanonicalFile();
+            File file = new File(appDir, resourcePath).getCanonicalFile();
+            // 防止通过 ../ 跳出当前应用目录
+            if (!file.toPath().startsWith(appDir.toPath())) {
+                return ResponseEntity.notFound().build();
             }
-            // 默认返回 index.html
-            if (resourcePath.equals("/")) {
-                resourcePath = "/index.html";
+            // 目录访问（如 Vue 工程的 dist/）需要回退到该目录下的 index.html
+            if (file.isDirectory()) {
+                // 地址不以斜杠结尾时，页面内的相对路径会解析到上一级，必须先重定向
+                if (!resourcePath.endsWith("/")) {
+                    HttpHeaders headers = new HttpHeaders();
+                    headers.add("Location", request.getRequestURI() + "/");
+                    return new ResponseEntity<>(headers, HttpStatus.MOVED_PERMANENTLY);
+                }
+                file = new File(file, "index.html");
             }
-            // 构建文件路径
-            String filePath = PREVIEW_ROOT_DIR + "/" + deployKey + resourcePath;
-            File file = new File(filePath);
             // 检查文件是否存在
-            if (!file.exists()) {
+            if (!file.isFile()) {
                 return ResponseEntity.notFound().build();
             }
             // 返回文件资源
             Resource resource = new FileSystemResource(file);
             return ResponseEntity.ok()
-                    .header("Content-Type", getContentTypeWithCharset(filePath))
+                    .header("Content-Type", getContentTypeWithCharset(file.getName()))
                     .body(resource);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
@@ -67,9 +74,17 @@ public class StaticResourceController {
     private String getContentTypeWithCharset(String filePath) {
         if (filePath.endsWith(".html")) return "text/html; charset=UTF-8";
         if (filePath.endsWith(".css")) return "text/css; charset=UTF-8";
-        if (filePath.endsWith(".js")) return "application/javascript; charset=UTF-8";
+        if (filePath.endsWith(".js") || filePath.endsWith(".mjs")) return "application/javascript; charset=UTF-8";
+        if (filePath.endsWith(".json") || filePath.endsWith(".map")) return "application/json; charset=UTF-8";
+        if (filePath.endsWith(".svg")) return "image/svg+xml; charset=UTF-8";
         if (filePath.endsWith(".png")) return "image/png";
-        if (filePath.endsWith(".jpg")) return "image/jpeg";
+        if (filePath.endsWith(".jpg") || filePath.endsWith(".jpeg")) return "image/jpeg";
+        if (filePath.endsWith(".gif")) return "image/gif";
+        if (filePath.endsWith(".webp")) return "image/webp";
+        if (filePath.endsWith(".ico")) return "image/x-icon";
+        if (filePath.endsWith(".woff2")) return "font/woff2";
+        if (filePath.endsWith(".woff")) return "font/woff";
+        if (filePath.endsWith(".ttf")) return "font/ttf";
         return "application/octet-stream";
     }
 }

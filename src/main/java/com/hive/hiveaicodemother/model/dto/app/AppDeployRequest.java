@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 应用部署流程
+ * 应用部署请求
  */
 @Data
 public class AppDeployRequest implements Serializable {

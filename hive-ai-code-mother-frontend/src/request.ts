@@ -1,11 +1,27 @@
 import axios from "axios"
 import { message } from 'ant-design-vue'
+import JSONbig from 'json-bigint'
+import { API_BASE_URL, DEFAULT_REQUEST_TIMEOUT } from '@/config/env'
+
+const jsonParser = JSONbig({ storeAsString: true })
 
 // 创建 Axios 实例
 const myAxios = axios.create({
-  baseURL: 'http://localhost:8123/api',
-  timeout: 60000,
+  baseURL: API_BASE_URL,
+  timeout: DEFAULT_REQUEST_TIMEOUT,
   withCredentials: true,
+  transformResponse: [
+    (data) => {
+      if (typeof data !== 'string' || data.length === 0) {
+        return data
+      }
+      try {
+        return jsonParser.parse(data)
+      } catch {
+        return data
+      }
+    },
+  ],
 })
 
 // 全局请求拦截器

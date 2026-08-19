@@ -1,5 +1,8 @@
 package com.hive.hiveaicodemother.constant;
 
+/**
+ * 应用常量
+ */
 public interface AppConstant {
 
     /**

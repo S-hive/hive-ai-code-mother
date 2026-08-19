@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 管理员更新应用请求
+ */
 @Data
 public class AppAdminUpdateRequest implements Serializable {
 

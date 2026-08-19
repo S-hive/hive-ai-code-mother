@@ -1,6 +1,7 @@
 package com.hive.hiveaicodemother.ai.tools;
 
 import cn.hutool.json.JSONObject;
+import org.springframework.stereotype.Component;
 
 /**
  * 工具基类
@@ -38,4 +39,4 @@ public abstract class BaseTool {
      * @return 格式化的工具执行结果
      */
     public abstract String generateToolExecutedResult(JSONObject arguments);
-} 
+}
