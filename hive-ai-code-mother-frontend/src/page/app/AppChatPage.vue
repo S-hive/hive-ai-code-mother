@@ -25,6 +25,7 @@ import {
   PREVIEW_POLL_INTERVAL,
   PREVIEW_POLL_TIMEOUT,
 } from '@/config/env'
+import { useTypewriterDisplay } from '@/composables/useTypewriterDisplay'
 import { useLoginUserStore } from '@/stores/loginUser'
 import { collectGeneratedFilePaths } from '@/utils/aiMessage'
 import { buildAppPreviewPath, buildAppSourceUrl } from '@/utils/appPreview'
@@ -101,11 +102,46 @@ const isOwner = computed(() => {
 const canManageApp = computed(() => isAdmin.value || isOwner.value)
 const shouldShowPreview = computed(() => messages.value.length >= 2)
 
+const streamingAiContent = computed(() => {
+  const last = messages.value[messages.value.length - 1]
+  return last?.role === 'ai' ? last.content : ''
+})
+
+const { displayed: displayedStreamContent } = useTypewriterDisplay(
+  streamingAiContent,
+  generating,
+)
+
+/** 贴底时才自动滚动；用户上滑后暂停，滚回底部再恢复 */
+const STICK_BOTTOM_PX = 24
+const stickToBottom = ref(true)
+
+const isNearBottom = (el: HTMLElement) =>
+  el.scrollHeight - el.scrollTop - el.clientHeight <= STICK_BOTTOM_PX
+
+const onMessagesWheel = (event: WheelEvent) => {
+  if (event.deltaY < 0) {
+    stickToBottom.value = false
+  }
+}
+
+const onMessagesScroll = () => {
+  const el = messagesEl.value
+  if (!el) return
+  stickToBottom.value = isNearBottom(el)
+}
+
+watch(displayedStreamContent, () => {
+  if (generating.value && stickToBottom.value) {
+    void scrollToBottom()
+  }
+})
+
 const scrollToBottom = async () => {
   await nextTick()
-  if (messagesEl.value) {
-    messagesEl.value.scrollTop = messagesEl.value.scrollHeight
-  }
+  const el = messagesEl.value
+  if (!el || !stickToBottom.value) return
+  el.scrollTop = el.scrollHeight
 }
 
 const isPreviewReady = async (url: string) => {
@@ -278,7 +314,8 @@ const sendMessage = (text: string) => {
   messages.value.push({ role: 'user', content })
   messages.value.push({ role: 'ai', content: '' })
   generating.value = true
-  scrollToBottom()
+  stickToBottom.value = true
+  void scrollToBottom()
 
   const aiIndex = messages.value.length - 1
   cancelStream?.()
@@ -287,7 +324,6 @@ const sendMessage = (text: string) => {
     message: content,
     onMessage: (chunk) => {
       messages.value[aiIndex].content += chunk
-      scrollToBottom()
     },
     onDone: async () => {
       generating.value = false
@@ -496,7 +532,12 @@ watch(rightMode, (mode) => {
 
     <div class="chat-body">
       <section class="chat-pane">
-        <div ref="messagesEl" class="messages">
+        <div
+          ref="messagesEl"
+          class="messages"
+          @scroll.passive="onMessagesScroll"
+          @wheel.passive="onMessagesWheel"
+        >
           <div v-if="hasMoreHistory" class="load-more">
             <a-button
               type="link"
@@ -514,7 +555,11 @@ watch(rightMode, (mode) => {
             :class="msg.role"
           >
             <div class="bubble">
-              <AiMessageContent v-if="msg.role === 'ai'" :content="msg.content" />
+              <AiMessageContent
+                v-if="msg.role === 'ai'"
+                :content="generating && idx === messages.length - 1 ? displayedStreamContent : msg.content"
+                :streaming="generating && idx === messages.length - 1"
+              />
               <template v-else>{{ msg.content }}</template>
             </div>
           </div>

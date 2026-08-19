@@ -1,8 +1,17 @@
 import { marked } from 'marked'
+import { highlightCodeByLanguage } from '@/utils/codeHighlight'
+
+const renderer = new marked.Renderer()
+
+renderer.code = ({ text, lang }) => {
+  const highlighted = highlightCodeByLanguage(text, lang)
+  return `<pre class="hljs"><code class="hljs">${highlighted}</code></pre>`
+}
 
 marked.setOptions({
   breaks: true,
   gfm: true,
+  renderer,
 })
 
 /** 将 Markdown 文本渲染为 HTML */

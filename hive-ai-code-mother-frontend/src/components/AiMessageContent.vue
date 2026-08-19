@@ -9,16 +9,24 @@ import {
   ToolOutlined,
 } from '@ant-design/icons-vue'
 import { parseAiMessage } from '@/utils/aiMessage'
+import { highlightCodeByLanguage } from '@/utils/codeHighlight'
 import { renderMarkdown } from '@/utils/markdown'
 
 const props = defineProps<{
   content: string
+  /** 流式输出中：未闭合的文件卡片不高亮，避免每个 chunk 全量重算 */
+  streaming?: boolean
 }>()
 
 const segments = computed(() => parseAiMessage(props.content))
 const collapsedFiles = ref<Set<string>>(new Set())
 
 const isCollapsed = (path: string) => collapsedFiles.value.has(path)
+
+const isUnclosedStreamingFile = (index: number) => {
+  const segment = segments.value[index]
+  return Boolean(props.streaming && segment?.kind === 'file' && !segment.closed)
+}
 
 const toggleFile = (path: string) => {
   const next = new Set(collapsedFiles.value)
@@ -38,20 +46,38 @@ const copyCode = async (code: string) => {
     message.error('复制代码失败')
   }
 }
+
+const highlightSegmentCode = (
+  code: string,
+  language?: string,
+  filePath?: string,
+) => highlightCodeByLanguage(code, language, filePath)
 </script>
 
 <template>
   <div class="ai-message">
     <template v-for="(segment, index) in segments" :key="index">
       <div
-        v-if="segment.kind === 'text'"
-        class="segment-text markdown-body"
-        v-html="renderMarkdown(segment.text)"
+        v-if="segment.kind === 'markdown'"
+        class="segment-markdown markdown-body"
+        v-html="renderMarkdown(segment.content)"
       />
 
       <div v-else-if="segment.kind === 'tool-select'" class="segment-tool">
         <ToolOutlined />
         <span>选择工具：{{ segment.toolName }}</span>
+      </div>
+
+      <div v-else-if="segment.kind === 'tool-call'" class="segment-tool-call">
+        <div class="tool-call-header">
+          <ToolOutlined />
+          <span>[工具调用] {{ segment.header }}</span>
+        </div>
+        <div
+          v-if="segment.body"
+          class="tool-call-body markdown-body"
+          v-html="renderMarkdown(segment.body)"
+        />
       </div>
 
       <div v-else-if="segment.kind === 'file'" class="segment-file">
@@ -68,10 +94,17 @@ const copyCode = async (code: string) => {
             <template #icon><CopyOutlined /></template>
           </a-button>
         </div>
-        <pre v-show="!isCollapsed(segment.path)" class="code-block"><code>{{ segment.code }}</code></pre>
+        <pre v-show="!isCollapsed(segment.path)" class="code-block">
+          <code v-if="isUnclosedStreamingFile(index)" class="hljs streaming-code">{{
+            segment.code
+          }}</code>
+          <code
+            v-else
+            class="hljs"
+            v-html="highlightSegmentCode(segment.code, segment.language, segment.path)"
+          />
+        </pre>
       </div>
-
-      <pre v-else class="code-block standalone"><code>{{ segment.code }}</code></pre>
     </template>
   </div>
 </template>
@@ -84,54 +117,56 @@ const copyCode = async (code: string) => {
   min-width: 0;
 }
 
-.segment-text {
-  word-break: break-word;
+.streaming-code {
+  white-space: pre;
 }
 
-.segment-text :deep(p) {
+.segment-markdown,
+.tool-call-body {
+  word-break: break-word;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #262626;
+}
+
+.segment-markdown :deep(p),
+.tool-call-body :deep(p) {
   margin: 0 0 8px;
 }
 
-.segment-text :deep(p:last-child) {
+.segment-markdown :deep(p:last-child),
+.tool-call-body :deep(p:last-child) {
   margin-bottom: 0;
 }
 
-.segment-text :deep(h1),
-.segment-text :deep(h2),
-.segment-text :deep(h3),
-.segment-text :deep(h4) {
+.segment-markdown :deep(h1),
+.segment-markdown :deep(h2),
+.segment-markdown :deep(h3),
+.segment-markdown :deep(h4),
+.tool-call-body :deep(h1),
+.tool-call-body :deep(h2),
+.tool-call-body :deep(h3),
+.tool-call-body :deep(h4) {
   margin: 12px 0 8px;
   font-weight: 600;
   line-height: 1.4;
 }
 
-.segment-text :deep(h1) {
-  font-size: 18px;
-}
-
-.segment-text :deep(h2) {
-  font-size: 16px;
-}
-
-.segment-text :deep(h3) {
-  font-size: 15px;
-}
-
-.segment-text :deep(ul),
-.segment-text :deep(ol) {
+.segment-markdown :deep(ul),
+.segment-markdown :deep(ol),
+.tool-call-body :deep(ul),
+.tool-call-body :deep(ol) {
   margin: 0 0 8px;
   padding-left: 20px;
 }
 
-.segment-text :deep(li) {
+.segment-markdown :deep(li),
+.tool-call-body :deep(li) {
   margin-bottom: 4px;
 }
 
-.segment-text :deep(strong) {
-  font-weight: 600;
-}
-
-.segment-text :deep(code) {
+.segment-markdown :deep(code),
+.tool-call-body :deep(code) {
   padding: 1px 4px;
   border-radius: 4px;
   font-family: Consolas, 'Courier New', monospace;
@@ -139,7 +174,8 @@ const copyCode = async (code: string) => {
   background: rgba(0, 0, 0, 0.06);
 }
 
-.segment-text :deep(pre) {
+.segment-markdown :deep(pre),
+.tool-call-body :deep(pre) {
   margin: 8px 0;
   padding: 10px 12px;
   overflow: auto;
@@ -147,12 +183,25 @@ const copyCode = async (code: string) => {
   background: #f6f8fa;
 }
 
-.segment-text :deep(pre code) {
-  padding: 0;
-  background: transparent;
+.segment-markdown :deep(pre.hljs),
+.segment-markdown :deep(pre code.hljs),
+.tool-call-body :deep(pre.hljs),
+.tool-call-body :deep(pre code.hljs) {
+  background: #f6f8fa;
 }
 
-.segment-text :deep(blockquote) {
+.segment-markdown :deep(pre code),
+.tool-call-body :deep(pre code) {
+  padding: 0;
+  background: transparent;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+.segment-markdown :deep(blockquote),
+.tool-call-body :deep(blockquote) {
   margin: 8px 0;
   padding-left: 12px;
   border-left: 3px solid #d9d9d9;
@@ -169,6 +218,30 @@ const copyCode = async (code: string) => {
   font-size: 12px;
   color: #1677ff;
   background: #e6f4ff;
+}
+
+.segment-tool-call {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tool-call-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #262626;
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tool-call-body {
+  padding: 10px 12px;
+  font-size: 13px;
 }
 
 .segment-file {
@@ -211,13 +284,14 @@ const copyCode = async (code: string) => {
   font-family: Consolas, 'Courier New', monospace;
   font-size: 12px;
   line-height: 1.6;
-  color: #262626;
   background: #f6f8fa;
   white-space: pre;
 }
 
-.code-block.standalone {
-  border: 1px solid #e8e8e8;
-  border-radius: 8px;
+.code-block code {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background: transparent;
 }
 </style>

@@ -4,7 +4,6 @@ import { CopyOutlined } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
 import { CodeGenTypeEnum } from '@/utils/CodeGenType'
 import { highlightCode } from '@/utils/codeHighlight'
-import 'highlight.js/styles/github.min.css'
 
 const props = defineProps<{
   baseUrl: string
