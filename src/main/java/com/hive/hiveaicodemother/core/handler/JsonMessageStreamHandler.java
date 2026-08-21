@@ -1,14 +1,11 @@
 package com.hive.hiveaicodemother.core.handler;
 
-import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.hive.hiveaicodemother.ai.model.message.*;
 import com.hive.hiveaicodemother.ai.tools.BaseTool;
 import com.hive.hiveaicodemother.ai.tools.ToolManager;
-import com.hive.hiveaicodemother.constant.AppConstant;
-import com.hive.hiveaicodemother.core.builder.VueProjectBuilder;
 import com.hive.hiveaicodemother.model.entity.User;
 import com.hive.hiveaicodemother.model.enums.ChatHistoryMessageTypeEnum;
 import com.hive.hiveaicodemother.service.ChatHistoryService;
@@ -27,9 +24,6 @@ import java.util.Set;
 @Slf4j
 @Component
 public class JsonMessageStreamHandler {
-
-    @Resource
-    private VueProjectBuilder vueProjectBuilder;
 
     @Resource
     private ToolManager toolManager;
@@ -61,8 +55,9 @@ public class JsonMessageStreamHandler {
                     // 流式响应完成后，添加 AI 消息到对话历史
                     String aiResponse = chatHistoryStringBuilder.toString();
                     chatHistoryService.addChatMessage(appId, aiResponse, ChatHistoryMessageTypeEnum.AI.getValue(), loginUser.getId());
+           /*         // 异步构建 Vue 项目
                     String projectPath = AppConstant.CODE_OUTPUT_ROOT_DIR + "/vue_project_" + appId;
-                    vueProjectBuilder.buildProjectAsync(projectPath);
+                    vueProjectBuilder.buildProjectAsync(projectPath);*/
                 })
                 .doOnError(error -> {
                     // 如果AI回复失败，也要记录错误消息
