@@ -134,11 +134,11 @@ public class AiCodeGeneratorFacade {
      * 通用流式代码处理方法
      *
      * @param codeStream      代码流
-     * @param codeGenTypeEnum 代码生成类型
+     * @param codeGenType 代码生成类型
      * @param appId           应用ID
      * @return 流式响应
      */
-    private Flux<String> processCodeStream(Flux<String> codeStream, CodeGenTypeEnum codeGenTypeEnum, Long appId) {
+    private Flux<String> processCodeStream(Flux<String> codeStream, CodeGenTypeEnum codeGenType, Long appId) {
         StringBuilder codeBuilder = new StringBuilder();
         return codeStream.doOnNext(chunk -> {
             // 实时收集代码片段
@@ -150,7 +150,7 @@ public class AiCodeGeneratorFacade {
                 // 使用执行器解析代码
                 Object parsedResult = CodeParserExecutor.executeParser(completeCode, codeGenType);
                 // 使用执行器保存代码
-                File saveDir = CodeFileSaverExecutor.executeSaver(parsedResult, codeGenTypeEnum, appId);
+                File saveDir = CodeFileSaverExecutor.executeSaver(parsedResult, codeGenType, appId);
                 log.info("保存完成, 目录为: {}", saveDir.getAbsolutePath());
             } catch (Exception e) {
                 log.error("保存失败: {}", e.getMessage());

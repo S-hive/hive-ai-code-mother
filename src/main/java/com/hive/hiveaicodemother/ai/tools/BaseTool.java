@@ -1,7 +1,6 @@
 package com.hive.hiveaicodemother.ai.tools;
 
 import cn.hutool.json.JSONObject;
-import org.springframework.stereotype.Component;
 
 /**
  * 工具基类
