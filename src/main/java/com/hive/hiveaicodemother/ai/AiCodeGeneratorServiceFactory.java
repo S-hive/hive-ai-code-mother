@@ -3,6 +3,7 @@ package com.hive.hiveaicodemother.ai;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.hive.hiveaicodemother.ai.guardrail.PromptSafetyInputGuardrail;
+import com.hive.hiveaicodemother.ai.guardrail.RetryOutputGuardrail;
 import com.hive.hiveaicodemother.ai.tools.ToolManager;
 import com.hive.hiveaicodemother.exception.BusinessException;
 import com.hive.hiveaicodemother.exception.ErrorCode;
@@ -113,6 +114,8 @@ public class AiCodeGeneratorServiceFactory {
                                 ToolExecutionResultMessage.from(toolExecutionRequest, "Error: there is no tool called " + toolExecutionRequest.name()))
                         //添加输入护轨
                         .inputGuardrails(new PromptSafetyInputGuardrail())
+                        //添加输出护轨
+                        .outputGuardrails(new RetryOutputGuardrail())
                         .build();
             }
 
@@ -126,6 +129,8 @@ public class AiCodeGeneratorServiceFactory {
                         .chatMemory(chatMemory)
                         //添加输入护轨
                         .inputGuardrails(new PromptSafetyInputGuardrail())
+                        //添加输出护轨
+                        .outputGuardrails(new RetryOutputGuardrail())
                         .build();
             }
             default -> throw new BusinessException(ErrorCode.SYSTEM_ERROR, "不支持的代码生成类型: " + codeGenType);
