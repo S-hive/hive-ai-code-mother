@@ -112,10 +112,12 @@ public class AiCodeGeneratorServiceFactory {
                         //处理工具调用幻觉问题
                         .hallucinatedToolNameStrategy(toolExecutionRequest ->
                                 ToolExecutionResultMessage.from(toolExecutionRequest, "Error: there is no tool called " + toolExecutionRequest.name()))
-                        //添加输入护轨
+/*                        //添加输入护轨
                         .inputGuardrails(new PromptSafetyInputGuardrail())
                         //添加输出护轨
-                        .outputGuardrails(new RetryOutputGuardrail())
+                        .outputGuardrails(new RetryOutputGuardrail())*/
+                        // 最多连续调用工具的次数
+                        .maxSequentialToolsInvocations(20)
                         .build();
             }
 
@@ -127,10 +129,10 @@ public class AiCodeGeneratorServiceFactory {
                         .chatModel(chatModel)
                         .streamingChatModel(openAiStreamingChatModel)
                         .chatMemory(chatMemory)
-                        //添加输入护轨
+/*                        //添加输入护轨
                         .inputGuardrails(new PromptSafetyInputGuardrail())
                         //添加输出护轨
-                        .outputGuardrails(new RetryOutputGuardrail())
+                        .outputGuardrails(new RetryOutputGuardrail())*/
                         .build();
             }
             default -> throw new BusinessException(ErrorCode.SYSTEM_ERROR, "不支持的代码生成类型: " + codeGenType);
