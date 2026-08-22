@@ -47,6 +47,17 @@ export function streamChatToGenCode(params: StreamChatParams): () => void {
     finish(() => onDone())
   })
 
+  es.addEventListener('business-error', (ev: Event) => {
+    const data = (ev as MessageEvent).data
+    try {
+      const errorData = JSON.parse(String(data)) as { message?: string }
+      const errorMessage = errorData.message || '生成过程中出现错误'
+      finish(() => onError(new Error(errorMessage)))
+    } catch {
+      finish(() => onError(new Error('服务器返回错误')))
+    }
+  })
+
   es.onerror = () => {
     finish(() => onError(new Error('SSE 连接失败')))
   }

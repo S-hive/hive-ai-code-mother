@@ -1,7 +1,7 @@
-<script setup lang="ts">
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { Modal, message } from 'ant-design-vue'
+<script lang="ts" setup>
+import {computed, nextTick, onBeforeUnmount, onMounted, ref, watch} from 'vue'
+import {useRoute, useRouter} from 'vue-router'
+import {message, Modal} from 'ant-design-vue'
 import axios from 'axios'
 import {
   CheckCircleOutlined,
@@ -18,20 +18,16 @@ import logoUrl from '@/assets/logo.png'
 import AiMessageContent from '@/components/AiMessageContent.vue'
 import AppCodeViewer from '@/components/AppCodeViewer.vue'
 import AppPromptInput from '@/components/AppPromptInput.vue'
-import { deleteApp, deleteAppByAdmin, deployApp, getAppVoById } from '@/api/appController'
-import { listAppChatHistory } from '@/api/chatHistoryController'
-import {
-  DEPLOY_REQUEST_TIMEOUT,
-  PREVIEW_POLL_INTERVAL,
-  PREVIEW_POLL_TIMEOUT,
-} from '@/config/env'
-import { useTypewriterDisplay } from '@/composables/useTypewriterDisplay'
-import { useLoginUserStore } from '@/stores/loginUser'
-import { collectGeneratedFilePaths } from '@/utils/aiMessage'
-import { buildAppPreviewPath, buildAppSourceUrl } from '@/utils/appPreview'
-import { CodeGenTypeEnum, formatCodeGenType } from '@/utils/CodeGenType'
-import { downloadAppCodeZip } from '@/utils/downloadAppCode'
-import { streamChatToGenCode } from '@/utils/sse'
+import {deleteApp, deleteAppByAdmin, deployApp, getAppVoById} from '@/api/appController'
+import {listAppChatHistory} from '@/api/chatHistoryController'
+import {DEPLOY_REQUEST_TIMEOUT, PREVIEW_POLL_INTERVAL, PREVIEW_POLL_TIMEOUT,} from '@/config/env'
+import {useTypewriterDisplay} from '@/composables/useTypewriterDisplay'
+import {useLoginUserStore} from '@/stores/loginUser'
+import {collectGeneratedFilePaths} from '@/utils/aiMessage'
+import {buildAppPreviewPath, buildAppSourceUrl} from '@/utils/appPreview'
+import {CodeGenTypeEnum, formatCodeGenType} from '@/utils/CodeGenType'
+import {downloadAppCodeZip} from '@/utils/downloadAppCode'
+import {streamChatToGenCode} from '@/utils/sse'
 import {
   appendSelectedElementToMessage,
   formatSelectedElementSummary,
@@ -107,7 +103,7 @@ const streamingAiContent = computed(() => {
   return last?.role === 'ai' ? last.content : ''
 })
 
-const { displayed: displayedStreamContent } = useTypewriterDisplay(
+const {displayed: displayedStreamContent} = useTypewriterDisplay(
   streamingAiContent,
   generating,
 )
@@ -298,7 +294,7 @@ const loadApp = async () => {
   const id = appId.value
   if (id === null) return
 
-  const res = await getAppVoById({ id })
+  const res = await getAppVoById({id})
   if (res.data.code === 0 && res.data.data) {
     app.value = res.data.data
   } else {
@@ -311,8 +307,8 @@ const sendMessage = (text: string) => {
   const id = appId.value
   if (!content || generating.value || id === null) return
 
-  messages.value.push({ role: 'user', content })
-  messages.value.push({ role: 'ai', content: '' })
+  messages.value.push({role: 'user', content})
+  messages.value.push({role: 'ai', content: ''})
   generating.value = true
   stickToBottom.value = true
   void scrollToBottom()
@@ -335,9 +331,10 @@ const sendMessage = (text: string) => {
     onError: (err) => {
       generating.value = false
       cancelStream = null
-      messages.value[aiIndex].content += `\n[错误] ${err.message}`
+      const errorMessage = err.message || '生成过程中出现错误'
+      messages.value[aiIndex].content = `❌ ${errorMessage}`
       refreshGeneratedFiles()
-      message.error(err.message)
+      message.error(errorMessage)
     },
   })
 }
@@ -388,8 +385,8 @@ const onDelete = () => {
     onOk: async () => {
       try {
         const res = isAdmin.value
-          ? await deleteAppByAdmin({ id })
-          : await deleteApp({ id })
+          ? await deleteAppByAdmin({id})
+          : await deleteApp({id})
         if (res.data.code === 0) {
           detailModalOpen.value = false
           message.success('删除成功')
@@ -430,7 +427,7 @@ const onDeploy = async () => {
   }
   try {
     // Vue 工程部署会在后端同步执行 npm install 与 npm run build，远超默认超时
-    const res = await deployApp({ appId: id }, { timeout: DEPLOY_REQUEST_TIMEOUT })
+    const res = await deployApp({appId: id}, {timeout: DEPLOY_REQUEST_TIMEOUT})
     if (res.data.code === 0 && res.data.data) {
       deployedUrl.value = res.data.data
       deployModalOpen.value = true
@@ -498,7 +495,7 @@ watch(rightMode, (mode) => {
   <div id="appChatPage">
     <header class="chat-header">
       <div class="header-left" @click="router.push('/')">
-        <img :src="logoUrl" alt="logo" class="logo" />
+        <img :src="logoUrl" alt="logo" class="logo"/>
         <span class="app-name">{{ app?.appName || '应用对话' }}</span>
         <a-tag v-if="app?.codeGenType" class="code-gen-tag">
           {{ formatCodeGenType(app.codeGenType) }}
@@ -512,19 +509,27 @@ watch(rightMode, (mode) => {
         ]"
       />
       <a-space class="header-actions">
-        <a-button title="刷新预览" :loading="buildingPreview" @click="showPreview(true)">
-          <template #icon><ReloadOutlined /></template>
+        <a-button :loading="buildingPreview" title="刷新预览" @click="showPreview(true)">
+          <template #icon>
+            <ReloadOutlined/>
+          </template>
         </a-button>
         <a-button @click="openDetail">
-          <template #icon><InfoCircleOutlined /></template>
+          <template #icon>
+            <InfoCircleOutlined/>
+          </template>
           应用详情
         </a-button>
-        <a-button :loading="downloading" :disabled="downloading" @click="onDownload">
-          <template #icon><DownloadOutlined /></template>
+        <a-button :disabled="downloading" :loading="downloading" @click="onDownload">
+          <template #icon>
+            <DownloadOutlined/>
+          </template>
           下载代码
         </a-button>
-        <a-button type="primary" :loading="deploying" :disabled="deploying" @click="onDeploy">
-          <template #icon><CloudUploadOutlined /></template>
+        <a-button :disabled="deploying" :loading="deploying" type="primary" @click="onDeploy">
+          <template #icon>
+            <CloudUploadOutlined/>
+          </template>
           部署
         </a-button>
       </a-space>
@@ -540,9 +545,9 @@ watch(rightMode, (mode) => {
         >
           <div v-if="hasMoreHistory" class="load-more">
             <a-button
-              type="link"
-              :loading="loadingMoreHistory"
               :disabled="loadingMoreHistory"
+              :loading="loadingMoreHistory"
+              type="link"
               @click="loadChatHistory(true)"
             >
               加载更多
@@ -551,8 +556,8 @@ watch(rightMode, (mode) => {
           <div
             v-for="(msg, idx) in messages"
             :key="msg.id ?? idx"
-            class="msg"
             :class="msg.role"
+            class="msg"
           >
             <div class="bubble">
               <AiMessageContent
@@ -563,15 +568,15 @@ watch(rightMode, (mode) => {
               <template v-else>{{ msg.content }}</template>
             </div>
           </div>
-          <a-spin v-if="loadingHistory" class="history-loading" tip="加载对话历史中..." />
+          <a-spin v-if="loadingHistory" class="history-loading" tip="加载对话历史中..."/>
         </div>
         <div class="input-wrap">
           <a-alert
             v-if="selectedElement"
-            type="info"
+            class="selected-element-alert"
             closable
             show-icon
-            class="selected-element-alert"
+            type="info"
             @close="clearSelection"
           >
             <template #message>已选中页面元素</template>
@@ -581,19 +586,21 @@ watch(rightMode, (mode) => {
           </a-alert>
           <AppPromptInput
             v-model="input"
-            variant="chat"
-            placeholder="描述越详细，页面越具体，可以一步一步完善生成效果"
             :loading="generating"
+            placeholder="描述越详细，页面越具体，可以一步一步完善生成效果"
+            variant="chat"
             @submit="onSubmit"
           >
             <template #actions>
               <a-button
-                size="small"
-                :type="visualEditMode ? 'primary' : 'default'"
                 :disabled="!previewUrl || generating"
+                :type="visualEditMode ? 'primary' : 'default'"
+                size="small"
                 @click="onToggleVisualEdit"
               >
-                <template #icon><HighlightOutlined /></template>
+                <template #icon>
+                  <HighlightOutlined/>
+                </template>
                 {{ visualEditMode ? '退出编辑' : '可视化编辑' }}
               </a-button>
             </template>
@@ -601,17 +608,17 @@ watch(rightMode, (mode) => {
         </div>
       </section>
 
-      <section class="preview-pane" :class="{ 'preview-pane-editing': visualEditMode }">
+      <section :class="{ 'preview-pane-editing': visualEditMode }" class="preview-pane">
         <div v-if="rightMode === 'preview' && buildingPreview" class="preview-state">
-          <a-spin tip="Vue 项目构建中，请稍候..." />
+          <a-spin tip="Vue 项目构建中，请稍候..."/>
         </div>
         <iframe
           v-else-if="rightMode === 'preview' && previewUrl"
-          ref="previewIframe"
           :key="previewKey"
-          class="preview-frame"
+          ref="previewIframe"
           :class="{ 'preview-frame-editing': visualEditMode }"
           :src="previewUrl"
+          class="preview-frame"
           title="网站预览"
           @load="onPreviewFrameLoad"
         />
@@ -631,7 +638,7 @@ watch(rightMode, (mode) => {
       </section>
     </div>
 
-    <a-modal v-model:open="detailModalOpen" title="应用详情" :footer="null" width="450px">
+    <a-modal v-model:open="detailModalOpen" :footer="null" title="应用详情" width="450px">
       <div class="app-detail">
         <div class="detail-row">
           <span class="detail-label">生成类型：</span>
@@ -653,29 +660,33 @@ watch(rightMode, (mode) => {
         </div>
         <a-space v-if="canManageApp" class="detail-actions">
           <a-button type="primary" @click="onEdit">
-            <template #icon><EditOutlined /></template>
+            <template #icon>
+              <EditOutlined/>
+            </template>
             修改
           </a-button>
           <a-button danger @click="onDelete">
-            <template #icon><DeleteOutlined /></template>
+            <template #icon>
+              <DeleteOutlined/>
+            </template>
             删除
           </a-button>
         </a-space>
       </div>
     </a-modal>
 
-    <a-modal v-model:open="deployModalOpen" title="部署成功" :footer="null" width="600px">
+    <a-modal v-model:open="deployModalOpen" :footer="null" title="部署成功" width="600px">
       <div class="deploy-success">
-        <CheckCircleOutlined class="success-icon" />
+        <CheckCircleOutlined class="success-icon"/>
         <h2>网站部署成功！</h2>
         <p>你的网站已经成功部署，可以通过以下链接访问：</p>
         <a-input :value="deployedUrl" readonly size="large">
           <template #suffix>
-            <CopyOutlined class="copy-icon" @click="copyDeployedUrl" />
+            <CopyOutlined class="copy-icon" @click="copyDeployedUrl"/>
           </template>
         </a-input>
         <a-space class="deploy-actions">
-          <a-button type="primary" size="large" @click="openDeployedSite">访问网站</a-button>
+          <a-button size="large" type="primary" @click="openDeployedSite">访问网站</a-button>
           <a-button size="large" @click="deployModalOpen = false">关闭</a-button>
         </a-space>
       </div>
