@@ -23,6 +23,8 @@ import com.hive.hiveaicodemother.model.enums.ChatHistoryMessageTypeEnum;
 import com.hive.hiveaicodemother.model.enums.CodeGenTypeEnum;
 import com.hive.hiveaicodemother.model.vo.AppVO;
 import com.hive.hiveaicodemother.model.vo.UserVO;
+import com.hive.hiveaicodemother.monitor.MonitorContext;
+import com.hive.hiveaicodemother.monitor.MonitorContextHolder;
 import com.hive.hiveaicodemother.service.AppService;
 import com.hive.hiveaicodemother.service.ChatHistoryService;
 import com.hive.hiveaicodemother.service.ScreenshotService;
@@ -180,7 +182,6 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
     }
 
 
-
     @Override
     public Flux<String> chatToGenCode(Long appId, String message, User loginUser) {
         // 1. 参数校验
@@ -201,10 +202,23 @@ public class AppServiceImpl extends ServiceImpl<AppMapper, App> implements AppSe
         }
         // 5.在调用AI前, 先保存用户消息到数据库中
         chatHistoryService.addChatMessage(appId, message, ChatHistoryMessageTypeEnum.USER.getValue(), loginUser.getId());
-        // 6.调用 AI 生成代码
+        // 5. 通过校验后，添加用户消息到对话历史
+        chatHistoryService.addChatMessage(appId, message, ChatHistoryMessageTypeEnum.USER.getValue(), loginUser.getId());
+        // 6. 设置监控上下文
+        MonitorContextHolder.setContext(
+                MonitorContext.builder()
+                        .userId(loginUser.getId().toString())
+                        .appId(appId.toString())
+                        .build()
+        );
+        // 7.调用 AI 生成代码
         Flux<String> codeStream = aiCodeGeneratorFacade.generateAndSaveCodeStream(message, codeGenTypeEnum, appId);
-        // 7.收集 AI 响应的内容, 在对话完成后保存到对话历史中
-        return streamHandlerExecutor.doExecute(codeStream, chatHistoryService, appId, loginUser, codeGenTypeEnum);
+        // 8.收集 AI 响应的内容, 在对话完成后保存到对话历史中
+        return streamHandlerExecutor.doExecute(codeStream, chatHistoryService, appId, loginUser, codeGenTypeEnum)
+                .doFinally(signalType -> {
+                    // 流结束时清理
+                    MonitorContextHolder.clearContext();
+                });
     }
 
     @Override
