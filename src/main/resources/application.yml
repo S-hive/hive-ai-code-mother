@@ -1,0 +1,92 @@
+# ============================================================================
+# 主配置文件（公开，可提交到仓库）
+#
+# 此文件只存放不敏感的通用配置。
+# 数据库密码、Redis 密码、AI API Key、COS 密钥等敏感信息，
+# 全部放在 application-local.yml 中（该文件已被 .gitignore 忽略）。
+#
+# 首次运行前，请复制示例文件并填入真实值：
+#   cp src/main/resources/application-local.yml.example src/main/resources/application-local.yml
+# ============================================================================
+spring:
+  application:
+    name: hive-ai-code-mother-backend
+  # 指向存放敏感配置的 application-local.yml
+  profiles:
+    active: local
+  # session 配置
+  session:
+    store-type: redis
+    # session 30 天过期
+    timeout: 2592000
+  # mysql（连接地址与账号密码见 application-local.yml）
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # redis（连接地址与密码见 application-local.yml）
+  data:
+    redis:
+      # 对话记忆过期时间（秒）
+      ttl: 3600
+      database: 0
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+# springdoc-openapi
+springdoc:
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.hive.hiveaicodemother.controller
+# knife4j
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+# AI（各模型的 api-key 见 application-local.yml）
+langchain4j:
+  open-ai:
+    chat-model:
+      base-url: https://api.deepseek.com
+      model-name: deepseek-chat
+      #      strict-json-schema: true
+      #      response-format: json_object
+      max-tokens: 8192
+      log-requests: true
+      log-responses: true
+      max-retries: 3
+    streaming-chat-model:
+      base-url: https://api.deepseek.com
+      model-name: deepseek-chat
+      max-tokens: 8192
+      log-requests: true
+      log-responses: true
+    # 推理 AI 模型配置（用于复杂的推理任务）
+    reasoning-streaming-chat-model:
+      base-url: https://api.deepseek.com
+      model-name: deepseek-reasoner
+      max-tokens: 3276
+      temperature: 0.1
+      log-requests: true
+      log-responses: true
+    # 智能路由 AI 模型配置（用于简单的分类任务）
+    routing-chat-model:
+      base-url: https://api.deepseek.com
+      model-name: deepseek-chat
+      log-requests: true
+      log-responses: true
+      max-tokens: 100
+
+# 监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always

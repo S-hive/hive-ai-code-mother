@@ -3480,3 +3480,182 @@ _**Agent (grok-4.6)**_
 - 启动时清掉旧的 `good_app_page` 缓存
 
 重启后端后即可按当前代码运行。
+
+---
+
+_**User**_
+
+前端 @AppChatPage 增加一个对自定义错误的处理,参考代码: // 处理business-error事件（后端限流等错误）
+eventSource.addEventListener('business-error', function (event: MessageEvent) {
+  if (streamCompleted) return
+
+  try {
+    const errorData = JSON.parse(event.data)
+    console.error('SSE业务错误事件:', errorData)
+
+    // 显示具体的错误信息
+    const errorMessage = errorData.message || '生成过程中出现错误'
+    messages.value[aiMessageIndex].content = `❌ ${errorMessage}`
+    messages.value[aiMessageIndex].loading = false
+    message.error(errorMessage)
+
+    streamCompleted = true
+    isGenerating.value = false
+    eventSource?.close()
+  } catch (parseError) {
+    console.error('解析错误事件失败:', parseError, '原始数据:', event.data)
+    handleError(new Error('服务器返回错误'), aiMessageIndex)
+  }
+})
+
+
+---
+
+_**Agent (grok-4.6)**_
+
+<think><details><summary>Thought Process</summary>
+需要在前端 AppChatPage 中增加 SSE business-error 事件的自定义错误处理，参考用户提供的代码实现。
+
+正在查看现有的 SSE 实现和 AppPage.Chat 组件结构。
+</details></think>
+
+_**Agent (grok-4.6)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\sse.ts</summary>
+
+</details></tool-use>
+
+_**Agent (grok-4.6)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "glob": "*.{java,ts,vue}",
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother",
+  "pattern": "business-error|EventSource|streamChatToGenCode|SseEmitter"
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "d:\\Liyalin\\javafail\\hive-ai-code-mother",
+  "pattern": "business-error|EventSource|streamChatToGenCode|SseEmitter",
+  "topFiles": [
+    {
+      "matchCount": 2,
+      "uri": "hive-ai-code-mother-frontend/src/utils/sse.ts"
+    },
+    {
+      "matchCount": 2,
+      "uri": "hive-ai-code-mother-frontend/src/page/app/AppChatPage.vue"
+    },
+    {
+      "matchCount": 1,
+      "uri": "src/main/java/com/hive/hiveaicodemother/exception/GlobalExceptionHandler.java"
+    }
+  ],
+  "totalFiles": 3,
+  "totalMatches": 5
+}
+```
+Status: **completed**
+
+</details></tool-use>
+
+_**Agent (grok-4.6)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (grok-4.6)**_
+
+<think><details><summary>Thought Process</summary>
+后端已发送 business-error SSE 事件，前端需补充对应处理逻辑。
+
+先查看 GlobalExceptionHandler 的 JSON 格式，再将其接入 sse.ts 和 AppChatPage。
+</details></think>
+
+_**Agent (grok-4.6)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\exception\GlobalExceptionHandler.java</summary>
+
+</details></tool-use>
+
+_**Agent (grok-4.6)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2** • Read file: d:\Liyalin\javafail\hive-ai-code-mother\src\main\java\com\hive\hiveaicodemother\common\BaseResponse.java</summary>
+
+</details></tool-use>
+
+_**Agent (grok-4.6)**_
+
+<think><details><summary>Thought Process</summary>
+正在分析后端 SSE 的 business-error 事件格式，准备将其接入前端消息展示与状态重置逻辑。
+
+发现 business-error 后会紧接着收到 done 事件。sse.ts 中的 onDone 会误判为生成成功并刷新预览。需要在 sse.ts 中监听 business-error 并调用 onError。后续的 done 会被忽略。这样可以避免状态冲突。
+
+EventSource 的 onmessage 只能响应默认未命名事件，business-error 必须通过 addEventListener 单独监听。若解析失败，将使用通用错误信息触发 onError。sse.ts 中的 finish() 会在 onError 之后执行，因此后续的 done 会被忽略。AppChatPage 已具备错误展示能力，可以直接复用其 onError 逻辑，无需额外修改页面。
+
+对比了直接复用现有 onError 与新增独立回调两种方案。现有 onError 仅追加 `[错误]` 标记，无法实现参考代码中「❌ 错误信息」的完整展示。因此更倾向于在 sse.ts 中新增专门的 business-error 处理逻辑，并在 AppChatPage 中按参考样式渲染错误内容、关闭流并停止生成。
+
+确定采用更简洁的方案：sse.ts 直接触发 onError，由 AppChatPage 的 onError 统一渲染「❌ 错误信息」格式。sse.ts 将新增 addEventListener 监听 business-error 事件。ChatMessage 类型不含 loading 字段，只需重置 isGenerating 状态即可。
+
+已确认 finish() 的 settled 标志可防止 onerror 重复触发。sse.ts 中将解析 `{ error, code, message }` 结构的 JSON 数据。AppChatPage 计划新增 `onBusinessError` 回调，在收到业务错误时直接重置生成状态并取消流。
+
+进一步对比了直接复用 onError 与新增独立回调的差异。现有 onError 仅在空消息后追加 `[错误]` 标记，无法实现参考代码中「❌ 错误信息」的完整替换效果。因此决定保留独立的 `onBusinessError` 回调，避免与通用连接错误的展示格式混为一谈。
+
+最终方案改为统一复用 AppChatPage 的 onError，不再单独新增回调。sse.ts 在收到 business-error 时直接触发 onError，由页面统一渲染「❌ 错误信息」。若 AI 消息已有内容则追加，否则直接替换，以匹配参考代码的完整替换效果。
+
+最终确定错误内容直接替换为 `❌ ${errorMessage}`，不追加到已有内容末尾。接下来将在 sse.ts 中实现 business-error 事件的监听逻辑。
+</details></think>
+
+_**Agent (grok-4.6)**_
+
+后端已经会发 `business-error` 事件。接下来在 SSE 客户端监听它，并在对话页把错误展示成 `❌` 提示。
+
+_**Agent (grok-4.6)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\utils\sse.ts</summary>
+
+</details></tool-use>
+
+_**Agent (grok-4.6)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2** • Edit file: d:\Liyalin\javafail\hive-ai-code-mother\hive-ai-code-mother-frontend\src\page\app\AppChatPage.vue</summary>
+
+</details></tool-use>
+
+_**Agent (grok-4.6)**_
+
+<think><details><summary>Thought Process</summary>
+注意到后端可能先发送 business-error 再发送 done，需要考虑这种时序问题。
+
+已确认 EventSource 事件顺序：business-error 必然先于 done 触发。finish() 在 onError 中调用后会忽略后续 done，settled 标志也能防止 onerror 重复触发。时序安全。
+</details></think>
+
+_**Agent (grok-4.6)**_
+
+已经接上。后端限流等业务错误会通过 SSE 的 `business-error` 事件推过来，前端现在会单独处理，而不会当成生成成功。
+
+**`sse.ts`**  
+监听 `business-error`，解析 `{ message }`，调用 `onError` 并关闭连接。后面的 `done` 不会再走成功逻辑。
+
+**`AppChatPage.vue`**  
+出错时 AI 气泡显示 `❌ 具体错误信息`，并弹出 `message.error`。
+
+触发限流后再发一条消息就能看到效果。

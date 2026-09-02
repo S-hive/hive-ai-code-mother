@@ -1,0 +1,66 @@
+# ============================================================================
+# 敏感配置示例文件（公开，可提交到仓库）
+#
+# 这是 application-local.yml 的模板，所有真实密钥均已替换为占位符。
+#
+# 使用方式：
+#   1. 复制本文件为同目录下的 application-local.yml
+#        cp application-local.yml.example application-local.yml
+#   2. 将下方所有 <...> 占位符替换为你自己的真实配置
+#   3. application-local.yml 已被 .gitignore 忽略，不会被提交
+#
+# 通用的非敏感配置（端口、模型名称、监控等）见 application.yml，无需改动。
+# ============================================================================
+spring:
+  # ---------------------------------------------------------------------------
+  # MySQL
+  # 需先执行 sql/create_table.sql 初始化数据库
+  # ---------------------------------------------------------------------------
+  datasource:
+    url: jdbc:mysql://localhost:3306/hive_ai_code_mother
+    username: <your-mysql-username>
+    password: <your-mysql-password>
+  # ---------------------------------------------------------------------------
+  # Redis
+  # 用于 Session、AI 对话记忆、精选应用缓存、分布式限流
+  # 无密码时可删除 password 一行
+  # ---------------------------------------------------------------------------
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: <your-redis-password>
+
+# -----------------------------------------------------------------------------
+# AI 模型密钥
+# 默认使用 DeepSeek，可在 https://platform.deepseek.com 申请 API Key。
+# 四个模型可共用同一个 Key；如需换用其他 OpenAI 兼容服务，
+# 请同时修改 application.yml 中对应的 base-url 与 model-name。
+# -----------------------------------------------------------------------------
+langchain4j:
+  open-ai:
+    # 常规对话模型
+    chat-model:
+      api-key: <your-deepseek-api-key>
+    # 流式对话模型（HTML / 多文件生成模式）
+    streaming-chat-model:
+      api-key: <your-deepseek-api-key>
+    # 推理模型（Vue 工程生成模式，需支持工具调用）
+    reasoning-streaming-chat-model:
+      api-key: <your-deepseek-api-key>
+    # 路由模型（判定代码生成模式）
+    routing-chat-model:
+      api-key: <your-deepseek-api-key>
+
+# -----------------------------------------------------------------------------
+# 腾讯云 COS 对象存储
+# 用于上传应用部署后的封面截图，可在腾讯云控制台获取。
+# 若不需要封面截图功能，此处可保留占位符，仅该功能不可用。
+# -----------------------------------------------------------------------------
+cos:
+  client:
+    host: <your-bucket-name>.cos.<your-region>.myqcloud.com
+    secretId: <your-cos-secret-id>
+    secretKey: <your-cos-secret-key>
+    region: <your-region>
+    bucket: <your-bucket-name>

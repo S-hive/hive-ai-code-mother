@@ -2,6 +2,10 @@ genresult
 tmp
 **/*.yaml
 **/*.yml
+# 主配置文件不含敏感信息，需要提交
+!src/main/resources/application.yml
+### 依赖 ###
+node_modules/
 
 HELP.md
 target/
